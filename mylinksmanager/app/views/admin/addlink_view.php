@@ -10,10 +10,15 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
-class Exception404 extends Exception
-{
-	public function __construct($message)
-	{
-		parent::__construct($message);
-	}
-}
+Auth::authorization();
+
+//include template
+core::requireEx('libs', "html_template/SeparateTemplate.php");
+$tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/addlink.tpl");
+
+$tpl->assign('TITLE_PAGE', '');
+$tpl->assign('TITLE', '');
+
+
+//display content
+$tpl->display();

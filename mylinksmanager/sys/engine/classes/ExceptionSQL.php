@@ -8,6 +8,8 @@
  * Skype: janickiy
  ********************************************/
 
+defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
+
 class ExceptionSQL extends Exception
 {
 	protected $sql_error;

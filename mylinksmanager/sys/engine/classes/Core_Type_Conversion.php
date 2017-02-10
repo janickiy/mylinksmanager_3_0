@@ -8,6 +8,8 @@
  * Skype: janickiy
  ********************************************/
 
+defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
+
 class Core_Type_Conversion
 {
 	/**

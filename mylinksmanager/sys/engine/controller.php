@@ -1,6 +1,6 @@
 <?php
 
-defined('GUESTBOOK') || exit('GUESTBOOK: access denied.');
+defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
 class Controller
 {

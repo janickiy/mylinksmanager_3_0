@@ -12,7 +12,7 @@ defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
 Error_Reporting(0); // set error reporting level
 define("DEBUG", true);
-define('VERSION', '3.0.0');
+define('VERSION', '3.0.0 alfa');
 
 $cmspaths = ['core' => 'sys/core',
              'engine' => 'sys/engine', // Engines AUTOLOAD folder

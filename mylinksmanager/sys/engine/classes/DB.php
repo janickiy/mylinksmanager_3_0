@@ -8,7 +8,7 @@
  * Skype: janickiy
  ********************************************/
 
-defined('LETTER') || exit('NewsLetter: access denied.');
+defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
 class DB {
 	public $dbh = null;
