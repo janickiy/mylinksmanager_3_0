@@ -16,8 +16,8 @@ Auth::authorization();
 core::requireEx('libs', "html_template/SeparateTemplate.php");
 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/addlink.tpl");
 
-$tpl->assign('TITLE_PAGE', core::getLanguage('title_page', 'admin_addlink'));
-$tpl->assign('TITLE', core::getLanguage('title_page', 'admin_addlink'));
+$tpl->assign('TITLE_PAGE', core::getLanguage('title_page', 'admin_addcategory'));
+$tpl->assign('TITLE', core::getLanguage('title_page', 'admin_addcategory'));
 
 
 

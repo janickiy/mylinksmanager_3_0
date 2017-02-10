@@ -14,10 +14,10 @@ Auth::authorization();
 
 //include template
 core::requireEx('libs', "html_template/SeparateTemplate.php");
-$tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/design.tpl");
+$tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/password.tpl");
 
-$tpl->assign('TITLE_PAGE', 'Список лицензионных ключей');
-$tpl->assign('TITLE', 'Список лицензионных ключей');
+$tpl->assign('TITLE_PAGE', core::getLanguage('title_page', 'admin_password'));
+$tpl->assign('TITLE', core::getLanguage('title_page', 'admin_password'));
 
 
 //display content

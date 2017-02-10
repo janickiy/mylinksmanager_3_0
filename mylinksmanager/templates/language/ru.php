@@ -1,8 +1,38 @@
 <?php
 
-$language["title_page"]["template"] = "";
-$language["title"]["template"] = "";
-$language["info"]["template"] = "";
+$language["title_page"]["index"] = "";
+$language["title"]["index"] = "";
+$language["info"]["index"] = "";
+
+$language["title_page"]["addcategory"] = "";
+$language["title"]["addcategory"] = "";
+$language["info"]["addcategory"] = "";
+
+$language["title_page"]["addlink"] = "";
+$language["title"]["addlink"] = "";
+$language["info"]["addlink"] = "";
+
+$language["title_page"]["blacklist"] = "";
+$language["title"]["blacklist"] = "";
+$language["info"]["blacklist"] = "";
+
+$language["title_page"]["categories"] = "";
+$language["title"]["categories"] = "";
+$language["info"]["categories"] = "";
+
+$language["title_page"]["check_links"] = "";
+$language["title"]["check_links"] = "";
+$language["info"]["check_links"] = "";
+
+$language["title_page"]["design"] = "";
+$language["title"]["design"] = "";
+$language["info"]["design"] = "";
+
+$language["title_page"]["edit"] = "";
+$language["title"]["edit"] = "";
+$language["info"]["edit"] = "";
+
+
 
 $language["title"]["subscribe"] = "Подписаться";
 
