@@ -102,11 +102,6 @@ if (Core_Array::getRequest('action')){
             if (Mlm::checkSizeBanner($htmlcode_banner)) {
                 $errors[] = core::getLanguage('error', 'size_banner');
             }
-
-            // check image type of banner
-            if (Mlm::checkTypeImageBanner($htmlcode_banner)) {
-                $errors[] = core::getLanguage('error', 'size_banner');
-            }
         }
     }
 
@@ -149,16 +144,71 @@ if (Core_Array::getRequest('action')){
         $fields['token'] = Mlm::getRandomCode();
         $fields['check_link'] = Core_Array::getPost('check_link') ? 'yes':'no';
         $fields['count'] = 0;
-        $fields['number_check' = 0;
+        $fields['number_check'] = 0;
 
 
-        $data->addLink($fields);
+        if ($data->addLink($fields)) {
+            unset($_POST);
+            $success_msg = core::getLanguage('msg', 'link_added');
+        }
     }
-
-
-
 }
 
+if (!empty($errors)) {
+    $errorBlock = $tpl->fetch('show_errors');
+    $errorBlock->assign('STR_IDENTIFIED_FOLLOWING_ERRORS', core::getLanguage('str', 'identified_following_errors'));
+
+    foreach($errors as $row) {
+        $rowBlock = $errorBlock->fetch('row');
+        $rowBlock->assign('ERROR', $row);
+        $errorBlock->assign('row', $rowBlock);
+    }
+
+    $tpl->assign('show_errors', $errorBlock);
+}
+
+if (isset($success_msg)) $tpl->assign('MSG_ALERT', $success_msg);
+
+
+include_once core::pathTo('extra', 'top.php');
+
+// menu
+include_once core::pathTo('extra', 'menu.php');
+
+//form
+$tpl->assign('STR_REQUIRED_FIELDS', core::getLanguage('str', 'required_fields'));
+$tpl->assign('STR_CATEGORY', core::getLanguage('str', 'category'));
+$tpl->assign('STR_CHOOSE_CATEGORY', core::getLanguage('str', 'choose_category'));
+$tpl->assign('STR_WEBSITE_NAME', core::getLanguage('str', 'website_name'));
+$tpl->assign('STR_URL', core::getLanguage('str', 'url'));
+$tpl->assign('STR_ADDRESS_OF_RECIP_LINK_PAGE', core::getLanguage('str', 'address_of_recip_link_page'));
+$tpl->assign('STR_EMAIL', core::getLanguage('str', 'email'));
+$tpl->assign('STR_ONLY_TEXT_NOT_HTML', core::getLanguage('str', 'only_text_not_html'));
+$tpl->assign('STR_KEYWORDS', core::getLanguage('str', 'keywords'));
+$tpl->assign('STR_LIST_SEPARATED_BY_COMMAS', core::getLanguage('str', 'list_separated_by_commas'));
+$tpl->assign('STR_BRIEF_DESCRIPTION', core::getLanguage('str', 'brief_description'));
+$tpl->assign('STR_TO_CHECK_THIS_LINK', core::getLanguage('str', 'to_check_this_link'));
+$tpl->assign('STR_FULL_DESCRIPTION', core::getLanguage('str', 'full_description'));
+$tpl->assign('STR_HTML_CODE_OF_BANNER', core::getLanguage('str', 'html_code_of_banner'));
+$tpl->assign('BUTTON', core::getLanguage('button', 'add'));
+
+//value
+$tpl->assign('HIDDEN_FIELD','');
+$tpl->assign('ACTION', $_SERVER['REQUEST_URI']);
+$tpl->assign('OPTION', ShowTree(0, 0));
+$tpl->assign('NAME', Core_Array::getPost('name'));
+$tpl->assign('URL', Core_Array::getPost('url'));
+$tpl->assign('RECIPROCAL_LINK', Core_Array::getPost('reciprocal_link'));
+$tpl->assign('EMAIL', Core_Array::getPost('email'));
+$tpl->assign('KEYWORDS', Core_Array::getPost('keywords'));
+$tpl->assign('DESCRIPTION', Core_Array::getPost('description'));
+$tpl->assign('FULL_DESCRIPTION', Core_Array::getPost('full_description'));
+$tpl->assign('FULL_DESCRIPTION', Core_Array::getPost('htmlcode_banner'));
+$tpl->assign('CAT_ID', Core_Array::getPost('cat_id'));
+$tpl->assign('CHECK_LINK', $check_link);
+
+//footer
+include_once core::pathTo('extra', 'footer.php');
 
 //display content
 $tpl->display();

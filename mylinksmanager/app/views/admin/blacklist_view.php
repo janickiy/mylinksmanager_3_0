@@ -19,6 +19,44 @@ $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "a
 $tpl->assign('TITLE_PAGE', core::getLanguage('title_page', 'admin_blacklist'));
 $tpl->assign('TITLE', core::getLanguage('title_page', 'admin_blacklist'));
 
+$errors = array();
+
+if (Core_Array::getRequest('action')){
+
+
+
+    // Remove links
+    if (Core_Array::getRequest('event') == "delete"){
+
+        $link_id = Core_Array::getPost('link_id');
+        if ($data->removeLink($link_id)) {
+           // $success = MSG_LINK_REMOVED;
+        } else {
+
+        }
+    }
+
+    if (Core_Array::getRequest('event') == "restore"){
+        $link_id = Core_Array::getPost('link_id');
+
+        if($data->restoreLink($link_id)){
+           // $success = MSG_LINK_RESTORED;
+        }
+        else { throw new ExceptionMySQL($dbh->error,$update,"Error executing SQL query!"); }
+    }
+
+}
+
+if (isset($success_msg)) $tpl->assign('MSG_ALERT', $success_msg);
+
+include_once core::pathTo('extra', 'top.php');
+
+// menu
+include_once core::pathTo('extra', 'menu.php');
+
+
+//footer
+include_once core::pathTo('extra', 'footer.php');
 
 //display content
 $tpl->display();
