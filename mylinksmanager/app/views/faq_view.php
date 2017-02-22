@@ -19,8 +19,8 @@ $tpl->assign('TITLE', core::getLanguage('title', 'faq'));
 
 $tpl->assign('FAQ', core::getLanguage('str', 'faq'));
 
-$tpl->assign('STR_LOGO', STR_LOGO);
-$tpl->assign('STR_AUTHOR', STR_AUTHOR);
+$tpl->assign('STR_LOGO', core::getLanguage('str', 'logo'));
+$tpl->assign('STR_AUTHOR',core::getLanguage('str', 'author'));
 
 // display content
 $tpl->display();

@@ -20,8 +20,8 @@ $tpl->assign('TITLE', core::getLanguage('title', 'help'));
 
 $tpl->assign('HELP', core::getLanguage('str', 'help'));
 
-$tpl->assign('STR_LOGO', STR_LOGO);
-$tpl->assign('STR_AUTHOR', STR_AUTHOR);
+$tpl->assign('STR_LOGO', core::getLanguage('str', 'logo'));
+$tpl->assign('STR_AUTHOR',core::getLanguage('str', 'author'));
 
 // display content
 $tpl->display();
