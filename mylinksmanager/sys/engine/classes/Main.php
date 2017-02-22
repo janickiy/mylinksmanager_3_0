@@ -810,7 +810,7 @@ class Mlm
      * @param $lvl
      * @return string
      */
-    public static public static function ShowCategoryList($ParentID, $lvl)
+    public static function ShowCategoryList($ParentID, $lvl)
     {
         global $lvl;
         global $dbh;
@@ -1107,9 +1107,9 @@ class Mlm
         ob_start();
 
         if ($image_mime == 'image/png'){
-            imagepng($resul,NULL,100);
+            imagepng($result, NULL, 100);
         } elseif ($image_mime == 'image/jpeg'){
-            imagejpeg($result,NULL,100);
+            imagejpeg($result, NULL, 100);
         } else {
             imagegif($result);
         }

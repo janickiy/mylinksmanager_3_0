@@ -16,9 +16,17 @@ Auth::authorization();
 core::requireEx('libs', "html_template/SeparateTemplate.php");
 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/index.tpl");
 
-$tpl->assign('TITLE_PAGE', core::getLanguage('title_page', 'admin_main'));
-$tpl->assign('TITLE', core::getLanguage('title_page', 'admin_main'));
+$tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_index'));
+$tpl->assign('TITLE', core::getLanguage('title', 'admin_index'));
+$tpl->assign('HELP', core::getLanguage('info', 'admin_index'));
 
+include_once core::pathTo('extra', 'top.php');
+
+//menu
+include_once core::pathTo('extra', 'menu.php');
+
+//footer
+include_once core::pathTo('extra', 'footer.php');
 
 //display content
 $tpl->display();

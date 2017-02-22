@@ -14,10 +14,10 @@ class Auth
 {
     public static function authorization()
     {
-        session_start();
+        core::session()->start();
 
-        if (!isset($_SESSION['sess_admin'])) {
-            $_SESSION['sess_admin'] = '';
+        if (core::session()->issetName('sess_admin') === false) {
+            core::session()->set('sess_admin', null);
         }
 
         $query = "SELECT * FROM " . core::database()->getTableName('aut');
@@ -25,9 +25,11 @@ class Auth
         $row = core::database()->getRow($result);
 
         if (Core_Array::getPost('admin_submit')){
-            if ($_SESSION['sess_admin'] != "ok") $sess_pass = md5(trim(Core_Array::getPost('password')));
+            if (core::session()->get('sess_admin') != "ok") $sess_pass = md5(trim(Core_Array::getPost('password')));
             if ($sess_pass === $row['password']){
-                $_SESSION['sess_admin'] = "ok";
+                core::session()->set('sess_admin', "ok");
+				core::session()->commit();
+				unset($_POST);
             } else {
                 echo '<!DOCTYPE html>
 				<html>
@@ -42,17 +44,25 @@ class Auth
 				</script>
 				</body>
 				</html>';
+				unset($_POST);
+				core::session()->commit();
                 exit();
             }
         } else {
-            if ($_SESSION['sess_admin'] != "ok") {
+            if (core::session()->get('sess_admin') != "ok") {
                 // require temlate class
                 core::requireEx('libs', "html_template/SeparateTemplate.php");
 
                 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "authorization.tpl");
                 $tpl->assign('TITLE', 'Авторизация');
+				
+				$tpl->assign('TITLE_ADMIN_AREA', 'Панель администрирования My Links Manager');
+				$tpl->assign('STR_LOGIN', 'Авторизуйтесь!');
+				$tpl->assign('STR_YOUR_PASSWORD', 'Введите пароль');
+				$tpl->assign('BUTTON_LOGIN', 'Войти');
 
-
+				unset($_POST);
+				core::session()->commit();
                 // display content
                 $tpl->display();
                 exit();

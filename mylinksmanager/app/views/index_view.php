@@ -10,17 +10,12 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
-// require temlate class
+//include template
 core::requireEx('libs', "html_template/SeparateTemplate.php");
 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . core::getSetting('controller') . ".tpl");
 
-$tpl->assign('TITLE_PAGE', core::getLanguage('title_page', 'edit_account'));
-$tpl->assign('TITLE', core::getLanguage('title', 'edit_account'));
-
-include_once core::pathTo('extra', 'top.php');
-
-// footer
-include_once core::pathTo('extra', 'footer.php');
+$tpl->assign('TITLE_PAGE', core::getLanguage('title_page', 'help'));
+$tpl->assign('TITLE', core::getLanguage('title', 'help'));
 
 // display content
 $tpl->display();

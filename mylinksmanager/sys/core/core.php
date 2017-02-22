@@ -1,30 +1,21 @@
 <?php
 
-/********************************************
- * My Links Manager 3.0.0 alfa
- * Copyright (c) 2011-2017 Alexander Yanitsky
- * Website: http://janicky.com
- * E-mail: janickiy@mail.ru
- * Skype: janickiy
- ********************************************/
-
-defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
-
 class core
 {
     protected static $_init = NULL;
     protected static $paths = array(); 
     protected static $mainConfig = NULL;
+    protected static $language = NULL;
     public static $db = NULL;
     public static $tpl = NULL;
     public static $path = NULL;
+    public static $session = NULL;
 
     /**
      * Check if self::init() has been called
      *
      * @return boolean
      */
-
     static public function isInit()
     {
         return self::$_init;
@@ -35,7 +26,6 @@ class core
      *
      * @return boolean
      */
-
     static public function init($paths)
     {
         if (self::isInit())
@@ -53,7 +43,6 @@ class core
      *            class name
      * @return mixed
      */
-
     static public function factory($className)
     {
         return new $className();
@@ -64,10 +53,14 @@ class core
         return self::$db;
     }
 
+    static public function session()
+    {
+        return self::$session;
+    }
+
     /**
      * AUTOLOAD modules
      */
-
     static protected function _loadEngines()
     {
         require_once 'folders.php';
@@ -102,6 +95,41 @@ class core
     static public function pathTo($engine, $data)
     {
         return SYS_ROOT . self::$paths[$engine] . DIRECTORY_SEPARATOR . $data;
+    }
+
+    // --------- SETTINGS -------------------------------
+    static public function addSetting($set = array())
+    {
+        self::$mainConfig = (is_array(self::$mainConfig)) ? array_merge(self::$mainConfig, $set) : $set;
+    }
+
+    static public function setSetting($index, $value)
+    {
+        self::$mainConfig[$index] = $value;
+    }
+
+    static public function getSetting($name = '')
+    {
+        // Main config
+        return ($name == '') ? self::$mainConfig : self::$mainConfig[$name];
+    }
+    // --------- SETTINGS -------------------------------
+
+
+    // --------- language -------------------------------
+    static public function addLanguage($lng = array())
+    {
+        self::$language = $lng;
+    }
+
+    static public function getLanguage($section, $item)
+    {
+        return (isset(self::$language[$section][$item])) ? self::$language[$section][$item] : '';
+    }
+
+    static public function setLanguage($section, $item, $value)
+    {
+        self::$language[$section][$item] = $value;
     }
 
     /**
@@ -142,5 +170,4 @@ class core
     {
         return self::$paths[$path];
     }
-
 }

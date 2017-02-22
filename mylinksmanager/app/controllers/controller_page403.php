@@ -12,14 +12,8 @@ defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
 class Controller_page403 extends Controller
 {
-	function __construct()
-	{
-		$this->model = new Model_page403();
-		$this->view = new View();
-	}
-
-	public function action_page403()
+	public function action_index()
 	{	
-		$this->view->generate('page403_view.php', $this->model);
+		$this->view->generate('page403_view.php');
 	}
 }

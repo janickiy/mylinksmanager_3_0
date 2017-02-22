@@ -16,8 +16,8 @@ Auth::authorization();
 core::requireEx('libs', "html_template/SeparateTemplate.php");
 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/edit.tpl");
 
-$tpl->assign('TITLE_PAGE', core::getLanguage('title_page', 'admin_edit'));
-$tpl->assign('TITLE', core::getLanguage('title_page', 'admin_edit'));
+$tpl->assign('TITLE_PAGE', core::getLanguage('title_page', 'admin_page_edit'));
+$tpl->assign('TITLE', core::getLanguage('title', 'admin_edit'));
 
 
 //display content

@@ -16,8 +16,8 @@ Auth::authorization();
 core::requireEx('libs', "html_template/SeparateTemplate.php");
 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/password.tpl");
 
-$tpl->assign('TITLE_PAGE', core::getLanguage('title_page', 'admin_password'));
-$tpl->assign('TITLE', core::getLanguage('title_page', 'admin_password'));
+$tpl->assign('TITLE_PAGE', core::getLanguage('title', 'admin_page_password'));
+$tpl->assign('TITLE', core::getLanguage('title', 'admin_password'));
 
 
 //display content
