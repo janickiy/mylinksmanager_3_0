@@ -12,5 +12,11 @@ defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
 class Model_settings extends Model
 {
-
+    public function updateSettings($fields)
+    {
+        if (core::database()->update($fields, core::database()->getTableName('settings'), ''))
+            return true;
+        else
+            return false;
+    }
 }

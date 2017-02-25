@@ -32,6 +32,18 @@ class Mlm
     }
 
     /**
+     * @param $url
+     * @return mixed
+     */
+    public static function convertUrl($url) {
+        if (substr($url, 0, 7) == "http://") { $url = str_replace('http://', '', $url); }
+        if (substr($url, 0, 4) == "www.") { $url = str_replace('www.', '', $url); }
+        if (strpos($url, '/') > 0) list($url) = explode('/', $url);
+
+        return $url;
+    }
+
+    /**
      * @param $email
      * @return bool
      */

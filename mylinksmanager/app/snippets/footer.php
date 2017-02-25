@@ -10,12 +10,10 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
+$tpl->assign("TOTAL_LINKS", Links::getTotalLinks());
 $tpl->assign('STR_LOGO', core::getLanguage('str', 'logo'));
 $tpl->assign('STR_AUTHOR', core::getLanguage('str', 'author'));
-
 $tpl->assign('STR_WEBSITE', core::getLanguage('str', 'website'));
-
-
 $tpl->assign('STR_HELPPAGE', core::getLanguage('str', 'helppage'));
 
 

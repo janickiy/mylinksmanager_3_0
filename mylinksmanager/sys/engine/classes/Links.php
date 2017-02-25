@@ -40,6 +40,14 @@ class Links
                 return true;
         }
     }
+
+    public static function getTotalLinks($status = 'show')
+    {
+        $query = "SELECT * FROM  " . core::database()->getTableName('links') . " WHERE status = '" . $status . "'";
+        $result = core::database()->querySQL($query);
+
+        return core::database()->getRecordCount($result);
+    }
 }
 
 
