@@ -16,8 +16,9 @@ Auth::authorization();
 core::requireEx('libs', "html_template/SeparateTemplate.php");
 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/blacklist.tpl");
 
-$tpl->assign('TITLE_PAGE', core::getLanguage('title', 'admin_page_blacklist'));
+$tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_blacklist'));
 $tpl->assign('TITLE', core::getLanguage('title', 'admin_blacklist'));
+$tpl->assign('HELP', core::getLanguage('info', 'admin_blacklist'));
 
 $errors = array();
 

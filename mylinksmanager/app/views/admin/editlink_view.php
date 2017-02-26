@@ -16,9 +16,9 @@ Auth::authorization();
 core::requireEx('libs', "html_template/SeparateTemplate.php");
 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/editlink.tpl");
 
-$tpl->assign('TITLE_PAGE', core::getLanguage('title', 'admin_page_editlink'));
+$tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_editlink'));
 $tpl->assign('TITLE', core::getLanguage('title', 'admin_editlink'));
-
+$tpl->assign('HELP', core::getLanguage('info', 'admin_edotlink'));
 
 //display content
 $tpl->display();

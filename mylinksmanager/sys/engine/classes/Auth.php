@@ -53,7 +53,7 @@ class Auth
                 // require temlate class
                 core::requireEx('libs', "html_template/SeparateTemplate.php");
 
-                $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "authorization.tpl");
+                $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/authenticate.tpl");
                 $tpl->assign('TITLE', 'Авторизация');
 				
 				$tpl->assign('TITLE_ADMIN_AREA', 'Панель администрирования My Links Manager');
@@ -68,6 +68,12 @@ class Auth
                 exit();
             }
         }
+    }
+
+    public static function logOut()
+    {
+        core::session()->start();
+        core::session()->destroy();
     }
 
     public static function getCurrentHash()

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 /********************************************
  * My Links Manager 3.0.0 alfa
@@ -10,12 +10,10 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
-class Model_password extends Model
+class Controller_logout extends Controller
 {
-    public function changePassword($password) {
-        $password = md5(trim($password));
-
-        $update = "UPDATE " . core::database()->getTableName('aut') . " SET password='".$password."'";
-        return core::database()->querySQL($update);
-    }
+	function action_admin()
+	{
+		$this->view->generate('admin/logout_view.php');
+	}
 }

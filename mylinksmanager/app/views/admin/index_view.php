@@ -25,6 +25,43 @@ include_once core::pathTo('extra', 'top.php');
 //menu
 include_once core::pathTo('extra', 'menu.php');
 
+// Read the contents of file of style.css in the buffer
+$fd = @fopen("templates/styles/style.css", "r");
+$bufer1 = @fread($fd, filesize("templates/styles/style.css"));
+fclose($fd);
+
+// Read the contents of file of top.html in the buffer
+$fd = @fopen("../templates/header.tpl", "r");
+$bufer2 = @fread($fd, filesize("../templates/header.tpl"));
+fclose($fd);
+
+$bufer2 = preg_replace('/\${(\w+)}/sU', "[\\1]", $bufer2);
+
+// Read the contents of file of bottom.html in the buffer
+$fd = @fopen("../templates/footer.tpl", "r");
+$bufer3 = @fread($fd, filesize("../templates/footer.tpl"));
+fclose($fd);
+
+$bufer3 = preg_replace('/\${(\w+)}/sU', "[\\1]", $bufer3);
+
+// Read the contents of file of index.tpl in the buffer
+$fd = @fopen("../templates/index.tpl", "r");
+$bufer4 = @fread($fd, filesize("../templates/index.tpl"));
+fclose($fd);
+
+$bufer4 = preg_replace('/\${(\w+)}/sU', "[\\1]", $bufer4);
+
+// Read the contents of file of add_url.tpl in the buffer
+$fd = @fopen("../templates/add_url.tpl", "r");
+$bufer5 = @fread($fd, filesize("../templates/add_url.tpl"));
+fclose($fd);
+
+$bufer5 = preg_replace('/\${(\w+)}/sU', "[\\1]", $bufer5);
+
+
+
+
+
 //footer
 include_once core::pathTo('extra', 'footer.php');
 

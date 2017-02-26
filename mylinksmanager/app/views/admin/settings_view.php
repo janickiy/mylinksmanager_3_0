@@ -16,7 +16,7 @@ Auth::authorization();
 core::requireEx('libs', "html_template/SeparateTemplate.php");
 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/settings.tpl");
 
-$tpl->assign('TITLE_PAGE', core::getLanguage('title', 'admin_page_settings'));
+$tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_settings'));
 $tpl->assign('TITLE', core::getLanguage('title', 'admin_settings'));
 $tpl->assign('HELP', core::getLanguage('info', 'admin_settings'));
 
@@ -74,7 +74,6 @@ if (Core_Array::getRequest('action')){
 
 	header('Location: ./?a=admin&t=settings');
 	exit;
-
 }
 
 include_once core::pathTo('extra', 'top.php');

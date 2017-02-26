@@ -74,6 +74,18 @@ class core
         }
     }
 
+
+
+    /**
+     * @param $engine
+     * @param $data
+     * @return string
+     */
+    static public function pathTo($engine, $data)
+    {
+        return SYS_ROOT . self::$paths[$engine] . DIRECTORY_SEPARATOR . $data;
+    }
+
     static public function getTemplate()
     {
         return self::$tpl;
@@ -85,16 +97,6 @@ class core
     static public function setTemplate($tpl)
     {
         self::$tpl = SYS_ROOT . self::$paths['templates'] . DIRECTORY_SEPARATOR . $tpl;
-    }
-
-    /**
-     * @param $engine
-     * @param $data
-     * @return string
-     */
-    static public function pathTo($engine, $data)
-    {
-        return SYS_ROOT . self::$paths[$engine] . DIRECTORY_SEPARATOR . $data;
     }
 
     // --------- SETTINGS -------------------------------

@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 /********************************************
  * My Links Manager 3.0.0 alfa
@@ -10,12 +10,15 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
-class Model_password extends Model
-{
-    public function changePassword($password) {
-        $password = md5(trim($password));
+Auth::authorization();
 
-        $update = "UPDATE " . core::database()->getTableName('aut') . " SET password='".$password."'";
-        return core::database()->querySQL($update);
-    }
-}
+// authorization
+Auth::authorization();
+
+Auth::logOut();
+
+$redirect = $_SERVER['HTTP_REFERER'] ? $_SERVER['HTTP_REFERER'] : '/';
+
+header("Location: " . $redirect . "");
+
+exit();

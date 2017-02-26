@@ -92,10 +92,10 @@
 					<a <!-- IF '${ACTIVE_MENU}' == 'settings' -->class="active-menu"<!-- END IF --> title="${MENU_SETTINGS_TITLE}" href="./?a=admin&t=settings">${MENU_SETTINGS}</a>
 				</li>
 				<li>
-					<a	<!-- IF '${ACTIVE_MENU}' == 'blacklist' -->class="active-menu"<!-- END IF --> title="${MENU_BLACK_TITLE}" href="./?a=admkin&t=ablacklist">${MENU_BLACK}</a>
+					<a	<!-- IF '${ACTIVE_MENU}' == 'blacklist' -->class="active-menu"<!-- END IF --> title="${MENU_BLACK_TITLE}" href="./?a=admin&t=ablacklist">${MENU_BLACK}</a>
 				</li>
 				<li>
-					<a <!-- IF '${ACTIVE_MENU}' == 'password' -->class="active-menu"<!-- END IF --> title="${MENU_PASSWORD_TITLE}" href="./?a=admkin&t=password">${MENU_PASSWORD}</a>
+					<a <!-- IF '${ACTIVE_MENU}' == 'password' -->class="active-menu"<!-- END IF --> title="${MENU_PASSWORD_TITLE}" href="./?a=admin&t=password">${MENU_PASSWORD}</a>
 				</li>
 				<li>
 					<a <!-- IF '${ACTIVE_MENU}' == 'design' -->class="active-menu"<!-- END IF --> title="${MENU_DESIGN_TITLE}" href="./?a=admin&t=design">${MENU_DESIGN}</a>

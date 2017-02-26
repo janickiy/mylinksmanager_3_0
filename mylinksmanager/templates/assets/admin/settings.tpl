@@ -15,18 +15,8 @@
               <div class="form-group">
                 <label>${STR_LANGUAGE}</label>
                 <select name="language" class="form-control">
-                  <option value="ru" 
-                  <!-- IF '${LANGUAGE_OPTION}' == 'ru' -->
-                  selected="selected"
-                  <!-- END IF -->
-                  >${STR_LANG_RU}
-                  </option>
-                  <option value="en" 
-                  <!-- IF '${LANGUAGE_OPTION}' == 'en' -->
-                  selected="selected"
-                  <!-- END IF -->
-                  >${STR_LANG_EN}
-                  </option>
+                  <option value="ru" <!-- IF '${LANGUAGE_OPTION}' == 'ru' -->selected="selected"<!-- END IF -->>${STR_LANG_RU}</option>
+                  <option value="en" <!-- IF '${LANGUAGE_OPTION}' == 'en' -->selected="selected"<!-- END IF -->>${STR_LANG_EN}</option>
                 </select>
               </div>
               <div class="form-group">
@@ -44,73 +34,28 @@
               <div class="form-group">
                 <label>${STR_ORDER_VIEWS}</label>
                 <div class="radio">
-                  <label> <input name="order_views" type="radio" value="1" 
-                    <!-- IF '${ORDER_VIEWS}' == 1 -->
-                    checked="checked"
-                    <!-- END IF -->
-                    >
-                    ${STR_BY_DATE} </label>
+                  <label> <input name="order_views" type="radio" value="1" <!-- IF '${ORDER_VIEWS}' == 1 -->checked="checked"<!-- END IF -->>${STR_BY_DATE} </label>
                 </div>
                 <div class="radio">
-                  <label> <input type="radio" name="order_views" value="2" 
-                    <!-- IF '${ORDER_VIEWS}' == 2 -->
-                    checked="checked"
-                    <!-- END IF -->
-                    >
-                    ${STR_BY_NUMBER} </label>
+                  <label> <input type="radio" name="order_views" value="2" <!-- IF '${ORDER_VIEWS}' == 2 -->checked="checked"<!-- END IF -->>${STR_BY_NUMBER} </label>
                 </div>
               </div>
               <div class="form-group">
                 <label>${STR_ORDER_LINKS}</label>
                 <div class="radio">
-                  <label> <input name="order_links" type="radio" value="1" 
-                    <!-- IF '${ORDER_LINKS}' == 1 -->
-                    checked="checked"
-                    <!-- END IF -->
-                    >
-                    ${STR_BY_INCREACE} </label>
+                  <label> <input name="order_links" type="radio" value="1" <!-- IF '${ORDER_LINKS}' == 1 -->checked="checked"<!-- END IF -->>${STR_BY_INCREACE} </label>
                 </div>
                 <div class="radio">
-                  <label> <input type="radio" name="order_links" value="2" 
-                    <!-- IF '${ORDER_LINKS}' == 2 -->
-                    checked="checked"
-                    <!-- END IF -->
-                    >
-                    ${STR_BY_DECREASE} </label>
+                  <label> <input type="radio" name="order_links" value="2" <!-- IF '${ORDER_LINKS}' == 2 -->checked="checked"<!-- END IF -->>${STR_BY_DECREASE} </label>
                 </div>
               </div>
               <div class="form-group">
                 <label for="show_cy">${STR_SHOW_CY}</label>
-                <input type=checkbox name="show_cy" 
-                <!-- IF '${SHOW_CY}' == 'yes' -->
-                checked="checked"
-                <!-- END IF -->
-                > </div>
+                <input type=checkbox name="show_cy" <!-- IF '${SHOW_CY}' == 'yes' -->checked="checked"<!-- END IF -->>
+              </div>
               <div class="form-group">
                 <label for="show_pr">${STR_SHOW_PR}</label>
-                <input type=checkbox  name="show_pr" 
-                <!-- IF '${SHOW_PR}' == 'yes' -->
-                checked="checked"
-                <!-- END IF -->
-                > </div>
-              <div class="form-group">
-                <label>${STR_STATIC}</label>
-                <div class="radio">
-                  <label> <input name="static" type="radio" value="1" 
-                    <!-- IF '${STATIC}' == 1 -->
-                    checked="checked"
-                    <!-- END IF -->
-                    >
-                    ${STR_STATIC_URL} </label>
-                </div>
-                <div class="radio">
-                  <label> <input type="radio" name="static" value="2" 
-                    <!-- IF '${STATIC}' == 2 -->
-                    checked="checked"
-                    <!-- END IF -->
-                    >
-                    ${STR_DYNAMIC_URL} </label>
-                </div>
+                <input type=checkbox  name="show_pr" <!-- IF '${SHOW_PR}' == 'yes' -->checked="checked"<!-- END IF -->>
               </div>
               <div class="form-group">
                 <label for="url">${STR_CATALOG_URL}</label>
@@ -197,20 +142,20 @@
               <div class="form-group">
                 <label>${STR_NUMBER_CHARS_DESCRIPTION}</label>
                 <label class="checkbox-inline">
-                  <input type="text" name="number_chars_description_min" value="${NUMBER_CHARS_DESCRIPTION_MIN}">
-                  min </label>
+                  <input type="text" name="number_chars_description_min" value="${NUMBER_CHARS_DESCRIPTION_MIN}">min
+                </label>
                 <label class="checkbox-inline">
-                  <input type="text" name="number_chars_description_max" value="${NUMBER_CHARS_DESCRIPTION_MAX}">
-                  max </label>
+                  <input type="text" name="number_chars_description_max" value="${NUMBER_CHARS_DESCRIPTION_MAX}">max
+                </label>
               </div>
               <div class="form-group">
                 <label>${STR_NUMBER_CHARS_FULLDESCRIPTION}</label>
                 <label class="checkbox-inline">
-                  <input type="text" name="number_chars_fulldescription_min" value="${NUMBER_CHARS_FULLDESCRIPTION_MIN}">
-                  min </label>
+                  <input type="text" name="number_chars_fulldescription_min" value="${NUMBER_CHARS_FULLDESCRIPTION_MIN}">min
+                </label>
                 <label class="checkbox-inline">
-                  <input type="text" name="number_chars_fulldescription_max" value="${NUMBER_CHARS_FULLDESCRIPTION_MAX}">
-                  max </label>
+                  <input type="text" name="number_chars_fulldescription_max" value="${NUMBER_CHARS_FULLDESCRIPTION_MAX}">max
+                </label>
               </div>
               <div class="form-group">
                 <label for="number_check">${STR_NUMBER_HTML_CHARS}</label>
@@ -218,70 +163,30 @@
               </div>
               </label>
               <div class="checkbox">
-                <label> <input type=checkbox name="request_captcha" 
-                  <!-- IF '${REQUEST_CAPTCHA}' == 'yes' -->
-                  checked="checked"
-                  <!-- END IF -->
-                  >
-                  ${STR_REQUEST_CAPTCHA} </label>
+                <label> <input type=checkbox name="request_captcha" <!-- IF '${REQUEST_CAPTCHA}' == 'yes' -->checked="checked"<!-- END IF -->>${STR_REQUEST_CAPTCHA} </label>
               </div>
               <div class="checkbox">
-                <label> <input type="checkbox" name="add_links_without_check" 
-                  <!-- IF '${ADD_LINKS_WITHOUT_CHECK}' == 'yes' -->
-                  checked="checked"
-                  <!-- END IF -->
-                  >
-                  ${STR_ADD_LINKS_WITHOUT_CHECK} </label>
+                <label> <input type="checkbox" name="add_links_without_check" <!-- IF '${ADD_LINKS_WITHOUT_CHECK}' == 'yes' -->checked="checked"<!-- END IF -->>${STR_ADD_LINKS_WITHOUT_CHECK} </label>
               </div>
               <div class="checkbox">
-                <label> <input type=checkbox name="check_links" 
-                  <!-- IF '${CHECK_LINKS}' == 'yes' -->
-                  checked="checked"
-                  <!-- END IF -->
-                  >
-                  ${STR_CHECK_LINKS} </label>
+                <label> <input type=checkbox name="check_links" <!-- IF '${CHECK_LINKS}' == 'yes' -->checked="checked"<!-- END IF -->>${STR_CHECK_LINKS} </label>
               </div>
               <div class="checkbox">
-                <label> <input type=checkbox name="common_host" 
-                  <!-- IF '${COMMON_HOST}' == 'yes' -->
-                  checked="checked"
-                  <!-- END IF -->
-                  >
-                  ${STR_COMMON_HOST} </label>
+                <label> <input type=checkbox name="common_host" <!-- IF '${COMMON_HOST}' == 'yes' -->checked="checked"<!-- END IF -->>${STR_COMMON_HOST} </label>
               </div>
               <div class="checkbox">
-                <label> <input type=checkbox name="check_get_parameter" 
-                  <!-- IF '${CHECK_GET_PARAMETER}' == 'yes' -->
-                  checked="checked"
-                  <!-- END IF -->
-                  >
-                  ${STR_CHECK_GET_PARAMETER} </label>
+                <label> <input type=checkbox name="check_get_parameter" <!-- IF '${CHECK_GET_PARAMETER}' == 'yes' -->checked="checked"<!-- END IF -->>${STR_CHECK_GET_PARAMETER} </label>
               </div>
               <div class="checkbox">
-                <label> <input type=checkbox name="limit_reciprocal_links" 
-                  <!-- IF '${LIMIT_RECIPROCAL_LINKS}' == 'yes' -->
-                  checked="checked"
-                  <!-- END IF -->
-                  >
-                  ${STR_LIMIT_RECIPROCAL_LINKS}
+                <label> <input type=checkbox name="limit_reciprocal_links" <!-- IF '${LIMIT_RECIPROCAL_LINKS}' == 'yes' -->checked="checked"<!-- END IF -->>${STR_LIMIT_RECIPROCAL_LINKS}
                   <input size="2" type=text name="number_reciprocal_links_limit" size="3" maxlength="6" value="${NUMBER_RECIPROCAL_LINKS_LIMIT}">
                 </label>
               </div>
               <div class="checkbox">
-                <label> <input type=checkbox name="add_to_blacklist" 
-                  <!-- IF '${ADD_TO_BLACKLIST}' == 'yes' -->
-                  checked="checked"
-                  <!-- END IF -->
-                  >
-                  ${STR_ADD_TO_BLACKLIST} </label>
+                <label> <input type=checkbox name="add_to_blacklist" <!-- IF '${ADD_TO_BLACKLIST}' == 'yes' -->checked="checked"<!-- END IF -->>${STR_ADD_TO_BLACKLIST} </label>
               </div>
               <div class="checkbox">
-                <label> <input type=checkbox name="new_links_notification" 
-                  <!-- IF '${NEW_LINKS_NOTIFICATION}' == 'yes' -->
-                  checked="checked"
-                  <!-- END IF -->
-                  >
-                  ${STR_NEW_LINKS_NOTIFICATION} </label>
+                <label> <input type=checkbox name="new_links_notification" <!-- IF '${NEW_LINKS_NOTIFICATION}' == 'yes' -->checked="checked"<!-- END IF -->>${STR_NEW_LINKS_NOTIFICATION} </label>
               </div>
             </div>
           </div>

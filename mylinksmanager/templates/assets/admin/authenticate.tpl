@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>${AUTORIZATION}</title>
-<meta name="ROBOTS" content="noindex">
-<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
-<!-- BOOTSTRAP STYLES-->
-<link href="assets/css/bootstrap.css" rel="stylesheet" />
-<!-- FONTAWESOME STYLES-->
-<link href="assets/css/font-awesome.css" rel="stylesheet" />
-<!-- MORRIS CHART STYLES-->
-<link href="assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
-<!-- CUSTOM STYLES-->
-<link href="assets/css/custom.css" rel="stylesheet" />
-<!-- GOOGLE FONTS-->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+  <title>${AUTORIZATION}</title>
+  <meta name="ROBOTS" content="noindex">
+  <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+  <!-- BOOTSTRAP STYLES-->
+  <link href="templates/admin/assets/css/bootstrap.css" rel="stylesheet" />
+  <!-- FONTAWESOME STYLES-->
+  <link href="templates/admin/assets/css/font-awesome.css" rel="stylesheet" />
+  <!-- MORRIS CHART STYLES-->
+  <link href="templates/admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+  <!-- CUSTOM STYLES-->
+  <link href="templates/admin/assets/css/custom.css" rel="stylesheet" />
+  <!-- GOOGLE FONTS-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
 <body>
 <div class="container">
@@ -30,7 +30,7 @@
         <div class="panel-heading"> <strong>${STR_LOGIN}</strong> </div>
         <div class="panel-body">
           <form role="form" action="${ACTION}" method="post">
-            <input type="hidden" name="admin" value="ok">
+            <input type="hidden" name="admin_submit" value="ok">
             <br />
             <div class="form-group input-group"> <span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
               <input type="password" name="password" class="form-control"  placeholder="${STR_YOUR_PASSWORD}" />
