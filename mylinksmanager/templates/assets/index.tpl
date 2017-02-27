@@ -39,12 +39,7 @@
                      </td>
                      <td>
                         <select type=text class="input" name="id_catalog">
-                           <option value=0 
-                           <!-- IF '${ID_CATALOG}' == 0 -->
-                           selected="selected"
-                           <!-- END IF -->
-                           >${STR_IT_DOESNT_MATTER_SEARCHFORM}
-                           </option>                  
+                           <option value=0 <!-- IF '${ID_CATALOG}' == 0 -->selected="selected"<!-- END IF -->>${STR_IT_DOESNT_MATTER_SEARCHFORM}</option>
                            ${OPTION}                
                         </select>
                      </td>
@@ -55,23 +50,13 @@
                      </td>
                      <td>
                         <p>
-                           <input name="logic" type="radio" value="0" 
-                           <!-- IF '${LOGIC}' == 0 -->
-                           checked="checked"
-                           <!-- END IF -->
-                           >
-                           ${STR_AT_LEAST_ONCE}
+                           <input name="logic" type="radio" value="0" <!-- IF '${LOGIC}' == 0 -->checked="checked"<!-- END IF -->> ${STR_AT_LEAST_ONCE}
                         </p>
                      </td>
                      <td width="15">&nbsp;</td>
                      <td>
                         <p align="right">
-                           <input name="logic" type="radio" value="1" 
-                           <!-- IF '${LOGIC}' == 1 -->
-                           checked="checked"
-                           <!-- END IF -->
-                           >
-                           ${STR_ALL_WORDS_TOGETHER}
+                           <input name="logic" type="radio" value="1" <!-- IF '${LOGIC}' == 1 -->checked="checked"<!-- END IF -->> ${STR_ALL_WORDS_TOGETHER}
                         </p>
                      </td>
                      <td>&nbsp;</td>

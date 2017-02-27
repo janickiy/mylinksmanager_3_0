@@ -163,6 +163,9 @@ $language["str"]["current_password"] = "Текущий пароль";
 $language["str"]["new_password"] =  "Пароль";
 $language["str"]["new_password_again"] = "Повтор пароля";
 $language["str"]["identified_following_errors"] = "Выявлены следующие ошибки";
+$language["str"]["add_subcategory"] = "Добавить подкатегорию";
+$language["str"]["remove"] = "Удалить";
+$language["str"]["edit"] = "Редактировать";
 
 
 $language["str"]["help"] = '<h2 align="left">Требование</h2>

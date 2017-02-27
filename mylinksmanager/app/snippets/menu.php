@@ -16,7 +16,7 @@ $tpl->assign('MENU_INDEX_TITLE', core::getLanguage('menu', 'index_title'));
 $tpl->assign('MENU_INDEX', core::getLanguage('menu', 'index'));
 
 $tpl->assign('MENU_ADDURL_TITLE', core::getLanguage('menu', 'addurl_title'));
-$tpl->assign('MENU_ADDURL', core::getLanguage('menu', 'menu_addurl'));
+$tpl->assign('MENU_ADDURL', core::getLanguage('menu', 'addurl'));
 
 $tpl->assign('MENU_CHECK_TITLE', core::getLanguage('menu', 'check_title'));
 $tpl->assign('MENU_CHECK', core::getLanguage('menu', 'check'));

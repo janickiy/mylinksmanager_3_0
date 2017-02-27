@@ -195,7 +195,7 @@ $tpl->assign('BUTTON', core::getLanguage('button', 'add'));
 //value
 $tpl->assign('HIDDEN_FIELD','');
 $tpl->assign('ACTION', $_SERVER['REQUEST_URI']);
-$tpl->assign('OPTION', ShowTree(0, 0));
+$tpl->assign('OPTION', Category::ShowTree(0, 0));
 $tpl->assign('NAME', Core_Array::getPost('name'));
 $tpl->assign('URL', Core_Array::getPost('url'));
 $tpl->assign('RECIPROCAL_LINK', Core_Array::getPost('reciprocal_link'));
