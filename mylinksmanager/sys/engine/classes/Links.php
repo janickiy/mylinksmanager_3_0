@@ -135,14 +135,28 @@ class Links
     public function getLinkInfo($id) {
         if (is_numeric($id)) {
             $query = "SELECT *,l.name AS name, l.description AS description,c.name AS catname FROM " . core::database()->getTableName('links') . " l
-            LEFT JOIN  " . core::database()->getTableName('catalog') . " c ON l.id_cat = c.id_cat WHERE id=" . $id;
+            LEFT JOIN  " . core::database()->getTableName('catalog') . " c ON l.cat_id = c.id WHERE l.id=" . $id;
             $result = core::database()->querySQL($query);
             return core::database()->getRow($result);
         }
     }
+
+    /**
+     * @param $id
+     * @param $status
+     * @return mixed
+     */
+    public function changeStatusLink($id, $status)
+    {
+        if (is_numeric($id) && $status) {
+            $query = "UPDATE " . core::database()->getTableName('links') . " SET status='" . $status . "' WHERE id=" . $id;
+            return core::database()->querySQL($query);
+        }
+    }
+
+    public function removeLink($id)
+    {
+
+    }
 }
-
-
-
-
 
