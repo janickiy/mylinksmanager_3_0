@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61876a4d-fdd0-4f91-9884-a1451e50dbd3" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\xampp\htdocs\site1.loc\www\mylinksmanager\mylinksmanager\app\controllers\controller_show_cy.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\site1.loc\www\mylinksmanager\mylinksmanager\app\controllers\controller_show_pr.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\site1.loc\www\mylinksmanager\mylinksmanager\app\models\model_show_cy.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\site1.loc\www\mylinksmanager\mylinksmanager\app\models\model_show_pr.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\site1.loc\www\mylinksmanager\mylinksmanager\app\views\show_cy_view.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\site1.loc\www\mylinksmanager\mylinksmanager\app\views\show_pr_view.php" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\site1.loc\www\mylinksmanager\mylinksmanager\templates\assets\show_cy.tpl" afterPath="" />
-      <change type="DELETED" beforePath="C:\xampp\htdocs\site1.loc\www\mylinksmanager\mylinksmanager\templates\assets\show_pr.tpl" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Links.php" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Links.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/index.tpl" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/index.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" afterPath="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_showcy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_showpr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_showcy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_showpr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/showcy.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/showcy_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/showpr.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/showpr_view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
@@ -144,7 +140,7 @@
       <file leaf-file-name="index_view.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37126437">
+            <state vertical-scroll-proportion="-1.4804598">
               <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
               <folding>
                 <marker date="1490372879618" expanded="true" signature="1864:1907" placeholder="SELECT * FRO..." />
@@ -782,7 +778,13 @@
       <option name="project" value="LOCAL" />
       <updated>1490367649614</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add files">
+      <created>1490372885951</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1490372885951</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1324,7 +1326,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37126437">
+        <state vertical-scroll-proportion="-1.4804598">
           <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
           <folding>
             <marker date="1490372879618" expanded="true" signature="1864:1907" placeholder="SELECT * FRO..." />
