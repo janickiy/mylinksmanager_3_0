@@ -10,12 +10,7 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
-class Model_password extends Model
+class Model_show_pr extends Model
 {
-    public function changePassword($password) {
-        $password = md5(trim($password));
 
-        $update = "UPDATE " . core::database()->getTableName('aut') . " SET password='" . $password . "'";
-        return core::database()->querySQL($update);
-    }
 }

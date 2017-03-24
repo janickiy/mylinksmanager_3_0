@@ -1,52 +1,40 @@
 <!-- INCLUDE header.tpl -->
-wwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
 <!-- BEGIN new_links -->
-<!-- BEGIN row -->
+<!-- BEGIN links_row -->
 <div class="link-block">
-    <div class="link-table col-md-12">
-        <div class="link-header">
-            <p>${HTMLCODE_BANNER} <a href="http://${URL}" target=_blank>${NAME}</a> - ${DESCRIPTION}</p>
-        </div>
-        <div class="link-left"></div>
-        <div class="link-right">
-            <p>${STR_ADDED}: ${TIME}<br />
-                ${STR_CATEGORY}: ${CATEGORY}<br />
-                ${STR_EMAIL}: ${EMAIL} </p>
-        </div>
-        <div class="link-footer">
-            <p style="text-align: right">
+    <div class="col-md-12">
+
+        <div class="well well-lg clearfix" id="link-{ID}">
+            <div class="col-xs-12 col-md-6 col-md-push-3">
+                <div>
+                    <p><a href="http://${URL}" target=_blank>${NAME}</a> - ${DESCRIPTION}<br />
+                    ${STR_ADDED}: ${TIME}<br />
+                    ${STR_CATEGORY}: ${CATEGORY}<br />
+                    ${STR_EMAIL}: ${EMAIL}
+                    </p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-3 col-md-pull-6">
+                <p>${HTMLCODE_BANNER}</p>
+            </div>
+            <div class="col-xs-6 col-md-6 col-md-push-3">
                 <!-- IF '${SHOW_PR}' == 'yes' -->
-                <iframe src="show_pr.php?url='${URL}" frameborder="0" scrolling="no" width="100" height="50"></iframe>
+                <iframe src="./?t=show_pr&url='${URL}" frameborder="0" scrolling="no" width="100" height="50"></iframe>
                 <!-- END IF -->
                 &nbsp;
                 <!-- IF '${SHOW_CY}' == 'yes' -->
-                <iframe src="show_cy.php?url='${url}" frameborder="0" scrolling="no" width="125" height="50"></iframe>
+                <iframe src="./?t=show_cy&url='${URL}" frameborder="0" scrolling="no" width="125" height="50"></iframe>
                 <!-- END IF -->
-            </p>
-            <div class="link-wrapper col-md-12">
-                <div class="link-row">
-                    <div class="link-col link-c50">
-                        <form action="${ACTION}" method="post">
-                            <input type=hidden name="id" value="${ID_LINK}">
-                            <button class="btn btn-primary" type="submit">${BUTTON_HANDCHECK}</button>
-                        </form>
-                    </div>
-                    <div class="link-col link-c50">
-                        <form action="index.php" method="post">
-                            <button class="btn btn-primary" type="submit">${BUTTON_AUTOCHECK}</button>
-                            <input type=hidden name="id_link" value="${ID_LINK}">
-                            <input type=hidden name="reciprocal_link" value="${RECIPROCAL_LINK}">
-                            <input type=hidden name="url" value="${URL}">
-                            <input type=hidden name="event" value="auto_check">
-                            <input type=hidden name="action" value="post">
-                        </form>
-                    </div>
-                </div>
+            </div>
+            <div class="col-xs-12 col-md-12">
+                <button class="btn btn-primary" type="button">${BUTTON_HANDCHECK}</button>
+                <button class="btn btn-primary" type="button">${BUTTON_AUTOCHECK}</button>
             </div>
         </div>
+
     </div>
 </div>
-<!-- END row -->
+<!-- END links_row -->
 <!-- IF '${MSG_NOTNEWLINKS}' != '' -->
 <div class="warning_msg" style="text-align: center;">${MSG_NOTNEWLINKS}</div>
 <!-- END IF -->

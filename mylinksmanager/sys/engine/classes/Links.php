@@ -75,7 +75,7 @@ class Links
 
         $numberlinks = $numberlinks + core::database()->getRecordCount($result);
 
-        $query = "SELECT * FROM   " . core::database()->getTableName('catalog') . "  WHERE parent_id=" . $parent_id;
+        $query = "SELECT * FROM  " . core::database()->getTableName('catalog') . "  WHERE parent_id=" . $parent_id;
         $result = core::database()->querySQL($query);
 
         if (core::database()->getRecordCount($result) > 0) {
@@ -95,14 +95,50 @@ class Links
      * @param $id_cat
      * @return mixed
      */
-    public static function ShowNumbersLinksSubCat($id_cat)
+    public static function ShowNumbersLinksSubCat($cat_id)
     {
-        $id_cat = core::database()->escape($id_cat);
+        $cat_id = core::database()->escape($cat_id);
 
-        $query = "SELECT * FROM " . core::database()->getTableName('links') . " WHERE id_cat = " . $id_cat . " AND status='show'";
+        $query = "SELECT * FROM " . core::database()->getTableName('links') . " WHERE cat_id = " . $cat_id . " AND status='show'";
         $result = core::database()->querySQL($query);
 
         return core::database()->getRecordCount($result);
+    }
+
+    /**
+     * @param $status
+     * @param $order
+     * @param $offset
+     * @param int $number
+     * @return mixed
+     */
+    public function getLinksList($status,$order,$offset,$number=10)
+    {
+        if (is_numeric($offset) && is_numeric($number)) {
+            $query = "SELECT *,c.name AS catname, l.description AS description, l.id AS id FROM " . core::database()->getTableName('links') . " l
+                      LEFT JOIN " . core::database()->getTableName('catalog') . " c ON c.id = l.cat_id
+                      WHERE l.status='" . $status ."'
+                      ORDER BY " . $order . "
+                      LIMIT " . $number . "
+                      OFFSET " . $offset . "";
+
+            $result = core::database()->querySQL($query);
+
+            return core::database()->getColumnArray($result);
+        }
+    }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function getLinkInfo($id) {
+        if (is_numeric($id)) {
+            $query = "SELECT *,l.name AS name, l.description AS description,c.name AS catname FROM " . core::database()->getTableName('links') . " l
+            LEFT JOIN  " . core::database()->getTableName('catalog') . " c ON l.id_cat = c.id_cat WHERE id=" . $id;
+            $result = core::database()->querySQL($query);
+            return core::database()->getRow($result);
+        }
     }
 }
 

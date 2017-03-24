@@ -166,7 +166,10 @@ $language["str"]["identified_following_errors"] = "Выявлены следую
 $language["str"]["add_subcategory"] = "Добавить подкатегорию";
 $language["str"]["remove"] = "Удалить";
 $language["str"]["edit"] = "Редактировать";
-
+$language["str"]["back"] = "Вернуться обратно";
+$language["str"]["added"] = "Добавлен";
+$language["str"]["cy_yandex"] = "тИЦ Яндекса";
+$language["str"]["pr_google"] = "PageRank Google";
 
 $language["str"]["help"] = '<h2 align="left">Требование</h2>
 <p align="justify">- Для корректной работы "My Links Manager" необходимо, чтобы на Вашем сервере был установлен PHP 5.1.2 или выше;<br />
@@ -375,11 +378,13 @@ $language["button"]["add"]  = "Добавить";
 $language["button"]["save"] = "Сохранить";
 $language["button"]["save_changes_in"] = "сохранить изменения в";
 
+$language["button"]["handcheck"] = "Проверить вручную";
+$language["button"]["autocheck"] = "Проверить автоматически";
+
 $language["msg"]["notfound"] = "По вашему запросу ничего не найдено!";
 $language["msg"]["link_added"] = "Ссылка добавлена";
 $language["msg"]["changes_added"] = "Изменения внесены";
 $language["msg"]["password_changed"] = "Пароль был изменен";
-
 
 //errors
 $language["error"]["wait_verification"] = "Этот сайт уже есть в каталоге!";

@@ -1,0 +1,1295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="61876a4d-fdd0-4f91-9884-a1451e50dbd3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_show_cy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_show_pr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_show_cy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_show_pr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/.idea/mylinksmanager.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/show_cy.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/show_cy_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/show_pr.tpl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/show_pr_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Links.php" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Links.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/ajax_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/ajax_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/blacklist.tpl" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/blacklist.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" afterPath="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/index.tpl" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/index.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_ajax.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_ajax.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_password.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_password.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" afterPath="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" />
+    </list>
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="mylinksmanager" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="ru.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/ru.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="163" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="407" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="en.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/en.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="294" column="20" selection-start-line="294" selection-start-column="20" selection-end-line="294" selection-end-column="21" />
+              <folding>
+                <marker date="1488528392864" expanded="true" signature="2127:2133" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="2152:2158" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="2201:2207" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="2221:2227" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="5189:5195" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="5211:5217" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="5311:5317" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="5334:5340" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="5343:5349" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="5366:5372" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="12923:13711" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="13770:14213" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="14318:15163" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="15100:15159" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="15183:15767" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="15297:15303" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="15820:16328" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="16267:16324" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="16391:17317" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="16392:16398" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="16414:16420" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="17177:17183" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="17379:18797" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="17831:18793" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="18868:19376" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="19378:19384" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="19436:20072" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="20524:20642" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="20569:20575" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="20633:20639" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="20857:20863" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="21899:21905" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="21940:22069" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="22003:22009" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="22059:22065" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="22706:22712" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="23045:23051" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="23494:23500" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="23509:23515" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="23551:23557" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="23569:23575" placeholder="..." />
+                <marker date="1488528392864" expanded="true" signature="23633:23639" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mlm.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Mlm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="762" column="7" selection-start-line="758" selection-start-column="3" selection-end-line="801" selection-end-column="5" />
+              <folding>
+                <marker date="1488207315813" expanded="true" signature="23577:23633" placeholder="..." />
+                <marker date="1488207315813" expanded="true" signature="24032:24107" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Links.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Links.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="115" column="5" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Category.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Category.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="253" column="1" selection-start-line="253" selection-start-column="1" selection-end-line="253" selection-end-column="1" />
+              <folding>
+                <marker date="1488207822298" expanded="true" signature="626:729" placeholder="..." />
+                <marker date="1488207822298" expanded="true" signature="960:1041" placeholder="..." />
+                <marker date="1488207822298" expanded="true" signature="2094:2196" placeholder="..." />
+                <marker date="1488207822298" expanded="true" signature="2427:2507" placeholder="..." />
+                <marker date="1488207822298" expanded="true" signature="3556:3687" placeholder="..." />
+                <marker date="1488207822298" expanded="true" signature="4542:4630" placeholder="..." />
+                <marker date="1488207822298" expanded="true" signature="5287:5389" placeholder="..." />
+                <marker date="1488207822298" expanded="true" signature="5287:5421" placeholder="..." />
+                <marker date="1488207822298" expanded="true" signature="7500:7580" placeholder="..." />
+                <marker date="1488207822298" expanded="true" signature="7500:7587" placeholder="..." />
+                <marker date="1488207822298" expanded="true" signature="8761:8864" placeholder="..." />
+                <marker date="1488207822298" expanded="true" signature="9222:9328" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajax_view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/ajax_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/index.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3" column="12" selection-start-line="2" selection-start-column="0" selection-end-line="10" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blacklist.tpl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/blacklist.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9954076">
+              <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model_ajax.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_ajax.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="28" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="controller_ajax.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_ajax.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>interface_settings</find>
+      <find>language</find>
+      <find>CatalogTree</find>
+      <find>ShowCategoryList</find>
+      <find>menu_addurl</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="janickiy &lt;janickiy@mail.ru&gt;" />
+        <option value="janickiy@mail.ru" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/model.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/controller.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/sys/core/core.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/header.tpl" />
+        <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Auth.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/snippets/top.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/snippets/footer.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/help_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/footer.tpl" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/index_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/page403_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/page404_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/page500_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/password_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/editcategory_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/edit_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/design_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/check_links_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/categories_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/blacklist_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/addcategory_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page500.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page404.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page403.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_help.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_faq.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/faq.tpl" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/help.tpl" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/footer.tpl" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/header.tpl" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/help_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/faq_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_settings.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_settings.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/settings_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/index.tpl" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/snippets/menu.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/addlink_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Mlm.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Category.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_ajax.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_ajax.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Links.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/index.tpl" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/ajax_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/blacklist.tpl" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="classes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snippets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mylinksmanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="FullScreen" value="false" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\site1.loc\www\mylinksmanager\mylinksmanager\app\controllers" />
+      <recent name="C:\xampp\htdocs\site1.loc\www\mylinksmanager\mylinksmanager\app\models" />
+      <recent name="C:\xampp\htdocs\site1.loc\www\mylinksmanager\mylinksmanager\app\views\admin" />
+      <recent name="C:\xampp\htdocs\site1.loc\www\mylinksmanager\mylinksmanager\sys\engine\classes" />
+      <recent name="C:\xampp\htdocs\site1.loc\www\mylinksmanager\mylinksmanager\templates\assets" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61876a4d-fdd0-4f91-9884-a1451e50dbd3" name="Default" comment="" />
+      <created>1486721820680</created>
+      <option name="number" value="Default" />
+      <updated>1486721820680</updated>
+      <workItem from="1486721822272" duration="7565000" />
+      <workItem from="1487580411735" duration="7943000" />
+      <workItem from="1487601808754" duration="1342000" />
+      <workItem from="1487687113452" duration="5569000" />
+      <workItem from="1487749861621" duration="22685000" />
+      <workItem from="1488181970094" duration="651000" />
+      <workItem from="1488195686522" duration="7682000" />
+      <workItem from="1488453858368" duration="16000" />
+      <workItem from="1488528114038" duration="2076000" />
+    </task>
+    <task id="LOCAL-00001" summary="add files">
+      <created>1486722105200</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1486722105200</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add files">
+      <created>1486734412466</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1486734412466</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add files">
+      <created>1486739314733</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1486739314733</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add methods adn view">
+      <created>1487587762628</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1487587762628</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add files">
+      <created>1487692614205</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1487692614205</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add files">
+      <created>1487692656498</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1487692656498</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add files">
+      <created>1487755680530</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1487755680530</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add files">
+      <created>1487777271031</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1487777271031</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add files">
+      <created>1487780397736</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1487780397736</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add files">
+      <created>1488207840127</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1488207840127</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="55529000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22761194" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936078" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32936078" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21695095" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add methods adn view" />
+    <MESSAGE value="add files" />
+    <option name="LAST_COMMIT_MESSAGE" value="add files" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/mylinksmanager/app/snippets/menu.php</url>
+          <line>12</line>
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/DB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="126" column="25" selection-start-line="126" selection-start-column="20" selection-end-line="126" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/edit_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="71" selection-start-line="18" selection-start-column="71" selection-end-line="18" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/check_links_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/addcategory_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/blacklist_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/categories_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/index_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/ExceptionSQL.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/page403_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page500.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page404.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page403.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/footer.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/page500.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/page404.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_faq.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/design_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="95" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="99" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/core/core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_help.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/password_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="66" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/faq.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="26" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/help.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/footer.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/faq_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="29" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/help_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="0" selection-end-line="23" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/settings_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="134" column="90" selection-start-line="134" selection-start-column="90" selection-end-line="134" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="130" selection-start-line="58" selection-start-column="130" selection-end-line="58" selection-end-column="130" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/header.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="80" column="165" selection-start-line="80" selection-start-column="158" selection-end-line="80" selection-end-column="169" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/snippets/top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/snippets/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/addlink_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="190" column="81" selection-start-line="190" selection-start-column="37" selection-end-line="190" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/DB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="126" column="25" selection-start-line="126" selection-start-column="20" selection-end-line="126" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Mlm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="762" column="7" selection-start-line="758" selection-start-column="3" selection-end-line="801" selection-end-column="5" />
+          <folding>
+            <marker date="1488207315813" expanded="true" signature="23577:23633" placeholder="..." />
+            <marker date="1488207315813" expanded="true" signature="24032:24107" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="253" column="1" selection-start-line="253" selection-start-column="1" selection-end-line="253" selection-end-column="1" />
+          <folding>
+            <marker date="1488207822298" expanded="true" signature="626:729" placeholder="..." />
+            <marker date="1488207822298" expanded="true" signature="960:1041" placeholder="..." />
+            <marker date="1488207822298" expanded="true" signature="2094:2196" placeholder="..." />
+            <marker date="1488207822298" expanded="true" signature="2427:2507" placeholder="..." />
+            <marker date="1488207822298" expanded="true" signature="3556:3687" placeholder="..." />
+            <marker date="1488207822298" expanded="true" signature="4542:4630" placeholder="..." />
+            <marker date="1488207822298" expanded="true" signature="5287:5389" placeholder="..." />
+            <marker date="1488207822298" expanded="true" signature="5287:5421" placeholder="..." />
+            <marker date="1488207822298" expanded="true" signature="7500:7580" placeholder="..." />
+            <marker date="1488207822298" expanded="true" signature="7500:7587" placeholder="..." />
+            <marker date="1488207822298" expanded="true" signature="8761:8864" placeholder="..." />
+            <marker date="1488207822298" expanded="true" signature="9222:9328" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/ru.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="163" column="22" selection-start-line="0" selection-start-column="0" selection-end-line="407" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/en.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="294" column="20" selection-start-line="294" selection-start-column="20" selection-end-line="294" selection-end-column="21" />
+          <folding>
+            <marker date="1488528392864" expanded="true" signature="2127:2133" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="2152:2158" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="2201:2207" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="2221:2227" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="5189:5195" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="5211:5217" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="5311:5317" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="5334:5340" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="5343:5349" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="5366:5372" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="12923:13711" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="13770:14213" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="14318:15163" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="15100:15159" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="15183:15767" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="15297:15303" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="15820:16328" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="16267:16324" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="16391:17317" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="16392:16398" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="16414:16420" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="17177:17183" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="17379:18797" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="17831:18793" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="18868:19376" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="19378:19384" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="19436:20072" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="20524:20642" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="20569:20575" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="20633:20639" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="20857:20863" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="21899:21905" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="21940:22069" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="22003:22009" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="22059:22065" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="22706:22712" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="23045:23051" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="23494:23500" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="23509:23515" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="23551:23557" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="23569:23575" placeholder="..." />
+            <marker date="1488528392864" expanded="true" signature="23633:23639" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="28" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Links.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="5" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="12" selection-start-line="2" selection-start-column="0" selection-end-line="10" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/ajax_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/blacklist.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9954076">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
