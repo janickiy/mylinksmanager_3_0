@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>${METATITLE}</title>
+<title>${TITLE}</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta content="${METADESCRIPTION}" name=description>
 <meta content="${METAKEYWORDS}" name=keywords>

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 /********************************************
  * My Links Manager 3.0.0 alfa
@@ -10,10 +10,7 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
-class Controller_faq extends Controller
+class Model_addurl extends Model
 {
-	public function action_index()
-	{	
-		$this->view->generate('faq_view.php');
-	}
+
 }

@@ -1,6 +1,6 @@
 <?php
 $ConfigDB["host"]  = "localhost";
-$ConfigDB["name"] = "mylinksmanager3";
+$ConfigDB["name"] = "mylinksmanager_3";
 $ConfigDB["user"] = "root"; // login
 $ConfigDB["passwd"] = ""; // password
 $ConfigDB["prefix"] = "lm_"; // prefix
