@@ -44,7 +44,7 @@ if (Core_Array::getRequest('action')){
     }
 
     // Cut out all unnecessary tags and javascripts from HTML code of banner
-    $htmlcode_banner  = Mlm::cuttags($htmlcode_banner);
+    $htmlcode_banner  = Helper::cuttags($htmlcode_banner);
 
     // Check catalogue already has adding link, if it has then print error
     if (!empty($url)) {
@@ -68,38 +68,38 @@ if (Core_Array::getRequest('action')){
     }
 
     // Check the url on valid
-    if (!empty($url) && Mlm::checkUrl($url)){
+    if (!empty($url) && Helper::checkUrl($url)){
         $errors[] = core::getLanguage('error', 'wrong_url');
     }
 
     // Check on, whether the adding site on the same hosting as catalogue is located
-    if ((!empty($url) && core::getSetting('common_host') == "yes") && Mlm::commonHost($url)) {
+    if ((!empty($url) && core::getSetting('common_host') == "yes") && Helper::commonHost($url)) {
         $errors[] = core::getLanguage('error', 'same_hosting');
     }
 
     // Check email on valid
-    if (!empty($email) && Mlm::checkEmail($email)){
+    if (!empty($email) && Helper::checkEmail($email)){
         $errors[] = core::getLanguage('error', 'wrong_email');
     }
 
     // Check brief description of site on spaces
-    if (!empty($description) && Mlm::lengthDescription($description)){
+    if (!empty($description) && Helper::lengthDescription($description)){
         $error[] = core::getLanguage('error', 'short_desc_without_spaces');
     }
 
     // Check full description of site on a quantity of characters
-    if (!empty($full_description) && Mlm::lengthFullDescription($full_description)){
+    if (!empty($full_description) && Helper::lengthFullDescription($full_description)){
         $errors[] = core::getLanguage('error', 'full_desc_without_spaces');
     }
 
     // Check HTML code of banner on valid
     if (!empty($htmlcode_banner)){
         // check htmlcode of banner
-        if (Mlm::checkHtmlcodeBanner($htmlcode_banner)) {
+        if (Helper::checkHtmlcodeBanner($htmlcode_banner)) {
             $errors[] = core::getLanguage('error', 'wrong_html_banner');
         } else {
             // check image size of banner
-            if (Mlm::checkSizeBanner($htmlcode_banner)) {
+            if (Helper::checkSizeBanner($htmlcode_banner)) {
                 $errors[] = core::getLanguage('error', 'size_banner');
             }
         }
@@ -141,7 +141,7 @@ if (Core_Array::getRequest('action')){
         $fields['htmlcode_banner'] = $fields;
         $fields['cat_id'] = $cat_id;
         $fields['status'] = 'show';
-        $fields['token'] = Mlm::getRandomCode();
+        $fields['token'] = Helper::getRandomCode();
         $fields['check_link'] = Core_Array::getPost('check_link') ? 'yes':'no';
         $fields['count'] = 0;
         $fields['number_check'] = 0;

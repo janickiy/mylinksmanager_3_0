@@ -92,8 +92,7 @@ $language['menu']['black'] = 'Чёрный список';
 $language['menu']['password_title'] = 'Пароль';
 $language['menu']['password'] = 'Пароль';
 
-$language['menu']['design_title'] = 'Правка дизайна';
-$language['menu']['design'] = 'Дизайн';
+
 
 $language["str"]["action"] = "Действия";
 $language["str"]["required_fields"] = "Обязательные поля";
@@ -110,7 +109,7 @@ $language["str"]["brief_description"] = "Краткое описание сай�
 $language["str"]["to_check_this_link"] = "Проводить проверку для этой ссылки";
 $language["str"]["full_description"] = "Полное описание сайта";
 $language["str"]["html_code_of_banner"] = "HTML-код баннера";
-$language["str"]["logo"] = "© 2011-2017 <a href=\"http://janicky.com/\">Бесплатный скрипт обмена ссылками My Links Manager</a>";
+$language["str"]["logo"] = "© 2011-2018 <a href=\"http://janicky.com/\">Бесплатный скрипт обмена ссылками My Links Manager</a>";
 $language["str"]["author"] = "Яницкий Александр";
 $language["str"]["website"] = "Веб сайт";
 $language["str"]["helppage"] = "Помощь";
@@ -200,21 +199,22 @@ $language["str"]["html_code_banner"] = "HTML код баннера";
 $language["str"]["script_link_catalog"] =  "Скрипт каталога ссылок My Links Manager";
 
 $language["str"]["go_back"] = "Вернуться в каталог";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$language["str"]["keywords_searchform"] = "Ключевые слова";
+$language["str"]["keywords"] = "Ключевые слова";
+$language["str"]["search_in_catalog_searchform"] = "Искать в каталоге";
+$language["str"]["meeting_of_keywords_searchform"] = "Встреча ключевых слов";
+$language["str"]["at_least_once"] = "хотя бы один раз";
+$language["str"]["it_doesnt_matter_searchform"] = "Не имеет значение";
+$language["str"]["all_words_together"] = "все слова одновременно";
+$language["str"]["add_category"] = "Добавить категорию";
+$language["str"]["add_subcategory"] = "Добавить подкатегорию";
+$language["str"]["no"] = "Нет";
+$language["str"]["category_name"] =  "Название";
+$language["str"]["category_description"] = "Описание в META";
+$language["str"]["category_keywords"] = "Ключевые слова в META";
+$language["str"]["category"] = "Категория";
+$language["str"]["category_image"] = "Картинка (не более 100 кб)";
+$language["str"]["remove_pic"] = "Удалить картинку";
 
 
 
@@ -416,6 +416,7 @@ $language["str"]["faq"] = '<h2 align=left>FAQ по скрипту</h2>
 
 $language["button"]["apply"] = "Применить";
 $language["button"]["add"]  = "Добавить";
+$language["button"]["edit"]  = "Редактировать";
 $language["button"]["save"] = "Сохранить";
 $language["button"]["save_changes_in"] = "сохранить изменения в";
 $language["button"]["handcheck"] = "Проверить вручную";
@@ -423,6 +424,7 @@ $language["button"]["autocheck"] = "Проверить автоматическ�
 $language["button"]["remove"] = "Удалить";
 $language["button"]["add_to_blacklist"] = "Добавить в черный спискок";
 $language["button"]["reset"] = "Сброс";
+$language["button"]["find"] = "найти";
 
 
 $language["msg"]["notfound"] = "По вашему запросу ничего не найдено!";
@@ -452,3 +454,7 @@ $language["error"]["fill_again_password"] = "Введите повторно п�
 $language["error"]["passwords_dont_match"] = "Пароли не совпадают!";
 $language["error"]["wrong_password"] = "Текущий пароль не верен!";
 $language["error"]["change_password"] = "Пароль не был сменён!";
+
+
+$language["error"]["fill_cat_name"] = "Введите название категории!";
+$language["error"]["filesize"] = "Размер файла больше %LIMIT% кб!";

@@ -1,5 +1,5 @@
 <!-- INCLUDE header.tpl -->
-<p> + <a href="addcategory.php?id_catalog=0&id_parent=0">${STR_ADD_CATEGORY}</a></p>
+<p> + <a href="./?a=admin&t=addcategory&catalog_id=0&parent_id=0">${STR_ADD_CATEGORY}</a></p>
 <div class="catalogtree">
 ${CATALOGTREE}
 </div>

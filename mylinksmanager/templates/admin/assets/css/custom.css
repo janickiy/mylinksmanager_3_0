@@ -196,10 +196,6 @@ height: 60px;
 font-size: 30px;
 font-weight: 700;
 }
-.navbar-brand {
-background-image: url("../../images/logo.png");
-background-repeat: no-repeat;
-}
 
 .active-menu {
     background-color:#C90000!important;
@@ -295,6 +291,11 @@ background-repeat: no-repeat;
 	background:#4D4D4D;
 	border-bottom:none;
 	
+}
+
+.navbar-brand {
+	background-image: url("../img/logo.png");
+	background-repeat: no-repeat;
 }
 
 

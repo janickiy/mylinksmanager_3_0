@@ -35,7 +35,7 @@ if (Core_Array::getRequest('action')){
     $fields['number_html_chars'] = (int)trim(Core_Array::getPost('number_html_chars'));
     $fields['order_views'] = (int)Core_Array::getPost('order_views');
     $fields['order_links'] = (int)Core_Array::getPost('order_links');
-    $fields['url'] = Mlm::convertUrl(trim(strtolower(Core_Array::getPost('url'))));
+    $fields['url'] = Helper::convertUrl(trim(strtolower(Core_Array::getPost('url'))));
     $fields['email'] = trim(Core_Array::getPost('email'));
     $fields['new_links_notification'] = Core_Array::getPost('new_links_notification') == "on" ? "yes" : "no";
     $fields['rules'] = trim(Core_Array::getPost('rules'));
@@ -63,8 +63,6 @@ if (Core_Array::getRequest('action')){
     $fields['check_interval'] = (int)trim(Core_Array::getPost('check_interval'));
     $fields['number_check'] = (int)trim(Core_Array::getPost('number_check'));
     $fields['request_captcha'] = Core_Array::getPost('request_captcha') == "on" ? "yes" : "no";
-    $fields['show_cy'] = Core_Array::getPost('show_cy') == "on" ? "yes" : "no";
-    $fields['show_pr'] = Core_Array::getPost('show_pr') == "on" ? "yes" : "no";
     $fields['check_url'] = Core_Array::getPost('check_url') == "on" ? "yes" : "no";
 
     if ($data->updateSettings($fields))
@@ -98,8 +96,6 @@ $tpl->assign("STR_BY_NUMBER", core::getLanguage('str', 'by_number'));
 $tpl->assign("STR_ORDER_LINKS", core::getLanguage('str', 'order_links'));
 $tpl->assign("STR_BY_INCREACE", core::getLanguage('str', 'by_increace'));
 $tpl->assign("STR_BY_DECREASE", core::getLanguage('str', 'by_decrease'));
-$tpl->assign("STR_SHOW_CY", core::getLanguage('str', 'show_cy'));
-$tpl->assign("STR_SHOW_PR", core::getLanguage('str', 'show_pr'));
 $tpl->assign("STR_CATALOG_URL", core::getLanguage('str', 'catalog_url'));
 $tpl->assign("STR_ADMIN_EMAIL", core::getLanguage('str', 'admin_email'));
 $tpl->assign("STR_CATALOG_RULE", core::getLanguage('str', 'catalog_rule'));
@@ -141,8 +137,6 @@ $tpl->assign("ACTION", $_SERVER['REQUEST_URI']);
 $tpl->assign("LANGUAGE_OPTION", core::getSetting('language'));
 $tpl->assign("ORDER_VIEWS", core::getSetting('order_views'));
 $tpl->assign("ORDER_LINKS", core::getSetting('order_links'));
-$tpl->assign("SHOW_CY", core::getSetting('show_cy'));
-$tpl->assign("SHOW_PR", core::getSetting('show_pr'));
 $tpl->assign("ALL_NUMBER_LINK", core::getSetting('all_number_links'));
 $tpl->assign("ALL_NUMBER_NEW", core::getSetting('all_number_new'));
 $tpl->assign("COLUMNS_NUMBER", core::getSetting('columns_number'));

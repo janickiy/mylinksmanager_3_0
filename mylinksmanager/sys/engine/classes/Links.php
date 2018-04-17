@@ -16,7 +16,8 @@ class Links
      * @param $url
      * @return bool
      */
-    public static function CheckExistsLink ($url) {
+    public static function CheckExistsLink($url)
+    {
         if (!empty($url)) {
             $url = core::database()->escape($url);
             $query = "SELECT * FROM  " . core::database()->getTableName('links') . "  WHERE url RLIKE '^(www\\.)?" . $url . "$' AND status = 'show' OR
@@ -34,12 +35,13 @@ class Links
      * @param $url
      * @return bool
      */
-    public static function CheckWaitVerification ($url) {
+    public static function CheckWaitVerification($url)
+    {
         if (!empty($url)) {
             $url = core::database()->escape($url);
 
             $query = "SELECT * FROM " . core::database()->getTableName('links') . " WHERE url RLIKE '^(www\\.)?" . $url . "$' AND status = 'new' OR
-												url RLIKE '^(www\\.)?". $url . "$' AND status = 'hide'";
+												url RLIKE '^(www\\.)?" . $url . "$' AND status = 'hide'";
             $result = core::database()->querySQL($query);
 
             if (core::database()->getRecordCount($result) == 0)
@@ -79,8 +81,7 @@ class Links
         $result = core::database()->querySQL($query);
 
         if (core::database()->getRecordCount($result) > 0) {
-            while($row = core::database()->getRow($result))
-            {
+            while ($row = core::database()->getRow($result)) {
                 $result2 = core::database()->querySQL("SELECT * FROM " . core::database()->getTableName('links') . " WHERE id = " . $row["id"] . " AND status = 'show'");
                 $numberlinks = $numberlinks + core::database()->getRecordCount($result2);
 
@@ -112,12 +113,12 @@ class Links
      * @param int $number
      * @return mixed
      */
-    public function getLinksList($status,$order,$offset,$number=10)
+    public function getLinksList($status, $order, $offset, $number = 10)
     {
         if (is_numeric($offset) && is_numeric($number)) {
             $query = "SELECT *,c.name AS catname, l.description AS description, l.id AS id FROM " . core::database()->getTableName('links') . " l
                       LEFT JOIN " . core::database()->getTableName('catalog') . " c ON c.id = l.cat_id
-                      WHERE l.status='" . $status ."'
+                      WHERE l.status='" . $status . "'
                       ORDER BY " . $order . "
                       LIMIT " . $number . "
                       OFFSET " . $offset . "";
@@ -132,7 +133,8 @@ class Links
      * @param $id
      * @return mixed
      */
-    public function getLinkInfo($id) {
+    public function getLinkInfo($id)
+    {
         if (is_numeric($id)) {
             $query = "SELECT *,l.name AS name, l.description AS description,c.name AS catname FROM " . core::database()->getTableName('links') . " l
             LEFT JOIN  " . core::database()->getTableName('catalog') . " c ON l.cat_id = c.id WHERE l.id=" . $id;
@@ -157,6 +159,157 @@ class Links
     public function removeLink($id)
     {
 
+    }
+
+    /**
+     * @param $ParentID
+     * @param $lvl
+     * @return string
+     */
+    public static function ShowCatalogList($ParentID, $lvl)
+    {
+        global $lvl;
+        global $option;
+        $lvl++;
+
+        $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE parent_id='$ParentID'";
+        $result = core::database()->querySQL($query);
+
+        if (core::database()->getRecordCount($result) > 0) {
+
+            while ($row = core::database()->getRow($result)) {
+                $ID = $row["id_cat"];
+                $selected = $_REQUEST['catalog_id'] == $row['id'] ? ' selected="selected"' : "";
+
+                $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE parent_id='$ID'";
+                $result2 = core::database()->querySQL($query);
+
+                $indent = '';
+
+                for ($c = 1; $c < $lvl; $c++) $indent .= '-';
+
+                if (core::database()->getRecordCount($result2) == 0)
+                    $option .= "<option value=" . $row['id'] . " " . $selected . ">" . $indent . " " . $row["name"] . "</option>\r\n";
+                else
+                    $option .= "<option value=" . $row['id'] . " " . $selected . ">" . $indent . " " . $row["name"] . "</option>\r\n";
+
+                self::ShowCatalogList($ID, $lvl);
+
+                $lvl--;
+            }
+        }
+
+        return $option;
+    }
+
+    /**
+     * @param $ParentID
+     * @param $lvl
+     * @return string
+     */
+    public static function CatalogTree($ParentID, $lvl)
+    {
+        global $lvl;
+        global $treelist;
+        $lvl++;
+
+        $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE parent_id='$ParentID' ORDER BY name";
+        $result = core::database()->querySQL($query);
+
+        if (core::database()->getRecordCount($result) > 0) {
+
+            if ($lvl == 1)
+                $lf_menu = 'class="lf_menu"';
+            else
+                $lf_menu = '';
+
+            $treelist .= "<ul $lf_menu>\n";
+
+            while ($row = core::database()->getRow($result)) {
+
+                $ID = $row["id"];
+
+                if ($_GET['id'] == $ID)
+                    $ul = "style=\"display: block;\"";
+                else
+                    $ul = "";
+
+                if ($row['id_parent'] == 0) {
+                    $div_class = "menu_1";
+                    $name = '<span>' . $row["name"] . '</span> <a title="' . core::getLanguage('str', 'add_subcategory') . '" href="./?a=admin&t=addcategory&catalog_id=' . $row['id'] . '&parent_id=' . $row['id'] . '"><span class="fa fa-plus"></span> <a title="' . core::getLanguage('str', 'edit') . '" href="./?a=admin&t=editcategory&id=' . $row['id'] . '"><span class="fa fa-pencil"></span> <a title="' .core::getLanguage('str', 'remove') . '" href="./?a=admin&t=delcategory&id=' . $row['id'] . '"><span class="fa fa-trash-o"></span></a>';
+                } else {
+                    if ($_GET['id'] == $ID)
+                        $li = "class=\"active\"";
+                    else
+                        $li = '';
+                    $div_class = "menu_1_1";
+                    $name = '' . $row["name"] . ' <a title="' . core::getLanguage('str', 'add_subcategory') . '" href="./?a=admin&t=addcategory&catalog_id=' . $row['id'] . '&parent_id=' . $row['id'] . '"><span class="fa fa-plus"></span> <a title="' . core::getLanguage('str', 'edit') . '" href="./?a=admin&t=editcategory&id=' . $row['id'] . '"><span class="fa fa-pencil"></span> <a title="' . core::getLanguage('str', 'remove') . '" href="./?a=admin&t=delcategory&id=' . $row['id'] . '"><span class="fa fa-trash-o"></span></a>';
+                }
+
+                $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE parent_id='$ID'";
+                $result2 = core::database()->querySQL($query);
+
+                if (core::database()->getRecordCount($result2) > 0) {
+                    $treelist .= "<li $li>\n";
+                    $treelist .= "<div class=$div_class><div><div><div>$name</div></div></div></div>\n";
+                } else {
+                    if ($row['parent_id'] == 0) {
+                        $div_class = "menu_2";
+                    } else {
+                        $div_class = "";
+                    }
+
+                    $treelist .= "<li $li>\n";
+                    $treelist .= "<div class=$div_class><div ><div><div>$name</div></div></div></div>\n";
+                }
+
+                self::CatalogTree($ID, $lvl);
+                $lvl--;
+            }
+
+            $treelist .= "</ul>\n";
+        }
+
+        return $treelist;
+
+    }
+
+    /**
+     * @param $ParentID
+     * @param $lvl
+     * @return string
+     */
+    public static function ShowCategoryList($ParentID, $lvl)
+    {
+        global $lvl;
+        global $option;
+        $lvl++;
+
+        $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE parent_id='$ParentID'";
+        $result = core::database()->querySQL($query);
+
+        if(core::database()->getRecordCount($result) > 0) {
+            while($row = core::database()->getRow($result))
+            {
+                $ID = $row["id"];
+
+                $indent = '';
+                for ($c = 1; $c < $lvl; $c++) $indent .= '-';
+
+                $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE parent_id=" . $row['id'] . " AND id=" . $_REQUEST['id'];
+                $result2 = core::database()->querySQL($query);
+
+                $selected = core::database()->getRecordCount($result2) > 0 ? ' selected="selected"' : "";
+
+                if ($row['id'] != $_REQUEST['id']) $option .= "<option value=" . $row['id'] . " " . $selected . ">" . $indent . " " . $row["name"] . "</option>\r\n";
+
+                self::ShowCategoryList($ID, $lvl);
+
+                $lvl--;
+            }
+        }
+
+        return $option;
     }
 }
 

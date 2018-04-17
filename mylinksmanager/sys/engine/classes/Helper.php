@@ -10,7 +10,7 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
-class Mlm
+class Helper
 {
     /**
      * @return array|false|string
@@ -756,50 +756,7 @@ class Mlm
     }
 
 
-    /**
-     * @param $ParentID
-     * @param $lvl
-     * @return string
-     */
-    public static function ShowCategoryList($ParentID, $lvl)
-    {
-        global $lvl;
-        global $dbh;
-        $lvl++;
-        global $option;
-        global $_REQUEST;
 
-        $query = "SELECT * FROM ".DB_CATALOG." WHERE id_parent='$ParentID'";
-        $result = $dbh->query($query);
-
-        if(!$result) { throw new ExceptionMySQL($dbh->error,$query,"Error executing SQL query!"); }
-
-        if($result->num_rows > 0){
-            while($row = $result->fetch_array())
-            {
-                $ID = $row["id_cat"];
-
-                $indent = '';
-                for($c = 1; $c < $lvl; $c++) $indent .= '-';
-
-                $query = "SELECT * FROM ".DB_CATALOG." WHERE id_parent=".$row['id_cat']." AND id_cat=".$_REQUEST['id_cat'];
-                $result2 = $dbh->query($query);
-
-                if(!$result2) throw new ExceptionMySQL($dbh->error,$query,"Error executing SQL query!");
-
-                $selected = $result2->num_rows > 0 ? ' selected="selected"' : "";
-
-                if($row['id_cat'] != $_REQUEST['id_cat']) $option .= "<option value=".$row['id_cat']." ".$selected.">".$indent." ".$row["name"]."</option>\r\n";
-
-                $result2->close();
-
-                ShowCategoryList($ID, $lvl);
-                $lvl--;
-            }
-        }
-
-        return $option;
-    }
 
     /**
      * @param $data

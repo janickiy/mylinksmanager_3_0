@@ -12,5 +12,12 @@ defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
 class Model_addcategory extends Model
 {
-
+    /**
+     * @param $fields
+     * @return mixed
+     */
+    public function addCategory($fields)
+    {
+        return core::database()->insert($fields, core::database()->getTableName('catalog'));
+    }
 }

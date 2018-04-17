@@ -18,6 +18,14 @@ $tpl->assign('MENU_INDEX', core::getLanguage('menu', 'index'));
 $tpl->assign('MENU_ADDURL_TITLE', core::getLanguage('menu', 'addurl_title'));
 $tpl->assign('MENU_ADDURL', core::getLanguage('menu', 'addurl'));
 
+
+
+
+$tpl->assign('MENU_CATEGORIES_TITLE}', core::getLanguage('menu', 'categories_title'));
+$tpl->assign('MENU_CATEGORIES', core::getLanguage('menu', 'categories'));
+
+
+
 $tpl->assign('MENU_CHECK_TITLE', core::getLanguage('menu', 'check_title'));
 $tpl->assign('MENU_CHECK', core::getLanguage('menu', 'check'));
 
@@ -33,5 +41,3 @@ $tpl->assign('MENU_BLACK', core::getLanguage('menu', 'black'));
 $tpl->assign('MENU_PASSWORD_TITLE', core::getLanguage('menu', 'password_title'));
 $tpl->assign('MENU_PASSWORD', core::getLanguage('menu', 'password'));
 
-$tpl->assign('MENU_DESIGN_TITLE', core::getLanguage('menu', 'design_title'));
-$tpl->assign('MENU_DESIGN', core::getLanguage('menu', 'design'));

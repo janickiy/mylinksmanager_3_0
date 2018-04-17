@@ -44,16 +44,17 @@
                      ${STR_REMOVE_PIC} 
                   </label>
                </div>
-               <!-- IF '${ID_PARENT}' != '' -->
-               <input type=hidden name="id_parent" value="${ID_PARENT}">
+               <!-- IF '${PARENT_ID}' != '' -->
+               <input type=hidden name="parent_id" value="${PARENT_ID}">
                <!-- END IF -->
-               <!-- IF '${ID_CAT}' != '' -->
-               <input type=hidden name="id_cat" value="${ID_CAT}">
+               <!-- IF '${ID}' != '' -->
+               <input type=hidden name="id" value="${ID}">
                <!-- END IF -->
                <input type=hidden name="action" value="post">
                <button class="btn btn-primary" type="submit">${BUTTON}</button>
-         </div>
+
          </form>
+      </div>
       </div>
    </div>
 </div>

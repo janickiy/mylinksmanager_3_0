@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteRule ^admin(\/)?$ index.php?a=admin [L]
+RewriteRule ^admin/page_([^/]+)/?$ index.php?a=admin&page=$1 [L]
+RewriteRule ^admin/([^/\.]+)/?$ index.php?a=admin&t=$1 [L]
+RewriteRule ^admin/([^/\.]+)/page_([^/]+)/?$ index.php?a=admin&t=$1&page=$2 [L]
+RewriteRule ^admin/edit/id_([^/]+)/?$ index.php?a=admin&t=edit&id=$1 [L]
+RewriteRule ^admin/([^/\.]+)/edit_([^/]+)/?$ index.php?a=admin&t=$1&edit=$2 [L]
+RewriteRule ^admin/([^/\.]+)/remove_([^/]+)/?$ index.php?a=admin&t=$1&action=remove&id=$2 [L]
+RewriteRule ^add(\/)?$ index.php?t=add [L]
+RewriteRule ^page_([^/]+)/?$ index.php?page=$1 [L]

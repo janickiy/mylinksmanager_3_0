@@ -15,7 +15,7 @@ core::requireEx('libs', "html_template/SeparateTemplate.php");
 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . core::getSetting('controller') . ".tpl");
 
 $url = "http://" . $_GET['url'];
-$cy = Mlm::cy_yandex($url);
+$cy = Helper::cy_yandex($url);
 
 $tpl->assign('STR_CY_YANDEX', core::getLanguage('str', 'cy_yandex'));
 $tpl->assign('PR', $cy);

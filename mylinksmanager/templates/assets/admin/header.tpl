@@ -97,9 +97,6 @@
 				<li>
 					<a <!-- IF '${ACTIVE_MENU}' == 'password' -->class="active-menu"<!-- END IF --> title="${MENU_PASSWORD_TITLE}" href="./?a=admin&t=password">${MENU_PASSWORD}</a>
 				</li>
-				<li>
-					<a <!-- IF '${ACTIVE_MENU}' == 'design' -->class="active-menu"<!-- END IF --> title="${MENU_DESIGN_TITLE}" href="./?a=admin&t=design">${MENU_DESIGN}</a>
-				</li>
 			</ul>
 		</div>
 	</nav>

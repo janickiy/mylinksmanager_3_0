@@ -50,14 +50,6 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="show_cy">${STR_SHOW_CY}</label>
-                <input type=checkbox name="show_cy" <!-- IF '${SHOW_CY}' == 'yes' -->checked="checked"<!-- END IF -->>
-              </div>
-              <div class="form-group">
-                <label for="show_pr">${STR_SHOW_PR}</label>
-                <input type=checkbox  name="show_pr" <!-- IF '${SHOW_PR}' == 'yes' -->checked="checked"<!-- END IF -->>
-              </div>
-              <div class="form-group">
                 <label for="url">${STR_CATALOG_URL}</label>
                 <input type="text" name="url" class="form-control" value="${URL}">
               </div>

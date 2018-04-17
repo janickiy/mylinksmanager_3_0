@@ -16,7 +16,7 @@ core::requireEx('libs', "html_template/SeparateTemplate.php");
 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . core::getSetting('controller') . ".tpl");
 
 $url = "http://" . $_GET['url'];
-$pr = Mlm::pr_google($url);
+$pr = Helper::pr_google($url);
 
 $tpl->assign('STR_PR_GOOGLE', core::getLanguage('str', 'pr_google'));
 $tpl->assign('PR', $pr);

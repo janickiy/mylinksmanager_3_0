@@ -74,8 +74,6 @@ class core
         }
     }
 
-
-
     /**
      * @param $engine
      * @param $data

@@ -19,6 +19,16 @@ $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "a
 $tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_categories'));
 $tpl->assign('TITLE', core::getLanguage('title', 'admin_categories'));
 
+include_once core::pathTo('extra', 'top.php');
+
+//menu
+include_once core::pathTo('extra', 'menu.php');
+
+$tpl->assign('STR_ADD_CATEGORY', core::getLanguage('str', 'add_category'));
+$tpl->assign('CATALOGTREE', Links::CatalogTree(0, 0));
+
+//footer
+include_once core::pathTo('extra', 'footer.php');
 
 //display content
 $tpl->display();

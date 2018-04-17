@@ -41,7 +41,7 @@ if (Core_Array::getPost('action')){
         // Remove link
         case 'delete':
 
-            Links::removeLink(Core_Array::getPost('id'), 'show'));
+            Links::removeLink(Core_Array::getPost('id'), 'show');
 
 
 
@@ -97,7 +97,6 @@ if (Core_Array::getPost('action')){
             break;
     }
 }
-
 
 
 include_once core::pathTo('extra', 'top.php');
@@ -168,10 +167,6 @@ if (Core_Array::getGet('id')) {
 
     $tpl->assign('new_links', $blockNewLinks);
 }
-
-
-
-
 
 
 
