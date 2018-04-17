@@ -80,6 +80,12 @@ $language['menu']['check'] = '';
 $language['menu']['categories_title'] = 'Категории';
 $language['menu']['categories'] = 'Категории';
 
+$language['menu']['check_links_title'] = 'Проверка ссылок';
+$language['menu']['check_links'] = 'Проверка ссылок';
+
+
+
+
 $language['menu']['edit_title'] = '';
 $language['menu']['edit'] = '';
 
@@ -215,6 +221,12 @@ $language["str"]["category_keywords"] = "Ключевые слова в META";
 $language["str"]["category"] = "Категория";
 $language["str"]["category_image"] = "Картинка (не более 100 кб)";
 $language["str"]["remove_pic"] = "Удалить картинку";
+
+
+$language["str"]["home"] = "На главную";
+
+
+
 
 
 
@@ -454,7 +466,6 @@ $language["error"]["fill_again_password"] = "Введите повторно п�
 $language["error"]["passwords_dont_match"] = "Пароли не совпадают!";
 $language["error"]["wrong_password"] = "Текущий пароль не верен!";
 $language["error"]["change_password"] = "Пароль не был сменён!";
-
-
 $language["error"]["fill_cat_name"] = "Введите название категории!";
 $language["error"]["filesize"] = "Размер файла больше %LIMIT% кб!";
+$language["error"]["web_apps_error"] = "Ошибка веб приложения! Действия не были выполнены.";

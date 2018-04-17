@@ -755,9 +755,6 @@ class Helper
         return $pr?substr(strrchr($pr, ':'), 1):0;
     }
 
-
-
-
     /**
      * @param $data
      * @param $w
@@ -785,4 +782,6 @@ class Helper
         imagedestroy($image);
         return $contents;
     }
+
+
 }

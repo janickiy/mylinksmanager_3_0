@@ -34,16 +34,16 @@ if (Core_Array::getRequest('action')) {
         $size = filesize ($_FILES['image']['tmp_name']);
 
         if ($size / 1024 > 100){
-            $error[] = str_replace('%LIMIT%','100',core::getLanguage('error', 'filesize'));
+            $errors[] = str_replace('%LIMIT%','100',core::getLanguage('error', 'filesize'));
         }
     }
 
     if (empty($errors)) {
 
-        if(!empty($_FILES['image']['tmp_name'])){
+        if (!empty($_FILES['image']['tmp_name'])){
             $ext = strrchr($_FILES["image"]["name"], ".");
 
-            if(preg_match('/\.(jpg|jpeg|png|gif)$/i', $ext)){
+            if (preg_match('/\.(jpg|jpeg|png|gif)$/i', $ext)){
                 $tmp = $_FILES['image']['tmp_name'];
                 $original = file_get_contents($tmp);
                 $image_mime = $_FILES["image"]["type"];

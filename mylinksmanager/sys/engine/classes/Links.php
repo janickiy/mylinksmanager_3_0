@@ -72,7 +72,7 @@ class Links
     {
         $parent_id = core::database()->escape($parent_id);
 
-        $query = "SELECT * FROM " . core::database()->getTableName('links') . " WHERE id_cat = " . $parent_id . " AND status='show'";
+        $query = "SELECT * FROM " . core::database()->getTableName('links') . " WHERE id = " . $parent_id . " AND status='show'";
         $result = core::database()->querySQL($query);
 
         $numberlinks = $numberlinks + core::database()->getRecordCount($result);
@@ -236,7 +236,7 @@ class Links
 
                 if ($row['id_parent'] == 0) {
                     $div_class = "menu_1";
-                    $name = '<span>' . $row["name"] . '</span> <a title="' . core::getLanguage('str', 'add_subcategory') . '" href="./?a=admin&t=addcategory&catalog_id=' . $row['id'] . '&parent_id=' . $row['id'] . '"><span class="fa fa-plus"></span> <a title="' . core::getLanguage('str', 'edit') . '" href="./?a=admin&t=editcategory&id=' . $row['id'] . '"><span class="fa fa-pencil"></span> <a title="' .core::getLanguage('str', 'remove') . '" href="./?a=admin&t=delcategory&id=' . $row['id'] . '"><span class="fa fa-trash-o"></span></a>';
+                    $name = '<span>' . $row["name"] . '</span> <a title="' . core::getLanguage('str', 'add_subcategory') . '" href="./?a=admin&t=addcategory&catalog_id=' . $row['id'] . '&parent_id=' . $row['id'] . '"><span class="fa fa-plus"></span> <a title="' . core::getLanguage('str', 'edit') . '" href="./?a=admin&t=editcategory&id=' . $row['id'] . '"><span class="fa fa-pencil"></span> <a title="' . core::getLanguage('str', 'remove') . '" href="./?a=admin&t=delcategory&id=' . $row['id'] . '"><span class="fa fa-trash-o"></span></a>';
                 } else {
                     if ($_GET['id'] == $ID)
                         $li = "class=\"active\"";
@@ -288,9 +288,8 @@ class Links
         $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE parent_id='$ParentID'";
         $result = core::database()->querySQL($query);
 
-        if(core::database()->getRecordCount($result) > 0) {
-            while($row = core::database()->getRow($result))
-            {
+        if (core::database()->getRecordCount($result) > 0) {
+            while ($row = core::database()->getRow($result)) {
                 $ID = $row["id"];
 
                 $indent = '';
@@ -310,6 +309,64 @@ class Links
         }
 
         return $option;
+    }
+
+    /**
+     * @param $cat_id
+     * @param $limit
+     * @return bool|string
+     */
+    public static function ShowSubCat($cat_id, $limit)
+    {
+        $sub_cat = '';
+
+        $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE parent_id=" . $cat_id . " ORDER BY name";
+        $result = core::database()->querySQL($query);
+
+        $i = 0;
+
+        while ($row = core::database()->getRow($result)) {
+            $i++;
+
+            $sub_cat .= ', <a href="http://' . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . '?id=' . $row['id'] . '">' . $row['name'] . '</a> <span>(' . self::ShowNumbersLinksSubCat($row['id']) . ')</span>';
+
+            if ($limit == $i && $limit != 0) {
+                $sub_cat .= ' ...';
+                break;
+            }
+        }
+
+        if (substr($sub_cat, 0, 1) == ",") $sub_cat = substr($sub_cat, 1);
+        $sub_cat = trim($sub_cat);
+
+        return $sub_cat;
+    }
+
+    /**
+     * @param $ParentID
+     * @param $topbar
+     * @return array
+     */
+    public static function topbarmenu($ParentID, $topbar)
+    {
+        global $topbar;
+
+        $ParentID = intval($ParentID);
+
+        $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE id='$ParentID'";
+        $result = core::database()->querySQL($query);
+
+        if (core::database()->getRecordCount($result) > 0) {
+            $row = core::database()->getRow($result);
+
+            $ID = $row["parent_id"];
+            $topbar[] = [$row['id'], $row['name']];
+
+            self::topbarmenu($ID, $topbar);
+        }
+
+        sort($topbar);
+        return $topbar;
     }
 }
 

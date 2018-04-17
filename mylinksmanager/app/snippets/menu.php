@@ -25,6 +25,10 @@ $tpl->assign('MENU_CATEGORIES_TITLE}', core::getLanguage('menu', 'categories_tit
 $tpl->assign('MENU_CATEGORIES', core::getLanguage('menu', 'categories'));
 
 
+$tpl->assign('MENU_CHECK_TITLE', core::getLanguage('menu', 'check_links_title'));
+$tpl->assign('MENU_CHECK', core::getLanguage('menu', 'check_links'));
+
+
 
 $tpl->assign('MENU_CHECK_TITLE', core::getLanguage('menu', 'check_title'));
 $tpl->assign('MENU_CHECK', core::getLanguage('menu', 'check'));
