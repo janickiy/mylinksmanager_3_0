@@ -221,9 +221,18 @@ $language["str"]["category_keywords"] = "Ключевые слова в META";
 $language["str"]["category"] = "Категория";
 $language["str"]["category_image"] = "Картинка (не более 100 кб)";
 $language["str"]["remove_pic"] = "Удалить картинку";
-
-
 $language["str"]["home"] = "На главную";
+$language["str"]["number_of_clicks"] = "Количество кликов";
+$language["str"]["pages"] = "Страницы";
+
+
+$language["str"]["links_waiting_checks"] = "Ссылки в очереди на проверку";
+$language["str"]["links_for_check"] = "Ссылки на проверку";
+
+
+$language["str"]["subject_add"] = "Ваш сайт добавлен в каталог ссылок";
+
+$language["str"]["subject_hide"] = "Ваша ссылка времено скрыта";
 
 
 
@@ -438,11 +447,54 @@ $language["button"]["add_to_blacklist"] = "Добавить в черный сп
 $language["button"]["reset"] = "Сброс";
 $language["button"]["find"] = "найти";
 
+$language["button"]["check_all_links_automatically"] = "Проверить все ссылки автоматически";
+
+
+
+
 
 $language["msg"]["notfound"] = "По вашему запросу ничего не найдено!";
 $language["msg"]["link_added"] = "Ссылка добавлена";
 $language["msg"]["changes_added"] = "Изменения внесены";
 $language["msg"]["password_changed"] = "Пароль был изменен";
+$language["msg"]["link_removed"] = "Ссылка была удалена";
+$language["msg"]["reason_admin"] = "По усмотрению администратора";
+$language["msg"]["link_added_to_blacklist"] = "Ссылка добавлена в черный список";
+$language["msg"]["reason_absense_reciprocal"] = "Отсутствие ответной или ссылка не доступна.";
+
+
+$language["msg"]["subject_del"] = "Ваша ссылка удалена";
+
+$language["msg"]["reason_closed_for_index_meta"] = "Закрыта для индексации метатэгом &lt;meta&nbsp;name=robot&gt;";
+
+
+
+
+
+
+
+
+
+$language["msg"]["check_is_completed"] = "Проверка закончена";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //errors
 $language["error"]["wait_verification"] = "Этот сайт уже есть в каталоге!";

@@ -62,7 +62,7 @@ if (Core_Array::getRequest('action')) {
         ];
 
         if ($data->addCategory($fields)) {
-            header("Location: ./?a=admin&t=category&parent=" . $parent_id);
+            header("Location: ./?a=admin&t=categories&parent=" . $parent_id);
             exit;
         } else {
             $errors[] =  core::getLanguage('error', 'web_apps_error');

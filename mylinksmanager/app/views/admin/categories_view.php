@@ -19,6 +19,21 @@ $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "a
 $tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_categories'));
 $tpl->assign('TITLE', core::getLanguage('title', 'admin_categories'));
 
+if (Core_Array::getRequest('action')) {
+    switch($_REQUEST['action']){
+        case 'remove':
+            if ($data->delCategory(Core_Array::getGet('id'))) {
+                header('Location: ./?a=admin&t=categories');
+                exit;
+            } else {
+                $errors[] = core::getLanguage('error', 'web_apps_error');
+            }
+
+            break;
+    }
+}
+
+
 include_once core::pathTo('extra', 'top.php');
 
 //menu

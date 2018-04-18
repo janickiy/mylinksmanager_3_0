@@ -19,7 +19,7 @@ class Model_check_links extends Model
     public function getArraycat($id)
     {
         if (is_numeric($id)) {
-            $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE id=" . $id . " ORDER BY name";
+            $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE parent_id=" . $id . " ORDER BY name";
             $result = core::database()->querySQL($query);
 
             $arraycat = [];
@@ -79,4 +79,46 @@ class Model_check_links extends Model
         return core::database()->page;
     }
 
+    public function getHiddenLinks()
+    {
+        $query = "SELECT * FROM " . core::database()->getTableName('links') . " WHERE status='hide' ORDER BY time DESC";
+        $result = core::database()->querySQL($query);
+        return core::database()->getColumnArray($result);
+    }
+
+    /**
+     * @param $fields
+     * @param $id
+     * @return mixed
+     */
+    public function updateStatus($fields, $id)
+    {
+        if (is_numeric($id)) {
+            return core::database()->update($fields, core::database()->getTableName('links'), "id=" . $id);
+        }
+    }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function getLinkInfo($id)
+    {
+        if (is_numeric($id)) {
+            $query = "SELECT * FROM ".core::database()->getTableName('links')." WHERE id=" . $id;
+            $result = core::database()->querySQL($query);
+            return core::database()->getRow($result);
+        }
+    }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public function removeLink($id)
+    {
+        if (is_numeric($id)) {
+            return core::database()->delete(core::database()->getTableName('links'), "id=" . $id);
+        }
+    }
 }

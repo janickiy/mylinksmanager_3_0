@@ -19,7 +19,7 @@ class Model_editcategory extends Model
     public function getCategoryRow($id)
     {
         if (is_numeric($id)) {
-            $query = "SELECT * FROM ".core::database()->getTableName('catalog')." WHERE id=" . $id;
+            $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE id=" . $id;
             $result = core::database()->querySQL($query);
             return core::database()->getRow($result);
         }

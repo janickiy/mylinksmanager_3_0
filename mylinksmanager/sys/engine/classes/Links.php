@@ -113,7 +113,7 @@ class Links
      * @param int $number
      * @return mixed
      */
-    public function getLinksList($status, $order, $offset, $number = 10)
+    public static function getLinksList($status, $order, $offset, $number = 10)
     {
         if (is_numeric($offset) && is_numeric($number)) {
             $query = "SELECT *,c.name AS catname, l.description AS description, l.id AS id FROM " . core::database()->getTableName('links') . " l
@@ -133,7 +133,7 @@ class Links
      * @param $id
      * @return mixed
      */
-    public function getLinkInfo($id)
+    public static function getLinkInfo($id)
     {
         if (is_numeric($id)) {
             $query = "SELECT *,l.name AS name, l.description AS description,c.name AS catname FROM " . core::database()->getTableName('links') . " l
@@ -236,14 +236,14 @@ class Links
 
                 if ($row['id_parent'] == 0) {
                     $div_class = "menu_1";
-                    $name = '<span>' . $row["name"] . '</span> <a title="' . core::getLanguage('str', 'add_subcategory') . '" href="./?a=admin&t=addcategory&catalog_id=' . $row['id'] . '&parent_id=' . $row['id'] . '"><span class="fa fa-plus"></span> <a title="' . core::getLanguage('str', 'edit') . '" href="./?a=admin&t=editcategory&id=' . $row['id'] . '"><span class="fa fa-pencil"></span> <a title="' . core::getLanguage('str', 'remove') . '" href="./?a=admin&t=delcategory&id=' . $row['id'] . '"><span class="fa fa-trash-o"></span></a>';
+                    $name = '<span>' . $row["name"] . '</span> <a title="' . core::getLanguage('str', 'add_subcategory') . '" href="./?a=admin&t=addcategory&catalog_id=' . $row['id'] . '&parent_id=' . $row['id'] . '"><span class="fa fa-plus"></span> <a title="' . core::getLanguage('str', 'edit') . '" href="./?a=admin&t=editcategory&id=' . $row['id'] . '"><span class="fa fa-pencil"></span> <a title="' . core::getLanguage('str', 'remove') . '" href="./?a=admin&t=categories&action=remove&id=' . $row['id'] . '"><span class="fa fa-trash-o"></span></a>';
                 } else {
                     if ($_GET['id'] == $ID)
                         $li = "class=\"active\"";
                     else
                         $li = '';
                     $div_class = "menu_1_1";
-                    $name = '' . $row["name"] . ' <a title="' . core::getLanguage('str', 'add_subcategory') . '" href="./?a=admin&t=addcategory&catalog_id=' . $row['id'] . '&parent_id=' . $row['id'] . '"><span class="fa fa-plus"></span> <a title="' . core::getLanguage('str', 'edit') . '" href="./?a=admin&t=editcategory&id=' . $row['id'] . '"><span class="fa fa-pencil"></span> <a title="' . core::getLanguage('str', 'remove') . '" href="./?a=admin&t=delcategory&id=' . $row['id'] . '"><span class="fa fa-trash-o"></span></a>';
+                    $name = '' . $row["name"] . ' <a title="' . core::getLanguage('str', 'add_subcategory') . '" href="./?a=admin&t=addcategory&catalog_id=' . $row['id'] . '&parent_id=' . $row['id'] . '"><span class="fa fa-plus"></span> <a title="' . core::getLanguage('str', 'edit') . '" href="./?a=admin&t=editcategory&id=' . $row['id'] . '"><span class="fa fa-pencil"></span> <a title="' . core::getLanguage('str', 'remove') . '" href="./?a=admin&t=categories&action=remove&id=' . $row['id'] . '"><span class="fa fa-trash-o"></span></a>';
                 }
 
                 $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE parent_id='$ID'";
@@ -328,7 +328,7 @@ class Links
         while ($row = core::database()->getRow($result)) {
             $i++;
 
-            $sub_cat .= ', <a href="http://' . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . '?id=' . $row['id'] . '">' . $row['name'] . '</a> <span>(' . self::ShowNumbersLinksSubCat($row['id']) . ')</span>';
+            $sub_cat .= ', <a href="http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'] . '&id=' . $row['id'] . '">' . $row['name'] . '</a> <span>(' . self::ShowNumbersLinksSubCat($row['id']) . ')</span>';
 
             if ($limit == $i && $limit != 0) {
                 $sub_cat .= ' ...';
@@ -351,22 +351,19 @@ class Links
     {
         global $topbar;
 
-        $ParentID = intval($ParentID);
-
         $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE id='$ParentID'";
         $result = core::database()->querySQL($query);
 
         if (core::database()->getRecordCount($result) > 0) {
             $row = core::database()->getRow($result);
 
-            $ID = $row["parent_id"];
-            $topbar[] = [$row['id'], $row['name']];
+           $ID = $row["parent_id"];
+           $topbar[] = [$row['id'], $row['name']];
 
-            self::topbarmenu($ID, $topbar);
+           self::topbarmenu($ID, $topbar);
         }
 
         sort($topbar);
         return $topbar;
     }
 }
-
