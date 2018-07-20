@@ -29,6 +29,9 @@ $tpl->assign('MENU_CHECK_TITLE', core::getLanguage('menu', 'check_links_title'))
 $tpl->assign('MENU_CHECK', core::getLanguage('menu', 'check_links'));
 
 
+$tpl->assign('MENU_LINKS_TITLE', core::getLanguage('menu', 'links_title'));
+$tpl->assign('MENU_LINKS', core::getLanguage('menu', 'links'));
+
 
 $tpl->assign('MENU_CHECK_TITLE', core::getLanguage('menu', 'check_title'));
 $tpl->assign('MENU_CHECK', core::getLanguage('menu', 'check'));

@@ -63,7 +63,7 @@ CREATE TABLE `lm_links` (
   `name` varchar(255) DEFAULT NULL,
   `url` varchar(255) DEFAULT NULL,
   `reciprocal_link` varchar(255) DEFAULT NULL,
-  `time` datetime DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
   `time_check` datetime DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `keywords` varchar(255) DEFAULT NULL,
@@ -74,7 +74,7 @@ CREATE TABLE `lm_links` (
   `status` enum('new','show','hide','black') NOT NULL DEFAULT 'hide',
   `token` varchar(64) DEFAULT NULL,
   `check_link` enum('yes','no') NOT NULL DEFAULT 'yes',
-  `count` int(6) NOT NULL DEFAULT '0',
+  `views` int(6) NOT NULL DEFAULT '0',
   `reason` varchar(255) DEFAULT NULL,
   `number_check` int(7) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

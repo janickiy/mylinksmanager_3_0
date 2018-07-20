@@ -10,7 +10,7 @@
           <input type=hidden name="action" value="post">
           <div class="form-group">
             <label>${STR_CATEGORY} <span class="msg">*</span></label>
-            <select type=text name="id_cat" class="form-control">
+            <select type=text name="cat_id" class="form-control">
               <option value="0" <!-- IF '${CAT_ID}' == 0 -->selected="selected"<!-- END IF -->class="input"> ----${STR_CHOOSE_CATEGORY}---- </option>              
 				${OPTION}
             </select>

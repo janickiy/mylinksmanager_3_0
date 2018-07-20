@@ -88,7 +88,7 @@ if (Core_Array::getRequest('action')){
     }
 
     // Check full description of site on a quantity of characters
-    if (!empty($full_description) && Helper::lengthFullDescription($full_description)){
+    if (!empty($full_description) && Helper::lengthDescription($full_description)){
         $errors[] = core::getLanguage('error', 'full_desc_without_spaces');
     }
 
@@ -132,7 +132,7 @@ if (Core_Array::getRequest('action')){
         $fields['name'] = $name;
         $fields['url'] = $url;
         $fields['reciprocal_link'] = $reciprocal_link;
-        $fields['time'] = date("Y-m-d H:i:s");
+        $fields['created'] = date("Y-m-d H:i:s");
         $fields['time_check'] = '0000-00-00 00:00:00';
         $fields['email'] = $email;
         $fields['keywords'] = $keywords;
@@ -143,7 +143,6 @@ if (Core_Array::getRequest('action')){
         $fields['status'] = 'show';
         $fields['token'] = Helper::getRandomCode();
         $fields['check_link'] = Core_Array::getPost('check_link') ? 'yes':'no';
-        $fields['count'] = 0;
         $fields['number_check'] = 0;
 
 

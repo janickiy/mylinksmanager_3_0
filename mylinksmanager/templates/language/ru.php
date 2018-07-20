@@ -44,19 +44,19 @@ $language["info"]["admin_design"] = 'В этом разделе Вы может�
 Файл &quot;<b>style.css</b>&quot; подключается в качестве файлов таблиц каскадных стилей и задает дизайн каталога.<br />
 Файлы &quot;<b>header.tpl</b>&quot; и &quot;<b>footer.tpl</b>&quot; включают в себя HTML-код, отвечающий за оригинальное оформление каталога.';
 
-$language["title"]["admin_page_edit"] = "";
-$language["title"]["admin_edit"] = "";
-$language["info"]["admin_edit"] = "";
+$language["title"]["admin_page_edit"] = "Панель администрирования My Links Manager |";
+$language["title"]["admin_edit"] = "Панель администрирования My Links Manager |";
+$language["info"]["admin_edit"] = "Панель администрирования My Links Manager |";
 
+$language["title"]["admin_page_links"] = "Ссылки";
+$language["title"]["admin_links"] = "Панель администрирования My Links Manager | Ссылки";
+$language["info"]["admin_links"] = "";
 
 $language["title"]["page_help"] = '';
 $language["title"]["help"] = '';
 
-
 $language["title"][""] = 'Каталог сайтов My Links Manager | добавить сайт';
 $language["title"]["addurl"] = 'Каталог сайтов My Links Manager | добавить сайт';
-
-
 
 $language["title"]["page_page403"] = 'Доступ запрещен';
 $language["title"]["page403"] = 'Доступ запрещен 403';
@@ -83,7 +83,8 @@ $language['menu']['categories'] = 'Категории';
 $language['menu']['check_links_title'] = 'Проверка ссылок';
 $language['menu']['check_links'] = 'Проверка ссылок';
 
-
+$language['menu']['links_title'] = 'Ссылки';
+$language['menu']['links'] = 'Ссылки';
 
 
 $language['menu']['edit_title'] = '';

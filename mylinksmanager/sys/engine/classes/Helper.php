@@ -35,9 +35,14 @@ class Helper
      * @param $url
      * @return mixed
      */
-    public static function convertUrl($url) {
-        if (substr($url, 0, 7) == "http://") { $url = str_replace('http://', '', $url); }
-        if (substr($url, 0, 4) == "www.") { $url = str_replace('www.', '', $url); }
+    public static function convertUrl($url)
+    {
+        if (substr($url, 0, 7) == "http://") {
+            $url = str_replace('http://', '', $url);
+        }
+        if (substr($url, 0, 4) == "www.") {
+            $url = str_replace('www.', '', $url);
+        }
         if (strpos($url, '/') > 0) list($url) = explode('/', $url);
 
         return $url;
@@ -61,7 +66,7 @@ class Helper
      */
     public static function checkUrl($url)
     {
-        if (!preg_match("/^(?:http\:\/\/)?[-0-9a-z_\.]+\.([a-z]{2,6})$/i", $url)){
+        if (preg_match("/^(?:http\:\/\/)?[-0-9a-z_\.]+\.([a-z]{2,6})$/i", $url)) {
             return false;
         } else {
             return true;
@@ -71,7 +76,8 @@ class Helper
     /**
      * @return string
      */
-    public static function root() {
+    public static function root()
+    {
         if (dirname($_SERVER['SCRIPT_NAME']) == '/' | dirname($_SERVER['SCRIPT_NAME']) == '\\')
             return '/';
         else
@@ -82,22 +88,15 @@ class Helper
      * @param $type
      * @return string
      */
-    public static function getRandomCode ($type)
+    public static function getRandomCode()
     {
         $maxcount = 8;
         $rand37 = "0123456789QWERTYUIOPASDFGHJKLZXCVBNM";
         $str_len = strlen($rand37) - 1;
-        srand((double)microtime()*1000000);
+        srand((double)microtime() * 1000000);
         $RandCode = "";
-        for($count = 0; $count < $maxcount; $count++)
+        for ($count = 0; $count < $maxcount; $count++)
             $RandCode .= substr($rand37, rand(1, $str_len), 1);
-
-        if ($type == 'demo')
-            $RandCode = 'T' . $RandCode;
-        elseif ($type == 'single')
-            $RandCode = 'H' . $RandCode;
-        elseif ($type == 'multi')
-            $RandCode = 'K' . $RandCode;
 
         return $RandCode;
     }
@@ -105,7 +104,8 @@ class Helper
     /**
      * @param $content
      */
-    public static function showJSONContent($content) {
+    public static function showJSONContent($content)
+    {
         header('Cache-Control: no-store, no-cache, must-revalidate');
         header('Content-Type: application/json');
         echo $content;
@@ -130,7 +130,7 @@ class Helper
      * @param $url
      * @return bool
      */
-    public static function commonHost ($url)
+    public static function commonHost($url)
     {
         if ($_SERVER["SERVER_ADDR"] == @gethostbyname($url))
             return true;
@@ -143,13 +143,13 @@ class Helper
      * @param $url
      * @return bool
      */
-    public static function nativeCheckLink ($reciprocal_link, $url)
+    public static function nativeCheckLink($reciprocal_link, $url)
     {
-        if (substr($url, 0, 4) == "www.") $url = str_replace('www.','',$url);
-        if (substr($reciprocal_link, 0, 4) == "www.") $reciprocal_link = str_replace('www.','',$reciprocal_link);
-        $url = str_replace('.','\.',$url);
+        if (substr($url, 0, 4) == "www.") $url = str_replace('www.', '', $url);
+        if (substr($reciprocal_link, 0, 4) == "www.") $reciprocal_link = str_replace('www.', '', $reciprocal_link);
+        $url = str_replace('.', '\.', $url);
 
-        if (preg_match("|^[-0-9a-z_^\.]*?($url)[-0-9a-z_^\.\/\?#&\+=%]*?$|i", $reciprocal_link)){
+        if (preg_match("|^[-0-9a-z_^\.]*?($url)[-0-9a-z_^\.\/\?#&\+=%]*?$|i", $reciprocal_link)) {
             return false;
         } else {
             return true;
@@ -160,9 +160,9 @@ class Helper
      * @param $url
      * @return bool
      */
-    public static function nativeCheckUrl ($url)
+    public static function nativeCheckUrl($url)
     {
-        if($url == $_SERVER['SERVER_NAME'])
+        if ($url == $_SERVER['SERVER_NAME'])
             return true;
         else
             return false;
@@ -172,9 +172,9 @@ class Helper
      * @param $url_link
      * @return bool
      */
-    public static function checkGetParameter ($url_link)
+    public static function checkGetParameter($url_link)
     {
-        $parse_url = @parse_url("http://".$url_link);
+        $parse_url = @parse_url("http://" . $url_link);
 
         if (stripos($parse_url['query'], $_SERVER['SERVER_NAME']))
             return true;
@@ -186,19 +186,19 @@ class Helper
      * @param $text
      * @return bool
      */
-    public static function lengthDescription ($text)
+    public static function lengthDescription($text)
     {
-        $lendescript = strlen($text);
+        $lendescript = mb_strlen($text);
         $templen = 0;
         $temp = strtok($text, " ");
 
-        if (strlen($text) > 60){
-            while($templen < $lendescript){
-                if (strlen($temp) > 60){
+        if (mb_strlen($text) > 60) {
+            while ($templen < $lendescript) {
+                if (mb_strlen($temp) > 60) {
                     return true;
                     break;
                 } else {
-                    $templen = $templen + strlen($temp) + 1;
+                    $templen = $templen + mb_strlen($temp) + 1;
                 }
 
                 $temp = strtok(" ");
@@ -213,7 +213,7 @@ class Helper
      */
     public static function lengthDescriptionLinkMin ($str, $min)
     {
-        if (strlen($str) < $min)
+        if (mb_strlen($str) < $min)
             return true;
         else
             return false;
@@ -226,7 +226,7 @@ class Helper
      */
     public static function lengthDescriptionLinkMax ($str, $max)
     {
-        if (strlen($str) > $max)
+        if (mb_strlen($str) > $max)
             return true;
         else
             return false;
@@ -239,7 +239,7 @@ class Helper
      */
     public static function lengthFullDescriptionMin ($str, $min)
     {
-        if (strlen($str) < $min)
+        if (mb_strlen($str) < $min)
             return true;
         else
             return false;
@@ -252,7 +252,7 @@ class Helper
      */
     public static function lengthFullDescriptionMax ($str, $max)
     {
-        if (strlen($str) > $max)
+        if (mb_strlen($str) > $max)
             return true;
         else
             return false;

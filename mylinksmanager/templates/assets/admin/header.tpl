@@ -87,7 +87,7 @@
 					<a <!-- IF '${ACTIVE_MENU}' == 'check_links' -->class="active-menu"<!-- END IF --> title="${MENU_CHECK_TITLE}" href="./?a=admin&t=check_links">${MENU_CHECK}</a>
 				</li>
 				<li>
-					<a <!-- IF '${ACTIVE_MENU}' == 'edit' -->class="active-menu"<!-- END IF --> title="${MENU_EDIT_TITLE}" href="./?a=admin&t=edit">${MENU_EDIT}</a></li>
+					<a <!-- IF '${ACTIVE_MENU}' == 'links' -->class="active-menu"<!-- END IF --> title="${MENU_LINKS_TITLE}" href="./?a=admin&t=links">${MENU_LINKS}</a></li>
 				<li>
 					<a <!-- IF '${ACTIVE_MENU}' == 'settings' -->class="active-menu"<!-- END IF --> title="${MENU_SETTINGS_TITLE}" href="./?a=admin&t=settings">${MENU_SETTINGS}</a>
 				</li>

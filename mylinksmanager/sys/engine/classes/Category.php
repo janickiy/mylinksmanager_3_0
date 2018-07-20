@@ -89,17 +89,16 @@ class Category
     }
 
     /**
-     * @param $id_cat
-     * @param $static
+     * @param $cat_id
      * @param $limit
-     * @return string
+     * @return bool|string
      */
-    public static function ShowSubCat($id_cat, $limit)
+    public static function ShowSubCat($cat_id, $limit)
     {
         $sub_cat = '';
-        $id_cat = core::database()->escape($id_cat);
+        $cat_id = core::database()->escape($cat_id);
 
-        $query = "SELECT `id`,`parent_id`,`name` FROM " . core::database()->getTableName('catalog') . " WHERE parent_id=" . $id_cat . " ORDER BY name";
+        $query = "SELECT `id`,`parent_id`,`name` FROM " . core::database()->getTableName('catalog') . " WHERE parent_id=" . $cat_id . " ORDER BY name";
         $result = core::database()->querySQL($query);
 
         $i = 0;
@@ -137,7 +136,7 @@ class Category
 
         if (core::database()->getRecordCount($result) > 0){
             $row = core::database()->getRow($result);
-            $topbar[] = array($row['id_cat'], $row['name']);
+            $topbar[] = array($row['cat_id'], $row['name']);
 
             self::topbarmenu($row["parent_id"], $topbar);
         }
