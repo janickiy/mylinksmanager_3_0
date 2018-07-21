@@ -47,7 +47,7 @@ class Model_links extends Model
             core::database()->order = "ORDER BY l.name";
         } else {
             core::database()->parameters = "*";
-            core::database()->order = "ORDER BY " . $strtmp . "";
+            core::database()->order = "ORDER BY l." . $strtmp . "";
         }
 
         core::database()->pnumber = $pnumber;

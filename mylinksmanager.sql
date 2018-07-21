@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.6.5.2
+-- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Фев 26 2017 г., 18:28
--- Версия сервера: 10.1.13-MariaDB
--- Версия PHP: 5.6.23
+-- Время создания: Июл 21 2018 г., 18:05
+-- Версия сервера: 10.1.31-MariaDB
+-- Версия PHP: 7.2.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,9 +14,10 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- База данных: `mylinksmanager3`
+-- База данных: `mylinksmanager`
 --
 
 -- --------------------------------------------------------
@@ -51,6 +52,19 @@ CREATE TABLE `lm_catalog` (
   `image_mime` varchar(40) DEFAULT NULL,
   `parent_id` int(9) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `lm_catalog`
+--
+
+INSERT INTO `lm_catalog` (`id`, `name`, `description`, `keywords`, `image`, `image_mime`, `parent_id`) VALUES
+(7, 'Category 1', 'Category 1', '', '', '', 0),
+(8, 'Category 2', 'Category 2', '', '', '', 0),
+(9, 'Category 3', 'Category 3', '', '', '', 0),
+(10, 'Category 4', 'Category 4', '', '', '', 0),
+(11, 'Subcategory 3', 'Subcategory 3', '', '', '', 10),
+(12, 'Subcategory 1', 'Subcategory 1', '', '', '', 10),
+(13, 'Subcategory 2', 'Subcategory 2', '', '', '', 10);
 
 -- --------------------------------------------------------
 
@@ -151,7 +165,8 @@ ALTER TABLE `lm_catalog`
 -- Индексы таблицы `lm_links`
 --
 ALTER TABLE `lm_links`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `cat_id` (`cat_id`);
 
 --
 -- AUTO_INCREMENT для сохранённых таблиц
@@ -161,7 +176,7 @@ ALTER TABLE `lm_links`
 -- AUTO_INCREMENT для таблицы `lm_catalog`
 --
 ALTER TABLE `lm_catalog`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT для таблицы `lm_links`
 --

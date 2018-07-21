@@ -109,6 +109,12 @@ $language["str"]["website_name"] = "Название сайта";
 $language["str"]["url"] = "Адрес сайта";
 $language["str"]["address_of_recip_link_page"] = "Адрес страницы с ответной ссылкой";
 $language["str"]["email"] = "E-mail";
+$language["str"]["name"] = "Название";
+$language["str"]["description"] = "Описание";
+$language["str"]["views"] = "Просмотры";
+$language["str"]["created"] = "Добавлено";
+$language["str"]["action"] = "Действие";
+
 $language["str"]["only_text_not_html"] = "Только текст, не html код";
 $language["str"]["keywords"] = "Ключевые слова в META";
 $language["str"]["list_separated_by_commas"] = "Перечислить через запятую";

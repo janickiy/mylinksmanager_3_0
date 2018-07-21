@@ -75,27 +75,24 @@
 		<div class="sidebar-collapse">
 			<ul class="nav" id="main-menu">
 				<li>
-					<a <!-- IF '${ACTIVE_MENU}' == '' -->class="active-menu"<!-- END IF --> title="${INDEXTITLE}" href="./?a=admin">${MENU_INDEX}</a>
+					<a <!-- IF '${ACTIVE_MENU}' == '' -->class="active-menu"<!-- END IF --> title="${INDEXTITLE}" href="./?a=admin"><i class="fa fa-flag"></i> ${MENU_INDEX}</a>
 				</li>
 				<li>
-					<a <!-- IF '${ACTIVE_MENU}' == 'addlink' -->class="active-menu"<!-- END IF --> title="${MENU_ADDURL_TITLE}" href="./?a=admin&t=addlink">${MENU_ADDURL}</a>
+					<a <!-- IF '${ACTIVE_MENU}' == 'addlink' -->class="active-menu"<!-- END IF --> title="${MENU_ADDURL_TITLE}" href="./?a=admin&t=addlink"><i class="fa fa-plus"></i> ${MENU_ADDURL}</a>
 				</li>
 				<li>
-					<a <!-- IF '${ACTIVE_MENU}' == 'category' -->class="active-menu"<!-- END IF --> title="${MENU_CATEGORIES_TITLE}" href="./?a=admin&t=categories">${MENU_CATEGORIES}</a>
+					<a <!-- IF '${ACTIVE_MENU}' == 'category' -->class="active-menu"<!-- END IF --> title="${MENU_CATEGORIES_TITLE}" href="./?a=admin&t=categories"><i class="fa fa-folder-open "></i> ${MENU_CATEGORIES}</a>
 				</li>
 				<li>
-					<a <!-- IF '${ACTIVE_MENU}' == 'check_links' -->class="active-menu"<!-- END IF --> title="${MENU_CHECK_TITLE}" href="./?a=admin&t=check_links">${MENU_CHECK}</a>
+					<a <!-- IF '${ACTIVE_MENU}' == 'links' -->class="active-menu"<!-- END IF --> title="${MENU_LINKS_TITLE}" href="./?a=admin&t=links"><i class="fa fa-list"></i> ${MENU_LINKS}</a></li>
+				<li>
+					<a <!-- IF '${ACTIVE_MENU}' == 'settings' -->class="active-menu"<!-- END IF --> title="${MENU_SETTINGS_TITLE}" href="./?a=admin&t=settings"><i class="fa fa-gear"></i> ${MENU_SETTINGS}</a>
 				</li>
 				<li>
-					<a <!-- IF '${ACTIVE_MENU}' == 'links' -->class="active-menu"<!-- END IF --> title="${MENU_LINKS_TITLE}" href="./?a=admin&t=links">${MENU_LINKS}</a></li>
-				<li>
-					<a <!-- IF '${ACTIVE_MENU}' == 'settings' -->class="active-menu"<!-- END IF --> title="${MENU_SETTINGS_TITLE}" href="./?a=admin&t=settings">${MENU_SETTINGS}</a>
+					<a	<!-- IF '${ACTIVE_MENU}' == 'blacklist' -->class="active-menu"<!-- END IF --> title="${MENU_BLACK_TITLE}" href="./?a=admin&t=blacklist"><i class="fa fa-thumbs-down"></i> ${MENU_BLACK}</a>
 				</li>
 				<li>
-					<a	<!-- IF '${ACTIVE_MENU}' == 'blacklist' -->class="active-menu"<!-- END IF --> title="${MENU_BLACK_TITLE}" href="./?a=admin&t=blacklist">${MENU_BLACK}</a>
-				</li>
-				<li>
-					<a <!-- IF '${ACTIVE_MENU}' == 'password' -->class="active-menu"<!-- END IF --> title="${MENU_PASSWORD_TITLE}" href="./?a=admin&t=password">${MENU_PASSWORD}</a>
+					<a <!-- IF '${ACTIVE_MENU}' == 'password' -->class="active-menu"<!-- END IF --> title="${MENU_PASSWORD_TITLE}" href="./?a=admin&t=password"><i class="fa fa-key "></i> ${MENU_PASSWORD}</a>
 				</li>
 
 			</ul>

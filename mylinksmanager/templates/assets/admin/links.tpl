@@ -5,13 +5,13 @@
     <tr>
         <th width="10px"><input type="checkbox" title="TABLECOLMN_CHECK_ALLBOX" id="check_all"></th>
         <th>ID</th>
-        <th>Название</th>
-        <th>Описание</th>
-        <th>Url</th>
-        <th>Категория</th>
-        <th>Просмотры</th>
-        <th>Добавлено</th>
-        <th>Действие</th>
+        <th>${STR_NAME}</th>
+        <th>${STR_DESCRIPTION}</th>
+        <th>${STR_EMAIL}</th>
+        <th>${STR_CATEGORY}</th>
+        <th>${STR_VIEWS}</th>
+        <th>${STR_CREATED}</th>
+        <th>${STR_ACTION}</th>
     </tr>
     </thead>
     <!-- BEGIN row -->
@@ -22,6 +22,7 @@
     <td>${ID}</td>
     <td>${NAME}</td>
     <td>${DESCRIPTION}</td>
+    <td>${EMAIL}</td>
     <td>${URL}</td>
     <td>${CATEGORY}</td>
     <td>${VIEWS}</td>

@@ -78,8 +78,13 @@ if ($arrs) {
     }
 }
 
-
-
+$tpl->assign('STR_NAME', core::getLanguage('str', 'name'));
+$tpl->assign('STR_EMAIL', core::getLanguage('str', 'email'));
+$tpl->assign('STR_DESCRIPTION', core::getLanguage('str', 'description'));
+$tpl->assign('STR_CATEGORY', core::getLanguage('str', 'category'));
+$tpl->assign('STR_VIEWS', core::getLanguage('str', 'views'));
+$tpl->assign('STR_CREATED', core::getLanguage('str', 'created'));
+$tpl->assign('STR_ACTION', core::getLanguage('str', 'action'));
 
 // menu
 include_once core::pathTo('extra', 'menu.php');
