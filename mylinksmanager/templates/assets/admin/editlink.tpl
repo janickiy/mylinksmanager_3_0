@@ -1,3 +1,3 @@
 <!-- INCLUDE header.tpl -->
-${FAQ}
+<!-- INCLUDE link_form.tpl -->
 <!-- INCLUDE footer.tpl -->

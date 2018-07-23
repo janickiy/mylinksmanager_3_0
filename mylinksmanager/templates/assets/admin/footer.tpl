@@ -1,9 +1,4 @@
 </div>
-<p align="right">
-    <a href="http://janicky.com">${STR_WEBSITE}</a>
-    <a href="./?t=help">${STR_HELPPAGE}</a>
-    <a href="./?t=faq">FAQ</a>
-</p>
 <p>${STR_LOGO}, ${STR_AUTHOR}</p>
 <div style="text-align: center">${STR_LINKS_IN_CATALOG}: ${TOTAL_LINKS}</div>
 <!-- /. PAGE INNER  -->

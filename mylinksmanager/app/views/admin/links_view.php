@@ -82,6 +82,7 @@ if ($arrs) {
     $rowBlock->assign('STR_VIEWS', core::getLanguage('str', 'views'));
     $rowBlock->assign('STR_CREATED', core::getLanguage('str', 'created'));
     $rowBlock->assign('STR_ACTION', core::getLanguage('str', 'action'));
+    $rowBlock->assign('SEARCH', $search);
 
     $rowBlock->assign('GET_ID', $_GET['id']);
     $rowBlock->assign('GET_NAME', $_GET['name']);

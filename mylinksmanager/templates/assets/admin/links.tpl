@@ -83,8 +83,8 @@
     <td>${VIEWS}</td>
     <td>${CREATED}</td>
     <td>
-        <a class="btn btn-outline btn-default" href="./?a=admin&t=edit_link&id_user=${ID}" title="${STR_EDIT}"> <i class="fa fa-pencil"></i></a>
-        <a class="btn btn-outline btn-danger" href="./?a=admin&t=linkss&remove=${ID}" title="${STR_REMOVE}"> <i class="fa fa-trash-o"></i></a>
+        <a class="btn btn-outline btn-default" href="./?a=admin&t=editlink&id=${ID}" title="${STR_EDIT}"> <i class="fa fa-pencil"></i></a>
+        <a class="btn btn-outline btn-danger" href="./?a=admin&t=links&remove=${ID}" title="${STR_REMOVE}"> <i class="fa fa-trash-o"></i></a>
     </td>
     </tr>
     <!-- END column -->

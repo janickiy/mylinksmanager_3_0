@@ -10,10 +10,16 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
-class Controller_faq extends Controller
+class Controller_editlink extends Controller
 {
-	public function action_index()
+	function __construct()
+	{
+		$this->model = new Model_editlink();
+		$this->view = new View();
+	}
+
+	public function action_admin()
 	{	
-		$this->view->generate('faq_view.php');
+		$this->view->generate('admin/editlink_view.php', $this->model);
 	}
 }

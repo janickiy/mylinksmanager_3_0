@@ -14,12 +14,12 @@ Auth::authorization();
 
 //include template
 core::requireEx('libs', "html_template/SeparateTemplate.php");
-$tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/addlink.tpl");
+$tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/editlink.tpl");
 
 $tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_addlink'));
 $tpl->assign('TITLE', core::getLanguage('title', 'admin_addlink'));
 
-$errors = array();
+$errors = [];
 
 if (Core_Array::getRequest('action')){
     $name = stripslashes(htmlspecialchars(trim(Core_Array::getPost('name'))));
@@ -127,26 +127,20 @@ if (Core_Array::getRequest('action')){
     }
 
     if (empty($errors)) {
-        $fields = array();
-        $fields['id'] = 0;
+        $fields = [];
         $fields['name'] = $name;
         $fields['url'] = $url;
         $fields['reciprocal_link'] = $reciprocal_link;
-        $fields['created'] = date("Y-m-d H:i:s");
-        $fields['time_check'] = '0000-00-00 00:00:00';
         $fields['email'] = $email;
         $fields['keywords'] = $keywords;
         $fields['description'] = $description;
         $fields['full_description'] = $full_description;
         $fields['htmlcode_banner'] = $fields;
         $fields['cat_id'] = $cat_id;
-        $fields['status'] = 'show';
         $fields['token'] = Helper::getRandomCode();
         $fields['check_link'] = Core_Array::getPost('check_link') ? 'yes':'no';
-        $fields['number_check'] = 0;
 
-
-        if ($data->addLink($fields)) {
+        if ($data->editLink($fields, Core_Array::getPost('id'))) {
             unset($_POST);
             $success_msg = core::getLanguage('msg', 'link_added');
         }
@@ -191,20 +185,24 @@ $tpl->assign('STR_FULL_DESCRIPTION', core::getLanguage('str', 'full_description'
 $tpl->assign('STR_HTML_CODE_OF_BANNER', core::getLanguage('str', 'html_code_of_banner'));
 $tpl->assign('BUTTON', core::getLanguage('button', 'add'));
 
+$row = $data->getLink(Core_Array::getRequest('id'));
+
+$_POST['cat_id'] = Core_Array::getPost('cat_id') ?  $_POST['cat_id'] : $row['cat_id'];
+
 //value
 $tpl->assign('HIDDEN_FIELD','');
 $tpl->assign('ACTION', $_SERVER['REQUEST_URI']);
 $tpl->assign('OPTION', Category::ShowTree(0, 0));
-$tpl->assign('NAME', Core_Array::getPost('name'));
-$tpl->assign('URL', Core_Array::getPost('url'));
-$tpl->assign('RECIPROCAL_LINK', Core_Array::getPost('reciprocal_link'));
-$tpl->assign('EMAIL', Core_Array::getPost('email'));
-$tpl->assign('KEYWORDS', Core_Array::getPost('keywords'));
-$tpl->assign('DESCRIPTION', Core_Array::getPost('description'));
-$tpl->assign('FULL_DESCRIPTION', Core_Array::getPost('full_description'));
-$tpl->assign('FULL_DESCRIPTION', Core_Array::getPost('htmlcode_banner'));
-$tpl->assign('CAT_ID', Core_Array::getPost('cat_id'));
-$tpl->assign('CHECK_LINK', Core_Array::getPost('check_link'));
+$tpl->assign('NAME', Core_Array::getPost('name') ? $_POST['name'] : $row['name']);
+$tpl->assign('URL', Core_Array::getPost('url') ? $_POST['url'] : $row['url']);
+$tpl->assign('RECIPROCAL_LINK', Core_Array::getPost('reciprocal_link') ? $_POST['reciprocal_link'] : $row['reciprocal_link']);
+$tpl->assign('EMAIL', Core_Array::getPost('email') ? $_POST['email'] : $row['email']);
+$tpl->assign('KEYWORDS', Core_Array::getPost('keywords') ? $_POST['keywords'] : $row['keywords']);
+$tpl->assign('DESCRIPTION', Core_Array::getPost('description') ? $_POST['description'] : $row['description']);
+$tpl->assign('FULL_DESCRIPTION', Core_Array::getPost('full_description') ? $_POST['full_description'] : $row['full_description']);
+$tpl->assign('FULL_DESCRIPTION', Core_Array::getPost('htmlcode_banner') ? $_POST['htmlcode_banner'] : $row['htmlcode_banner']);
+$tpl->assign('CAT_ID', $_POST['cat_id']);
+$tpl->assign('CHECK_LINK', Core_Array::getPost('check_link') ?  $_POST['check_link'] : $row['check_link']);
 
 //footer
 include_once core::pathTo('extra', 'footer.php');
