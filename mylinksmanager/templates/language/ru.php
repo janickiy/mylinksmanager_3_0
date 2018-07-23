@@ -235,6 +235,9 @@ $language["str"]["home"] = "На главную";
 $language["str"]["number_of_clicks"] = "Количество кликов";
 $language["str"]["pages"] = "Страницы";
 
+$language["str"]["pnumber"] = 'Кол-во строк';;
+
+
 
 $language["str"]["links_waiting_checks"] = "Ссылки в очереди на проверку";
 $language["str"]["links_for_check"] = "Ссылки на проверку";

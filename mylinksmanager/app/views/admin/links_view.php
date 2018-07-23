@@ -29,7 +29,8 @@ $order = [
     'id'  => "id",
     'name'  => "name",
     'email' => "email",
-    'cat_id' => "cat_id",
+    'url' => "url",
+    'category' => "cat_id",
     'views' => "views",
     'created' => "created"
 ];
@@ -38,26 +39,17 @@ $strtmp = "name";
 $sort = '';
 
 
-
-
-
-
 foreach($order as $parametr => $field) {
     if (isset($_GET[$parametr])) {
         if ($_GET[$parametr] == "up"){
             $_GET[$parametr] = "down";
             $strtmp = $field;
             $sort = "&" . $field . "=up";
-            $thclass[$parametr] = 'headerSortUp';
         } else {
             $_GET[$parametr] = "up";
             $strtmp = $field . " DESC";
             $sort = "&" . $field . "=down";
-            $thclass[$parametr] = 'headerSortDown';
         }
-    } else {
-        $_GET[$parametr] = "up";
-        $thclass[$parametr] = 'headerUnSort';
     }
 }
 
@@ -65,12 +57,39 @@ foreach($order as $parametr => $field) {
 if (isset($_COOKIE['pnumber_links']))
     $pnumber = (int)$_COOKIE['pnumber_links'];
 else
-    $pnumber = 20;
+    $pnumber = 5;
+
+$search = Core_Array::getRequest('search');
 
 
-$arrs = $data->getLinksArray($strtmp, $search, Core_Array::getRequest('category'), Core_Array::getRequest('page'), $pnumber);
+//form
+$tpl->assign('FORM_SEARCH_NAME', core::getLanguage('str', 'search_name'));
+$tpl->assign('BUTTON_FIND',  core::getLanguage('button', 'find'));
+$tpl->assign('ACTION', $_SERVER['REQUEST_URI']);
+
+
+$arrs = $data->getLinksArray($strtmp, urldecode($search), Core_Array::getRequest('category'), Core_Array::getRequest('page'), $pnumber);
 
 if ($arrs) {
+
+    $rowBlock = $tpl->fetch('row');
+
+    $rowBlock->assign('STR_NAME', core::getLanguage('str', 'name'));
+    $rowBlock->assign('STR_EMAIL', core::getLanguage('str', 'email'));
+    $rowBlock->assign('STR_URL', core::getLanguage('str', 'url'));
+    $rowBlock->assign('STR_DESCRIPTION', core::getLanguage('str', 'description'));
+    $rowBlock->assign('STR_CATEGORY', core::getLanguage('str', 'category'));
+    $rowBlock->assign('STR_VIEWS', core::getLanguage('str', 'views'));
+    $rowBlock->assign('STR_CREATED', core::getLanguage('str', 'created'));
+    $rowBlock->assign('STR_ACTION', core::getLanguage('str', 'action'));
+
+    $rowBlock->assign('GET_ID', $_GET['id']);
+    $rowBlock->assign('GET_NAME', $_GET['name']);
+    $rowBlock->assign('GET_EMAIL', $_GET['email']);
+    $rowBlock->assign('GET_CATEGORY', $_GET['category']);
+    $rowBlock->assign('GET_URL', $_GET['url']);
+    $rowBlock->assign('GET_VIEWS', $_GET['views']);
+    $rowBlock->assign('GET_CREATED', $_GET['created']);
 
 
     $number = $data->getTotal();
@@ -113,10 +132,6 @@ if ($arrs) {
     else
         $pagenav = '';
 
-    $rowBlock = $tpl->fetch('row');
-
-    if ($search) $rowBlock->assign('SEARCH', $search);
-
     foreach ($arrs as $row) {
         $columnBlock = $rowBlock->fetch('column');
         $columnBlock->assign('ID', $row['id']);
@@ -132,9 +147,12 @@ if ($arrs) {
         $rowBlock->assign('column', $columnBlock);
     }
 
+    $rowBlock->assign('STR_PNUMBER',  core::getLanguage('str', 'pnumber'));
+    $rowBlock->assign('PNUMBER', isset($pnumber) ? $pnumber : '');
+
     if ($number > 1) {
         $paginationBlock = $rowBlock->fetch('pagination');
-        $paginationBlock->assign('STR_PNUMBER',  core::getLanguage('str', 'pnumber'));
+
         $paginationBlock->assign('CURRENT_PAGE', '<a>' . $page . '</a>');
         $paginationBlock->assign('STR_PAGES', core::getLanguage('str', 'pages'));
 
@@ -150,12 +168,17 @@ if ($arrs) {
         $paginationBlock->assign('PERV', isset($perv) ? $perv : '');
         $paginationBlock->assign('NEXT', isset($next) ? $next : '');
 
-        $paginationBlock->assign('PNUMBER', isset($pnumber) ? $pnumber : '');
+        if ($search) $paginationBlock->assign('SEARCH', urlencode($search));
+
+
         $rowBlock->assign('pagination', $paginationBlock);
     }
 
-    $tpl->assign('row', $rowBlock);
+    $rowBlock->assign('STR_CHECK', core::getLanguage('str', 'check'));
+    $rowBlock->assign('STR_REMOVE', core::getLanguage('str', 'remove'));
+    $rowBlock->assign('STR_APPLY', core::getLanguage('str', 'apply'));
 
+    $tpl->assign('row', $rowBlock);
 
 } else {
     if (!empty($search)) {
@@ -167,40 +190,15 @@ if ($arrs) {
     }
 }
 
-$tpl->assign('STR_NAME', core::getLanguage('str', 'name'));
-$tpl->assign('STR_EMAIL', core::getLanguage('str', 'email'));
-$tpl->assign('STR_URL', core::getLanguage('str', 'url'));
-$tpl->assign('STR_DESCRIPTION', core::getLanguage('str', 'description'));
-$tpl->assign('STR_CATEGORY', core::getLanguage('str', 'category'));
-$tpl->assign('STR_VIEWS', core::getLanguage('str', 'views'));
-$tpl->assign('STR_CREATED', core::getLanguage('str', 'created'));
-$tpl->assign('STR_ACTION', core::getLanguage('str', 'action'));
-
-
 
 $tpl->assign('STR_IMPORT_LINKS', core::getLanguage('str', 'import_links'));
-
 $tpl->assign('STR_EXPORT_LINKS', core::getLanguage('str', 'export_links'));
 
 
-
-
-
-//form
-$tpl->assign('FORM_SEARCH_NAME', core::getLanguage('str', 'search_name'));
-$tpl->assign('BUTTON_FIND',  core::getLanguage('button', 'find'));
-$tpl->assign('ACTION', $_SERVER['REQUEST_URI']);
-$search = urldecode(Core_Array::getRequest('search'));
-$tpl->assign('SEARCH', $search);
-
-
-$tpl->assign('STR_CHECK', core::getLanguage('str', 'check'));
-$tpl->assign('STR_REMOVE', core::getLanguage('str', 'remove'));
-
-$tpl->assign('STR_APPLY', core::getLanguage('str', 'apply'));
-
-
-
+if ($search) {
+    $tpl->assign('SEARCH', urlencode($search));
+    $tpl->assign('FORM_SEARCH', $search);
+}
 
 
 // menu

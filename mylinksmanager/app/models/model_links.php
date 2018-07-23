@@ -35,7 +35,7 @@ class Model_links extends Model
                 $temp = strtok(" ");
             }
 
-            core::database()->parameters = "*, c.name AS category";
+            core::database()->parameters = "l.*, c.name AS category";
             core::database()->where = "WHERE " . $tmpl . "";
             core::database()->group = "GROUP BY l.id";
             core::database()->order = "ORDER BY l.name";
@@ -46,7 +46,7 @@ class Model_links extends Model
             core::database()->where = "WHERE " . $_where . " ";
             core::database()->order = "ORDER BY l.name";
         } else {
-            core::database()->parameters = "*, c.name AS category";
+            core::database()->parameters = "l.*, c.name AS category";
             core::database()->order = "ORDER BY l." . $strtmp . "";
         }
 
