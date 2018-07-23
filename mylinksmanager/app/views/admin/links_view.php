@@ -13,10 +13,61 @@ defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 Auth::authorization();
 
 
+if (Core_Array::getRequest('remove') && is_numeric($_REQUEST['remove'])) {
+    if ($data->removeLink($_REQUEST['remove']))
+        $success_alert = core::getLanguage('msg', 'selected_links_deleted');
+    else
+        $errors[] =   core::getLanguage('error', 'web_apps_error');
+
+}
+
+$errors = [];
+
+if (Core_Array::getRequest('action')) {
+    switch($_REQUEST['action']) {
+        case 1:
+            if ($data->updateLinks( Core_Array::getRequest('activate'), 'show')) {
+                $success_alert = core::getLanguage('msg', 'selected_links_added');
+            } else {
+                $errors[] = core::getLanguage('error', 'web_apps_error');
+            }
+
+            break;
+
+        case 2:
+            if ($data->updateLinks(Core_Array::getRequest('activate'), 'black')) {
+                $success_alert = core::getLanguage('msg', 'selected_links_black');
+            } else {
+                $errors[] = core::getLanguage('error', 'web_apps_error');
+            }
+
+            break;
+
+        case 3:
+            if ($data->checkLinks( Core_Array::getRequest('activate'))) {
+                $success_alert =  core::getLanguage('msg', 'selected_links_ckecked');
+            } else {
+                $errors[] =  core::getLanguage('error', 'web_apps_error');
+            }
+
+            break;
+
+        case 4:
+            if ($data->deleteLinks( Core_Array::getRequest('activate'))) {
+                $success_alert =  core::getLanguage('msg', 'selected_links_deleted');
+            } else {
+                $errors[] =  core::getLanguage('error', 'web_apps_error');
+            }
+
+            break;
+    }
+}
+
 
 //include template
 core::requireEx('libs', "html_template/SeparateTemplate.php");
 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/links.tpl");
+
 
 $tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_links'));
 $tpl->assign('TITLE', core::getLanguage('title', 'admin_links'));
@@ -32,12 +83,12 @@ $order = [
     'url' => "url",
     'category' => "cat_id",
     'views' => "views",
+    'status' => "status",
     'created' => "created"
 ];
 
 $strtmp = "name";
 $sort = '';
-
 
 foreach($order as $parametr => $field) {
     if (isset($_GET[$parametr])) {
@@ -81,6 +132,7 @@ if ($arrs) {
     $rowBlock->assign('STR_CATEGORY', core::getLanguage('str', 'category'));
     $rowBlock->assign('STR_VIEWS', core::getLanguage('str', 'views'));
     $rowBlock->assign('STR_CREATED', core::getLanguage('str', 'created'));
+    $rowBlock->assign('STR_STATUS', core::getLanguage('str', 'status'));
     $rowBlock->assign('STR_ACTION', core::getLanguage('str', 'action'));
     $rowBlock->assign('SEARCH', $search);
 
@@ -141,9 +193,13 @@ if ($arrs) {
         $columnBlock->assign('NAME', $row['name']);
         $columnBlock->assign('DESCRIPTION', $row['description']);
         $columnBlock->assign('EMAIL', $row['email']);
+        $columnBlock->assign('STATUS', str_replace($row['status'], core::getLanguage('status', $row['status']), $row['status']));
         $columnBlock->assign('URL', $row['url']);
         $columnBlock->assign('CATEGORY', $row['category']);
         $columnBlock->assign('VIEWS', $row['views']);
+
+
+
         $columnBlock->assign('CREATED', $row['created']);
         $columnBlock->assign('STR_EDIT', core::getLanguage('str', 'edit'));
         $columnBlock->assign('STR_REMOVE', core::getLanguage('str', 'remove'));
@@ -178,6 +234,8 @@ if ($arrs) {
     }
 
     $rowBlock->assign('STR_CHECK', core::getLanguage('str', 'check'));
+    $rowBlock->assign('STR_SHOW', core::getLanguage('str', 'show'));
+    $rowBlock->assign('STR_BLACK', core::getLanguage('str', 'black'));
     $rowBlock->assign('STR_REMOVE', core::getLanguage('str', 'remove'));
     $rowBlock->assign('STR_APPLY', core::getLanguage('str', 'apply'));
 

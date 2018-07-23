@@ -65,6 +65,7 @@
         <th><a href="./?a=admin&t=links&url=<!-- IF '${GET_URL}' != '' -->${GET_URL}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_URL}</a> <span class="<!-- IF '${GET_URL}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_URL}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"</span></th>
         <th><a href="./?a=admin&t=links&category=<!-- IF '${GET_CATEGORY}' != '' -->${GET_CATEGORY}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_CATEGORY}</a> <span class="<!-- IF '${GET_CATEGORY}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_CATEGORY}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"</span></th>
         <th><a href="./?a=admin&t=links&views=<!-- IF '${GET_VIEWS}' != '' -->${GET_VIEWS}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_VIEWS}</a> <span class="<!-- IF '${GET_VIEWS}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_VIEWS}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"</span></th>
+        <th><a href="./?a=admin&t=links&status=<!-- IF '${GET_STATUS}' != '' -->${GET_STATUS}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_STATUS}</a> <span class="<!-- IF '${GET_STATUS}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_STATUS}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"</span></th>
         <th><a href="./?a=admin&t=links&created=<!-- IF '${GET_CREATED}' != '' -->${GET_CREATED}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_CREATED}</a> <span class="<!-- IF '${GET_CREATED}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_CREATED}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"</span></th>
         <th>${STR_ACTION}</th>
     </tr>
@@ -81,6 +82,7 @@
     <td>${URL}</td>
     <td>${CATEGORY}</td>
     <td>${VIEWS}</td>
+    <th>${STATUS}</th>
     <td>${CREATED}</td>
     <td>
         <a class="btn btn-outline btn-default" href="./?a=admin&t=editlink&id=${ID}" title="${STR_EDIT}"> <i class="fa fa-pencil"></i></a>
@@ -143,15 +145,16 @@
     </div>
 </div>
 
-
 <div class="row">
     <div class="col-sm-12">
         <div class="form-inline">
             <div class="control-group">
                 <select id="select_action" class="span3 form-control" name="action">
                     <option value="0">--${STR_ACTION}--</option>
-                    <option value="1">${STR_CHECK}</option>
-                    <option value="2">${STR_REMOVE}</option>
+                    <option value="1">${STR_SHOW}</option>
+                    <option value="2">${STR_BLACK}</option>
+                    <option value="3">${STR_CHECK}</option>
+                    <option value="4">${STR_REMOVE}</option>
                 </select>
                 <span class="help-inline">
       <input type="submit" id="apply" value="${STR_APPLY}" class="btn btn-success" disabled="" name="">

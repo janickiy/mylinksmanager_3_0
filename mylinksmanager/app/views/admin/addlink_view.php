@@ -19,7 +19,7 @@ $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "a
 $tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_addlink'));
 $tpl->assign('TITLE', core::getLanguage('title', 'admin_addlink'));
 
-$errors = array();
+$errors = [];
 
 if (Core_Array::getRequest('action')){
     $name = stripslashes(htmlspecialchars(trim(Core_Array::getPost('name'))));
@@ -127,7 +127,7 @@ if (Core_Array::getRequest('action')){
     }
 
     if (empty($errors)) {
-        $fields = array();
+        $fields = [];
         $fields['id'] = 0;
         $fields['name'] = $name;
         $fields['url'] = $url;
