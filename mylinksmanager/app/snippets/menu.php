@@ -25,16 +25,14 @@ $tpl->assign('MENU_CATEGORIES_TITLE}', core::getLanguage('menu', 'categories_tit
 $tpl->assign('MENU_CATEGORIES', core::getLanguage('menu', 'categories'));
 
 
-$tpl->assign('MENU_CHECK_TITLE', core::getLanguage('menu', 'check_links_title'));
-$tpl->assign('MENU_CHECK', core::getLanguage('menu', 'check_links'));
+
 
 
 $tpl->assign('MENU_LINKS_TITLE', core::getLanguage('menu', 'links_title'));
 $tpl->assign('MENU_LINKS', core::getLanguage('menu', 'links'));
 
 
-$tpl->assign('MENU_CHECK_TITLE', core::getLanguage('menu', 'check_title'));
-$tpl->assign('MENU_CHECK', core::getLanguage('menu', 'check'));
+
 
 $tpl->assign('MENU_EDIT_TITLE', core::getLanguage('menu', 'edit_title'));
 $tpl->assign('MENU_EDIT', core::getLanguage('menu', 'edit'));
@@ -44,6 +42,13 @@ $tpl->assign('MENU_SETTINGS', core::getLanguage('menu', 'settings'));
 
 $tpl->assign('MENU_BLACK_TITLE', core::getLanguage('menu', 'black_title'));
 $tpl->assign('MENU_BLACK', core::getLanguage('menu', 'black'));
+
+
+$tpl->assign('MENU_UPDATE_TITLE', core::getLanguage('menu', 'update_title'));
+$tpl->assign('MENU_UPDATE', core::getLanguage('menu', 'update'));
+
+
+
 
 $tpl->assign('MENU_PASSWORD_TITLE', core::getLanguage('menu', 'password_title'));
 $tpl->assign('MENU_PASSWORD', core::getLanguage('menu', 'password'));

@@ -96,6 +96,9 @@ $language['menu']['settings'] = 'Настройки';
 $language['menu']['black_title'] = 'Чёрный список';
 $language['menu']['black'] = 'Чёрный список';
 
+$language['menu']['update_title'] = 'Обновление';
+$language['menu']['update'] = 'Обновление';
+
 $language['menu']['password_title'] = 'Пароль';
 $language['menu']['password'] = 'Пароль';
 
@@ -242,6 +245,13 @@ $language["str"]["subject_add"] = "Ваш сайт добавлен в ката�
 $language["str"]["subject_hide"] = "Ваша ссылка времено скрыта";
 
 
+$language["str"]["import_links"] = "Импорт";
+$language["str"]["export_links"] = "Экспорт";
+
+$language["str"]["apply"] = "Применить";
+
+
+$language["str"]["check"] = "Проверить";
 
 
 

@@ -14,8 +14,16 @@
 	<link href="./templates/admin/assets/css/custom.css" rel="stylesheet" />
 	<!-- GOOGLE FONTS-->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-	<script src="./templates/js/jquery.js" type="text/javascript"></script>
-	<script src="./templates/js/main.js" type="text/javascript"></script>
+
+
+
+	<script src="./js/jquery.min.js"></script>
+
+	<script src="./js/jquery.hide_alertblock.js"></script>
+	<script src="./js/jquery.cookie.js"></script>
+
+
+
 	<script type="text/javascript">
         $(document).ready(function(){
             $.ajax({
@@ -90,6 +98,9 @@
 				</li>
 				<li>
 					<a	<!-- IF '${ACTIVE_MENU}' == 'blacklist' -->class="active-menu"<!-- END IF --> title="${MENU_BLACK_TITLE}" href="./?a=admin&t=blacklist"><i class="fa fa-thumbs-down"></i> ${MENU_BLACK}</a>
+				</li>
+				<li>
+					<a	<!-- IF '${ACTIVE_MENU}' == 'update' -->class="active-menu"<!-- END IF --> title="${MENU_UPDATE_TITLE}" href="./?a=admin&t=update"><i class="fa fa-refresh"></i> ${MENU_UPDATE}</a>
 				</li>
 				<li>
 					<a <!-- IF '${ACTIVE_MENU}' == 'password' -->class="active-menu"<!-- END IF --> title="${MENU_PASSWORD_TITLE}" href="./?a=admin&t=password"><i class="fa fa-key "></i> ${MENU_PASSWORD}</a>

@@ -35,18 +35,18 @@ class Model_links extends Model
                 $temp = strtok(" ");
             }
 
-            core::database()->parameters = "*";
+            core::database()->parameters = "*, c.name AS category";
             core::database()->where = "WHERE " . $tmpl . "";
             core::database()->group = "GROUP BY l.id";
             core::database()->order = "ORDER BY l.name";
         } elseif (is_numeric($category)) {
             core::database()->tablename = core::database()->getTableName('links') . " l LEFT JOIN " . core::database()->getTableName('catalog') . " c ON c.id=l.cat_id";
             $_where = (isset($category) && $category > 0) ? "c.cat_id=" . $category . " " : "1";
-            core::database()->parameters = "*,l.name AS name";
+            core::database()->parameters = "*,c.name AS category";
             core::database()->where = "WHERE " . $_where . " ";
             core::database()->order = "ORDER BY l.name";
         } else {
-            core::database()->parameters = "*";
+            core::database()->parameters = "*, c.name AS category";
             core::database()->order = "ORDER BY l." . $strtmp . "";
         }
 
@@ -58,7 +58,7 @@ class Model_links extends Model
 
     public function getTotal()
     {
-        core::database()->tablename = core::database()->getTableName('links') . " l LEFT JOIN " . core::database()->getTableName('catalog') . " c ON l.id=c.cat_id";
+        core::database()->tablename = core::database()->getTableName('links') . " l LEFT JOIN " . core::database()->getTableName('catalog') . " c ON l.cat_id=c.id";
 
         $number = intval((core::database()->get_total() - 1) / core::database()->pnumber) + 1;
 
