@@ -44,11 +44,11 @@ foreach($order as $parametr => $field) {
         if ($_GET[$parametr] == "up"){
             $_GET[$parametr] = "down";
             $strtmp = $field;
-            $sort = "&" . $field . "=up";
+            $sort = "&" . $parametr  . "=up";
         } else {
             $_GET[$parametr] = "up";
             $strtmp = $field . " DESC";
-            $sort = "&" . $field . "=down";
+            $sort = "&" . $parametr . "=down";
         }
     }
 }
@@ -90,7 +90,7 @@ if ($arrs) {
     $rowBlock->assign('GET_URL', $_GET['url']);
     $rowBlock->assign('GET_VIEWS', $_GET['views']);
     $rowBlock->assign('GET_CREATED', $_GET['created']);
-
+    $rowBlock->assign('GET_CREATED', $_GET['created']);
 
     $number = $data->getTotal();
     $page = $data->getPageNumber();
@@ -131,6 +131,8 @@ if ($arrs) {
         $pagenav = "&page=" . $page . "";
     else
         $pagenav = '';
+
+    $rowBlock->assign('PAGENAV', $pagenav);
 
     foreach ($arrs as $row) {
         $columnBlock = $rowBlock->fetch('column');
