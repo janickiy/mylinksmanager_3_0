@@ -78,7 +78,7 @@ ${TOPBARMENU}
    <tr>
       <td>
          <h2>${SUBCATALOG}</h2>
-         <div style="text-align: center;"> <a href="add_url.php">${STR_ADD_URL}</a> </div>
+         <div style="text-align: center;"> <a href="./?t=addurl">${STR_ADD_URL}</a> </div>
          <!-- BEGIN ROW_LINKS -->
          <div id="link">
             <table width="100%" border="0">
@@ -99,18 +99,6 @@ ${TOPBARMENU}
                      ${STR_CATEGORY}: ${CATEGORY}<br />
                      ${STR_NUMBER_OF_CLICKS}: ${NUMBER_OF_CLICKS} </span>
                   </td>
-                  <td width="50%" align="left">
-                     <p align="right">
-                        <noindex>
-                           <!-- IF '${SHOW_PR}' == 'yes' -->
-                           <iframe src="show_pr.php?url=${URL}" frameborder="0" scrolling="no" width="100" height="50"></iframe>
-                           <!-- END IF -->
-                           <!-- IF '${SHOW_CY}' == 'yes' -->
-                           <iframe src="show_cy.php?url=${URL}" frameborder="0" scrolling="no" width="125" height="50"></iframe>
-                           <!-- END IF -->
-                        </noindex>
-                     </p>
-                  </td>
                </tr>
             </table>
             <!-- END ROW_LINKS -->
@@ -129,7 +117,7 @@ ${TOPBARMENU}
             ${PERVPAGE}${PAGE2LEFT}${PAGE1LEFT}<b>${PAGE}</b>${PAGE1RIGHT}${PAGE2RIGHT}${NEXTPAGE} 
          </div>
          <!-- END pagination -->
-         <div style="text-align: center;"> <a href="add_url.php">${STR_ADD_URL}</a> </div>
+         <div style="text-align: center;"> <a href="./?t=addurl">${STR_ADD_URL}</a> </div>
       </td>
    </tr>
 </table>

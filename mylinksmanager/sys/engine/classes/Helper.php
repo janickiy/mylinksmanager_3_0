@@ -335,7 +335,7 @@ class Helper
      * @param $limit
      * @return bool
      */
-    public static function countLink($url_link, $limit)
+    public static function countLinks($url_link, $limit)
     {
         global $version;
 

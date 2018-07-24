@@ -14,6 +14,272 @@ defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 core::requireEx('libs', "html_template/SeparateTemplate.php");
 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . core::getSetting('controller') . ".tpl");
 
+$errors = [];
+
+if (Core_Array::getRequest('action')) {
+    $name = stripslashes(htmlspecialchars(trim(Core_Array::getPost('name'))));
+    $email = stripslashes(htmlspecialchars(trim(Core_Array::getPost('email'))));
+    $keywords = strtolower(htmlspecialchars(trim(Core_Array::getPost('keywords'))));
+    $url = strtolower(trim(Core_Array::getPost('url')));
+    $reciprocal_link = trim(Core_Array::getPost('reciprocal_link'));
+    $description = stripslashes(htmlspecialchars(trim(Core_Array::getPost('description'))));
+    $full_description = stripslashes(htmlspecialchars(trim(Core_Array::getPost('full_description'))));
+    $htmlcode_banner = trim(Core_Array::getPost('htmlcode_banner'));
+
+    // Cut out http:// from url of site
+    if (!empty($url)){
+        if (substr($url, 0, 7) == "http://") $url = str_replace('http://', '', $url);
+        if (substr($url, 0, 8) == "https://") $url = str_replace('https://', '', $url);
+        if (strpos($url, '/') > 0) list($url) = explode('/', $url);
+    }
+
+    // Cut out http:// from url address of reciprocal link
+    if (!empty($reciprocal_link)){
+        if (substr(strtolower($reciprocal_link), 0, 7) == "http://") $reciprocal_link = str_replace('http://', '', $reciprocal_link);
+        if (substr(strtolower($reciprocal_link), 0, 8) == "https://") $reciprocal_link = str_replace('https://', '', $reciprocal_link);
+    }
+
+    // Cut out all unnecessary tags and javascript from HTML code of banner
+    $htmlcode_banner  = Helper::cuttags($htmlcode_banner);
+
+    // Check category is chosen, if not then print error
+    if ($cat_id == 0){
+        $errors[] = core::getLanguage('error', 'choose_category');
+    }
+
+    // Check catalogue already has adding link, if it has then print error
+    if (!empty($url)) {
+        $src_url = $url;
+
+        if(substr($url, 0, 4) == "www.") $src_url = str_replace('www.', '', $src_url);
+
+        $src_url = str_replace('.', '\\.', $src_url);
+
+        if (Links::CheckWaitVerification($src_url)) {
+            $errors[] = core::getLanguage('error', 'wait_verification');
+        }
+
+        if (Links::CheckExistsLink($src_url)) {
+            $errors[] = core::getLanguage('error', 'already_exists');
+        }
+    }
+
+    // Check on, whether the adding site on the same hosting as catalogue is located
+    if (!empty($url) && core::getSetting('common_host') == "yes"){
+        if (Helper::commonHost($url)) {
+            $error[] = core::getLanguage('error','same_hosting');
+        }
+    }
+
+    // Check on, whether the url address of reciprocal link has the url address of catalogue in arg=value
+    if ((!empty($reciprocal_link) && core::getSetting('check_get_parameter') == "yes") && Helper::checkGetParameter($reciprocal_link)) {
+        $error[] = core::getLanguage('error','arg_value');
+    }
+
+    // Verify domen of reciprocal link and of catalogue
+    if ((!empty($reciprocal_link) && core::getSetting('check_links') == "yes") && Helper::nativeCheckLink($reciprocal_link,$url)) {
+        $error[] = core::getLanguage('error','verify_domen');
+    }
+
+    // Check the email on valid
+    if (!empty($email) && Helper::checkEmail($email)) {
+        $error[]= core::getLanguage('error','wrong_email');
+    }
+
+    // Check the url address on valid
+    if (!empty($url) && Helper::checkUrl($url)) {
+
+        $error[]= core::getLanguage('error','wrong_url');
+
+        if (Helper::nativeCheckUrl($url)){
+            $error[] = core::getLanguage('error','not_your_site');
+        }
+    }
+
+    // Check brief description of site on spaces
+    if (!empty($description) && Helper::lengthDescription($description)) {
+        $error[] = core::getLanguage('error','short_desc_without_spaces');
+    }
+
+    // Count the number of characters of full description, if it more than a limit then print error
+    if (!empty($_POST["full_description"]) && Helper::lengthDescription($full_description)){
+        $error[] = core::getLanguage('error','full_desc_spaces');
+    }
+
+    // Check min and max number of characters in brief description
+    if (!empty($description) && Helper::lengthDescriptionLinkMin($description,core::getSetting('number_chars_description_min'))) {
+        $error[] = str_replace('%NUMBER_CHARS_DESCRIPTION_MIN%', core::getSetting('number_chars_description_min'), core::getLanguage('error','short_desc_min_char'));
+
+        if (Helper::lengthDescriptionLinkMax($description,core::getSetting('number_chars_description_max'))) {
+            $error[] = str_replace('%NUMBER_CHARS_DESCRIPTION_MAX%', core::getSetting('number_chars_description_max'), core::getLanguage('error','short_desc_max_char'));
+        }
+    }
+
+    // Check min and max number of characters in full description
+    if (!empty($full_description)){
+
+        if (Helper::lengthFullDescriptionMin($full_description, core::getSetting('number_chars_fulldescription_min'))) {
+            $error[] = str_replace('%NUMBER_CHARS_FULLDESCRIPTION_MIN%', core::getSetting('number_chars_fulldescription_min'), core::getLanguage('str','full_desc_min_char'));
+        }
+
+        if (Helper::lengthFullDescriptionMax($full_description, core::getSetting('number_chars_fulldescription_max'))) {
+            $error[] = str_replace('%NUMBER_CHARS_FULLDESCRIPTION_MAX%', core::getSetting('number_chars_fulldescription_max'), core::getLanguage('full_desc_max_char'));
+        }
+    }
+
+    // Count the number of characters in HTML code of banner, if it more than a limit then print error
+    if (!empty($htmlcode_banner) && Helper::lengthHtmlcode($htmlcode_banner, core::getSetting('number_html_chars'))) {
+        $error[] = str_replace('%NUMBER_HTML_CHARS%', core::getSetting('number_html_chars'), core::getLanguage('error','html_banner_limit'));
+    }
+
+    // if $settings['robot'] == yes then check on,
+    // whether there's a prohibition on index of a reciprocal link by meta tag <meta name=robot>
+    if (!empty($reciprocal_link) && core::getSetting('check_links') == "yes") {
+
+        if (Helper::checkMeta($reciprocal_link)){
+            $error[] = core::getLanguage('error','close_index_tags');
+        }
+
+        // check a directory if it is closed for index then print error
+        if (Helper::checkRobots($reciprocal_link)) {
+            $error[] = core::getLanguage('error','close_index_dir');
+        }
+
+        // if $settings['no_add_link'] == yes, check the number of links on the page of a reciprocal link
+        // if the number of links is more than $settings['no_link'] print the notice
+        if ((core::getSetting('limit_reciprocal_links') == "yes" && !empty($url)) && Helper::countLinks($reciprocal_link, core::getSetting('limit_reciprocal_link'))) {
+            $error[] = str_replace('%NUMBER_RECIPROCAL_LINKS_LIMIT%', core::getSetting('limit_reciprocal_link'), core::getLanguage('error', 'number_url'));
+        }
+    }
+
+// If $settings['check_links'] == yes, then check
+    // the find a reciprocal link on our site
+    if (!empty($reciprocal_link) && core::getSetting('check_links') == "yes") {
+        if (Helper::checkMultiLinkNative($reciprocal_link,core::getSetting('url'))) {
+            $error[] = core::getLanguage('error','not_reciprocal_link');
+        }
+    }
+
+    // Check HTML code of banner on valid
+    if (!empty($htmlcode_banner)){
+        // check htmlcode of banner
+        if (Helper::checkHtmlcodeBanner($htmlcode_banner)) {
+            $error[] = core::getLanguage('error','wrong_html_banner');
+        } else {
+            // check image size of banner
+            if (Helper::checkSizeBanner($htmlcode_banner)) {
+                $error[] = core::getLanguage('error','size_banner');
+            }
+
+            // check image type of banner
+            if (Helper::checkTypeImageBanner($htmlcode_banner)) {
+                $error[] = core::getLanguage('error','type_banner');
+            }
+        }
+    }
+
+    // Check all required fields is filled
+    // Check site name, if its value is empty print error
+    if (empty($name)) {
+        $error[] = core::getLanguage('error','nofill_name');
+    }
+
+    // Check site address, if its value is empty print error
+    if (empty($url)) {
+        $error[] = core::getLanguage('error','nofill_url');
+    }
+
+    // Check reciprocal link, if its value is empty print error
+    if (core::getSetting('check_links') == "yes" && empty($reciprocal_link)) {
+        $error[] = core::getLanguage('error','nofill_reciprocal_link');
+    }
+
+    // Check email, if its value is empty print error
+    if (empty($email)) {
+        $error[] = core::getLanguage('error','nofill_email');
+    }
+
+    // Check description of link, if its value is empty print error
+    if (empty(description)) {
+        $error[] = core::getLanguage('error', 'nofill_briefdesc');
+    }
+
+    // Check CAPTCHA, if its value is empty print error
+    if (empty($securityCode) && core::getSetting('request_captcha')  == "yes"){
+        $error[] = core::getLanguage('str','not_filled_captcha');
+    }
+
+    // Check full description of link, if its value is empty print error
+    if (empty($full_description)){
+        $error[] = core::getLanguage('error','nofill_fulldesc');
+    }
+
+
+
+    // Add the link if there are not any errors
+    if (empty($errors)) {
+        $fields = [];
+        $fields['id'] = 0;
+        $fields['name'] = $name;
+        $fields['url'] = $url;
+        $fields['reciprocal_link'] = $reciprocal_link;
+        $fields['created'] = date("Y-m-d H:i:s");;
+        $fields['time_check'] = '0000-00-00 00:00:00';
+        $fields['email'] = $email;
+        $fields['keywords'] = $keywords;
+        $fields['description'] = $description;
+        $fields['full_description'] = $full_description;
+        $fields['htmlcode_banner'] = $htmlcode_banner;
+        $fields['cat_id'] = $cat_id;
+        $fields['status'] = core::getSetting('add_links_without_check') == "yes" ? 'show' : 'new';;
+        $fields['token'] = Helper::getRandomCode();
+        $fields['check_link'] = 'yes';
+
+        if ($data->addLink($fields)) {
+            unset($_POST);
+
+            $adr = 'http://'.$_SERVER['SERVER_NAME'].root().'index.php?id_link='.$id.'';
+
+            $date = date("d.m.Y г. G:i:s");
+
+            $msgUser = $settings['template_mail_1'];
+            $msgUser = str_replace("{[HTTP_HOST]}", $_SERVER['SERVER_NAME'], $msgUser);
+            $msgUser = str_replace("{[ADRESS]}", $adr, $msgUser);
+            $msgUser = str_replace("{[NAME]}", $_POST["name"], $msgUser);
+            $msgUser = str_replace("{[EMAIL]}", $_POST["email"], $msgUser);
+            $msgUser = str_replace("{[URL]}", $_POST["url"], $msgUser);
+            $msgUser = str_replace("{[DESCRIPTION]}", $_POST["description"], $msgUser);
+            $msgUser = str_replace("{[DATE]}", $date, $msgUser);
+
+            $fromname = $_SERVER['SERVER_NAME'];
+            $fromname_encoded = base64_encode($fromname);
+            $fromname_packed = "=?utf-8?B?".$fromname_encoded."?=";
+            $fromaddr  = $settings['email'];
+
+            $headers = "MIME-Version: 1.0\n";
+            $headers .= "From: ".$fromname_packed." <$fromaddr>\n";
+            $headers .= "Content-type: text/plain; charset=utf-8\n";
+            $headers .= "Content-Transfer-Encoding: 8bit\r\n";
+
+            if($settings['add_links_without_check'] == 'no') { @mail($_POST["email"], STR_SUBJECT_WAIT, $msgUser, $headers); }
+
+            // Notify admin of catalogue about a new link
+            if($settings['new_links_notification'] == "yes"){
+                $msgAdmin = $settings['template_mail_5'];
+                $msgAdmin = str_replace("{[HTTP_HOST]}", $HTTP_HOST, $msgAdmin);
+                $msgAdmin = str_replace("{[NAME]}", $_POST["name"], $msgAdmin);
+                $msgAdmin = str_replace("{[EMAIL]}", $_POST["email"], $msgAdmin);
+                $msgAdmin = str_replace("{[URL]}", $_POST["url"], $msgAdmin);
+                $msgAdmin = str_replace("{[DESCRIPTION]}", $_POST["description"], $msgAdmin);
+                $msgAdmin = str_replace("{[DATE]}", $date, $msgAdmin);
+
+                @mail($settings['email'], STR_SUBJECT_NEWLINK, $msgAdmin, $headers);
+            }
+        }
+    }
+}
+
+
 $tpl->assign('TITLE_PAGE', core::getLanguage('title', 'page_addurl'));
 $tpl->assign('TITLE', core::getLanguage('title', 'addurl'));
 
@@ -24,7 +290,7 @@ $tpl->assign('STR_HTMLCODE_BANNER', core::getLanguage('str','htmlcode_banner'));
 $tpl->assign('ALERT_INITIAALIZATION_ERROR_INTERFACE', core::getLanguage('error','alert_initiaalization_error_interface'));
 
 //form
-$tpl->assign('ACTION', $_SERVER['PHP_SELF']);
+$tpl->assign('ACTION', $_SERVER['REQUEST_URI']);
 $tpl->assign('STR_REQUIRED_FIELD', core::getLanguage('str','required_field'));
 $tpl->assign('STR_CHOOSE_YOUR_CATEGORY', core::getLanguage('str','choose_your_category'));
 $tpl->assign('STR_CHOOSE_CATEGORY', core::getLanguage('str','choose_category'));
@@ -33,10 +299,10 @@ $tpl->assign('STR_FORM_URL', core::getLanguage('str','form_url'));
 $tpl->assign('STR_FORM_EMAIL', core::getLanguage('str','form_email'));
 $tpl->assign('STR_FORM_KEYWORDS', core::getLanguage('str','form_keywords'));
 $tpl->assign('STR_SEPARATED_BY_COMMAS', core::getLanguage('str','separated_by_commas'));
-$tpl->assign('STR_FORM_DESCRIPTION', core::getLanguage('','form_description'));
+$tpl->assign('STR_FORM_DESCRIPTION', core::getLanguage('str','form_description'));
 $tpl->assign('STR_ONLY_TEXT_NOT_HTMLCODE', core::getLanguage('str','only_text_not_htmlcode'));
 
-
+$tpl->assign("OPTION", Category::ShowTree(0,0));
 
 
 $tpl->assign('STR_FROM', core::getLanguage('str','from'));
@@ -55,6 +321,18 @@ $tpl->assign("STR_SCRIPT_LINK_CATALOG", core::getLanguage('str','script_link_cat
 $tpl->assign('GO_BACK', core::getLanguage('str', 'go_back'));
 
 
+$tpl->assign('NUMBER_CHARS_DESCRIPTION_MIN', core::getSetting('number_chars_description_min'));
+$tpl->assign('NUMBER_CHARS_FULLDESCRIPTION_MIN', core::getSetting('number_chars_fulldescription_min'));
+
+
+$tpl->assign('NUMBER_CHARS_DESCRIPTION_MAX', core::getSetting('number_chars_description_max'));
+$tpl->assign('NUMBER_CHARS_FULLDESCRIPTION_MAX', core::getSetting('number_chars_fulldescription_max'));
+
+
+$tpl->assign('NUMBER_HTML_CHARS', core::getSetting('number_html_chars'));
+
+
+include_once core::pathTo('extra', 'footer.php');
 
 // display content
 $tpl->display();

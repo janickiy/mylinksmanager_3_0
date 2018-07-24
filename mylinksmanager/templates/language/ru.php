@@ -226,49 +226,27 @@ $language["str"]["remove_pic"] = "Удалить картинку";
 $language["str"]["home"] = "На главную";
 $language["str"]["number_of_clicks"] = "Количество кликов";
 $language["str"]["pages"] = "Страницы";
-
-$language["str"]["pnumber"] = 'Кол-во строк';;
-
-
-
+$language["str"]["pnumber"] = 'Кол-во строк';
 $language["str"]["links_waiting_checks"] = "Ссылки в очереди на проверку";
 $language["str"]["links_for_check"] = "Ссылки на проверку";
-
-
 $language["str"]["subject_add"] = "Ваш сайт добавлен в каталог ссылок";
-
 $language["str"]["subject_hide"] = "Ваша ссылка времено скрыта";
-
-
 $language["str"]["import_links"] = "Импорт";
 $language["str"]["export_links"] = "Экспорт";
-
 $language["str"]["apply"] = "Применить";
-
-
 $language["str"]["check"] = "Проверить";
-
-
 $language["str"]["status"] = "Статус";
-
 $language["str"]["show"] = "Отобразить";
 $language["str"]["black"] = "В черный список";
-
 $language["str"]["selected_links_added"] = "Выбранные ссылки добавлены";
 $language["str"]["selected_links_black"] = "Выбранные ссылки добавлены в чёрный список";
 $language["str"]["selected_links_ckecked"] = "Выбранные ссылки проверены";
-
-
 $language["str"]["new_links"] = 'Новые ссылки';
-
 $language["str"]["add_url"] = 'Добавить ссылку';
-
 $language["str"]["read_more"] = "Подробнее...";
-
-
 $language["str"]["go_to_website"] = "Перейти на сайт";
 
-
+$language["str"]["go_to_catalog"] = "Вернуться в каталог";
 
 
 
@@ -277,9 +255,6 @@ $language["status"]["new"] = "Новые";
 $language["status"]["show"] = "Проверено";
 $language["status"]["hide"] = "На проверке";
 $language["status"]["black"] = "В черном списке";
-
-
-
 
 
 
@@ -320,12 +295,14 @@ $language["error"]["choose_category"] = "Выберите категорию!";
 $language["error"]["wrong_url"] = "Неверно введен адрес сайта! Введите адрес сайта в виде <i>my-domain.com</i> или <i>www.my-domain.com</i>";
 $language["error"]["same_hosting"] = "Добавляемый сайт находится на той же хостинг площадке, что и каталог!";
 $language["error"]["wrong_email"] = "Неверно введен еmail! Введите email в виде <i>yourname@my-domain.com</i>";
-$language["error"]["short_desc_without_spaces"] = "Текст краткое описания содержит слишком много символов без пробелов!";
 $language["error"]["full_desc_without_spaces"] = "Текст полного описания содержит слишком много символов без пробелов!";
 $language["error"]["wrong_html_banner"] = "HTML кода баннера введен не верно!";
 $language["error"]["size_banner"] = "Размер баннера должен быть 88Х31!";
 $language["error"]["nofill_name"] = "Введите название сайта!";
 $language["error"]["nofill_url"] = "Введите адрес сайта!";
+$language["error"]["nofill_reciprocal_link"] = "Введите адерес страницы с ссылкой на наш сайт!";
+$language["error"]["nofill_email"] = "Введите email!";
+
 $language["error"]["nofill_briefdesc"] = "Введите краткое описание!";
 $language["error"]["nofill_fulldesc"] = "Введите полное описание!";
 $language["error"]["failed_add_changes_design"] = "Не удалось добавить изменения! Файл %FILE% недоступен для записи";
@@ -338,3 +315,23 @@ $language["error"]["change_password"] = "Пароль не был сменён!"
 $language["error"]["fill_cat_name"] = "Введите название категории!";
 $language["error"]["filesize"] = "Размер файла больше %LIMIT% кб!";
 $language["error"]["web_apps_error"] = "Ошибка веб приложения! Действия не были выполнены.";
+
+$language["error"]["arg_value"] = "Запрещено в значении arg=value указывать url адрес каталога!";
+$language["error"]["verify_domen"] = "Ответная ссылка должна находиться на сайте, который вы добавляете!";
+$language["error"]["not_your_site"] = "Укажите свой адрес сайта!";
+$language["error"]["short_desc_without_spaces"] = "Текст краткого описания содержит слишком много символов без пробелов!";
+$language["error"]["full_desc_spaces"] = "Текст полного описания содержит слишком много символов без пробелов!";
+$language["error"]["short_desc_min_char"] = 'Краткое описание сайта меньше %NUMBER_CHARS_DESCRIPTION_MIN% знаков!';
+$language["error"]["short_desc_max_char"] = "Краткое описание сайта больше %NUMBER_CHARS_DESCRIPTION_MAX% знаков!";
+$language["error"]["full_desc_min_char"] = 'Полное описание сайта меньше %NUMBER_CHARS_FULLDESCRIPTION_MIN% знаков!';
+$language["error"]["full_desc_max_char"] = 'Полное описание сайта превышает %NUMBER_CHARS_FULLDESCRIPTION_MAX% знаков!';
+$language["error"]["html_banner_limit"] = "Количество знаков в HTML коде баннера превышает %NUMBER_HTML_CHARS% знаков!";
+$language["error"]["close_index_tags"] = 'Ответная ссылка закрыта для индексации метатэгом &lt;meta name=robot&gt;!';
+$language["error"]["close_index_dir"] = "Директория где расположена наша ссылка закрыта для индексации!";
+$language["error"]["number_url"] = 'Количество url ссылок на странице где расположена наша ссылка больше %NUMBER_RECIPROCAL_LINKS_LIMIT%!';
+
+$language["error"]["not_reciprocal_link"] = "Введите адерес страницы с ссылкой на наш сайт!";
+$language["error"]["type_banner"] = "Расширение банера должно быть GIF, JPEG или PNG!";
+
+
+

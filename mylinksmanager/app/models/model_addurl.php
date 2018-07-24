@@ -12,5 +12,8 @@ defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
 class Model_addurl extends Model
 {
-
+    public function addLink($fields)
+    {
+        return core::database()->insert($fields, core::database()->getTableName('links'));
+    }
 }

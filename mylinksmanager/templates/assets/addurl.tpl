@@ -209,7 +209,7 @@ function showLength2(id,max)
 </script>
 
 <h3>${ADDING_LINK}</h3>
-<p align="left">« <a href="${GO_BACK}">${STR_GO_TO_CATALOG}</a></p>
+<p align="left">« <a href="./">${STR_GO_TO_CATALOG}</a></p>
 <table border="0" width="100%">
   <tr>
     <td vAlign="top"><!-- IF '${RULES}' != '' -->
