@@ -136,7 +136,7 @@ class Links
     public static function getLinkInfo($id)
     {
         if (is_numeric($id)) {
-            $query = "SELECT *,l.name AS name, l.description AS description,c.name AS catname FROM " . core::database()->getTableName('links') . " l
+            $query = "SELECT l.*,c.name AS catname ,c.id AS cat_id  FROM " . core::database()->getTableName('links') . " l
             LEFT JOIN  " . core::database()->getTableName('catalog') . " c ON l.cat_id = c.id WHERE l.id=" . $id;
             $result = core::database()->querySQL($query);
             return core::database()->getRow($result);

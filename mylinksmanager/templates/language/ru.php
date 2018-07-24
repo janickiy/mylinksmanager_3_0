@@ -259,10 +259,25 @@ $language["str"]["selected_links_black"] = "Выбранные ссылки до
 $language["str"]["selected_links_ckecked"] = "Выбранные ссылки проверены";
 
 
+$language["str"]["new_links"] = 'Новые ссылки';
+
+$language["str"]["add_url"] = 'Добавить ссылку';
+
+$language["str"]["read_more"] = "Подробнее...";
+
+
+
+
+
+
 $language["status"]["new"] = "Новые";
 $language["status"]["show"] = "Проверено";
 $language["status"]["hide"] = "На проверке";
 $language["status"]["black"] = "В черном списке";
+
+
+
+
 
 
 $language["button"]["apply"] = "Применить";

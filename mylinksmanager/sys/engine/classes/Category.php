@@ -125,18 +125,18 @@ class Category
      * @param $topbar
      * @return array
      */
-    public static function topbarmenu($parent_id, $topbar)
+    public static function topbarMenu($parent_id, $topbar)
     {
         global $topbar;
 
         $parent_id = intval($parent_id);
 
-        $query = "SELECT `id`,`parent_id` FROM " . core::database()->getTableName('catalog') . " WHERE id=" . $parent_id;
+        $query = "SELECT `id`,`parent_id`,`name` FROM " . core::database()->getTableName('catalog') . " WHERE id=" . $parent_id;
         $result = core::database()->querySQL($query);
 
         if (core::database()->getRecordCount($result) > 0){
             $row = core::database()->getRow($result);
-            $topbar[] = array($row['cat_id'], $row['name']);
+            $topbar[] = [$row['id'], $row['name']];
 
             self::topbarmenu($row["parent_id"], $topbar);
         }

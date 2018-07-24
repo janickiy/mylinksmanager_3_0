@@ -10,16 +10,12 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
-class Controller_icon extends Controller
-{
-	function __construct()
-	{
-		$this->model = new Model_icon();
-		$this->view = new View();
-	}
 
-	public function action_index()
-	{	
-		$this->view->generate('icon_view.php', $this->model);
-	}
-}
+$row = $data->getIcon(Core_Array::getGet('id'));
+
+
+$image = imagecreatefromstring($row['image']) or die('Can\'t load image.');
+
+header("Content-Type: " . $row['image_mime']);
+imagejpeg($image);
+imagedestroy($image);

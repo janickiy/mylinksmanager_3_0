@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 /********************************************
  * My Links Manager 3.0.0 alfa
@@ -10,7 +10,7 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
-class Model_icon extends Model
+class Model_pic extends Model
 {
     /**
      * @param $cat_id
@@ -21,7 +21,6 @@ class Model_icon extends Model
         if (is_numeric($cat_id)) {
             $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE id=" . $cat_id;
             $result = core::database()->querySQL($query);
-
             return core::database()->getRow($result);
         }
     }
