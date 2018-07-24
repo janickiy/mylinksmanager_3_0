@@ -49,4 +49,19 @@ class Model_index extends Model
         $result = core::database()->querySQL($query);
         return core::database()->getColumnArray($result);
     }
+
+    /**
+     * @param $link_id
+     * @return mixed
+     */
+    public function countView($link_id)
+    {
+        if (is_numeric($link_id)) {
+            $fields = [
+                'views' => 'count + 1',
+            ];
+
+            return core::database()->update($fields, core::database()->getTableName('links'), "id=" . $link_id);
+        }
+    }
 }

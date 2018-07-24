@@ -74,10 +74,10 @@ if (Core_Array::getRequest('action')) {
     }
 }
 
-include_once core::pathTo('extra', 'top.php');
+include_once core::pathTo('extra', 'admin/top.php');
 
 //menu
-include_once core::pathTo('extra', 'menu.php');
+include_once core::pathTo('extra', 'admin/menu.php');
 
 $row = $data->getCategoryRow(Core_Array::getRequest('id'));
 
@@ -106,7 +106,7 @@ if ($data->getTotal(Core_Array::getRequest('id'))) {
 }
 
 //footer
-include_once core::pathTo('extra', 'footer.php');
+include_once core::pathTo('extra', 'admin/footer.php');
 
 //display content
 $tpl->display();

@@ -34,16 +34,16 @@ if (Core_Array::getRequest('action')) {
 }
 
 
-include_once core::pathTo('extra', 'top.php');
+include_once core::pathTo('extra', 'admin/top.php');
 
 //menu
-include_once core::pathTo('extra', 'menu.php');
+include_once core::pathTo('extra', 'admin/menu.php');
 
 $tpl->assign('STR_ADD_CATEGORY', core::getLanguage('str', 'add_category'));
 $tpl->assign('CATALOGTREE', Links::CatalogTree(0, 0));
 
 //footer
-include_once core::pathTo('extra', 'footer.php');
+include_once core::pathTo('extra', 'admin/footer.php');
 
 //display content
 $tpl->display();

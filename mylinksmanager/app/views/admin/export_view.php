@@ -21,7 +21,7 @@ $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "a
 
 
 //footer
-include_once core::pathTo('extra', 'footer.php');
+include_once core::pathTo('extra', 'admin/footer.php');
 
 //display content
 $tpl->display();

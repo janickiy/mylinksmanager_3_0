@@ -63,10 +63,10 @@ if (Core_Array::getRequest('action')) {
 }
 
 
-include_once core::pathTo('extra', 'top.php');
+include_once core::pathTo('extra', 'admin/top.php');
 
 //menu
-include_once core::pathTo('extra', 'menu.php');
+include_once core::pathTo('extra', 'admin/menu.php');
 
 //form
 $tpl->assign('ACTION', $_SERVER['REQUEST_URI']);
@@ -94,7 +94,7 @@ if (isset($success_msg)) {
 }
 
 //footer
-include_once core::pathTo('extra', 'footer.php');
+include_once core::pathTo('extra', 'admin/footer.php');
 
 //display content
 $tpl->display();

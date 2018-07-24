@@ -20,10 +20,10 @@ $tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_check_links'));
 $tpl->assign('TITLE', core::getLanguage('title', 'admin_check_links'));
 $tpl->assign('HELP', core::getLanguage('info', 'admin_check_links'));
 
-include_once core::pathTo('extra', 'top.php');
+include_once core::pathTo('extra', 'admin/top.php');
 
 //menu
-include_once core::pathTo('extra', 'menu.php');
+include_once core::pathTo('extra', 'admin/menu.php');
 
 $errors = [];
 
@@ -689,7 +689,7 @@ if (Core_Array::getRequest('action') == '') {
 }
 
 //footer
-include_once core::pathTo('extra', 'footer.php');
+include_once core::pathTo('extra', 'admin/footer.php');
 
 //display content
 $tpl->display();

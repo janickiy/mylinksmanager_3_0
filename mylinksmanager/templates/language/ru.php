@@ -266,6 +266,9 @@ $language["str"]["add_url"] = 'Добавить ссылку';
 $language["str"]["read_more"] = "Подробнее...";
 
 
+$language["str"]["go_to_website"] = "Перейти на сайт";
+
+
 
 
 

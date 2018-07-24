@@ -22,7 +22,7 @@ $tpl->assign('HELP', core::getLanguage('info', 'admin_settings'));
 
 
 if (Core_Array::getRequest('action')){
-    $fields = Array();
+    $fields = [];
 
     $fields['language']  = Core_Array::getPost('language');
     $fields['all_number_links'] = (int)trim(Core_Array::getPost('all_number_links'));
@@ -74,13 +74,13 @@ if (Core_Array::getRequest('action')){
 	exit;
 }
 
-include_once core::pathTo('extra', 'top.php');
+include_once core::pathTo('extra', 'admin/top.php');
 
 //menu
-include_once core::pathTo('extra', 'menu.php');
+include_once core::pathTo('extra', 'admin/menu.php');
 
 //footer
-include_once core::pathTo('extra', 'footer.php');
+include_once core::pathTo('extra', 'admin/footer.php');
 
 //form
 $tpl->assign("STR_INTERFACE_SETTINGS", core::getLanguage('str', 'interface_settings'));

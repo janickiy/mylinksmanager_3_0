@@ -99,10 +99,10 @@ if (Core_Array::getPost('action')){
 }
 
 
-include_once core::pathTo('extra', 'top.php');
+include_once core::pathTo('extra', 'admin/top.php');
 
 //menu
-include_once core::pathTo('extra', 'menu.php');
+include_once core::pathTo('extra', 'admin/menu.php');
 
 if (Core_Array::getGet('id')) {
     $blockInfoLink = $tpl->fetch('info_link');
@@ -171,7 +171,7 @@ if (Core_Array::getGet('id')) {
 
 
 //footer
-include_once core::pathTo('extra', 'footer.php');
+include_once core::pathTo('extra', 'admin/footer.php');
 
 //display content
 $tpl->display();

@@ -35,6 +35,7 @@ if (Core_Array::getRequest('action')){
     // Cut out http:// from url of site
     if (!empty($url)){
         if (substr($url, 0, 7) == "http://") $url = str_replace('http://', '', $url);
+        if (substr($url, 0, 8) == "https://") $url = str_replace('https://', '', $url);
         if (strpos($url, '/') > 0) list($url) = explode('/', $url);
     }
 
@@ -163,10 +164,10 @@ if (!empty($errors)) {
 if (isset($success_msg)) $tpl->assign('MSG_ALERT', $success_msg);
 
 
-include_once core::pathTo('extra', 'top.php');
+include_once core::pathTo('extra', 'admin/top.php');
 
 // menu
-include_once core::pathTo('extra', 'menu.php');
+include_once core::pathTo('extra', 'admin/menu.php');
 
 //form
 $tpl->assign('STR_REQUIRED_FIELDS', core::getLanguage('str', 'required_fields'));
@@ -205,7 +206,7 @@ $tpl->assign('CAT_ID', $_POST['cat_id']);
 $tpl->assign('CHECK_LINK', Core_Array::getPost('check_link') ?  $_POST['check_link'] : $row['check_link']);
 
 //footer
-include_once core::pathTo('extra', 'footer.php');
+include_once core::pathTo('extra', 'admin/footer.php');
 
 //display content
 $tpl->display();

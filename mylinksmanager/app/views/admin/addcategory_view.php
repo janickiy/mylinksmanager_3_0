@@ -72,10 +72,10 @@ if (Core_Array::getRequest('action')) {
     }
 }
 
-include_once core::pathTo('extra', 'top.php');
+include_once core::pathTo('extra', 'admin/top.php');
 
 //menu
-include_once core::pathTo('extra', 'menu.php');
+include_once core::pathTo('extra', 'admin/menu.php');
 
 //FORM
 $tpl->assign('STR_REQUIRED_FIELDS', core::getLanguage('str', 'required_fields'));
@@ -99,7 +99,7 @@ $tpl->assign('ID_PARENT', Core_Array::getRequest('Core_Array::getRequest'));
 
 
 //footer
-include_once core::pathTo('extra', 'footer.php');
+include_once core::pathTo('extra', 'admin/footer.php');
 
 //display content
 $tpl->display();

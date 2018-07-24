@@ -54,7 +54,7 @@ if (!empty($_GET['link_id'])){
 
     $link_go_back = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF']."?id=" . $link['id'];
 
-    $url_to_site = "" . $_SERVER['PHP_SELF']."link_id=" . $link['id']."&url=" . $link['url']."";
+    $url_to_site = "" . $_SERVER['PHP_SELF'] . " ? link_id=" . $link['id'] . "&url=" . $link['url'] . "";
     $link['full_description'] = preg_replace("/\\r\\n/s","<br />", $link['full_description']);
 
     $tpl->assign('CATNAME', $link['catname']);
@@ -68,35 +68,13 @@ if (!empty($_GET['link_id'])){
     $tpl->assign('STR_GO_TO_WEBSITE', core::getLanguage('str', 'go_to_website'));
     $tpl->assign('STR_GO_BACK', core::getLanguage('str','go_back'));
 
-    /*
-    $query = "SELECT COUNT(*) FROM ".DB_LINKS." WHERE status = 'show'";
-    $result = $dbh->query($query);
-
-    if(!$result) throw new ExceptionMySQL($dbh->error,$query,"Error executing SQL query!");
-
-    $total = $result->fetch_assoc();
-
-
-
-    if($total['COUNT(*)'] > 3){
-        $tpl->assign('INT', 'show');
-    }
-
     if ($_GET['url']){
         // If there is a URL then count one click
-        $update = "UPDATE ".DB_LINKS." SET count = count + 1 WHERE id_link = ".$_GET['id_link'];
-
-        if ($dbh->query($update)){
+        if ($data->countView($_GET['link_id'])){
             // Make a redirect
-            $tpl->assign('REDIRECT_URL', $links['url']);
+            $tpl->assign('REDIRECT_URL', $link['url']);
         }
     }
-    */
-
-    $tpl->assign('STR_LOGO', STR_LOGO);
-    $tpl->assign('STR_AUTHOR', STR_AUTHOR);
-
-
 
 } else {
 
@@ -214,8 +192,7 @@ if (!empty($_GET['link_id'])){
     }
 }
 
-
-
+include_once core::pathTo('extra', 'footer.php');
 
 // display content
 $tpl->display();
