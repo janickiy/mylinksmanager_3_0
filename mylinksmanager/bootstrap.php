@@ -12,7 +12,7 @@ defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
 Error_Reporting(1); // set error reporting level
 
-define("DEBUG", 1);
+define("DEBUG", 0);
 
 define('VERSION', '3.0.0 alfa');
 

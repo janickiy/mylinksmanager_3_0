@@ -35,6 +35,65 @@ $tpl->assign('ID_CATALOG', $_GET['id_catalog']);
 $tpl->assign('LOGIC', $_GET['logic']);
 $tpl->assign('OPTION', Links::ShowCatalogList(0, 0));
 
+$id = $_GET['id'] ? $_GET['id'] : 0;
+
+$arraycat = $data->getCatalogList($id);
+
+$total = count($arraycat);
+
+$number = (int)($total / core::getSetting('columns_number'));
+
+if ((float)($total / core::getSetting('columns_number')) - $number != 0) $number++;
+
+// Form an array
+for($i = 0; $i < $number; $i++){
+    for($j = 0; $j < core::getSetting('columns_number'); $j++){
+        $arr[$i][$j] = $arraycat[$j * $number + $i];
+    }
+}
+
+$rowPrintCat = $tpl->fetch('PRINT_CAT');
+
+for($i = 0; $i < $number; $i++){
+
+    $rowBlockCat = $rowPrintCat->fetch('ROW_CAT');
+
+    for($j = 0; $j < core::getSetting('columns_number'); $j++){
+
+        $rowBlockFolder = $rowBlockCat->fetch('ROW_FOLDER');
+
+        if ($arr[$i][$j][0]){
+                $rowBlockFolder->assign('FOLDER_LINK', "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF']."?id=".$arr[$i][$j][1]);
+
+            $query = "SELECT * FROM ".DB_CATALOG." WHERE image != '' and id_cat = ".$arr[$i][$j][1];
+            $result = $dbh->query($query);
+
+            if(!$result) { throw new ExceptionMySQL($dbh->error, $query, "Error executing SQL query!"); }
+
+            if($result->num_rows > 0)
+                $rowBlockFolder->assign('IMAGEFOLDER', "img.php?id_cat=".$arr[$i][$j][1]);
+            else
+                $rowBlockFolder->assign('IMAGEFOLDER', 'images/folder.gif');
+
+            $columns_number = (int)(100 / $settings['columns_number']);
+            $rowBlockFolder->assign('COLUMNS_NUMBER', $columns_number);
+            $rowBlockFolder->assign('FOLDER_LINK_NAME', $arr[$i][$j][0]);
+            $rowBlockFolder->assign('NUMBERSLINKS', ShowNumbersLinks($arr[$i][$j][1],0));
+            $rowBlockFolder->assign('SHOWSUBCAT', ShowSubCat($arr[$i][$j][1],$settings['static'],5));
+
+            $rowBlockCat->assign('ROW_FOLDER', $rowBlockFolder);
+
+            $result->close();
+        }
+    }
+
+    $rowPrintCat->assign('ROW_CAT', $rowBlockCat);
+}
+
+$tpl->assign('PRINT_CAT', $rowPrintCat);
+
+var_dump($arr);
+
 
 
 // display content

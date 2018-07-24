@@ -156,11 +156,6 @@ class Links
         }
     }
 
-    public function removeLink($id)
-    {
-
-    }
-
     /**
      * @param $ParentID
      * @param $lvl
@@ -178,7 +173,7 @@ class Links
         if (core::database()->getRecordCount($result) > 0) {
 
             while ($row = core::database()->getRow($result)) {
-                $ID = $row["id_cat"];
+                $ID = $row["id"];
                 $selected = $_REQUEST['catalog_id'] == $row['id'] ? ' selected="selected"' : "";
 
                 $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE parent_id='$ID'";

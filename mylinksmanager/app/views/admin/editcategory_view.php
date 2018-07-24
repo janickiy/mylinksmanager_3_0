@@ -44,7 +44,7 @@ if (Core_Array::getRequest('action')) {
 
         $new_id_cat = Core_Array::getPost('new_id_cat') == 0 ? 0 : Core_Array::getPost('new_id_cat');
 
-        if (empty($_FILES['image']['tmp_name'])) {
+        if (!empty($_FILES['image']['tmp_name'])) {
             $ext = strrchr($_FILES["image"]["name"], ".");
 
             if (preg_match('/\.(jpg|jpeg|png|gif)$/i', $ext)) {
@@ -53,6 +53,9 @@ if (Core_Array::getRequest('action')) {
                 $image_mime = $_FILES["image"]["type"];
                 $image = Helper::image_convert($original, 80, 80, $image_mime);
             }
+
+            //var_dump($image_mime);
+           // exit;
         }
 
         $fields = [
