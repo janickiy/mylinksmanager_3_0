@@ -250,4 +250,17 @@ class Category
 
         return $option;
     }
+
+    /**
+     * @param $id
+     * @return mixed
+     */
+    public static function getCategoryById($id)
+    {
+        if (is_numeric($id)) {
+            $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE id=" . $id;
+            $result = core::database()->querySQL($query);
+            return core::database()->getRow($result);
+        }
+    }
 }

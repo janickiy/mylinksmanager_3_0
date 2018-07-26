@@ -66,7 +66,7 @@ function value_id(id,max)
 		color2='#AAFFC6';
 	}
 
-	document.getElementById('id_'+id).innerHTML='<img src="images/line.gif" align="middle" border="1" width="'+lnpx+'" height="8px" style="background:'+color1+'"/><img src="images/line.gif" border="1" align="middle" width="'+(150-lnpx)+'" height="8px" style="background:'+color2+'"/> ${STR_LEFT}: '+ln+' (${STR_FROM_TOTAL} '+max+')';
+	document.getElementById('id_'+id).innerHTML='<img src="./images/line.gif" align="middle" border="1" width="'+lnpx+'" height="8px" style="background:'+color1+'"/><img src="./images/line.gif" border="1" align="middle" width="'+(150-lnpx)+'" height="8px" style="background:'+color2+'"/> ${STR_LEFT}: '+ln+' (${STR_FROM_TOTAL} '+max+')';
 }
 
 function value_id2(id,min,max)
@@ -96,7 +96,7 @@ function value_id2(id,min,max)
 		color2='#AAFFC6';
 	}
 
-	document.getElementById('id_'+id).innerHTML='<img src="images/line.gif" align="middle" border="1" width="'+lnpx+'" height="8px" style="background:'+color1+'"/><img src="images/line.gif" border="1" align="middle" width="'+(150-lnpx)+'" height="8px" style="background:'+color2+'"/> ${STR_LEFT}: '+ln+' (${STR_FROM_TOTAL} '+max+')';
+	document.getElementById('id_'+id).innerHTML='<img src="./images/line.gif" align="middle" border="1" width="'+lnpx+'" height="8px" style="background:'+color1+'"/><img src="./images/line.gif" border="1" align="middle" width="'+(150-lnpx)+'" height="8px" style="background:'+color2+'"/> ${STR_LEFT}: '+ln+' (${STR_FROM_TOTAL} '+max+')';
 }
 
 function createXMLHttp() {
@@ -123,7 +123,7 @@ function sendRequest() {
 	var url = document.getElementById("url").value;
 	url = trim(url);
 	
-	document.getElementById("id_url").innerHTML = '<img src=images/loader.gif>';
+	document.getElementById("id_url").innerHTML = '<img src=./images/loader.gif>';
      
 	oXmlHttp.open("GET","check_add_link.php?url=" + escape(url), true);
 	oXmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -178,7 +178,7 @@ function showLength(id,min,max)
 		color2='#AAFFC6';
 	}
 
-	document.getElementById('id_'+id.name).innerHTML='<img src="images/line.gif" align="middle" width="'+lnpx+'" height="8px" border="1" style="background:'+color1+'"/><img src="images/line.gif" border="1" align="middle" width="'+(150-lnpx)+'" height="8px" style="background:'+color2+'"/> ${STR_LEFT}: '+ln+' (${STR_FROM_TOTAL} '+max+')';
+	document.getElementById('id_'+id.name).innerHTML='<img src="./images/line.gif" align="middle" width="'+lnpx+'" height="8px" border="1" style="background:'+color1+'"/><img src="./images/line.gif" border="1" align="middle" width="'+(150-lnpx)+'" height="8px" style="background:'+color2+'"/> ${STR_LEFT}: '+ln+' (${STR_FROM_TOTAL} '+max+')';
 }
 
 function showLength2(id,max)
@@ -203,7 +203,7 @@ function showLength2(id,max)
 		color2 = '#AAFFC6';
 	}
 
-	document.getElementById('id_'+id.name).innerHTML='<img src="images/line.gif" align="middle" width="'+lnpx+'" height="8px" border="1" style="background:'+color1+'"/><img src="images/line.gif" border="1" align="middle" width="'+(150-lnpx)+'" height="8px" style="background:'+color2+'"/> ${STR_LEFT}: '+ln+' (${STR_FROM_TOTAL} '+max+')';
+	document.getElementById('id_'+id.name).innerHTML='<img src="./images/line.gif" align="middle" width="'+lnpx+'" height="8px" border="1" style="background:'+color1+'"/><img src="./images/line.gif" border="1" align="middle" width="'+(150-lnpx)+'" height="8px" style="background:'+color2+'"/> ${STR_LEFT}: '+ln+' (${STR_FROM_TOTAL} '+max+')';
 }
 
 </script>
@@ -357,9 +357,9 @@ function showLength2(id,max)
         <!-- END row -->
       </ul>
       <!-- END show_errors -->
-      <center>
+      <p style="text-align: center">
         <a href="http://janicky.com/" target=_blank>${STR_SCRIPT_LINK_CATALOG} ${VERSION}</a>
-      </center>
+      </p>
       <br /></td>
   </tr>
 </table>

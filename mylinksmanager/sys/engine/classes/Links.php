@@ -113,15 +113,14 @@ class Links
      * @param int $number
      * @return mixed
      */
-    public static function getLinksList($status, $order, $offset, $number = 10)
+    public static function getLinksList($status, $order, $number = 10, $offset=0)
     {
         if (is_numeric($offset) && is_numeric($number)) {
             $query = "SELECT *,c.name AS catname, l.description AS description, l.id AS id FROM " . core::database()->getTableName('links') . " l
                       LEFT JOIN " . core::database()->getTableName('catalog') . " c ON c.id = l.cat_id
                       WHERE l.status='" . $status . "'
                       ORDER BY " . $order . "
-                      LIMIT " . $number . "
-                      OFFSET " . $offset . "";
+                      LIMIT " . $number . " OFFSET " . $offset . "";
 
             $result = core::database()->querySQL($query);
 

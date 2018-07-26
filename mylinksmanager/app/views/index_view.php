@@ -10,9 +10,6 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
-
-
-
 if ($_GET['id']){
     $arraypathway = [];
     $arraypathway = Category::topbarMenu($_GET['id'],'');
@@ -78,6 +75,25 @@ if (!empty($_GET['link_id'])){
 
 } else {
 
+    $all_number_links = core::getSetting('all_number_links') ? core::getSetting('all_number_links') : 5;
+
+    if (empty($page)) $page = $_GET['page'] ? $_GET['page'] : 1;
+    $begin = ($page - 1) * $all_number_links;
+
+    if (!empty($_GET['id']) && $_GET['id'] != 0) {
+
+        // Get the meta tags of catalogue
+         $catalog = Category::getCategoryById($_GET['id']);
+
+        $description =  $catalog['description'];
+        $keywords	 =  $catalog['keywords'];
+
+        $title		 = "" . core::getLanguage('title', 'index') . " " . VERSION . " - " . $catalog['name'];
+    }
+
+    if (empty($title)) { $title = core::getLanguage('title', 'index') . " " .VERSION; }
+
+
     //include template
     core::requireEx('libs', "html_template/SeparateTemplate.php");
     $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . core::getSetting('controller') . ".tpl");
@@ -135,7 +151,7 @@ if (!empty($_GET['link_id'])){
                 if ($arr[$i][$j][2] != '') {
                     $rowBlockFolder->assign('IMAGEFOLDER', './?t=pic&id=' . $arr[$i][$j][1]);
                 } else {
-                    $rowBlockFolder->assign('IMAGEFOLDER', './templates/assets/images/folder.gif');
+                    $rowBlockFolder->assign('IMAGEFOLDER', './templates/images/folder.gif');
                 }
 
                 $columns_number = (int)(100 / $settings['columns_number']);
@@ -151,13 +167,17 @@ if (!empty($_GET['link_id'])){
 
     $tpl->assign('PRINT_CAT', $rowPrintCat);
     $tpl->assign('TOPBARMENU', $pathway);
-    $tpl->assign('SUBCATALOG',  core::getLanguage('str', 'new_links'));
+    $tpl->assign('SUBCATALOG',  $catalog['name'] ? $catalog['name'] : core::getLanguage('str', 'new_links'));
 
 
     $tpl->assign('STR_ADD_URL', core::getLanguage('str','add_url'));
 
 
-    $links = $data->getLastAddedLinks(5);
+    if (empty($_GET['id'])) {
+        $links = Links::getLinksList('show','l.id DESC',$all_number_links);
+    } else {
+        $links = $data->getLinks($page, $all_number_links);
+    }
 
     foreach ($links as $link) {
         if ($_GET['page'])
@@ -168,7 +188,7 @@ if (!empty($_GET['link_id'])){
         if (!empty($link['htmlcode_banner']))
             $htmlcode_banner = $link['htmlcode_banner'];
         else
-            $htmlcode_banner = '<a href=http://' . $link['url'] . ' target=_blank><img border="0" width="88" height="31" src="./templates/assets/images/noimage.gif"></a>';
+            $htmlcode_banner = '<a href=http://' . $link['url'] . ' target=_blank><img border="0" width="88" height="31" src="./templates/images/noimage.gif"></a>';
 
         $link['description'] = nl2br($link['description']);
 

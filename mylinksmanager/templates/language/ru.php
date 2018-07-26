@@ -47,8 +47,12 @@ $language["info"]["admin_links"] = "";
 $language["title"]["page_help"] = '';
 $language["title"]["help"] = '';
 
-$language["title"][""] = 'Каталог сайтов My Links Manager | добавить сайт';
+$language["title"]["page_addurl"] = 'Каталог сайтов My Links Manager | добавить сайт';
 $language["title"]["addurl"] = 'Каталог сайтов My Links Manager | добавить сайт';
+
+
+$language["title"]["index"] = "Каталог сайтов My Links Manager";
+
 
 $language["title"]["page_page403"] = 'Доступ запрещен';
 $language["title"]["page403"] = 'Доступ запрещен 403';
@@ -128,14 +132,6 @@ $language["str"]["lang_en"] = "English (English)";
 $language["str"]["all_number_links"] = "Количество ссылок на странице каталога в юзерской и админской части";
 $language["str"]["all_number_new"] = "Количество новых ссылок на главной странице каталога";
 $language["str"]["columns_number"] = "Количество колонок каталогов";
-$language["str"]["order_views"] = "Сортировать ссылок";
-$language["str"]["by_date"] = "По дате добавления";
-$language["str"]["by_number"] = "По количеству кликов";
-$language["str"]["order_links"] = "Порядок сортировки ссылок";
-$language["str"]["by_increace"] = "По возрастанию";
-$language["str"]["by_decrease"] = "По убыванию";
-$language["str"]["show_cy"] = "Отображать тИЦ Яндекса";
-$language["str"]["show_pr"] = "Отображать PageRank Google";
 $language["str"]["catalog_url"] = "URL адрес каталога";
 $language["str"]["admin_email"] = "Email администратора каталога";
 $language["str"]["catalog_rule"] = "Правила каталога";
@@ -182,8 +178,6 @@ $language["str"]["remove"] = "Удалить";
 $language["str"]["edit"] = "Редактировать";
 $language["str"]["back"] = "Вернуться обратно";
 $language["str"]["added"] = "Добавлен";
-$language["str"]["cy_yandex"] = "тИЦ Яндекса";
-$language["str"]["pr_google"] = "PageRank Google";
 $language["str"]["not_new_links"] = "Нет новых ссылок";
 $language["str"]["recip_url_link"] = "Адрес обратной ссылки";
 $language["str"]["required_field"] = "Обязательные поля";
