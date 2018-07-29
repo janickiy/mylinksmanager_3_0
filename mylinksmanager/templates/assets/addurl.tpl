@@ -125,7 +125,7 @@ function sendRequest() {
 	
 	document.getElementById("id_url").innerHTML = '<img src=./images/loader.gif>';
      
-	oXmlHttp.open("GET","check_add_link.php?url=" + escape(url), true);
+	oXmlHttp.open("GET","./?ajax?action=check_add_link&url=" + escape(url), true);
 	oXmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         
 	oXmlHttp.onreadystatechange = function() {
@@ -212,13 +212,15 @@ function showLength2(id,max)
 <p align="left">« <a href="./">${STR_GO_TO_CATALOG}</a></p>
 <table border="0" width="100%">
   <tr>
-    <td vAlign="top"><!-- IF '${RULES}' != '' -->
+    <td vAlign="top">
+      <!-- IF '${RULES}' != '' -->
       <div id=rule><b>${STR_RULES}:</b> ${RULES}</div>
-      <!-- END IF --></td>
+      <!-- END IF -->
+    </td>
   </tr>
   <tr>
     <td><table border="0">
-        <!-- IF '${STR_HTML_CODE_OF_LINK_FOR_THIS}' != '' -->
+        <!-- IF '${HTMLCODE_SITE1}' != '' || '${HTMLCODE_SITE2}' != '' || '${HTMLCODE_SITE3}' != '' -->
         <tr>
           <td width=100%><br />
             <h4>${STR_HTML_CODE_OF_LINK_FOR_THIS}:</h4></td>
@@ -240,10 +242,12 @@ function showLength2(id,max)
         </tr>
         <!-- END IF -->
         <tr>
-          <td width=100%><!-- BEGIN banners -->
+          <td width=100%>
+            <!-- BEGIN banners -->
             <br />
             <h4>${STR_HTML_CODE_OF_BANNER_FOR_THIS}:</h4>
-            <!-- END banners --></td>
+            <!-- END banners -->
+          </td>
         </tr>
         <!-- IF '${HTMLCODE_BANNER1}' != '' -->
         <tr>
@@ -271,22 +275,18 @@ function showLength2(id,max)
       <form action="${ACTION}" method="post">
         <table class="link">
           <tr>
-            <td><span class="msg">*</span>-${STR_REQUIRED_FIELD}<br />
+            <td><span class="msg">*</span> - ${STR_REQUIRED_FIELD}<br />
               <br /></td>
           </tr>
           <tr>
             <td align="right"><b>${STR_CHOOSE_YOUR_CATEGORY}:</b></td>
-            <td><select type="text" class="input" name="id_cat">
-                <option value="0" 
-                <!-- IF '${ID_CAT}' == 0 -->
-                selected="selected"
-                <!-- END IF -->
-                 class="input"> ---- ${STR_CHOOSE_CATEGORY} ---- 
-                </option>
+            <td><select type="text" class="input" name="cat_id">
+                <option value="0" <!-- IF '${ID_CAT}' == 0 -->selected="selected" <!-- END IF --> class="input"> ---- ${STR_CHOOSE_CATEGORY} ---- </option>
                 
               ${OPTION}
            
-              </select></td>
+              </select>
+            </td>
           </tr>
           <tr>
             <td align="right"><b>${STR_FORM_NAME}:</b></td>
@@ -296,7 +296,7 @@ function showLength2(id,max)
             <td align="right"><b>${STR_FORM_URL}:</b><span class="msg" id="id_url"></span></td>
             <td><input size="50" class="input" maxlength="200" name="url" id="url" onChange="sendRequest();" type="text" value="${URL}"></td>
           </tr>
-          <!-- IF '${STR_FORM_RECIPROCAL_LINK}' != '' -->
+          <!-- IF '${CHECK_URL}' == 'yes' -->
           <tr>
             <td align="right"><b>${STR_FORM_RECIPROCAL_LINK}:</b></td>
             <td><input size="50" class="input" maxlength="200" name="reciprocal_link" type="text" value="${RECIPROCAL_LINK}"></td>
@@ -331,30 +331,36 @@ function showLength2(id,max)
               <br />
               <span id="id_htmlcode_banner"><img style="BACKGROUND: #FFDBD9" height="8" border="1" src="images/line.gif" width="150" align="middle"> ${STR_LEFT}: ${NUMBER_HTML_CHARS} (${STR_FROM_TOTAL} ${NUMBER_HTML_CHARS})</span></td>
           </tr>
-          <!-- IF '${STR_FORM_SECURITYCODE}' != '' -->
+
+          <!-- IF '${SECURITYCODE}' == 'yes' -->
+
           <tr>
             <td align="right"><b>${STR_FORM_SECURITYCODE}:</b></td>
-            <td rowspan="2" valign="bottom"><input class="input" type="text" size="8" maxlength="8" name="securityCode"></td>
+            <td rowspan="2" valign="bottom"><input class="input" type="text" size="8" maxlength="8" name="securitycode"></td>
           </tr>
           <tr>
-            <td align="right"><img alt="${STR_TYPE_THIS_SECURITY_CODE}" src="security.php?sid=${SESSION_ID}" class="input2" hspace="3"></td>
+            <td align="right">
+              <img src="${IMAGE_SRC}" alt="${STR_SECURITYCODE}"  />
+            </td>
           </tr>
+
           <!-- END IF -->
+
           <tr>
             <td align="right" height="50">&nbsp;</td>
-            <td><input type="submit" class="inputsubmit" value="${BUTTON_ADD}">
-              &nbsp;&nbsp;&nbsp;
+            <td>
+              <input type="submit" class="inputsubmit" value="${BUTTON_ADD}">              &nbsp;&nbsp;&nbsp;
               <input type="reset" class="inputsubmit" value="${BUTTON_RESET}">
-              <input type=hidden name="action" value=post></td>
+              <input type=hidden name="action" value="post"></td>
           </tr>
         </table>
       </form>
       <!-- BEGIN show_errors -->
       <h4 class="msg">${STR_IDENTIFIED_FOLLOWING_ERRORS}:</h4>
       <ul class="msg">
-        <!-- BEGIN row -->
+        <!-- BEGIN errors -->
         <li> ${ERROR}</li>
-        <!-- END row -->
+        <!-- END errors -->
       </ul>
       <!-- END show_errors -->
       <p style="text-align: center">

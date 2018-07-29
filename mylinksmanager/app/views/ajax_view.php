@@ -27,10 +27,6 @@ switch (Core_Array::getGet('action'))
         if (is_array($arrs)) {
             foreach($arrs as $row) {
                 $rows[] = [
-
-
-
-
                     "id" => $row['id'],
                     "description" => $row['description'],
                     "banner" => $row['htmlcode_banner'],

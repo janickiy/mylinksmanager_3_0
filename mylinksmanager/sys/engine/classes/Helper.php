@@ -275,7 +275,7 @@ class Helper
         $data = curl_exec($ch);
         curl_close($ch);
 
-        if (preg_match('/<META([^>]*)\s+CONTENT=(?:")?NOINDEX(?:")?([^>]*)>.*<\/head>/siU',  $data))
+        if (preg_match('/<META([^>]*)\s+CONTENT=(?:")?NOINDEX(?:")?([^>]*)>.*<\/head>/siU', $data))
             return true;
         else
             return false;
@@ -337,9 +337,6 @@ class Helper
      */
     public static function countLinks($url_link, $limit)
     {
-        global $version;
-
-        $line = "";
         $parse_url = @parse_url("http://" . $url_link);
 
         if (empty($parse_url['path']))
@@ -348,31 +345,25 @@ class Helper
             $path = str_replace($parse_url['host'], '', $url_link);
 
         $host = $parse_url['host'];
-        $fp = @fsockopen($host, 80, $errno, $errstr, 30);
 
-        if ($fp) {
-            $headers = "GET " . $path . " HTTP/1.1\r\n";
-            $headers .= "Accept: image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*\r\n";
-            // $headers .= "User-Agent: My Links Manager (ver ".$version."; +http://janicky.com)\r\n";
-            $headers .= "User-Agent: Mozilla/5.0 (compatible; MSIE 7.0; Windows NT 5.1; SV1)\r\n";
-            // $headers .= "User-Agent: Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)\r\n";
-            // $headers .= "User-Agent: Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)\r\n";
-            $headers .= "Host: " . $host . "\r\n";
-            $headers .= "Connection: Close\r\n\r\n";
-
-            fwrite($fp, $headers);
-
-            while (!feof($fp)) {
-                $line .= fgets($fp, 1024);
-            }
-
-            fclose($fp);
-        }
+        $ch = curl_init("http://" . $url_link);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:61.0) Gecko/20100101 Firefox/61.0');
+        // curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)');
+        // curl_setopt($ch, CURLOPT_USERAGENT, Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)');
+        curl_setopt($ch, CURLOPT_REFERER, 0);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 20);
+        $data = curl_exec($ch);
+        curl_close($ch);
 
         $host = str_replace('.', '\.', $host);
-        $line = preg_replace("/<A\s*([^>]*)\s+HREF=(?:\"|')?http:\/\/(?:www\.)?($host)[^>]*>([^>]*)<\/A>/siU", '', $line);
+        $data = preg_replace("/<A\s*([^>]*)\s+HREF=(?:\"|')?http:\/\/(?:www\.)?($host)[^>]*>([^>]*)<\/A>/siU", '', $data);
 
-        preg_match_all('/<A\s*([^>]*)\s+HREF=(?:"|\')?http:\/\/[-0-9a-z_\.]+\.\w{2,6}[:0-9]*[^>]*>([^>]*)<\/A>/siU', $line, $anchors);
+        preg_match_all('/<A\s*([^>]*)\s+HREF=(?:"|\')?http:\/\/[-0-9a-z_\.]+\.\w{2,6}[:0-9]*[^>]*>([^>]*)<\/A>/siU', $data, $anchors);
 
         if ($limit < count($anchors[1]))
             return true;
@@ -458,287 +449,244 @@ class Helper
         else
             return false;
 
-}
-
-/**
- * @param $htmlcode_banner
- * @return bool
- */
-public
-static function checkHtmlcodeBanner($htmlcode_banner)
-{
-    if (!preg_match('/^<A([^>]*)\s+HREF=(?:"|\')?HTTP:\/\/[^>]*>\s*<\s*IMG[^>]*\s+SRC=(?:"|\')?HTTP:\/\/[^>]*><\/A>$/siU', $htmlcode_banner))
-        return true;
-    else
-        return false;
-}
-
-/**
- * @param $htmlcode_banner
- * @return bool
- */
-public
-static function checkSizeBanner($htmlcode_banner)
-{
-    if (!preg_match('/\s+width=(?:"|\')?88(?:"|\')?(\s+|>)/siU', $htmlcode_banner) || !preg_match('/\s+height=(?:"|\')?31(?:"|\')?(\s+|>)/i', $htmlcode_banner))
-        return true;
-    else
-        return false;
-}
-
-/**
- * @param $htmlcode_banner
- * @return bool
- */
-public
-static function checkTypeImageBanner($htmlcode_banner)
-{
-    if (!preg_match('/\s+src=(?:"|\')?HTTP:\/\/.*\.(?:gif|jpg|jpeg|png)(?:"|\')?/i', $htmlcode_banner))
-        return true;
-    else
-        return false;
-}
-
-/**
- * @param $str
- * @param $limit
- * @return bool
- */
-public static function lengthHtmlcode($str, $limit)
-{
-    if (strlen($str) > $limit) {
-        return true;
-    } else {
-        return false;
     }
-}
 
-/**
- * @param $links
- * @param $subject
- */
-public static function sendMailAdd($links, $subject)
-{
-    $date = date("d.m.Y г. G:i");
-    $url = $links['url'];
-
-    $message = core::getSetting('template_mail_2');
-    $message = str_replace("{[HTTP_HOST]}", $_SERVER['SERVER_NAME'], $message);
-    $message = str_replace("{[URL]}", $url, $message);
-    $message = str_replace("{[DATE]}", $date, $message);
-
-    $fromname = "administrator " . $_SERVER['SERVER_NAME'] . "";
-    $fromname_encoded = base64_encode($fromname);
-    $fromname_packed = "=?utf-8?B?" . $fromname_encoded . "?=";
-    $fromaddr = core::getSetting('email');
-
-    $headers = "MIME-Version: 1.0\n";
-    $headers .= "From: " . $fromname_packed . " <" . $fromaddr . ">\n";
-    $headers .= "Content-type: text/plain; charset=utf-8\n";
-    $headers .= "Content-Transfer-Encoding: 8bit\r\n";
-
-    @mail($links['email'], $subject, $message, $headers);
-
-}
-
-/**
- * @param $links
- * @param $subject
- */
-public static function sendMailNoAdd($links, $subject)
-{
-    global $settings;
-
-    $date = date("d.m.Y г. G:i");
-    $url = $links['url'];
-
-    $message = $settings['template_mail_7'];
-    $message = str_replace("{[HTTP_HOST]}", $_SERVER['SERVER_NAME'], $message);
-    $message = str_replace("{[URL]}", $url, $message);
-    $message = str_replace("{[DATE]}", $date, $message);
-
-    $fromname = "administrator " . $_SERVER['SERVER_NAME'] . "";
-    $fromname_encoded = base64_encode($fromname);
-    $fromname_packed = "=?utf-8?B?" . $fromname_encoded . "?=";
-    $fromaddr = $settings['email'];
-
-    $headers = "MIME-Version: 1.0\n";
-    $headers .= "From: " . $fromname_packed . " <" . $fromaddr . ">\n";
-    $headers .= "Content-type: text/plain; charset=utf-8\n";
-    $headers .= "Content-Transfer-Encoding: 8bit\r\n";
-
-    @mail($links['email'], $subject, $message, $headers);
-}
-
-/**
- * @param $links
- * @param $url_link_edit
- * @param $subject
- */
-public static function sendmail_hide_link($links, $url_link_edit, $subject)
-{
-    global $settings;
-
-    $date = date("d.m.Y г. G:i");
-    $url = $links['url'];
-    $url_link = $links['reciprocal_link'];
-    $date_limit = $settings['check_interval'];
-
-    $message = $settings['template_mail_3'];
-    $message = str_replace("{[HTTP_HOST]}", $_SERVER['SERVER_NAME'], $message);
-    $message = str_replace("{[URL]}", $url, $message);
-    $message = str_replace("{[URL_LINK]}", $url_link, $message);
-    $message = str_replace("{[DATE_LIMIT]}", $date_limit, $message);
-    $message = str_replace("{[URL_EDIT]}", $url_link_edit, $message);
-    $message = str_replace("{[DATE]}", $date, $message);
-
-    $fromname = "administrator " . $_SERVER['SERVER_NAME'] . "";
-    $fromname_encoded = base64_encode($fromname);
-    $fromname_packed = "=?utf-8?B?" . $fromname_encoded . "?=";
-    $fromaddr = $settings['email'];
-
-    $headers = "MIME-Version: 1.0\n";
-    $headers .= "From: " . $fromname_packed . " <" . $fromaddr . ">\n";
-    $headers .= "Content-type: text/plain; charset=utf-8\n";
-    $headers .= "Content-Transfer-Encoding: 8bit\r\n";
-
-    @mail($links['email'], $subject, $message, $headers);
-
-}
-
-/**
- * @param $links
- * @param $reason
- * @param $subject
- */
-public static function sendmail_hide_link2($links, $reason, $subject)
-{
-    global $settings;
-
-    $date = date("d.m.Y г. G:i");
-    $url = $links['url'];
-    $date_limit = $settings['check_interval'];
-
-    $message = $settings['template_mail_4'];
-    $message = str_replace("{[HTTP_HOST]}", $_SERVER['SERVER_NAME'], $message);
-    $message = str_replace("{[URL]}", $url, $message);
-    $message = str_replace("{[REASON]}", $reason, $message);
-    $message = str_replace("{[DATE_LIMIT]}", $date_limit, $message);
-    $message = str_replace("{[DATE]}", $date, $message);
-
-    $fromname = "administrator " . $_SERVER['SERVER_NAME'] . "";
-    $fromname_encoded = base64_encode($fromname);
-    $fromname_packed = "=?utf-8?B?" . $fromname_encoded . "?=";
-    $fromaddr = $settings['admin_email'];
-
-    $headers = "MIME-Version: 1.0\n";
-    $headers .= "From: " . $fromname_packed . " <" . $fromaddr . ">\n";
-    $headers .= "Content-type: text/plain; charset=utf-8\n";
-    $headers .= "Content-Transfer-Encoding: 8bit\r\n";
-
-    @mail($links['email'], $subject, $message, $headers);
-}
-
-/**
- * @param $links
- * @param $subject
- */
-public static function sendmail_del_link($links, $subject)
-{
-    $date = date("d.m.Y г. G:i");
-    $url = $links['url'];
-
-    $message =  core::getSetting('template_mail_6');
-    $message = str_replace("{[HTTP_HOST]}", $_SERVER['SERVER_NAME'], $message);
-    $message = str_replace("{[URL]}", $url, $message);
-    $message = str_replace("{[DATE]}", $date, $message);
-
-    $fromname = "adminisrator " . $_SERVER['SERVER_NAME'] . "";
-    $fromname_encoded = base64_encode($fromname);
-    $fromname_packed = "=?utf-8?B?" . $fromname_encoded . "?=";
-    $fromaddr = core::getSetting('email');
-
-    $headers = "MIME-Version: 1.0\n";
-    $headers .= "From: " . $fromname_packed . " <" . $fromaddr . ">\n";
-    $headers .= "Content-type: text/plain; charset=utf-8\n";
-    $headers .= "Content-Transfer-Encoding: 8bit\r\n";
-
-    @mail($links['email'], $subject, $message, $headers);
-}
-
-/**
- * @param $url
- * @return bool|int
- */
-public static function cy_yandex($url)
-{
-    $str = @file("http://bar-navig.yandex.ru/u?ver=2&show=32&url=" . $url);
-
-    if ($str == false) {
-        $cy = false;
-    } else {
-        $result = preg_match("/value=\"(.\d*)\"/", join("", $str), $tic);
-
-        if ($result < 1)
-            $cy = 0;
+    /**
+     * @param $htmlcode_banner
+     * @return bool
+     */
+    public
+    static function checkHtmlcodeBanner($htmlcode_banner)
+    {
+        if (!preg_match('/^<A([^>]*)\s+HREF=(?:"|\')?HTTP:\/\/[^>]*>\s*<\s*IMG[^>]*\s+SRC=(?:"|\')?HTTP:\/\/[^>]*><\/A>$/siU', $htmlcode_banner))
+            return true;
         else
-            $cy = $tic[1];
+            return false;
     }
 
-    return $cy;
-}
-
-/**
- * @param $q
- * @param string $host
- * @param null $context
- * @return int|string
- */
-public static function pr_google($q, $host = 'toolbarqueries.google.com', $context = NULL)
-{
-    $seed = "Mining PageRank is AGAINST GOOGLE'S TERMS OF SERVICE. Yes, I'm talking to you, scammer.";
-    $result = 0x01020345;
-    $len = strlen($q);
-
-    for ($i = 0; $i < $len; $i++) {
-        $result ^= ord($seed{$i % strlen($seed)}) ^ ord($q{$i});
-        $result = (($result >> 23) & 0x1ff) | $result << 9;
+    /**
+     * @param $htmlcode_banner
+     * @return bool
+     */
+    public
+    static function checkSizeBanner($htmlcode_banner)
+    {
+        if (!preg_match('/\s+width=(?:"|\')?88(?:"|\')?(\s+|>)/siU', $htmlcode_banner) || !preg_match('/\s+height=(?:"|\')?31(?:"|\')?(\s+|>)/i', $htmlcode_banner))
+            return true;
+        else
+            return false;
     }
 
-    $ch = sprintf('8%x', $result);
-    $url = 'http://%s/tbr?client=navclient-auto&ch=%s&features=Rank&q=info:%s';
-    $url = sprintf($url, $host, $ch, $q);
-    @$pr = file_get_contents($url, false, $context);
-    return $pr ? substr(strrchr($pr, ':'), 1) : 0;
-}
-
-/**
- * @param $data
- * @param $w
- * @param $h
- * @param $image_mime
- * @return string
- */
-public static function image_convert($data, $w, $h, $image_mime)
-{
-    $image = imagecreatefromstring($data);
-    $result = imagecreatetruecolor($w, $h);
-    imagecopyresized($result, $image, 0, 0, 0, 0, $w, $h, imagesx($image), imagesy($image));
-    ob_start();
-
-    if ($image_mime == 'image/png') {
-        imagepng($result, NULL, 100);
-    } elseif ($image_mime == 'image/jpeg') {
-        imagejpeg($result, NULL, 100);
-    } else {
-        imagegif($result);
+    /**
+     * @param $htmlcode_banner
+     * @return bool
+     */
+    public
+    static function checkTypeImageBanner($htmlcode_banner)
+    {
+        if (!preg_match('/\s+src=(?:"|\')?HTTP:\/\/.*\.(?:gif|jpg|jpeg|png)(?:"|\')?/i', $htmlcode_banner))
+            return true;
+        else
+            return false;
     }
 
-    $contents = ob_get_contents();
-    ob_end_clean();
-    imagedestroy($result);
-    imagedestroy($image);
+    /**
+     * @param $str
+     * @param $limit
+     * @return bool
+     */
+    public static function lengthHtmlcode($str, $limit)
+    {
+        if (strlen($str) > $limit) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
-    return $contents;
-}
+    /**
+     * @param $links
+     * @param $subject
+     */
+    public static function sendMailAdd($link, $subject)
+    {
+        $message = core::getSetting('template_mail_2');
+        $message = str_replace("{[HTTP_HOST]}", $_SERVER['SERVER_NAME'], $message);
+        $message = str_replace("{[URL]}", $link['url'], $message);
+        $message = str_replace("{[DATE]}", date("d.m.Y г. G:i"), $message);
+
+        core::requireEx('libs', "PHPMailer/class.phpmailer.php");
+
+        $m = new PHPMailer();
+        $m->IsMail();
+        $m->CharSet = 'utf-8';
+        $m->Subject = $subject;
+        $m->FromName = "administrator " . $_SERVER['SERVER_NAME'];
+        $m->From = core::getSetting('email') ? core::getSetting('email') : "noreply@" . $_SERVER['SERVER_NAME'];
+        $m->isHTML(false);
+        $m->AddAddress($link['email']);
+        $m->Body = $message;
+        $m->Send();
+    }
+
+    /**
+     * @param $links
+     * @param $subject
+     */
+    public static function sendMailNoAdd($link, $subject)
+    {
+        $message = core::getSetting('template_mail_7');
+        $message = str_replace("{[HTTP_HOST]}", $_SERVER['SERVER_NAME'], $message);
+        $message = str_replace("{[URL]}", $link['url'], $message);
+        $message = str_replace("{[DATE]}", date("d.m.Y г. G:i"), $message);
+
+        core::requireEx('libs', "PHPMailer/class.phpmailer.php");
+
+        $m = new PHPMailer();
+        $m->IsMail();
+        $m->CharSet = 'utf-8';
+        $m->Subject = $subject;
+        $m->FromName = "administrator " . $_SERVER['SERVER_NAME'];
+        $m->From = core::getSetting('email') ? core::getSetting('email') : "noreply@" . $_SERVER['SERVER_NAME'];
+        $m->isHTML(false);
+        $m->AddAddress($link['email']);
+        $m->Body = $message;
+        $m->Send();
+    }
+
+    /**
+     * @param $links
+     * @param $url_link_edit
+     * @param $subject
+     */
+    public static function sendmail_hide_link($link, $url_link_edit, $subject)
+    {
+        $message = core::getSetting('template_mail_3');
+        $message = str_replace("{[HTTP_HOST]}", $_SERVER['SERVER_NAME'], $message);
+        $message = str_replace("{[URL]}", $link['url'], $message);
+        $message = str_replace("{[URL_LINK]}", $link['reciprocal_link'], $message);
+        $message = str_replace("{[DATE_LIMIT]}", core::getSetting('check_interval'), $message);
+        $message = str_replace("{[URL_EDIT]}", $url_link_edit, $message);
+        $message = str_replace("{[DATE]}", date("d.m.Y г. G:i"), $message);
+
+        core::requireEx('libs', "PHPMailer/class.phpmailer.php");
+
+        $m = new PHPMailer();
+        $m->IsMail();
+        $m->CharSet = 'utf-8';
+        $m->Subject = $subject;
+        $m->FromName = "administrator " . $_SERVER['SERVER_NAME'];
+        $m->From = core::getSetting('email') ? core::getSetting('email') : "noreply@" . $_SERVER['SERVER_NAME'];
+        $m->isHTML(false);
+        $m->AddAddress($link['email']);
+        $m->Body = $message;
+        $m->Send();
+    }
+
+    /**
+     * @param $links
+     * @param $reason
+     * @param $subject
+     */
+    public static function sendmail_hide_link2($link, $reason, $subject)
+    {
+        $message = core::getSetting('template_mail_4');
+        $message = str_replace("{[HTTP_HOST]}", $_SERVER['SERVER_NAME'], $message);
+        $message = str_replace("{[URL]}", $link['url'], $message);
+        $message = str_replace("{[REASON]}", $reason, $message);
+        $message = str_replace("{[DATE_LIMIT]}", core::getSetting('check_interval'), $message);
+        $message = str_replace("{[DATE]}", date("d.m.Y г. G:i"), $message);
+
+        core::requireEx('libs', "PHPMailer/class.phpmailer.php");
+
+        $m = new PHPMailer();
+        $m->IsMail();
+        $m->CharSet = 'utf-8';
+        $m->Subject = $subject;
+        $m->FromName = "administrator " . $_SERVER['SERVER_NAME'];
+        $m->From = core::getSetting('email') ? core::getSetting('email') : "noreply@" . $_SERVER['SERVER_NAME'];
+        $m->isHTML(false);
+        $m->AddAddress($link['email']);
+        $m->Body = $message;
+        $m->Send();
+    }
+
+    /**
+     * @param $links
+     * @param $subject
+     */
+    public static function sendmail_del_link($link, $subject)
+    {
+        $message = core::getSetting('template_mail_6');
+        $message = str_replace("{[HTTP_HOST]}", $_SERVER['SERVER_NAME'], $message);
+        $message = str_replace("{[URL]}", $link['url'], $message);
+        $message = str_replace("{[DATE]}", date("d.m.Y г. G:i"), $message);
+
+        core::requireEx('libs', "PHPMailer/class.phpmailer.php");
+
+        $m = new PHPMailer();
+        $m->IsMail();
+        $m->CharSet = 'utf-8';
+        $m->Subject = $subject;
+        $m->FromName = "administrator " . $_SERVER['SERVER_NAME'];
+        $m->From = core::getSetting('email') ? core::getSetting('email') : "noreply@" . $_SERVER['SERVER_NAME'];
+        $m->isHTML(false);
+        $m->AddAddress($link['email']);
+        $m->Body = $message;
+        $m->Send();
+    }
+
+    /**
+     * @param $q
+     * @param string $host
+     * @param null $context
+     * @return int|string
+     */
+    public static function pr_google($q, $host = 'toolbarqueries.google.com', $context = NULL)
+    {
+        $seed = "Mining PageRank is AGAINST GOOGLE'S TERMS OF SERVICE. Yes, I'm talking to you, scammer.";
+        $result = 0x01020345;
+        $len = strlen($q);
+
+        for ($i = 0; $i < $len; $i++) {
+            $result ^= ord($seed{$i % strlen($seed)}) ^ ord($q{$i});
+            $result = (($result >> 23) & 0x1ff) | $result << 9;
+        }
+
+        $ch = sprintf('8%x', $result);
+        $url = 'http://%s/tbr?client=navclient-auto&ch=%s&features=Rank&q=info:%s';
+        $url = sprintf($url, $host, $ch, $q);
+        @$pr = file_get_contents($url, false, $context);
+        return $pr ? substr(strrchr($pr, ':'), 1) : 0;
+    }
+
+    /**
+     * @param $data
+     * @param $w
+     * @param $h
+     * @param $image_mime
+     * @return string
+     */
+    public static function image_convert($data, $w, $h, $image_mime)
+    {
+        $image = imagecreatefromstring($data);
+        $result = imagecreatetruecolor($w, $h);
+        imagecopyresized($result, $image, 0, 0, 0, 0, $w, $h, imagesx($image), imagesy($image));
+        ob_start();
+
+        if ($image_mime == 'image/png') {
+            imagepng($result, NULL, 100);
+        } elseif ($image_mime == 'image/jpeg') {
+            imagejpeg($result, NULL, 100);
+        } else {
+            imagegif($result);
+        }
+
+        $contents = ob_get_contents();
+        ob_end_clean();
+        imagedestroy($result);
+        imagedestroy($image);
+
+        return $contents;
+    }
 }

@@ -239,10 +239,15 @@ $language["str"]["new_links"] = 'Новые ссылки';
 $language["str"]["add_url"] = 'Добавить ссылку';
 $language["str"]["read_more"] = "Подробнее...";
 $language["str"]["go_to_website"] = "Перейти на сайт";
-
 $language["str"]["go_to_catalog"] = "Вернуться в каталог";
-
-
+$language["str"]["form_securitycode"] = "Проверочный код";
+$language["str"]["securitycode"] = "защитный код";
+$language["str"]["rules"] = "Правила каталога";
+$language["str"]["html_code_of_link_for_this"] = "Код ссылки этого сайта";
+$language["str"]["html_code_of_banner_for_this"] = "Код кнопки этого сайта";
+$language["str"]["form_reciprocal_link"] = "Адрес страницы с ответной ссылкой";
+$language["str"]["subject_wait"] = "Ваш сайт добавлен в очередь на проверку";
+$language["str"]["subject_newlink"] = "Добавлена новая ссылка";
 
 
 $language["status"]["new"] = "Новые";
@@ -327,5 +332,4 @@ $language["error"]["number_url"] = 'Количество url ссылок на �
 $language["error"]["not_reciprocal_link"] = "Введите адерес страницы с ссылкой на наш сайт!";
 $language["error"]["type_banner"] = "Расширение банера должно быть GIF, JPEG или PNG!";
 
-
-
+$language["error"]["not_filled_captcha"] = "Введите защитный код!";

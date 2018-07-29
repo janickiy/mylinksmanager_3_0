@@ -5,45 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddc54ce9-1ab0-46a5-84c7-5cd13333537f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/images/1px.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/images/1px_white.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/images/2px.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/images/2px_gray.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/images/border_dashed_red.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/images/bulet_minus.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/images/bulet_plus.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/images/folder.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/images/glue_line_bg.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/images/line.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/images/loader.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/images/noimage.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/images/index.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/images/1px.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/images/1px_white.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/images/2px.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/images/2px_gray.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/images/border_dashed_red.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/images/bulet_minus.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/images/bulet_plus.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/images/folder.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/images/glue_line_bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/images/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/images/line.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/images/loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/images/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/images/noimage.gif" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/captcha/backgrounds/45-degree-fabric.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/captcha/backgrounds/cloth-alike.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/captcha/backgrounds/grey-sandbag.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/captcha/backgrounds/kinda-jean.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/captcha/backgrounds/polyester-lite.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/captcha/backgrounds/stitched-wool.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/captcha/backgrounds/white-carbon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/captcha/backgrounds/white-wave.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/captcha/fonts/times_new_yorker.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/ajax_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/captcha.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/ajax_view.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager.sql" afterPath="$PROJECT_DIR$/mylinksmanager.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_index.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/settings_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/settings_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/index_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/index_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Category.php" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Category.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Links.php" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Links.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/header.tpl" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/header.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" afterPath="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" afterPath="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/styles/style.css" afterPath="$PROJECT_DIR$/mylinksmanager/templates/styles/style.css" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,91 +37,87 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index_view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/index_view.php">
+      <file leaf-file-name="captcha.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/captcha.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="179" column="5" lean-forward="true" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
+            <state relative-caret-position="1819">
+              <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model_links.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_links.php">
+      <file leaf-file-name="addurl_view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="23" column="5" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="84" selection-end-column="5" />
+            <state relative-caret-position="-374">
+              <caret line="248" column="45" lean-forward="true" selection-start-line="248" selection-start-column="45" selection-end-line="248" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="links_view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/links_view.php">
+      <file leaf-file-name="model_addurl.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_addurl.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4471">
-              <caret line="269" column="42" lean-forward="false" selection-start-line="269" selection-start-column="42" selection-end-line="269" selection-end-column="42" />
+            <state relative-caret-position="170">
+              <caret line="16" column="86" lean-forward="false" selection-start-line="16" selection-start-column="86" selection-end-line="16" selection-end-column="86" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Links.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Links.php">
+      <file leaf-file-name="Helper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1972">
-              <caret line="122" column="44" lean-forward="false" selection-start-line="122" selection-start-column="44" selection-end-line="122" selection-end-column="44" />
+            <state relative-caret-position="-1156">
+              <caret line="346" column="35" lean-forward="false" selection-start-line="346" selection-start-column="35" selection-end-line="346" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ru.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/ru.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="249" column="28" lean-forward="true" selection-start-line="249" selection-start-column="18" selection-end-line="249" selection-end-column="33" />
               <folding>
-                <marker date="1532623030669" expanded="true" signature="553:751" ph="SELECT * FRO... ${core::database()-&gt;getTableName('links')}" />
-                <marker date="1532623030669" expanded="true" signature="1188:1381" ph="SELECT * FRO... ${core::database()-&gt;getTableName('links')}" />
-                <marker date="1532623030669" expanded="true" signature="1749:1844" ph="SELECT * FRO... ${core::database()-&gt;getTableName('links')}" />
-                <marker date="1532623030669" expanded="true" signature="2210:2319" ph="SELECT * FRO... ${core::database()-&gt;getTableName('links')}" />
-                <marker date="1532623030669" expanded="true" signature="2477:2559" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532623030669" expanded="true" signature="2809:2920" ph="SELECT * FRO... ${core::database()-&gt;getTableName('links')}" />
-                <marker date="1532623030669" expanded="true" signature="3338:3448" ph="SELECT * FRO... ${core::database()-&gt;getTableName('links')}" />
-                <marker date="1532623030669" expanded="true" signature="3867:4223" ph="SELECT *,c.n... ${core::database()-&gt;getTableName('links')}" />
-                <marker date="1532623030669" expanded="true" signature="3867:4262" ph="SELECT *,c.n... ${core::database()-&gt;getTableName('links')}" />
-                <marker date="1532623030669" expanded="true" signature="3867:4321" ph="SELECT *,c.n... ${core::database()-&gt;getTableName('links')}" />
-                <marker date="1532623030669" expanded="true" signature="4407:4457" ph="/** * @param... " />
-                <marker date="1532623030669" expanded="true" signature="4561:4767" ph="SELECT l.*,c... ${core::database()-&gt;getTableName('links')}" />
-                <marker date="1532623030669" expanded="true" signature="5504:5595" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532623030669" expanded="true" signature="5936:6021" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532623030669" expanded="true" signature="6899:7004" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532623030669" expanded="true" signature="8991:9076" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532623030669" expanded="true" signature="10146:10237" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532623030669" expanded="true" signature="10573:10679" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532623030669" expanded="true" signature="11359:11468" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532623030669" expanded="true" signature="12301:12385" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
+                <marker date="1532827535338" expanded="true" signature="2127:2133" ph="&quot;" />
+                <marker date="1532827535338" expanded="true" signature="2152:2158" ph="&quot;" />
+                <marker date="1532827535338" expanded="true" signature="2201:2207" ph="&quot;" />
+                <marker date="1532827535338" expanded="true" signature="2221:2227" ph="&quot;" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model_index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_index.php">
+      <file leaf-file-name="addurl.tpl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="44" />
+            <state relative-caret-position="170">
+              <caret line="127" column="52" lean-forward="false" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="54" />
               <folding>
-                <marker date="1532625573665" expanded="true" signature="516:801" ph="SELECT c.nam... ${core::database()-&gt;getTableName('catalog')}" />
+                <element signature="n#style#0;n#img#0;n#span#0;n#td#1;n#tr#7;n#table#0;n#form#0;n#td#0;n#tr#1;n#table#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings_view.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/settings_view.php">
+      <file leaf-file-name="ajax_view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/ajax_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
-              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="237">
+              <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+              <folding>
+                <element signature="e#7#254#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model_settings.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_settings.php">
+      <file leaf-file-name="model_ajax.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_ajax.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -151,51 +126,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/bootstrap.php">
+      <file leaf-file-name="controller_ajax.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_ajax.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="15" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="15" />
-              <folding>
-                <marker date="1532617091617" expanded="true" signature="1179:1193" ph="SELECT * FRO... ${core::database()-&gt;getTableName('settings')}" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ru.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/ru.php">
+      <file leaf-file-name="DHTML.js" pinned="false" current-in-tab="false">
+        <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3060">
-              <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-              <folding>
-                <marker date="1532621903072" expanded="true" signature="2127:2133" ph="&quot;" />
-                <marker date="1532621903072" expanded="true" signature="2152:2158" ph="&quot;" />
-                <marker date="1532621903072" expanded="true" signature="2201:2207" ph="&quot;" />
-                <marker date="1532621903072" expanded="true" signature="2221:2227" ph="&quot;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Category.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Category.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4267">
-              <caret line="257" column="41" lean-forward="false" selection-start-line="257" selection-start-column="27" selection-end-line="257" selection-end-column="42" />
-              <folding>
-                <marker date="1532620383100" expanded="true" signature="626:729" ph="SELECT `id`,... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532620383100" expanded="true" signature="960:1041" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532620383100" expanded="true" signature="2094:2196" ph="SELECT `id`,... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532620383100" expanded="true" signature="2427:2507" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532620383100" expanded="true" signature="3539:3670" ph="SELECT `id`,... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532620383100" expanded="true" signature="4525:4620" ph="SELECT `id`,... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532620383100" expanded="true" signature="5268:5402" ph="SELECT `id`,... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532620383100" expanded="true" signature="7481:7561" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532620383100" expanded="true" signature="8742:8845" ph="SELECT `id`,... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532620383100" expanded="true" signature="9203:9309" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1532620383100" expanded="true" signature="9931:10004" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-              </folding>
+            <state relative-caret-position="2084">
+              <caret line="1387" column="0" lean-forward="false" selection-start-line="1387" selection-start-column="0" selection-end-line="1387" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -204,14 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ShowCategoryList</find>
-      <find>ShowNumbersLinks</find>
-      <find>ShowSubCat</find>
-      <find>topbarmenu</find>
-      <find>$language[&quot;str&quot;][&quot;added&quot;]</find>
-      <find>NUMBER_OF_CLICKS</find>
-      <find>$language[&quot;str&quot;][&quot;pages&quot;]</find>
-      <find>?a=admin&amp;check_links</find>
       <find>LINKS_WAITING_CHECKS</find>
       <find>Ваш сайт добавлен в каталог ссылок</find>
       <find>sendMailAdd</find>
@@ -234,6 +172,14 @@
       <find>url RLIKE</find>
       <find>commonHo</find>
       <find>NUMBER_CHARS_DESCRIPTION_MIN</find>
+      <find>GdFgColor</find>
+      <find>RULES</find>
+      <find>STR_HTML_CODE_OF_LINK_FOR_THIS</find>
+      <find>STR_IDENTIFIED_FOLLOWING_ERRORS</find>
+      <find>IDENTIFIED_FOLLOWING_ERRORS</find>
+      <find>SUBJECT_NEWLINK</find>
+      <find>STR_FORM_RECIPROCAL_LINK</find>
+      <find>$_GET['t']</find>
     </findStrings>
     <replaceStrings>
       <replace>Copyright (c) 2011-2018 Alexander Yanitsky</replace>
@@ -256,10 +202,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/update_view.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_update.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_update.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/app/snippets/menu.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/admin/assets/css/custom.css" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/header.tpl" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/categories.tpl" />
@@ -293,25 +235,36 @@
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/.gitignore" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/index.tpl" />
-        <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_addurl.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/header.tpl" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/styles/style.css" />
-        <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl" />
         <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Category.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/settings_view.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Links.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_links.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_index.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/index_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/vendor/SimpleCaptcha.class.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/captcha.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/ajax_view.php" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -369,6 +322,13 @@
               <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -418,7 +378,20 @@
               <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="language" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -485,7 +458,9 @@
       <workItem from="1532618737424" duration="1795000" />
       <workItem from="1532620644768" duration="1990000" />
       <workItem from="1532622697271" duration="1799000" />
-      <workItem from="1532624657009" duration="1470000" />
+      <workItem from="1532624657009" duration="1520000" />
+      <workItem from="1532681008486" duration="1881000" />
+      <workItem from="1532817761590" duration="9415000" />
     </task>
     <task id="LOCAL-00001" summary="add files">
       <created>1486722105200</created>
@@ -648,11 +623,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532617164453</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="добавлены правки">
+      <created>1532626153180</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1532626153180</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180438000" />
+    <option name="totallyTimeSpent" value="191784000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -666,14 +648,15 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26066098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26865673" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -681,7 +664,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -719,7 +701,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
+    <MESSAGE value="добавлены правки" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавлены правки" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -728,44 +711,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_icon.php" />
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="10" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_icon.php" />
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/icon_view.php" />
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/pic_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_pic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_pic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="20" lean-forward="false" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Exception404.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/addcategory_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="656">
@@ -844,13 +789,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="401" column="27" lean-forward="false" selection-start-line="401" selection-start-column="27" selection-end-line="401" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1299">
@@ -865,24 +803,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_addurl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="86" lean-forward="false" selection-start-line="16" selection-start-column="86" selection-end-line="16" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_addcategory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="279" column="1" lean-forward="false" selection-start-line="279" selection-start-column="1" selection-end-line="279" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -914,13 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="359" column="36" lean-forward="true" selection-start-line="359" selection-start-column="36" selection-end-line="359" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/page500.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-213">
@@ -946,13 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-128">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2023">
-          <caret line="119" column="21" lean-forward="false" selection-start-line="119" selection-start-column="21" selection-end-line="119" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1029,19 +939,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/ru.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3060">
-          <caret line="180" column="0" lean-forward="false" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-          <folding>
-            <marker date="1532621903072" expanded="true" signature="2127:2133" ph="&quot;" />
-            <marker date="1532621903072" expanded="true" signature="2152:2158" ph="&quot;" />
-            <marker date="1532621903072" expanded="true" signature="2201:2207" ph="&quot;" />
-            <marker date="1532621903072" expanded="true" signature="2221:2227" ph="&quot;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Links.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1972">
@@ -1089,19 +986,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="612">
           <caret line="42" column="44" lean-forward="false" selection-start-line="42" selection-start-column="29" selection-end-line="42" selection-end-column="44" />
           <folding>
             <marker date="1532625573665" expanded="true" signature="516:801" ph="SELECT c.nam... ${core::database()-&gt;getTableName('catalog')}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/index_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="179" column="5" lean-forward="true" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1115,8 +1004,130 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/settings_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="16" column="100" lean-forward="false" selection-start-line="16" selection-start-column="100" selection-end-line="16" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2023">
+          <caret line="119" column="21" lean-forward="false" selection-start-line="119" selection-start-column="21" selection-end-line="119" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/vendor/SimpleCaptcha.class.php" />
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/index_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="183" column="81" lean-forward="true" selection-start-line="183" selection-start-column="63" selection-end-line="183" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/en.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="339" column="67" lean-forward="false" selection-start-line="339" selection-start-column="67" selection-end-line="339" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/ru.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="249" column="28" lean-forward="true" selection-start-line="249" selection-start-column="18" selection-end-line="249" selection-end-column="33" />
+          <folding>
+            <marker date="1532827535338" expanded="true" signature="2127:2133" ph="&quot;" />
+            <marker date="1532827535338" expanded="true" signature="2152:2158" ph="&quot;" />
+            <marker date="1532827535338" expanded="true" signature="2201:2207" ph="&quot;" />
+            <marker date="1532827535338" expanded="true" signature="2221:2227" ph="&quot;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_addurl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="86" lean-forward="false" selection-start-line="16" selection-start-column="86" selection-end-line="16" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-374">
+          <caret line="248" column="45" lean-forward="true" selection-start-line="248" selection-start-column="45" selection-end-line="248" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1156">
+          <caret line="346" column="35" lean-forward="false" selection-start-line="346" selection-start-column="35" selection-end-line="346" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/captcha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1819">
+          <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2084">
+          <caret line="1387" column="0" lean-forward="false" selection-start-line="1387" selection-start-column="0" selection-end-line="1387" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="127" column="52" lean-forward="false" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#span#0;n#td#1;n#tr#7;n#table#0;n#form#0;n#td#0;n#tr#1;n#table#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/ajax_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/ajax_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+          <folding>
+            <element signature="e#7#254#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
