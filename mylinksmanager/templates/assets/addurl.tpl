@@ -119,26 +119,26 @@ function createXMLHttp() {
      
 function sendRequest() {
 
-	var oXmlHttp = createXMLHttp();
 	var url = document.getElementById("url").value;
 	url = trim(url);
-	
 	document.getElementById("id_url").innerHTML = '<img src=./images/loader.gif>';
-     
-	oXmlHttp.open("GET","./?ajax?action=check_add_link&url=" + escape(url), true);
-	oXmlHttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        
-	oXmlHttp.onreadystatechange = function() {
-		if(oXmlHttp.readyState == 4) {
-			if(oXmlHttp.status == 200) {
-				document.getElementById("id_url").innerHTML = oXmlHttp.responseText;
-			} else {
-				document.getElementById("id_url").innerHTML = oXmlHttp.statusText;
-			}
-		}
-	};
-        
-	oXmlHttp.send(null);
+
+    var http = new XMLHttpRequest();
+    var params = 'url=' + encodeURIComponent(url);
+    http.open("POST", "./ajax?action=check_add_link", true);
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    http.onreadystatechange = function() {
+        if (oXmlHttp.readyState == 4) {
+            if (oXmlHttp.status == 200) {
+                document.getElementById("id_url").innerHTML = oXmlHttp.responseText;
+            } else {
+                document.getElementById("id_url").innerHTML = oXmlHttp.statusText;
+            }
+        }
+    }
+
+    http.send(params);
 }
 
 function trim(str)

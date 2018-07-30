@@ -120,7 +120,7 @@ $tpl->assign("STR_NUMBER_HTML_CHARS", core::getLanguage('str', 'number_html_char
 $tpl->assign("STR_REQUEST_CAPTCHA", core::getLanguage('str', 'request_captcha'));
 $tpl->assign("STR_ADD_LINKS_WITHOUT_CHECK", core::getLanguage('str', 'add_links_without_check'));
 $tpl->assign("STR_CHECK_LINKS", core::getLanguage('str', 'check_links'));
-$tpl->assign("STR_COMMON_HOST", core::getLanguage('str', 'str_common_host'));
+$tpl->assign("STR_COMMON_HOST", core::getLanguage('str', 'common_host'));
 $tpl->assign("STR_CHECK_GET_PARAMETER", core::getLanguage('str', 'check_get_parameter'));
 $tpl->assign("STR_LIMIT_RECIPROCAL_LINKS", core::getLanguage('str', 'limit_reciprocal_links'));
 $tpl->assign("STR_ADD_TO_BLACKLIST", core::getLanguage('str', 'add_to_blacklist'));

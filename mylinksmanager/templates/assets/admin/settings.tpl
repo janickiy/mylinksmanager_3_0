@@ -32,24 +32,6 @@
                 <input type="text" name="columns_number" class="form-control" value="${COLUMNS_NUMBER}">
               </div>
               <div class="form-group">
-                <label>${STR_ORDER_VIEWS}</label>
-                <div class="radio">
-                  <label> <input name="order_views" type="radio" value="1" <!-- IF '${ORDER_VIEWS}' == 1 -->checked="checked"<!-- END IF -->>${STR_BY_DATE} </label>
-                </div>
-                <div class="radio">
-                  <label> <input type="radio" name="order_views" value="2" <!-- IF '${ORDER_VIEWS}' == 2 -->checked="checked"<!-- END IF -->>${STR_BY_NUMBER} </label>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>${STR_ORDER_LINKS}</label>
-                <div class="radio">
-                  <label> <input name="order_links" type="radio" value="1" <!-- IF '${ORDER_LINKS}' == 1 -->checked="checked"<!-- END IF -->>${STR_BY_INCREACE} </label>
-                </div>
-                <div class="radio">
-                  <label> <input type="radio" name="order_links" value="2" <!-- IF '${ORDER_LINKS}' == 2 -->checked="checked"<!-- END IF -->>${STR_BY_DECREASE} </label>
-                </div>
-              </div>
-              <div class="form-group">
                 <label for="url">${STR_CATALOG_URL}</label>
                 <input type="text" name="url" class="form-control" value="${URL}">
               </div>

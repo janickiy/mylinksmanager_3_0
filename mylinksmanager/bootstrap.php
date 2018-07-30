@@ -14,7 +14,7 @@ Error_Reporting(1); // set error reporting level
 
 define("DEBUG", 1);
 
-define('VERSION', '3.0.0 alfa');
+define('VERSION', '3.0.0');
 
 $cmspaths = ['core' => 'sys/core',
              'engine' => 'sys/engine', // Engines AUTOLOAD folder

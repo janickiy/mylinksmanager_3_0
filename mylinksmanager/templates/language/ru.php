@@ -333,3 +333,8 @@ $language["error"]["not_reciprocal_link"] = "Введите адерес стр�
 $language["error"]["type_banner"] = "Расширение банера должно быть GIF, JPEG или PNG!";
 
 $language["error"]["not_filled_captcha"] = "Введите защитный код!";
+
+$language["error"]["not_your_site"] = "Укажите свой адрес сайта!";
+
+
+

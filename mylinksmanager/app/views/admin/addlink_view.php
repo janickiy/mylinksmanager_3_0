@@ -71,6 +71,10 @@ if (Core_Array::getRequest('action')){
     // Check the url on valid
     if (!empty($url) && Helper::checkUrl($url)){
         $errors[] = core::getLanguage('error', 'wrong_url');
+
+        if (Helper::nativeCheckUrl($_POST["url"])){
+            $errors[] = core::getLanguage('error', 'not_your_site');
+        }
     }
 
     // Check on, whether the adding site on the same hosting as catalogue is located

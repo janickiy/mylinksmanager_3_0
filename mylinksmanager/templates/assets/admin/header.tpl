@@ -15,22 +15,23 @@
 	<!-- GOOGLE FONTS-->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
-
-
 	<script src="./js/jquery.min.js"></script>
 
 	<script src="./js/jquery.hide_alertblock.js"></script>
 	<script src="./js/jquery.cookie.js"></script>
 
-
-
 	<script type="text/javascript">
         $(document).ready(function(){
             $.ajax({
-                type: "GET",
-                url: "alert_update.php",
-                dataType: "xml",
-                success: xmlParser
+                cache: false,
+                url: './?t=ajax&action=alert_update',
+                dataType: "json",
+                success: function(data){
+                    if (data.msg != '' && $.cookie('alertshow') != 'no'){
+                        $('#alert_msg_block').fadeIn('700');
+                        $("#alert_warning_msg").append(data.msg);
+                    }
+                }
             });
 
             $('.close').on('click', function(){
@@ -58,15 +59,8 @@
             setTimeout(function(){
                 setTimeout(function(){$('.alert-success').fadeOut('700')},5000);
             });
-
         });
 
-        function xmlParser(xml) {
-            $(xml).find("DOCUMENT").each(function () {
-                $('.alert-warning').fadeIn('700');
-                $("#alert_warning_msg").append($(this).find("warning").text());
-            });
-        }
 	</script>
 </head>
 <body>
@@ -135,10 +129,11 @@
 			<div class="alert alert-info"> ${INFO_ALERT} </div>
 			<!-- END IF -->
 			<div class="alert alert-warning" style="display:none">
-				<button class="close" data-dismiss="alert">×</button>
+				<button class="close" onClick="$.cookie('alertshow', 'no');" data-dismiss="alert">×</button>
 				<h4 class="alert-heading">${STR_WARNING}!</h4>
 				<span id="alert_warning_msg">${PAGE_ALERT_WARNING_MSG}</span>
 			</div>
+
 			<!-- IF '${ERROR_ALERT}' != '' -->
 			<div class="alert alert-danger">
 				<button class="close" data-dismiss="alert">×</button>
