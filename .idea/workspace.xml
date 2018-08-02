@@ -5,14 +5,148 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddc54ce9-1ab0-46a5-84c7-5cd13333537f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/bootstrap/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/images/Sorting icons.psd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/images/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/images/sort_asc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/images/sort_asc_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/images/sort_both.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/images/sort_desc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/images/sort_desc_disabled.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/fonts/fontawesome-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager_data_en.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager_data_ru.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/bootstrap-social/bootstrap-social.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/bootstrap-social/bootstrap-social.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/bootstrap-social/bootstrap-social.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/bootstrap/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/bootstrap/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/bootstrap/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/bootstrap/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables-plugins/dataTables.bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables-plugins/dataTables.bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables-plugins/dataTables.bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables-plugins/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables-responsive/dataTables.responsive.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables-responsive/dataTables.responsive.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables-responsive/dataTables.responsive.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/dataTables.bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/dataTables.bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/dataTables.bootstrap4.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/dataTables.bootstrap4.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/dataTables.foundation.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/dataTables.foundation.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/dataTables.jqueryui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/dataTables.jqueryui.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/dataTables.material.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/dataTables.material.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/dataTables.semanticui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/dataTables.semanticui.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/dataTables.uikit.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/dataTables.uikit.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/jquery.dataTables.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/jquery.dataTables.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/css/jquery.dataTables_themeroller.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/dataTables.bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/dataTables.bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/dataTables.bootstrap4.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/dataTables.bootstrap4.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/dataTables.foundation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/dataTables.foundation.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/dataTables.jqueryui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/dataTables.jqueryui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/dataTables.material.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/dataTables.material.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/dataTables.semanticui.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/dataTables.semanticui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/dataTables.uikit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/dataTables.uikit.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/jquery.dataTables.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/jquery.dataTables.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/datatables/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot-tooltip/jquery.flot.tooltip.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot-tooltip/jquery.flot.tooltip.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot-tooltip/jquery.flot.tooltip.source.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/excanvas.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/excanvas.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.colorhelpers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.flot.canvas.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.flot.categories.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.flot.crosshair.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.flot.errorbars.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.flot.fillbetween.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.flot.image.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.flot.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.flot.navigate.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.flot.pie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.flot.resize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.flot.selection.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.flot.stack.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.flot.symbol.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.flot.threshold.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.flot.time.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/flot/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/HELP-US-OUT.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/css/font-awesome.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/css/font-awesome.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/less/animated.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/less/bordered-pulled.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/less/core.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/less/extras.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/less/fixed-width.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/less/font-awesome.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/less/icons.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/less/larger.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/less/list.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/less/mixins.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/less/path.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/less/rotated-flipped.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/less/screen-reader.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/less/spinning.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/less/stacked.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/less/variables.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/scss/_animated.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/scss/_bordered-pulled.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/scss/_core.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/scss/_extras.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/scss/_fixed-width.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/scss/_icons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/scss/_larger.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/scss/_list.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/scss/_mixins.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/scss/_path.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/scss/_rotated-flipped.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/scss/_screen-reader.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/scss/_spinning.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/scss/_stacked.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/scss/_variables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/font-awesome/scss/font-awesome.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/jquery/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/jquery/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/metisMenu/metisMenu.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/metisMenu/metisMenu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/metisMenu/metisMenu.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/metisMenu/metisMenu.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/morrisjs/morris.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/morrisjs/morris.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/morrisjs/morris.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/raphael/raphael.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/vendor/raphael/raphael.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.rus" afterPath="$PROJECT_DIR$/readme.rus" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_links.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_links.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/snippets/footer.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/snippets/footer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/index_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/index_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/index.tpl" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/index.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" afterPath="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" afterPath="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager.sql" afterPath="$PROJECT_DIR$/mylinksmanager.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/install/index.php" afterPath="$PROJECT_DIR$/mylinksmanager/install/index.php" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +161,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index_view.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index_view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/index_view.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-2690">
-              <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+              <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/install/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-8574">
+              <caret line="301" column="0" lean-forward="true" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
+              <folding>
+                <element signature="e#7#254#0#PHP" expanded="true" />
+                <marker date="1533233620046" expanded="true" signature="7383:7404" ph="DROP TABLE I... " />
+                <marker date="1533233620046" expanded="true" signature="8609:8630" ph="DROP TABLE I... " />
+                <marker date="1533233620046" expanded="true" signature="9742:9763" ph="DROP TABLE I... " />
+                <marker date="1533233620046" expanded="true" signature="12378:12542" ph="INSERT INTO `${$_SESSION['prefix']}aut`... " />
+                <marker date="1533233620046" expanded="true" signature="12572:12682" ph="INSERT INTO `${$_SESSION['prefix']}licensekey`... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mylinksmanager.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mylinksmanager_data_en.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager_data_en.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mylinksmanager_data_ru.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager_data_ru.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -51,7 +232,7 @@
         <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/ru.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="178">
-              <caret line="282" column="25" lean-forward="true" selection-start-line="282" selection-start-column="18" selection-end-line="282" selection-end-column="26" />
+              <caret line="282" column="25" lean-forward="false" selection-start-line="282" selection-start-column="18" selection-end-line="282" selection-end-column="26" />
               <folding>
                 <marker date="1533228446913" expanded="true" signature="2127:2133" ph="&quot;" />
                 <marker date="1533228446913" expanded="true" signature="2152:2158" ph="&quot;" />
@@ -77,26 +258,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="links_view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/links_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="269" column="42" lean-forward="false" selection-start-line="269" selection-start-column="42" selection-end-line="269" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="info.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/info.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-451">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="addurl.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl">
           <provider selected="true" editor-type-id="text-editor">
@@ -107,31 +268,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/index.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="263">
               <caret line="108" column="37" lean-forward="false" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="model_links.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_links.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="22" column="49" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -194,9 +335,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/links.tpl" />
-        <option value="$PROJECT_DIR$/mylinksmanager/index.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_icon.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_pic.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_icon.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_pic.php" />
@@ -232,7 +370,6 @@
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/ajax_view.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/bootstrap.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/header.tpl" />
-        <option value="$PROJECT_DIR$/mylinksmanager/install/index.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/install/ru.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/install/en.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/LICENSE_RU" />
@@ -245,6 +382,10 @@
         <option value="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/index_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/install/index.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager.sql" />
+        <option value="$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager_data_en.sql" />
+        <option value="$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager_data_ru.sql" />
       </list>
     </option>
   </component>
@@ -306,49 +447,14 @@
               <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
               <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="snippets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="install" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
               <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="install" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="sql" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
@@ -492,7 +598,7 @@
       <workItem from="1532975038496" duration="23000" />
       <workItem from="1532984427227" duration="25000" />
       <workItem from="1533222092383" duration="3496000" />
-      <workItem from="1533227160367" duration="1816000" />
+      <workItem from="1533227160367" duration="3733000" />
     </task>
     <task id="LOCAL-00001" summary="add files">
       <created>1486722105200</created>
@@ -676,11 +782,18 @@
       <option name="project" value="LOCAL" />
       <updated>1532914581217</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="добавлены правки">
+      <created>1533229010301</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1533229010301</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207554000" />
+    <option name="totallyTimeSpent" value="209471000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -694,7 +807,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20309168" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20309168" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -757,34 +870,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Core_Array.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_categories.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1532617091559" expanded="true" signature="504:586" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_editcategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="50" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="23" selection-end-column="53" />
-          <folding>
-            <marker date="1532617091561" expanded="true" signature="523:596" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-            <marker date="1532617091561" expanded="true" signature="882:951" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Category.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4267">
@@ -910,13 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="7" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/install/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -1122,7 +1200,7 @@
     <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/ru.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
-          <caret line="282" column="25" lean-forward="true" selection-start-line="282" selection-start-column="18" selection-end-line="282" selection-end-column="26" />
+          <caret line="282" column="25" lean-forward="false" selection-start-line="282" selection-start-column="18" selection-end-line="282" selection-end-column="26" />
           <folding>
             <marker date="1533228446913" expanded="true" signature="2127:2133" ph="&quot;" />
             <marker date="1533228446913" expanded="true" signature="2152:2158" ph="&quot;" />
@@ -1143,7 +1221,46 @@
     <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/index_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2690">
-          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/install/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8574">
+          <caret line="301" column="0" lean-forward="true" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#254#0#PHP" expanded="true" />
+            <marker date="1533233620046" expanded="true" signature="7383:7404" ph="DROP TABLE I... " />
+            <marker date="1533233620046" expanded="true" signature="8609:8630" ph="DROP TABLE I... " />
+            <marker date="1533233620046" expanded="true" signature="9742:9763" ph="DROP TABLE I... " />
+            <marker date="1533233620046" expanded="true" signature="12378:12542" ph="INSERT INTO `${$_SESSION['prefix']}aut`... " />
+            <marker date="1533233620046" expanded="true" signature="12572:12682" ph="INSERT INTO `${$_SESSION['prefix']}licensekey`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager_data_en.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager_data_ru.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
