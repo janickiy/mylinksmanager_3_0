@@ -109,9 +109,6 @@ ${TOPBARMENU}
          <!-- IF '${MSG_SEARCH_NOTFOUND}' != '' -->
          <div class="warning_msg" style="text-align: center;">${MSG_SEARCH_NOTFOUND}</div>
          <!-- END IF -->
-         <!-- IF '${MSG_SEARCH_QUANTITY_CHARCTER}' != '' -->
-         <div class="warning_msg" style="text-align: center;">${MSG_SEARCH_QUANTITY_CHARCTER}</div>
-         <!-- END IF -->
          <!-- BEGIN pagination -->
          <div class="pagination">${STR_PAGES}:&nbsp;
             ${PERVPAGE}${PAGE2LEFT}${PAGE1LEFT}<b>${PAGE}</b>${PAGE1RIGHT}${PAGE2RIGHT}${NEXTPAGE} 

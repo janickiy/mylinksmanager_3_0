@@ -20,13 +20,14 @@ class Model_links extends Model
      * @param $pnumber
      * @return mixed
      */
-    public function getLinksArray($strtmp, $search, $category, $page, $pnumber)
+    public function getLinksArray($page, $pnumber)
     {
         core::database()->tablename = core::database()->getTableName('links') . " l LEFT JOIN " . core::database()->getTableName('catalog') . " c ON c.id=l.cat_id";
 
+        $search = trim(Core_Array::getPost('search'));
+
         if ($search) {
             $_search = core::database()->escape($search);
-
             $temp = strtok($_search, " ");
             $temp = "%" . $temp . "%";
             $logstr = "or";

@@ -10,15 +10,14 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
-if ($_GET['id']){
+if (Core_Array::getGet('id')) {
     $arraypathway = [];
-    $arraypathway = Category::topbarMenu($_GET['id'],'');
+    $arraypathway = Category::topbarMenu(Core_Array::getGet('id'), '');
 
-    $pathway = '<a href="index.php">' . core::getLanguage('str', 'home'). '</a> ';
+    $pathway = '<a href="./">' . core::getLanguage('str', 'home') . '</a> ';
 
-    for($i = 0; $i < count($arraypathway); $i++)
-    {
-        if ($arraypathway[$i][0] == $_GET['id']) {
+    for ($i = 0; $i < count($arraypathway); $i++) {
+        if ($arraypathway[$i][0] == Core_Array::getGet('id')) {
             $pathway .= '» ' . $arraypathway[$i][1];
         } else {
             $pathway .= '» <a href="http://' . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . '?id=' . $arraypathway[$i][0] . '">' . $arraypathway[$i][1] . '</a>';
@@ -26,14 +25,14 @@ if ($_GET['id']){
     }
 }
 
-if (!empty($_GET['link_id'])){
+if (!empty(Core_Array::getGet('link_id'))) {
 
     // include template
     core::requireEx('libs', "html_template/SeparateTemplate.php");
 
     $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "info.tpl");
 
-    $link = Links::getLinkInfo($_GET['link_id']);
+    $link = Links::getLinkInfo(Core_Array::getGet('link_id'));
 
     if (!$link) {
         throw new Exception404("Not found");
@@ -47,12 +46,12 @@ if (!empty($_GET['link_id'])){
     $tpl->assign('METATITLE', $title);
     $tpl->assign('METADESCRIPTION', $description);
     $tpl->assign('METAKEYWORDS', $keywords);
-    $tpl->assign('VERSION', $version);
+    $tpl->assign('VERSION', VERSION);
 
-    $link_go_back = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF']."?id=" . $link['id'];
+    $link_go_back = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . "?id=" . $link['id'];
 
     $url_to_site = "" . $_SERVER['PHP_SELF'] . " ? link_id=" . $link['id'] . "&url=" . $link['url'] . "";
-    $link['full_description'] = preg_replace("/\\r\\n/s","<br />", $link['full_description']);
+    $link['full_description'] = preg_replace("/\\r\\n/s", "<br />", $link['full_description']);
 
     $tpl->assign('CATNAME', $link['catname']);
     $tpl->assign('URL_TO_SITE', $url_to_site);
@@ -63,11 +62,11 @@ if (!empty($_GET['link_id'])){
     $tpl->assign('FULL_DESCRIPTION', $link['full_description']);
 
     $tpl->assign('STR_GO_TO_WEBSITE', core::getLanguage('str', 'go_to_website'));
-    $tpl->assign('STR_GO_BACK', core::getLanguage('str','go_back'));
+    $tpl->assign('STR_GO_BACK', core::getLanguage('str', 'go_back'));
 
-    if ($_GET['url']){
+    if (Core_Array::getGet('url')) {
         // If there is a URL then count one click
-        if ($data->countView($_GET['link_id'])){
+        if ($data->countView(Core_Array::getGet('link_id'))) {
             // Make a redirect
             $tpl->assign('REDIRECT_URL', $link['url']);
         }
@@ -77,22 +76,23 @@ if (!empty($_GET['link_id'])){
 
     $all_number_links = core::getSetting('all_number_links') ? core::getSetting('all_number_links') : 5;
 
-    if (empty($page)) $page = $_GET['page'] ? $_GET['page'] : 1;
+    if (empty($page)) $page = Core_Array::getGet('page') ? $_GET['page'] : 1;
     $begin = ($page - 1) * $all_number_links;
 
-    if (!empty($_GET['id']) && $_GET['id'] != 0) {
+    if (!empty(Core_Array::getGet('id')) && Core_Array::getGet('id') != 0) {
 
         // Get the meta tags of catalogue
-         $catalog = Category::getCategoryById($_GET['id']);
+        $catalog = Category::getCategoryById(Core_Array::getGet('id'));
 
-        $description =  $catalog['description'];
-        $keywords	 =  $catalog['keywords'];
+        $description = $catalog['description'];
+        $keywords = $catalog['keywords'];
 
-        $title		 = "" . core::getLanguage('title', 'index') . " " . VERSION . " - " . $catalog['name'];
+        $title = core::getLanguage('title', 'index') . " " . VERSION . " - " . $catalog['name'];
     }
 
-    if (empty($title)) { $title = core::getLanguage('title', 'index') . " " .VERSION; }
-
+    if (empty($title)) {
+        $title = core::getLanguage('title', 'index') . " " . VERSION;
+    }
 
     //include template
     core::requireEx('libs', "html_template/SeparateTemplate.php");
@@ -111,42 +111,39 @@ if (!empty($_GET['link_id'])){
     $tpl->assign('STR_ALL_WORDS_TOGETHER', core::getLanguage('str', 'all_words_together'));
     $tpl->assign('BUTTON_FIND', core::getLanguage('button', 'find'));
 
-
     $tpl->assign('ACTION', $_SERVER['REQUEST_URI']);
-    $tpl->assign('SEARCH', urldecode($_GET['search']));
-    $tpl->assign('ID_CATALOG', $_GET['id_catalog']);
-    $tpl->assign('LOGIC', $_GET['logic']);
+    $tpl->assign('SEARCH', urldecode(Core_Array::getGet('search')));
+    $tpl->assign('ID_CATALOG', Core_Array::getGet('id_catalog'));
+    $tpl->assign('LOGIC', Core_Array::getGet('logic'));
     $tpl->assign('OPTION', Links::ShowCatalogList(0, 0));
 
-    $id = $_GET['id'] ? $_GET['id'] : 0;
-
+    $id = Core_Array::getGet('id') ? $_GET['id'] : 0;
     $arraycat = $data->getCatalogList($id);
-
     $total = count($arraycat);
 
     $number = (int)($total / core::getSetting('columns_number'));
 
     if ((float)($total / core::getSetting('columns_number')) - $number != 0) $number++;
 
-// Form an array
-    for($i = 0; $i < $number; $i++){
-        for($j = 0; $j < core::getSetting('columns_number'); $j++){
+    // Form an array
+    for ($i = 0; $i < $number; $i++) {
+        for ($j = 0; $j < core::getSetting('columns_number'); $j++) {
             $arr[$i][$j] = $arraycat[$j * $number + $i];
         }
     }
 
     $rowPrintCat = $tpl->fetch('PRINT_CAT');
 
-    for($i = 0; $i < $number; $i++){
+    for ($i = 0; $i < $number; $i++) {
 
         $rowBlockCat = $rowPrintCat->fetch('ROW_CAT');
 
-        for($j = 0; $j < core::getSetting('columns_number'); $j++){
+        for ($j = 0; $j < core::getSetting('columns_number'); $j++) {
 
             $rowBlockFolder = $rowBlockCat->fetch('ROW_FOLDER');
 
-            if ($arr[$i][$j][0]){
-                $rowBlockFolder->assign('FOLDER_LINK', "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF']."?id=".$arr[$i][$j][1]);
+            if ($arr[$i][$j][0]) {
+                $rowBlockFolder->assign('FOLDER_LINK', "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . "?id=" . $arr[$i][$j][1]);
 
                 if ($arr[$i][$j][2] != '') {
                     $rowBlockFolder->assign('IMAGEFOLDER', './?t=pic&id=' . $arr[$i][$j][1]);
@@ -167,48 +164,54 @@ if (!empty($_GET['link_id'])){
 
     $tpl->assign('PRINT_CAT', $rowPrintCat);
     $tpl->assign('TOPBARMENU', $pathway);
-    $tpl->assign('SUBCATALOG',  $catalog['name'] ? $catalog['name'] : core::getLanguage('str', 'new_links'));
+    $tpl->assign('SUBCATALOG', $catalog['name'] ? $catalog['name'] : core::getLanguage('str', 'new_links'));
 
+    $tpl->assign('STR_ADD_URL', core::getLanguage('str', 'add_url'));
 
-    $tpl->assign('STR_ADD_URL', core::getLanguage('str','add_url'));
-
-
-    if (empty($_GET['id'])) {
-        $links = Links::getLinksList('show','l.id DESC',$all_number_links);
-    } else {
+    if (empty(Core_Array::getGet('id'))) {
         $links = $data->getLinks($page, $all_number_links);
+    } else {
+        $links = Links::getLinksList('show', 'l.id DESC', $all_number_links);
     }
 
-    foreach ($links as $link) {
-        if ($_GET['page'])
-            $read_more = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . "?link_id=" . $link['id'] . "&page=" . $_GET['page'];
+
+    if ($links) {
+        foreach ($links as $link) {
+            if (Core_Array::getGet('page'))
+                $read_more = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . "?link_id=" . $link['id'] . "&page=" . Core_Array::getGet('page');
+            else
+                $read_more = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . "?link_id=" . $link['id'];
+
+            if (!empty($link['htmlcode_banner']))
+                $htmlcode_banner = $link['htmlcode_banner'];
+            else
+                $htmlcode_banner = '<a href=http://' . $link['url'] . ' target=_blank><img border="0" width="88" height="31" src="./templates/images/noimage.gif"></a>';
+
+            $link['description'] = nl2br($link['description']);
+
+            $rowBlock = $tpl->fetch('ROW_LINKS');
+
+            $rowBlock->assign('STR_ADDED', core::getLanguage('str', 'added'));
+            $rowBlock->assign('STR_CATEGORY', core::getLanguage('str', 'category'));
+            $rowBlock->assign('STR_NUMBER_OF_CLICKS', core::getLanguage('str', 'number_of_clicks'));
+            $rowBlock->assign('STR_READ_MORE', core::getLanguage('str', 'read_more'));
+
+            $rowBlock->assign('URL', $link['url']);
+            $rowBlock->assign('NAME', $link['name']);
+            $rowBlock->assign('DESCRIPTION', $link['description']);
+            $rowBlock->assign('READ_MORE', $read_more);
+            $rowBlock->assign('HTMLCODE_BANNER', $htmlcode_banner);
+            $rowBlock->assign('TIME', $link['created']);
+            $rowBlock->assign('CATEGORY', $link['catname']);
+            $rowBlock->assign('NUMBER_OF_CLICKS', $link['views']);
+
+            $tpl->assign('ROW_LINKS', $rowBlock);
+        }
+    } else {
+        if (Core_Array::getGet('search'))
+            $tpl->assign('MSG_SEARCH_NOTFOUND', core::getLanguage('msg', 'notfound'));
         else
-            $read_more = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . "?link_id=" . $link['id'];
-
-        if (!empty($link['htmlcode_banner']))
-            $htmlcode_banner = $link['htmlcode_banner'];
-        else
-            $htmlcode_banner = '<a href=http://' . $link['url'] . ' target=_blank><img border="0" width="88" height="31" src="./templates/images/noimage.gif"></a>';
-
-        $link['description'] = nl2br($link['description']);
-
-        $rowBlock = $tpl->fetch('ROW_LINKS');
-
-        $rowBlock->assign('STR_ADDED', core::getLanguage('str', 'added'));
-        $rowBlock->assign('STR_CATEGORY', core::getLanguage('str','category'));
-        $rowBlock->assign('STR_NUMBER_OF_CLICKS', core::getLanguage('str', 'number_of_clicks'));
-        $rowBlock->assign('STR_READ_MORE', core::getLanguage('str', 'read_more'));
-
-        $rowBlock->assign('URL', $link['url']);
-        $rowBlock->assign('NAME', $link['name']);
-        $rowBlock->assign('DESCRIPTION', $link['description']);
-        $rowBlock->assign('READ_MORE', $read_more);
-        $rowBlock->assign('HTMLCODE_BANNER', $htmlcode_banner);
-        $rowBlock->assign('TIME', $link['created']);
-        $rowBlock->assign('CATEGORY', $link['catname']);
-        $rowBlock->assign('NUMBER_OF_CLICKS', $link['views']);
-
-        $tpl->assign('ROW_LINKS', $rowBlock);
+            $tpl->assign('MSG_NOTLINKS', core::getLanguage('msg', 'notlinks'));
     }
 }
 

@@ -66,7 +66,7 @@ function value_id(id,max)
 		color2='#AAFFC6';
 	}
 
-	document.getElementById('id_'+id).innerHTML='<img src="./images/line.gif" align="middle" border="1" width="'+lnpx+'" height="8px" style="background:'+color1+'"/><img src="./images/line.gif" border="1" align="middle" width="'+(150-lnpx)+'" height="8px" style="background:'+color2+'"/> ${STR_LEFT}: '+ln+' (${STR_FROM_TOTAL} '+max+')';
+	document.getElementById('id_'+id).innerHTML='<img src="./templates/images/line.gif" align="middle" border="1" width="'+lnpx+'" height="8px" style="background:'+color1+'"/><img src="./templates/images/line.gif" border="1" align="middle" width="'+(150-lnpx)+'" height="8px" style="background:'+color2+'"/> ${STR_LEFT}: '+ln+' (${STR_FROM_TOTAL} '+max+')';
 }
 
 function value_id2(id,min,max)
@@ -96,7 +96,7 @@ function value_id2(id,min,max)
 		color2='#AAFFC6';
 	}
 
-	document.getElementById('id_'+id).innerHTML='<img src="./images/line.gif" align="middle" border="1" width="'+lnpx+'" height="8px" style="background:'+color1+'"/><img src="./images/line.gif" border="1" align="middle" width="'+(150-lnpx)+'" height="8px" style="background:'+color2+'"/> ${STR_LEFT}: '+ln+' (${STR_FROM_TOTAL} '+max+')';
+	document.getElementById('id_'+id).innerHTML='<img src="./templates/images/line.gif" align="middle" border="1" width="'+lnpx+'" height="8px" style="background:'+color1+'"/><img src="./templates/images/line.gif" border="1" align="middle" width="'+(150-lnpx)+'" height="8px" style="background:'+color2+'"/> ${STR_LEFT}: '+ln+' (${STR_FROM_TOTAL} '+max+')';
 }
 
 function createXMLHttp() {
@@ -121,24 +121,30 @@ function sendRequest() {
 
 	var url = document.getElementById("url").value;
 	url = trim(url);
-	document.getElementById("id_url").innerHTML = '<img src=./images/loader.gif>';
 
-    var http = new XMLHttpRequest();
-    var params = 'url=' + encodeURIComponent(url);
-    http.open("POST", "./ajax?action=check_add_link", true);
-    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	if (url != '') {
+        document.getElementById("id_url").innerHTML = '<img src="./templates/images/loader.gif">';
 
-    http.onreadystatechange = function() {
-        if (oXmlHttp.readyState == 4) {
-            if (oXmlHttp.status == 200) {
-                document.getElementById("id_url").innerHTML = oXmlHttp.responseText;
+        var http = new XMLHttpRequest();
+        var params = 'url=' + encodeURIComponent(url);
+        http.open("POST", "./?t=ajax&action=check_add_link", true);
+        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        http.onreadystatechange = function() {
+            if (http.readyState == 4) {
+                if (http.status == 200) {
+                    document.getElementById("id_url").innerHTML = http.responseText;
+                } else {
+                    document.getElementById("id_url").innerHTML = http.statusText;
+                }
             } else {
-                document.getElementById("id_url").innerHTML = oXmlHttp.statusText;
+                document.getElementById("id_url").innerHTML = '';
             }
         }
+
+        http.send(params);
     }
 
-    http.send(params);
 }
 
 function trim(str)
@@ -178,7 +184,7 @@ function showLength(id,min,max)
 		color2='#AAFFC6';
 	}
 
-	document.getElementById('id_'+id.name).innerHTML='<img src="./images/line.gif" align="middle" width="'+lnpx+'" height="8px" border="1" style="background:'+color1+'"/><img src="./images/line.gif" border="1" align="middle" width="'+(150-lnpx)+'" height="8px" style="background:'+color2+'"/> ${STR_LEFT}: '+ln+' (${STR_FROM_TOTAL} '+max+')';
+	document.getElementById('id_'+id.name).innerHTML='<img src="./templates/images/line.gif" align="middle" width="'+lnpx+'" height="8px" border="1" style="background:'+color1+'"/><img src="./templates/images/line.gif" border="1" align="middle" width="'+(150-lnpx)+'" height="8px" style="background:'+color2+'"/> ${STR_LEFT}: '+ln+' (${STR_FROM_TOTAL} '+max+')';
 }
 
 function showLength2(id,max)
@@ -203,7 +209,7 @@ function showLength2(id,max)
 		color2 = '#AAFFC6';
 	}
 
-	document.getElementById('id_'+id.name).innerHTML='<img src="./images/line.gif" align="middle" width="'+lnpx+'" height="8px" border="1" style="background:'+color1+'"/><img src="./images/line.gif" border="1" align="middle" width="'+(150-lnpx)+'" height="8px" style="background:'+color2+'"/> ${STR_LEFT}: '+ln+' (${STR_FROM_TOTAL} '+max+')';
+	document.getElementById('id_'+id.name).innerHTML='<img src="./templates/images/line.gif" align="middle" width="'+lnpx+'" height="8px" border="1" style="background:'+color1+'"/><img src="./templates/images/line.gif" border="1" align="middle" width="'+(150-lnpx)+'" height="8px" style="background:'+color2+'"/> ${STR_LEFT}: '+ln+' (${STR_FROM_TOTAL} '+max+')';
 }
 
 </script>
@@ -315,21 +321,21 @@ function showLength2(id,max)
               (${STR_ONLY_TEXT_NOT_HTMLCODE} ${STR_FROM} ${NUMBER_CHARS_DESCRIPTION_MIN} ${STR_TO} ${NUMBER_CHARS_DESCRIPTION_MAX} ${STR_CHARACTERS}) </td>
             <td><textarea class="input2" cols="45" rows="3" onkeyup=showLength(this,${NUMBER_CHARS_DESCRIPTION_MIN},${NUMBER_CHARS_DESCRIPTION_MAX}); id="description" name="description">${DESCRIPTION}</textarea>
               <br />
-              <span id="id_description"><img style="BACKGROUND: #FFDBD9" height="8" border="1" src="images/line.gif" width="150" align="middle"> ${STR_LEFT}: ${NUMBER_CHARS_DESCRIPTION_MAX} (${STR_FROM_TOTAL} ${NUMBER_CHARS_DESCRIPTION_MAX})</span></td>
+              <span id="id_description"><img style="BACKGROUND: #FFDBD9" height="8" border="1" src="./templates/images/line.gif" width="150" align="middle"> ${STR_LEFT}: ${NUMBER_CHARS_DESCRIPTION_MAX} (${STR_FROM_TOTAL} ${NUMBER_CHARS_DESCRIPTION_MAX})</span></td>
           </tr>
           <tr>
             <td align="right"><b>${STR_FORM_FULL_DESCRIPTION}:</b><br />
               (${STR_ONLY_TEXT_NOT_HTMLCODE} ${STR_FROM} ${NUMBER_CHARS_FULLDESCRIPTION_MIN} ${STR_TO} ${NUMBER_CHARS_FULLDESCRIPTION_MAX} ${STR_CHARACTERS}) </td>
             <td><textarea class="input2" cols="45" rows="6" onkeyup=showLength(this,${NUMBER_CHARS_FULLDESCRIPTION_MIN},${NUMBER_CHARS_FULLDESCRIPTION_MAX}); id="full_description" name="full_description">${FULL_DESCRIPTION}</textarea>
               <br />
-              <span id="id_full_description"><img style="BACKGROUND: #FFDBD9" height="8" border="1" src="images/line.gif" width="150" align="middle"> ${STR_LEFT}: ${NUMBER_CHARS_FULLDESCRIPTION_MAX} (${STR_FROM_TOTAL} ${NUMBER_CHARS_FULLDESCRIPTION_MAX})</span></td>
+              <span id="id_full_description"><img style="BACKGROUND: #FFDBD9" height="8" border="1" src="./templates/images/line.gif" width="150" align="middle"> ${STR_LEFT}: ${NUMBER_CHARS_FULLDESCRIPTION_MAX} (${STR_FROM_TOTAL} ${NUMBER_CHARS_FULLDESCRIPTION_MAX})</span></td>
           </tr>
           <tr>
             <td align="right"><b>${STR_HTML_CODE_BANNER}:</b><br />
               (${STR_IF_ANY} ${STR_NO_MORE} ${NUMBER_HTML_CHARS} ${STR_CHARACTERS})</td>
             <td><textarea class="input2" cols="45" rows="3" onkeyup=showLength2(this,${NUMBER_HTML_CHARS}); id="htmlcode_banner" name="htmlcode_banner">${HTMLCODE_BANNER}</textarea>
               <br />
-              <span id="id_htmlcode_banner"><img style="BACKGROUND: #FFDBD9" height="8" border="1" src="images/line.gif" width="150" align="middle"> ${STR_LEFT}: ${NUMBER_HTML_CHARS} (${STR_FROM_TOTAL} ${NUMBER_HTML_CHARS})</span></td>
+              <span id="id_htmlcode_banner"><img style="BACKGROUND: #FFDBD9" height="8" border="1" src="./templates/images/line.gif" width="150" align="middle"> ${STR_LEFT}: ${NUMBER_HTML_CHARS} (${STR_FROM_TOTAL} ${NUMBER_HTML_CHARS})</span></td>
           </tr>
 
           <!-- IF '${SECURITYCODE}' == 'yes' -->

@@ -82,7 +82,6 @@ $language['menu']['check_links'] = 'Проверка ссылок';
 $language['menu']['links_title'] = 'Ссылки';
 $language['menu']['links'] = 'Ссылки';
 
-
 $language['menu']['edit_title'] = '';
 $language['menu']['edit'] = '';
 
@@ -239,28 +238,20 @@ $language["str"]["new_links"] = 'Новые ссылки';
 $language["str"]["add_url"] = 'Добавить ссылку';
 $language["str"]["read_more"] = "Подробнее...";
 $language["str"]["go_to_website"] = "Перейти на сайт";
-
 $language["str"]["go_to_catalog"] = "Вернуться в каталог";
-
 $language["str"]["form_securitycode"] = "Проверочный код";
 $language["str"]["securitycode"] = "защитный код";
-
 $language["str"]["rules"] = "Правила каталога";
-
 $language["str"]["html_code_of_link_for_this"] = "Код ссылки этого сайта";
 $language["str"]["html_code_of_banner_for_this"] = "Код кнопки этого сайта";
-
 $language["str"]["form_reciprocal_link"] = "Адрес страницы с ответной ссылкой";
-
 $language["str"]["subject_wait"] = "Ваш сайт добавлен в очередь на проверку";
-
+$language["str"]["subject_newlink"] = "Добавлена новая ссылка";
 
 $language["status"]["new"] = "Новые";
 $language["status"]["show"] = "Проверено";
 $language["status"]["hide"] = "На проверке";
 $language["status"]["black"] = "В черном списке";
-
-
 
 $language["button"]["apply"] = "Применить";
 $language["button"]["add"]  = "Добавить";
@@ -289,7 +280,7 @@ $language["msg"]["subject_del"] = "Ваша ссылка удалена";
 $language["msg"]["reason_closed_for_index_meta"] = "Закрыта для индексации метатэгом &lt;meta&nbsp;name=robot&gt;";
 $language["msg"]["selected_links_deleted"] = "Ссылка удалена";
 $language["msg"]["reason_closed_for_index_robot"] = "Закрыта для индексации в robots.txt";
-
+$language["msg"]["notlinks"] = "Нет ссылок";
 $language["msg"]["check_is_completed"] = "Проверка закончена";
 
 //errors
@@ -338,3 +329,5 @@ $language["error"]["not_reciprocal_link"] = "Введите адерес стр�
 $language["error"]["type_banner"] = "Расширение банера должно быть GIF, JPEG или PNG!";
 
 $language["error"]["not_filled_captcha"] = "Введите защитный код!";
+
+$language["error"]["not_your_site"] = "Укажите свой адрес сайта!";
