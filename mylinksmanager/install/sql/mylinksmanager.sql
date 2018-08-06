@@ -2,71 +2,82 @@ CREATE TABLE IF NOT EXISTS `%prefix%aut` (
   `password` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS `%prefix%catalog` (
-  `id_cat` int(9) NOT NULL AUTO_INCREMENT,
-  `name` varchar(200) DEFAULT NULL,
-  PRIMARY KEY (`id_cat`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
-
-CREATE TABLE IF NOT EXISTS `%prefix%links` (
-  `id_user` int(7) NOT NULL AUTO_INCREMENT,
-  `name` varchar(200) DEFAULT NULL,
-  `email` varchar(200) DEFAULT NULL,
-  `ip` varchar(64) DEFAULT NULL,
-  `token` varchar(64) DEFAULT NULL,
-  `time` datetime DEFAULT NULL,
-  `status` enum('active','noactive') NOT NULL DEFAULT 'noactive',
-  `time_send` datetime DEFAULT NULL,
-  PRIMARY KEY (`id_user`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
-
-
-CREATE TABLE IF NOT EXISTS `%prefix%settings` (
-  `language` varchar(10) DEFAULT NULL,  
-  `path` varchar(255) DEFAULT NULL,  
-  `email` varchar(255) DEFAULT NULL,
-  `list_owner` varchar(255) DEFAULT NULL,
-  `email_name` varchar(255) DEFAULT NULL,
-  `show_email` enum('no','yes') DEFAULT 'yes',
-  `organization` varchar(200) DEFAULT NULL,
-  `smtp_host` varchar(200) DEFAULT NULL,
-  `smtp_username` varchar(200) DEFAULT NULL,
-  `smtp_password` varchar(200) DEFAULT NULL,
-  `smtp_port` int(8) DEFAULT '25',
-  `smtp_aut` enum('no','plain','cram-md5') DEFAULT 'no',
-  `smtp_secure` enum('no','ssl','tls') DEFAULT NULL,
-  `smtp_timeout` int(6) DEFAULT NULL,
-  `how_to_send` tinyint(1) DEFAULT NULL,
-  `sendmail` varchar(150) DEFAULT NULL,
-  `id_charset` tinyint(4) DEFAULT '0',
-  `content_type` tinyint(1) DEFAULT NULL,
-  `number_days` tinyint(4) DEFAULT NULL,
-  `make_limit_send` enum('yes','no') DEFAULT NULL,
-  `re_send` enum('yes','no') DEFAULT NULL,
-  `delete_subs` enum('yes','no') DEFAULT 'yes',
-  `newsubscribernotify` enum('yes','no') DEFAULT 'yes',
-  `request_reply` enum('yes','no') DEFAULT NULL,
-  `email_reply` varchar(200) DEFAULT NULL,
-  `show_unsubscribe_link` enum('yes','no') DEFAULT NULL,
-  `subjecttextconfirm` varchar(255) DEFAULT NULL,
-  `textconfirmation` text,
-  `require_confirmation` enum('yes','no') DEFAULT 'no',
-  `unsublink` text,
-  `interval_type` enum('no','m','h','d') DEFAULT 'no',
-  `interval_number` int(9) DEFAULT NULL,
-  `limit_number` int(6) DEFAULT NULL,
-  `precedence` enum('no','bulk','junk','list') DEFAULT 'bulk',
-  `return_path` varchar(255) DEFAULT NULL,
-  `sleep` int(6) DEFAULT NULL,
-  `random` enum('no','yes') DEFAULT 'no',   
-  `replacement_chars_body` enum('no','yes') DEFAULT 'no',  
-  `replacement_chars_subject` enum('no','yes') DEFAULT 'no',  
-  `add_dkim` enum('no','yes') DEFAULT 'no',
-  `dkim_domain` varchar(255) DEFAULT NULL,
-  `dkim_private` varchar(255) DEFAULT NULL,
-  `dkim_selector` varchar(255) DEFAULT NULL,
-  `dkim_passphrase` varchar(255) DEFAULT NULL,
-  `dkim_identity` varchar(255) DEFAULT NULL,
-  `remove_subscriber` ENUM('yes','no') NOT NULL DEFAULT 'no',
-  `remove_subscriber_days` TINYINT NOT NULL DEFAULT 7
+CREATE TABLE `%prefix%catalog` (
+  `id` int(9) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `keywords` varchar(255) DEFAULT NULL,
+  `image` mediumblob,
+  `image_mime` varchar(40) DEFAULT NULL,
+  `parent_id` int(9) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE `%prefix%links` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `url` varchar(255) NOT NULL,
+  `reciprocal_link` varchar(255) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `time_check` datetime DEFAULT NULL,
+  `email` varchar(100) NOT NULL,
+  `keywords` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `full_description` text,
+  `htmlcode_banner` text,
+  `cat_id` int(9) NOT NULL,
+  `status` enum('new','show','hide','black') NOT NULL DEFAULT 'hide',
+  `token` varchar(64) DEFAULT NULL,
+  `check_link` enum('yes','no') NOT NULL DEFAULT 'yes',
+  `views` int(6) NOT NULL DEFAULT '0',
+  `reason` varchar(255) DEFAULT NULL,
+  `number_check` int(7) NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE `%prefix%settings` (
+  `language` enum('en','ru') NOT NULL,
+  `all_number_links` int(6) NOT NULL DEFAULT '0',
+  `all_number_new` int(6) NOT NULL DEFAULT '0',
+  `columns_number` int(3) NOT NULL DEFAULT '0',
+  `number_chars_description_min` int(6) NOT NULL DEFAULT '10',
+  `number_chars_description_max` int(6) NOT NULL DEFAULT '300',
+  `number_chars_fulldescription_min` int(6) NOT NULL DEFAULT '30',
+  `number_chars_fulldescription_max` int(6) NOT NULL DEFAULT '1500',
+  `number_html_chars` int(6) NOT NULL DEFAULT '0',
+  `url` varchar(255) NOT NULL,
+  `email` varchar(64) NOT NULL,
+  `new_links_notification` enum('yes','no') NOT NULL DEFAULT 'yes',
+  `rules` text NOT NULL,
+  `htmlcode_site1` text NOT NULL,
+  `htmlcode_site2` text NOT NULL,
+  `htmlcode_site3` text NOT NULL,
+  `htmlcode_banner1` text NOT NULL,
+  `htmlcode_banner2` text NOT NULL,
+  `htmlcode_banner3` text NOT NULL,
+  `template_mail_1` text NOT NULL,
+  `template_mail_2` text NOT NULL,
+  `template_mail_3` text NOT NULL,
+  `template_mail_4` text NOT NULL,
+  `template_mail_5` text NOT NULL,
+  `template_mail_6` text NOT NULL,
+  `template_mail_7` text NOT NULL,
+  `from_add_message` text NOT NULL,
+  `add_links_without_check` enum('yes','no') NOT NULL DEFAULT 'yes',
+  `check_links` enum('yes','no') NOT NULL DEFAULT 'yes',
+  `limit_reciprocal_links` enum('yes','no') NOT NULL DEFAULT 'yes',
+  `number_reciprocal_links_limit` int(6) NOT NULL DEFAULT '0',
+  `common_host` enum('yes','no') NOT NULL DEFAULT 'yes',
+  `check_get_parameter` enum('yes','no') NOT NULL DEFAULT 'no',
+  `add_to_blacklist` enum('yes','no') NOT NULL DEFAULT 'yes',
+  `check_interval` int(6) NOT NULL DEFAULT '0',
+  `number_check` int(6) NOT NULL DEFAULT '3',
+  `request_captcha` enum('yes','no') NOT NULL DEFAULT 'yes',
+  `check_url` enum('yes','no') NOT NULL DEFAULT 'no'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+ALTER TABLE `%prefix%catalog`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `parent_id` (`parent_id`);
+
+ALTER TABLE `%prefix%links`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `cat_id` (`cat_id`);

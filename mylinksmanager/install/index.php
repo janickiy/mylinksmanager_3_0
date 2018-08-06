@@ -335,9 +335,7 @@ if ($INSTALL['step'] == 4 && isset($_POST['forward'])){
 if ($INSTALL['step'] == 5 && isset($_POST['forward'])){
 	$_POST['password'] = trim($_POST['password']);
 	$_POST['confirm_password'] = trim($_POST['confirm_password']);
-	$_POST['login'] = trim($_POST['login']);
 
-	if (empty($_POST['login'])) $INSTALL['errors'][] = $INSTALL["lang"]["error"]["enter_login"];
 	if (empty($_POST['password'])){
 		$INSTALL['errors'][] = $INSTALL["lang"]["error"]["must_be_enter_apass"];
 	} elseif ($_POST['password'] != $_POST['confirm_password']){
@@ -346,14 +344,12 @@ if ($INSTALL['step'] == 5 && isset($_POST['forward'])){
 	
 	if (empty($INSTALL['errors'])) {
 		$password = md5($_POST['password']);
-		$login = $_POST['login'];
 
 		$dbh = new mysqli($_SESSION['host'], $_SESSION['user'], $_SESSION['password'], $_SESSION['name']);
 		$result1 = $dbh->query("TRUNCATE TABLE `" . $_SESSION['prefix'] . "aut`");
-		$result2 = $dbh->query("INSERT INTO `". $_SESSION['prefix'] . "aut` (`id`, `login`, `password`, `role`) VALUES (0, '" . $dbh->real_escape_string($login) . "', '" . $password . "', 'admin')");
-		$result3 = $dbh->query("INSERT INTO `" . $_SESSION['prefix'] . "licensekey` (`licensekey`) VALUES ('" . $_SESSION['license_key'] . "')");
+		$result2 = $dbh->query("INSERT INTO `". $_SESSION['prefix'] . "aut` (`password`) VALUES ('" . $password . "')");
 
-		if ($result1 && $result2 && $result3){
+		if ($result1 && $result2){
 			$string = "<?php\n";
 			$string .= "\$ConfigDB[\"host\"]  = \"".str_replace("\"", "\\\"", $_SESSION['host'])."\";\n";
 			$string .= "\$ConfigDB[\"name\"] = \"".str_replace("\"", "\\\"", $_SESSION['name'])."\";\n";
@@ -736,10 +732,6 @@ if (ini_get('register_globals') == 1) {
 ?>
         <fieldset>
           <legend><?php echo $INSTALL["lang"]["str"]["administration"]; ?></legend>
-			<div class="form-group">
-				<label for="passw"><?php echo $INSTALL["lang"]["str"]["login"]; ?>:</label>
-				<input class="form-control" type="text" name="login" value="<?php echo $_POST["login"]; ?>" />
-			</div>
           <div class="form-group">
             <label for="passw"><?php echo $INSTALL["lang"]["str"]["password"]; ?>:</label>
               <input class="form-control" type="password" name="password" value="<?php echo $_POST["password"]; ?>" />

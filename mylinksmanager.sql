@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Авг 02 2018 г., 19:47
+-- Время создания: Авг 06 2018 г., 20:59
 -- Версия сервера: 10.1.31-MariaDB
 -- Версия PHP: 7.2.3
 
@@ -45,7 +45,7 @@ INSERT INTO `lm_aut` (`password`) VALUES
 
 CREATE TABLE `lm_catalog` (
   `id` int(9) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
   `description` varchar(255) DEFAULT NULL,
   `keywords` varchar(255) DEFAULT NULL,
   `image` mediumblob,
@@ -58,13 +58,13 @@ CREATE TABLE `lm_catalog` (
 --
 
 INSERT INTO `lm_catalog` (`id`, `name`, `description`, `keywords`, `image`, `image_mime`, `parent_id`) VALUES
-(7, 'Category 1', 'Category 1', '', '', '', 0),
-(8, 'Category 2', 'Category 2', '', '', '', 0),
-(9, 'Category 3', 'Category 3', '', '', '', 0),
-(10, 'Category 4', 'Category 4', '', '', '', 0),
-(11, 'Subcategory 3', 'Subcategory 3', '', '', '', 10),
-(12, 'Subcategory 1', 'Subcategory 1', '', '', '', 10),
-(13, 'Subcategory 2', 'Subcategory 2', '', '', '', 10);
+(1, 'Category 1', 'Category 1', '', '', '', 0),
+(2, 'Category 2', 'Category 2', '', '', '', 0),
+(3, 'Category 3', 'Category 3', '', '', '', 0),
+(4, 'Category 4', 'Category 4', '', '', '', 0),
+(5, 'Subcategory 1', 'Subcategory 1', '', '', '', 4),
+(6, 'Subcategory 2', 'Subcategory 2', '', '', '', 4),
+(7, 'Subcategory 3', 'Subcategory 3', '', '', '', 4);
 
 -- --------------------------------------------------------
 
@@ -74,17 +74,17 @@ INSERT INTO `lm_catalog` (`id`, `name`, `description`, `keywords`, `image`, `ima
 
 CREATE TABLE `lm_links` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `url` varchar(255) DEFAULT NULL,
+  `name` varchar(255) NOT NULL,
+  `url` varchar(255) NOT NULL,
   `reciprocal_link` varchar(255) DEFAULT NULL,
   `created` datetime DEFAULT NULL,
   `time_check` datetime DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL,
+  `email` varchar(100) NOT NULL,
   `keywords` varchar(255) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
   `full_description` text,
   `htmlcode_banner` text,
-  `cat_id` int(9) DEFAULT NULL,
+  `cat_id` int(9) NOT NULL,
   `status` enum('new','show','hide','black') NOT NULL DEFAULT 'hide',
   `token` varchar(64) DEFAULT NULL,
   `check_link` enum('yes','no') NOT NULL DEFAULT 'yes',
@@ -92,14 +92,6 @@ CREATE TABLE `lm_links` (
   `reason` varchar(255) DEFAULT NULL,
   `number_check` int(7) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `lm_links`
---
-
-INSERT INTO `lm_links` (`id`, `name`, `url`, `reciprocal_link`, `created`, `time_check`, `email`, `keywords`, `description`, `full_description`, `htmlcode_banner`, `cat_id`, `status`, `token`, `check_link`, `views`, `reason`, `number_check`) VALUES
-(1, 'site 1', 'site1.ru', '', '2018-07-23 00:57:23', '0000-00-00 00:00:00', 'janickiy@mail.ru', 'wewqewq wqe', 'qww qwe qwewqeqwe qwe', 'weqwreqwr qwr qwr qwrqer wer', '', 7, 'show', 'FYURIDGO', 'yes', 0, NULL, 0),
-(2, '890-', '', '', '2018-07-29 02:54:41', '0000-00-00 00:00:00', 'y8upo', '', '', '', '', 11, 'new', 'c5fbaff353149189523a75801fd7054b', 'yes', 0, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -163,7 +155,8 @@ INSERT INTO `lm_settings` (`language`, `all_number_links`, `all_number_new`, `co
 -- Индексы таблицы `lm_catalog`
 --
 ALTER TABLE `lm_catalog`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `parent_id` (`parent_id`);
 
 --
 -- Индексы таблицы `lm_links`
@@ -180,12 +173,12 @@ ALTER TABLE `lm_links`
 -- AUTO_INCREMENT для таблицы `lm_catalog`
 --
 ALTER TABLE `lm_catalog`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT для таблицы `lm_links`
 --
 ALTER TABLE `lm_links`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
