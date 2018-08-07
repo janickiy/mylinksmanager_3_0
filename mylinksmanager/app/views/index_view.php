@@ -174,18 +174,12 @@ if (!empty(Core_Array::getGet('link_id'))) {
         $links = Links::getLinksList('show', 'l.id DESC', $all_number_links);
     }
 
-
     if ($links) {
         foreach ($links as $link) {
             if (Core_Array::getGet('page'))
                 $read_more = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . "?link_id=" . $link['id'] . "&page=" . Core_Array::getGet('page');
             else
                 $read_more = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . "?link_id=" . $link['id'];
-
-            if (!empty($link['htmlcode_banner']))
-                $htmlcode_banner = $link['htmlcode_banner'];
-            else
-                $htmlcode_banner = '<a href=http://' . $link['url'] . ' target=_blank><img border="0" width="88" height="31" src="./templates/images/noimage.gif"></a>';
 
             $link['description'] = nl2br($link['description']);
 
@@ -200,7 +194,7 @@ if (!empty(Core_Array::getGet('link_id'))) {
             $rowBlock->assign('NAME', $link['name']);
             $rowBlock->assign('DESCRIPTION', $link['description']);
             $rowBlock->assign('READ_MORE', $read_more);
-            $rowBlock->assign('HTMLCODE_BANNER', $htmlcode_banner);
+            $rowBlock->assign('HTMLCODE_BANNER', $link['htmlcode_banner'] ? $link['htmlcode_banner'] : '<a href=http://' . $link['url'] . ' target=_blank><img border="0" width="88" height="31" src="./templates/images/noimage.gif"></a>');
             $rowBlock->assign('TIME', $link['created']);
             $rowBlock->assign('CATEGORY', $link['catname']);
             $rowBlock->assign('NUMBER_OF_CLICKS', $link['views']);

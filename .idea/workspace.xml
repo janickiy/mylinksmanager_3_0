@@ -5,280 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddc54ce9-1ab0-46a5-84c7-5cd13333537f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/export.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/import.tpl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Autoloader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/CachedObjectStorage/APC.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/CachedObjectStorage/CacheBase.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/CachedObjectStorage/DiscISAM.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/CachedObjectStorage/ICache.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/CachedObjectStorage/Igbinary.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/CachedObjectStorage/Memcache.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/CachedObjectStorage/Memory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/CachedObjectStorage/MemoryGZip.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/CachedObjectStorage/MemorySerialized.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/CachedObjectStorage/PHPTemp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/CachedObjectStorage/SQLite.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/CachedObjectStorage/SQLite3.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/CachedObjectStorage/Wincache.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/CachedObjectStorageFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/CalcEngine/CyclicReferenceStack.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/CalcEngine/Logger.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/Database.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/DateTime.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/Engineering.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/Exception.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/ExceptionHandler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/Financial.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/FormulaParser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/FormulaToken.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/Function.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/Functions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/Logical.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/LookupRef.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/MathTrig.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/Statistical.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/TextData.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/Token/Stack.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Calculation/functionlist.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Cell.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Cell/AdvancedValueBinder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Cell/DataType.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Cell/DataValidation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Cell/DefaultValueBinder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Cell/Hyperlink.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Cell/IValueBinder.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Chart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Chart/Axis.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Chart/DataSeries.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Chart/DataSeriesValues.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Chart/Exception.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Chart/GridLines.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Chart/Layout.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Chart/Legend.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Chart/PlotArea.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Chart/Properties.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Chart/Renderer/PHP Charting Libraries.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Chart/Renderer/jpgraph.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Chart/Title.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Comment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/DocumentProperties.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/DocumentSecurity.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Exception.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/HashTable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Helper/HTML.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/IComparable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/IOFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/NamedRange.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Abstract.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/CSV.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/DefaultReadFilter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Excel2003XML.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Excel2007.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Excel2007/Chart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Excel2007/Theme.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Excel5.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Excel5/Color.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Excel5/Color/BIFF5.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Excel5/Color/BIFF8.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Excel5/Color/BuiltIn.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Excel5/ErrorCode.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Excel5/Escher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Excel5/MD5.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Excel5/RC4.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Excel5/Style/Border.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Excel5/Style/FillPattern.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Exception.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/Gnumeric.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/HTML.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/IReadFilter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/IReader.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/OOCalc.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Reader/SYLK.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/ReferenceHelper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/RichText.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/RichText/ITextElement.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/RichText/Run.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/RichText/TextElement.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Settings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/CodePage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/Date.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/Drawing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/Escher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/Escher/DgContainer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/Escher/DgContainer/SpgrContainer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/Escher/DgContainer/SpgrContainer/SpContainer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/Escher/DggContainer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/Escher/DggContainer/BstoreContainer.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/Escher/DggContainer/BstoreContainer/BSE.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/Escher/DggContainer/BstoreContainer/BSE/Blip.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/Excel5.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/Font.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/JAMA/CHANGELOG.TXT" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/JAMA/CholeskyDecomposition.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/JAMA/EigenvalueDecomposition.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/JAMA/LUDecomposition.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/JAMA/Matrix.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/JAMA/QRDecomposition.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/JAMA/SingularValueDecomposition.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/JAMA/utils/Error.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/JAMA/utils/Maths.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/OLE.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/OLE/ChainedBlockStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/OLE/PPS.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/OLE/PPS/File.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/OLE/PPS/Root.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/OLERead.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/PCLZip/gnu-lgpl.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/PCLZip/pclzip.lib.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/PCLZip/readme.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/PasswordHasher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/String.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/TimeZone.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/XMLWriter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/ZipArchive.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/ZipStreamWrapper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/trend/bestFitClass.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/trend/exponentialBestFitClass.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/trend/linearBestFitClass.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/trend/logarithmicBestFitClass.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/trend/polynomialBestFitClass.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/trend/powerBestFitClass.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Shared/trend/trendClass.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Style.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Style/Alignment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Style/Border.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Style/Borders.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Style/Color.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Style/Conditional.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Style/Fill.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Style/Font.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Style/NumberFormat.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Style/Protection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Style/Supervisor.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/AutoFilter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/AutoFilter/Column.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/AutoFilter/Column/Rule.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/BaseDrawing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/CellIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/Column.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/ColumnCellIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/ColumnDimension.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/ColumnIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/Dimension.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/Drawing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/Drawing/Shadow.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/HeaderFooter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/HeaderFooterDrawing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/MemoryDrawing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/PageMargins.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/PageSetup.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/Protection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/Row.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/RowCellIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/RowDimension.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/RowIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Worksheet/SheetView.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/WorksheetIterator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Abstract.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/CSV.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel2007.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel2007/Chart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel2007/Comments.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel2007/ContentTypes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel2007/DocProps.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel2007/Drawing.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel2007/Rels.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel2007/RelsRibbon.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel2007/RelsVBA.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel2007/StringTable.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel2007/Style.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel2007/Theme.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel2007/Workbook.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel2007/Worksheet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel2007/WriterPart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel5.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel5/BIFFwriter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel5/Escher.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel5/Font.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel5/Parser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel5/Workbook.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel5/Worksheet.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Excel5/Xf.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/Exception.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/HTML.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/IWriter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/OpenDocument.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/OpenDocument/Cell/Comment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/OpenDocument/Content.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/OpenDocument/Meta.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/OpenDocument/MetaInf.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/OpenDocument/Mimetype.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/OpenDocument/Settings.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/OpenDocument/Styles.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/OpenDocument/Thumbnails.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/OpenDocument/WriterPart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/PDF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/PDF/Core.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/PDF/DomPDF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/PDF/mPDF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/Writer/PDF/tcPDF.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/bg/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/cs/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/cs/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/da/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/da/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/de/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/de/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/en/uk/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/es/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/es/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/fi/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/fi/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/fr/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/fr/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/hu/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/hu/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/it/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/it/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/nl/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/nl/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/no/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/no/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/pl/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/pl/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/pt/br/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/pt/br/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/pt/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/pt/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/ru/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/ru/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/sv/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/sv/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/tr/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/PHPExcel/PHPExcel/locale/tr/functions" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_check_links.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/check_links_view.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_import.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_import.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_links.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_links.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/addcategory_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/addcategory_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/addlink_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/addlink_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_export.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_export.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/export_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/export_view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/import_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/import_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/links_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/links_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/password_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/password_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/settings_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/settings_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/install/en.php" afterPath="$PROJECT_DIR$/mylinksmanager/install/en.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/install/index.php" afterPath="$PROJECT_DIR$/mylinksmanager/install/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/install/ru.php" afterPath="$PROJECT_DIR$/mylinksmanager/install/ru.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager_data_en.sql" afterPath="$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager_data_en.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/update.tpl" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/update.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/index_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/index_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/export.tpl" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/export.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/links.tpl" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/links.tpl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" afterPath="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" afterPath="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" />
     </list>
@@ -295,30 +34,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="import_view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/import_view.php">
+      <file leaf-file-name="index_view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/index_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+            <state relative-caret-position="323">
+              <caret line="196" column="71" lean-forward="false" selection-start-line="196" selection-start-column="56" selection-end-line="196" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="model_export.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_export.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
               <folding>
-                <element signature="e#7#254#0#PHP" expanded="true" />
+                <marker date="1533666803263" expanded="true" signature="418:432" ph="SELECT c.id_... ${core::database()-&gt;getTableName('category')}" />
+                <marker date="1533666803263" expanded="true" signature="418:475" ph="SELECT c.id_... ${core::database()-&gt;getTableName('category')}" />
+                <marker date="1533666803263" expanded="true" signature="418:499" ph="SELECT * FRO... ${core::database()-&gt;getTableName('links')}" />
+                <marker date="1533666803263" expanded="true" signature="418:500" ph="SELECT c.id_... ${core::database()-&gt;getTableName('links')}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/install/index.php">
+      <file leaf-file-name="editlink_view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-340">
-              <caret line="271" column="36" lean-forward="true" selection-start-line="271" selection-start-column="36" selection-end-line="271" selection-end-column="36" />
-              <folding>
-                <element signature="e#7#254#0#PHP" expanded="true" />
-                <marker date="1533599792383" expanded="true" signature="7204:7225" ph="DROP TABLE I... " />
-                <marker date="1533599792383" expanded="true" signature="8430:8451" ph="DROP TABLE I... " />
-                <marker date="1533599792383" expanded="true" signature="9563:9584" ph="DROP TABLE I... " />
-                <marker date="1533599792383" expanded="true" signature="12035:12120" ph="INSERT INTO `${$_SESSION['prefix']}aut`... " />
-              </folding>
+            <state relative-caret-position="310">
+              <caret line="128" column="51" lean-forward="true" selection-start-line="128" selection-start-column="51" selection-end-line="128" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -326,34 +72,49 @@
       <file leaf-file-name="links_view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/links_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1819">
-              <caret line="113" column="22" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="114" selection-end-column="48" />
+            <state relative-caret-position="2023">
+              <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="import.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/import.tpl">
+      <file leaf-file-name="controller_links.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_links.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="model_import.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_import.php">
+      <file leaf-file-name="model_links.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_links.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-595">
-              <caret line="58" column="66" lean-forward="true" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
-              <folding>
-                <element signature="e#7#254#0#PHP" expanded="true" />
-                <marker date="1533659031293" expanded="true" signature="2721:2830" ph="SELECT * FRO... ${core::database()-&gt;getTableName('links')}" />
-                <marker date="1533659031293" expanded="true" signature="4371:4468" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-                <marker date="1533659031293" expanded="true" signature="4371:4483" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-              </folding>
+            <state relative-caret-position="-1003">
+              <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="links.tpl" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/links.tpl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="104" column="25" lean-forward="true" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1283">
+              <caret line="696" column="27" lean-forward="false" selection-start-line="696" selection-start-column="27" selection-end-line="696" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -361,44 +122,13 @@
       <file leaf-file-name="ru.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/ru.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="302" column="68" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="323" selection-end-column="69" />
+            <state relative-caret-position="446">
+              <caret line="327" column="6" lean-forward="true" selection-start-line="327" selection-start-column="0" selection-end-line="328" selection-end-column="74" />
               <folding>
-                <marker date="1533659588705" expanded="true" signature="2127:2133" ph="&quot;" />
-                <marker date="1533659588705" expanded="true" signature="2152:2158" ph="&quot;" />
-                <marker date="1533659588705" expanded="true" signature="2201:2207" ph="&quot;" />
-                <marker date="1533659588705" expanded="true" signature="2221:2227" ph="&quot;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addurl_view.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="367" column="71" lean-forward="true" selection-start-line="367" selection-start-column="71" selection-end-line="367" selection-end-column="71" />
-              <folding>
-                <element signature="e#7#254#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addurl.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2282">
-              <caret line="347" column="30" lean-forward="true" selection-start-line="347" selection-start-column="30" selection-end-line="347" selection-end-column="30" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#span#0;n#td#1;n#tr#7;n#table#0;n#form#0;n#td#0;n#tr#1;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#span#0;n#td#1;n#tr#8;n#table#0;n#form#0;n#td#0;n#tr#1;n#table#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#span#0;n#td#1;n#tr#9;n#table#0;n#form#0;n#td#0;n#tr#1;n#table#0;n#!!top" expanded="true" />
-                <element signature="e#12018#12024#1#HTML" expanded="true" />
-                <element signature="e#12138#12144#0#HTML" expanded="true" />
-                <element signature="e#12144#12150#0#HTML" expanded="true" />
-                <element signature="e#12150#12156#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#td#0;n#tr#1;n#table#0;n#!!top" expanded="true" />
+                <marker date="1533678650553" expanded="true" signature="2127:2133" ph="&quot;" />
+                <marker date="1533678650553" expanded="true" signature="2152:2158" ph="&quot;" />
+                <marker date="1533678650553" expanded="true" signature="2201:2207" ph="&quot;" />
+                <marker date="1533678650553" expanded="true" signature="2221:2227" ph="&quot;" />
               </folding>
             </state>
           </provider>
@@ -407,24 +137,14 @@
       <file leaf-file-name="en.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/en.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1911">
-              <caret line="310" column="83" lean-forward="false" selection-start-line="310" selection-start-column="83" selection-end-line="310" selection-end-column="83" />
+            <state relative-caret-position="5576">
+              <caret line="328" column="74" lean-forward="false" selection-start-line="328" selection-start-column="74" selection-end-line="328" selection-end-column="74" />
               <folding>
-                <marker date="1533659588787" expanded="true" signature="2127:2133" ph="&quot;" />
-                <marker date="1533659588787" expanded="true" signature="2152:2158" ph="&quot;" />
-                <marker date="1533659588787" expanded="true" signature="2201:2207" ph="&quot;" />
-                <marker date="1533659588787" expanded="true" signature="2221:2227" ph="&quot;" />
+                <marker date="1533678650677" expanded="true" signature="2127:2133" ph="&quot;" />
+                <marker date="1533678650677" expanded="true" signature="2152:2158" ph="&quot;" />
+                <marker date="1533678650677" expanded="true" signature="2201:2207" ph="&quot;" />
+                <marker date="1533678650677" expanded="true" signature="2221:2227" ph="&quot;" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="update.tpl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/update.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -433,7 +153,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sendmail_del_link</find>
       <find>SEARCH</find>
       <find>check</find>
       <find>add_url</find>
@@ -463,6 +182,7 @@
       <find>forward</find>
       <find>count</find>
       <find>$lvl</find>
+      <find>HTMLCODE_BANNER</find>
     </findStrings>
     <replaceStrings>
       <replace>Copyright (c) 2011-2018 Alexander Yanitsky</replace>
@@ -486,12 +206,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mylinksmanager/app/views/icon_view.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/blacklist_view.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/categories_view.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/check_links_view.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/editcategory_view.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/.gitignore" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_addurl.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -501,7 +217,6 @@
         <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_index.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/vendor/SimpleCaptcha.class.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/captcha.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/settings.tpl" />
         <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Update.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/ajax_view.php" />
@@ -512,7 +227,6 @@
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/update_view.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/snippets/footer.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/index.tpl" />
-        <option value="$PROJECT_DIR$/mylinksmanager/app/views/index_view.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager.sql" />
         <option value="$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager_data_ru.sql" />
         <option value="$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager_data_en.sql" />
@@ -522,21 +236,27 @@
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/settings_view.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/config/config_db.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_links.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/links_view.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/update.tpl" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/password_view.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/export_view.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Category.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/addcategory_view.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/addlink_view.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/import.tpl" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_import.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/import_view.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/index_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/export.tpl" />
+        <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_export.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/import_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/export_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/links_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/links.tpl" />
       </list>
     </option>
   </component>
@@ -606,6 +326,13 @@
               <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -622,25 +349,6 @@
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="config" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="install" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="install" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sql" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
@@ -703,13 +411,6 @@
               <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="html_template" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -785,7 +486,7 @@
       <workItem from="1533222092383" duration="3496000" />
       <workItem from="1533227160367" duration="3880000" />
       <workItem from="1533571028719" duration="4280000" />
-      <workItem from="1533594808219" duration="15826000" />
+      <workItem from="1533594808219" duration="24368000" />
     </task>
     <task id="LOCAL-00001" summary="add files">
       <created>1486722105200</created>
@@ -990,11 +691,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533583731139</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="добавлен импорт ссылок">
+      <created>1533660810796</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1533660810796</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="229724000" />
+    <option name="totallyTimeSpent" value="238266000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1008,16 +716,16 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20735608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21375267" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33369565" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33369565" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33369565" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1064,7 +772,8 @@
     <MESSAGE value="add gitignore" />
     <MESSAGE value="добавлен установщик приожения" />
     <MESSAGE value="добавлены правки" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавлены правки" />
+    <MESSAGE value="добавлен импорт ссылок" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавлен импорт ссылок" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1073,55 +782,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/LICENSE_EN">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1598">
-          <caret line="94" column="18" lean-forward="false" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/page500.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/page404.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/page403.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="46" lean-forward="true" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/update_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/addlink.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1175,22 +835,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/index.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1836">
-          <caret line="108" column="37" lean-forward="false" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/index_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1250,14 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_links.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/pic_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1286,22 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/links.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-714">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/export.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1383,100 +1003,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/addlink_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="149" column="44" lean-forward="false" selection-start-line="149" selection-start-column="27" selection-end-line="149" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/export_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="151" column="18" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="161" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/editlink.tpl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/update.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/links_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="113" column="22" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="114" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_import.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-595">
-          <caret line="58" column="66" lean-forward="true" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
-          <folding>
-            <element signature="e#7#254#0#PHP" expanded="true" />
-            <marker date="1533659031293" expanded="true" signature="2721:2830" ph="SELECT * FRO... ${core::database()-&gt;getTableName('links')}" />
-            <marker date="1533659031293" expanded="true" signature="4371:4468" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-            <marker date="1533659031293" expanded="true" signature="4371:4483" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/import_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding>
-            <element signature="e#7#254#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/ru.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="302" column="68" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="323" selection-end-column="69" />
-          <folding>
-            <marker date="1533659588705" expanded="true" signature="2127:2133" ph="&quot;" />
-            <marker date="1533659588705" expanded="true" signature="2152:2158" ph="&quot;" />
-            <marker date="1533659588705" expanded="true" signature="2201:2207" ph="&quot;" />
-            <marker date="1533659588705" expanded="true" signature="2221:2227" ph="&quot;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/en.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1911">
-          <caret line="310" column="83" lean-forward="false" selection-start-line="310" selection-start-column="83" selection-end-line="310" selection-end-column="83" />
-          <folding>
-            <marker date="1533659588787" expanded="true" signature="2127:2133" ph="&quot;" />
-            <marker date="1533659588787" expanded="true" signature="2152:2158" ph="&quot;" />
-            <marker date="1533659588787" expanded="true" signature="2201:2207" ph="&quot;" />
-            <marker date="1533659588787" expanded="true" signature="2221:2227" ph="&quot;" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1505,10 +1036,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3128">
+          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/index.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="88" column="47" lean-forward="true" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/install/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-340">
-          <caret line="271" column="36" lean-forward="true" selection-start-line="271" selection-start-column="36" selection-end-line="271" selection-end-column="36" />
+        <state relative-caret-position="-505">
+          <caret line="293" column="25" lean-forward="true" selection-start-line="293" selection-start-column="25" selection-end-line="293" selection-end-column="25" />
           <folding>
             <element signature="e#7#254#0#PHP" expanded="true" />
             <marker date="1533599792383" expanded="true" signature="7204:7225" ph="DROP TABLE I... " />
@@ -1519,13 +1066,193 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php">
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_import.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="367" column="71" lean-forward="true" selection-start-line="367" selection-start-column="71" selection-end-line="367" selection-end-column="71" />
+        <state relative-caret-position="289">
+          <caret line="32" column="40" lean-forward="false" selection-start-line="26" selection-start-column="16" selection-end-line="34" selection-end-column="44" />
+          <folding>
+            <element signature="e#7#254#0#PHP" expanded="true" />
+            <marker date="1533659031293" expanded="true" signature="2721:2830" ph="SELECT * FRO... ${core::database()-&gt;getTableName('links')}" />
+            <marker date="1533659031293" expanded="true" signature="4371:4468" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
+            <marker date="1533659031293" expanded="true" signature="4371:4483" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_blacklist.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_addurl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_categories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1532617091559" expanded="true" signature="504:586" ph="SELECT * FRO... ${core::database()-&gt;getTableName('catalog')}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/addlink_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="149" column="44" lean-forward="false" selection-start-line="149" selection-start-column="27" selection-end-line="149" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/export.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="27" lean-forward="true" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/import_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="e#7#254#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/export_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#254#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/editlink.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2873">
+          <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#254#0#PHP" expanded="true" />
+            <marker date="1533677849738" expanded="true" signature="1864:1907" ph="SELECT * FRO... ${DB_LINKS}" />
+            <marker date="1533677849738" expanded="true" signature="2852:2893" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/en.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5576">
+          <caret line="328" column="74" lean-forward="false" selection-start-line="328" selection-start-column="74" selection-end-line="328" selection-end-column="74" />
+          <folding>
+            <marker date="1533678650677" expanded="true" signature="2127:2133" ph="&quot;" />
+            <marker date="1533678650677" expanded="true" signature="2152:2158" ph="&quot;" />
+            <marker date="1533678650677" expanded="true" signature="2201:2207" ph="&quot;" />
+            <marker date="1533678650677" expanded="true" signature="2221:2227" ph="&quot;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1283">
+          <caret line="696" column="27" lean-forward="false" selection-start-line="696" selection-start-column="27" selection-end-line="696" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_export.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" column="1" lean-forward="false" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <marker date="1533666803263" expanded="true" signature="418:432" ph="SELECT c.id_... ${core::database()-&gt;getTableName('category')}" />
+            <marker date="1533666803263" expanded="true" signature="418:475" ph="SELECT c.id_... ${core::database()-&gt;getTableName('category')}" />
+            <marker date="1533666803263" expanded="true" signature="418:499" ph="SELECT * FRO... ${core::database()-&gt;getTableName('links')}" />
+            <marker date="1533666803263" expanded="true" signature="418:500" ph="SELECT c.id_... ${core::database()-&gt;getTableName('links')}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="128" column="51" lean-forward="true" selection-start-line="128" selection-start-column="51" selection-end-line="128" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/ru.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="327" column="6" lean-forward="true" selection-start-line="327" selection-start-column="0" selection-end-line="328" selection-end-column="74" />
+          <folding>
+            <marker date="1533678650553" expanded="true" signature="2127:2133" ph="&quot;" />
+            <marker date="1533678650553" expanded="true" signature="2152:2158" ph="&quot;" />
+            <marker date="1533678650553" expanded="true" signature="2201:2207" ph="&quot;" />
+            <marker date="1533678650553" expanded="true" signature="2221:2227" ph="&quot;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/links_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2023">
+          <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_links.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_links.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1003">
+          <caret line="34" column="29" lean-forward="true" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/index_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="196" column="71" lean-forward="false" selection-start-line="196" selection-start-column="56" selection-end-line="196" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/links.tpl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="104" column="25" lean-forward="true" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>

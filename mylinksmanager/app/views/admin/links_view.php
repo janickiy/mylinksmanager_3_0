@@ -130,13 +130,15 @@ if ($arrs) {
     $rowBlock->assign('STR_ACTION', core::getLanguage('str', 'action'));
     $rowBlock->assign('SEARCH', $search);
 
+    $rowBlock->assign('ALERT_SELECT_ACTION', core::getLanguage('alert', 'select_action'));
+    $rowBlock->assign('ALERT_CONFIRM_REMOVE', core::getLanguage('alert', 'confirm_remove'));
+
     $rowBlock->assign('GET_ID', $_GET['id']);
     $rowBlock->assign('GET_NAME', $_GET['name']);
     $rowBlock->assign('GET_EMAIL', $_GET['email']);
     $rowBlock->assign('GET_CATEGORY', $_GET['category']);
     $rowBlock->assign('GET_URL', $_GET['url']);
     $rowBlock->assign('GET_VIEWS', $_GET['views']);
-    $rowBlock->assign('GET_CREATED', $_GET['created']);
     $rowBlock->assign('GET_CREATED', $_GET['created']);
 
     $number = $data->getTotal();

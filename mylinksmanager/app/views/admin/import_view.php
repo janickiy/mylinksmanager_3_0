@@ -10,6 +10,13 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
+
+
+
+
+
+
+
 Auth::authorization();
 
 //include template

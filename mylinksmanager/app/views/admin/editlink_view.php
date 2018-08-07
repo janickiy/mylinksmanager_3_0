@@ -16,8 +16,8 @@ Auth::authorization();
 core::requireEx('libs', "html_template/SeparateTemplate.php");
 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/editlink.tpl");
 
-$tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_addlink'));
-$tpl->assign('TITLE', core::getLanguage('title', 'admin_addlink'));
+$tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_editlink'));
+$tpl->assign('TITLE', core::getLanguage('title', 'admin_editlink'));
 
 $errors = [];
 
@@ -46,22 +46,6 @@ if (Core_Array::getRequest('action')){
 
     // Cut out all unnecessary tags and javascripts from HTML code of banner
     $htmlcode_banner  = Helper::cuttags($htmlcode_banner);
-
-    // Check catalogue already has adding link, if it has then print error
-    if (!empty($url)) {
-        $src_url = $url;
-
-        if(substr($url, 0, 4) == "www.") $src_url = str_replace('www.', '', $src_url);
-        $src_url = str_replace('.', '\\.', $src_url);
-
-        if (Links::CheckWaitVerification($src_url)) {
-            $errors[] = core::getLanguage('error', 'wait_verification');
-        }
-
-        if (Links::CheckExistsLink($src_url)) {
-            $errors[] = core::getLanguage('error', 'already_exists');
-        }
-    }
 
     // Check category is chosen, if not then print error
     if ($cat_id == 0){
@@ -142,9 +126,9 @@ if (Core_Array::getRequest('action')){
         $fields['check_link'] = Core_Array::getPost('check_link') ? 'yes':'no';
 
         if ($data->editLink($fields, Core_Array::getPost('id'))) {
-            unset($_POST);
-            $success_msg = core::getLanguage('msg', 'link_added');
-        }
+            header("Location: ./?a=admin&t=links");
+            exit;
+        } else $errors[] = core::getLanguage('error', 'web_apps_error');
     }
 }
 
@@ -183,7 +167,7 @@ $tpl->assign('STR_BRIEF_DESCRIPTION', core::getLanguage('str', 'brief_descriptio
 $tpl->assign('STR_TO_CHECK_THIS_LINK', core::getLanguage('str', 'to_check_this_link'));
 $tpl->assign('STR_FULL_DESCRIPTION', core::getLanguage('str', 'full_description'));
 $tpl->assign('STR_HTML_CODE_OF_BANNER', core::getLanguage('str', 'html_code_of_banner'));
-$tpl->assign('BUTTON', core::getLanguage('button', 'add'));
+$tpl->assign('BUTTON', core::getLanguage('button', 'edit'));
 
 $row = $data->getLink(Core_Array::getRequest('id'));
 

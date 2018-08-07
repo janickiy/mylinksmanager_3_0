@@ -241,6 +241,7 @@ $language["str"]["form_reciprocal_link"] = "Адрес страницы с от�
 $language["str"]["subject_wait"] = "Ваш сайт добавлен в очередь на проверку";
 $language["str"]["subject_newlink"] = "Добавлена новая ссылка";
 $language["str"]["database_file"] = "Файл базы данных";
+$language["str"]["links_db"] = "База каталога ссылок";
 
 $language["status"]["new"] = "Новые";
 $language["status"]["show"] = "Проверено";
@@ -258,8 +259,8 @@ $language["button"]["remove"] = "Удалить";
 $language["button"]["add_to_blacklist"] = "Добавить в черный спискок";
 $language["button"]["reset"] = "Сброс";
 $language["button"]["find"] = "найти";
-
 $language["button"]["check_all_links_automatically"] = "Проверить все ссылки автоматически";
+$language["button"]["export"] = "Экспорт";
 
 $language["msg"]["notfound"] = "По вашему запросу ничего не найдено!";
 $language["msg"]["link_added"] = "Ссылка добавлена";
@@ -322,3 +323,7 @@ $language["error"]["not_filled_captcha"] = "Введите защитный ко
 $language["error"]["not_your_site"] = "Укажите свой адрес сайта!";
 $language["error"]["no_import"] = "Импорт не выполнен!";
 $language["error"]["no_import_file"] = "Файл для импорта не выбран!";
+$language["error"]["web_apps_error"] = 'Ошибка веб приложения! Действия не были выполнены.';
+
+$language["alert"]["select_action"]  = "Выберите действие!";
+$language["alert"]["confirm_remove"] = "Вы действительно хотите удалить?";

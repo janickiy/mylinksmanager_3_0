@@ -25,7 +25,7 @@ if (Core_Array::getPost('action')){
     {
         case 'add':
 
-            if (Links::changeStatusLink(Core_Array::getPost('id'), 'show')){
+            if (Links::changeStatusLink(Core_Array::getPost('id'), 'show')) {
 
 
                // sendMailAdd($links, STR_SUBJECT_ADD);
@@ -167,8 +167,6 @@ if (Core_Array::getGet('id')) {
 
     $tpl->assign('new_links', $blockNewLinks);
 }
-
-
 
 //footer
 include_once core::pathTo('extra', 'admin/footer.php');
