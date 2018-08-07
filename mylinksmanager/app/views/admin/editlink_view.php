@@ -163,7 +163,6 @@ if (!empty($errors)) {
 
 if (isset($success_msg)) $tpl->assign('MSG_ALERT', $success_msg);
 
-
 include_once core::pathTo('extra', 'admin/top.php');
 
 // menu

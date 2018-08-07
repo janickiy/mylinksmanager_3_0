@@ -27,9 +27,7 @@ $language["info"]["admin_password"] = "";
 
 $language["title"]["admin_page_settings"] = "Настройки";
 $language["title"]["admin_settings"] = "Панель администрирования My Links Manager | Настройки";
-$language["info"]["admin_settings"] = '<font color="#FFFFFF"><b>Настройки интерфейса.</b></font><br />
-В этом пункте доступны только те настройки, отвечающие за интерфейс и набор данных в каталоге. Внимание! Для того, чтобы использовать статический вид ссылок каталога, необходимо, чтобы на вашем сервере был подключен модуль mode_rewrite. Не забудьте выставить права на запись 0755 (CHMOD) для settings.php. Это необходимо для того, чтобы скрипт имел возможность запись в .htaccess<br />
-<font color="#FFFFFF"><b>Шаблоны писем</b></font><br />
+$language["info"]["admin_settings"] = '<font color="#FFFFFF"><b>Шаблоны писем</b></font><br />
 В этом пункте Вы можете редактировать шаблоны писем, отправляемые администратору каталога и пользователям в определенных случаях.
 В фигурных скобках {[ ]} это: <b>NAME</b> - название ссылки, <b>EMAIL</b> - email пользователя, <b>URL</b> - url адрес ссылки, <b>URL_LINK</b> - url адрес страницы с ответной ссылкой, <b>DESCRIPTION</b> - описание ссылки, <b>DATE</b> - дата добавления ссылки в каталог, <b>URL_EDIT</b> - url адрес, где пользователь может редактировать ссылку, <b>DATE_LIMIT</b> - Минимальный интервал проверки наличия обратной ссылки в днях, <b>HTTP_HOST</b> - хост каталога, <b>REASON</b> - причина по которой была скрыта ссылка. <br />
 <font color="#FFFFFF"><b>Настройки работы каталога</b></font><br />
@@ -49,7 +47,6 @@ $language["title"]["help"] = '';
 
 $language["title"]["page_addurl"] = 'Каталог сайтов My Links Manager | добавить сайт';
 $language["title"]["addurl"] = 'Каталог сайтов My Links Manager | добавить сайт';
-
 
 $language["title"]["index"] = "Каталог сайтов My Links Manager";
 
@@ -97,8 +94,6 @@ $language['menu']['update'] = 'Обновление';
 $language['menu']['password_title'] = 'Пароль';
 $language['menu']['password'] = 'Пароль';
 
-
-
 $language["str"]["action"] = "Действия";
 $language["str"]["required_fields"] = "Обязательные поля";
 $language["str"]["category"] = "Категория";
@@ -112,7 +107,6 @@ $language["str"]["description"] = "Описание";
 $language["str"]["views"] = "Просмотры";
 $language["str"]["created"] = "Добавлено";
 $language["str"]["action"] = "Действие";
-
 $language["str"]["only_text_not_html"] = "Только текст, не html код";
 $language["str"]["keywords"] = "Ключевые слова в META";
 $language["str"]["list_separated_by_commas"] = "Перечислить через запятую";
@@ -198,7 +192,6 @@ $language["str"]["left"] = "осталось";
 $language["str"]["from_total"] = "из";
 $language["str"]["html_code_banner"] = "HTML код баннера";
 $language["str"]["script_link_catalog"] =  "Скрипт каталога ссылок My Links Manager";
-
 $language["str"]["go_back"] = "Вернуться в каталог";
 $language["str"]["keywords_searchform"] = "Ключевые слова";
 $language["str"]["keywords"] = "Ключевые слова";
@@ -247,6 +240,7 @@ $language["str"]["html_code_of_banner_for_this"] = "Код кнопки этог
 $language["str"]["form_reciprocal_link"] = "Адрес страницы с ответной ссылкой";
 $language["str"]["subject_wait"] = "Ваш сайт добавлен в очередь на проверку";
 $language["str"]["subject_newlink"] = "Добавлена новая ссылка";
+$language["str"]["database_file"] = "Файл базы данных";
 
 $language["status"]["new"] = "Новые";
 $language["status"]["show"] = "Проверено";
@@ -267,7 +261,6 @@ $language["button"]["find"] = "найти";
 
 $language["button"]["check_all_links_automatically"] = "Проверить все ссылки автоматически";
 
-
 $language["msg"]["notfound"] = "По вашему запросу ничего не найдено!";
 $language["msg"]["link_added"] = "Ссылка добавлена";
 $language["msg"]["changes_added"] = "Изменения внесены";
@@ -282,6 +275,7 @@ $language["msg"]["selected_links_deleted"] = "Ссылка удалена";
 $language["msg"]["reason_closed_for_index_robot"] = "Закрыта для индексации в robots.txt";
 $language["msg"]["notlinks"] = "Нет ссылок";
 $language["msg"]["check_is_completed"] = "Проверка закончена";
+$language["msg"]["imported_links"] = 'Импортировано %COUNT% ссылок';
 
 //errors
 $language["error"]["wait_verification"] = "Этот сайт уже есть в каталоге!";
@@ -297,7 +291,6 @@ $language["error"]["nofill_name"] = "Введите название сайта!
 $language["error"]["nofill_url"] = "Введите адрес сайта!";
 $language["error"]["nofill_reciprocal_link"] = "Введите адерес страницы с ссылкой на наш сайт!";
 $language["error"]["nofill_email"] = "Введите email!";
-
 $language["error"]["nofill_briefdesc"] = "Введите краткое описание!";
 $language["error"]["nofill_fulldesc"] = "Введите полное описание!";
 $language["error"]["failed_add_changes_design"] = "Не удалось добавить изменения! Файл %FILE% недоступен для записи";
@@ -310,7 +303,6 @@ $language["error"]["change_password"] = "Пароль не был сменён!"
 $language["error"]["fill_cat_name"] = "Введите название категории!";
 $language["error"]["filesize"] = "Размер файла больше %LIMIT% кб!";
 $language["error"]["web_apps_error"] = "Ошибка веб приложения! Действия не были выполнены.";
-
 $language["error"]["arg_value"] = "Запрещено в значении arg=value указывать url адрес каталога!";
 $language["error"]["verify_domen"] = "Ответная ссылка должна находиться на сайте, который вы добавляете!";
 $language["error"]["not_your_site"] = "Укажите свой адрес сайта!";
@@ -324,10 +316,9 @@ $language["error"]["html_banner_limit"] = "Количество знаков в 
 $language["error"]["close_index_tags"] = 'Ответная ссылка закрыта для индексации метатэгом &lt;meta name=robot&gt;!';
 $language["error"]["close_index_dir"] = "Директория где расположена наша ссылка закрыта для индексации!";
 $language["error"]["number_url"] = 'Количество url ссылок на странице где расположена наша ссылка больше %NUMBER_RECIPROCAL_LINKS_LIMIT%!';
-
 $language["error"]["not_reciprocal_link"] = "Введите адерес страницы с ссылкой на наш сайт!";
 $language["error"]["type_banner"] = "Расширение банера должно быть GIF, JPEG или PNG!";
-
 $language["error"]["not_filled_captcha"] = "Введите защитный код!";
-
 $language["error"]["not_your_site"] = "Укажите свой адрес сайта!";
+$language["error"]["no_import"] = "Импорт не выполнен!";
+$language["error"]["no_import_file"] = "Файл для импорта не выбран!";

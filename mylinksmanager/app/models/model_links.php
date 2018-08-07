@@ -20,7 +20,7 @@ class Model_links extends Model
      * @param $pnumber
      * @return mixed
      */
-    public function getLinksArray($page, $pnumber)
+    public function getLinksArray($page, $pnumber, $strtmp)
     {
         core::database()->tablename = core::database()->getTableName('links') . " l LEFT JOIN " . core::database()->getTableName('catalog') . " c ON c.id=l.cat_id";
 

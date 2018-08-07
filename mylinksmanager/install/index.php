@@ -20,7 +20,7 @@ $SCRIPT_URL = substr($_SERVER['SCRIPT_NAME'], 0, strpos($_SERVER['SCRIPT_NAME'],
 $_SESSION['domain'] = (substr($_SERVER['SERVER_NAME'], 0, 4)) == "www." ? str_replace('www.','', $_SERVER['SERVER_NAME']) : $_SERVER['SERVER_NAME'];
 
 // Step
-$INSTALL['step_count'] = 7;
+$INSTALL['step_count'] = 6;
 $INSTALL['step'] = 1;
 
 if (!empty($_POST['step']) && is_numeric($_POST['step'])){
@@ -36,18 +36,11 @@ if ($INSTALL['step'] < 1 or $INSTALL['step'] > $INSTALL['step_count']){
 // language
 $INSTALL['available_langs'] = [
 	'en' => 'English',
-	'ru' => 'Russian'
+	'ru' => 'Russian (Русский)'
 ];
 
 if ($INSTALL['step'] == 1 && isset($_POST['forward'])){
 	$_SESSION['language'] = $_POST['language'];
-}
-
-if ($INSTALL['step'] == 2) {
-	if ($_POST['license_key'])
-		$_SESSION['license_key'] = trim($_POST['license_key']);
-	else
-		$_SESSION['license_key'] = 'DEMO';
 }
 
 $INSTALL['language'] = !empty($_SESSION['language']) ? $_SESSION['language'] : null;
@@ -116,7 +109,7 @@ if ($INSTALL['step'] == 3 && isset($_POST['forward'])){
 	$INSTALL['step'] = 4;
 }
 
-if ($INSTALL['step'] == 4 && isset($_POST['forward'])){
+if ($INSTALL['step'] == 4){
     $INSTALL['type'] = null;
     $INSTALL['version_detect'] = null;
 
@@ -762,17 +755,12 @@ if (ini_get('register_globals') == 1) {
 
 ?>
 
+					   </div>
 					</div>
-
-					</div>
-
 				</div>
 			<footer> <?php echo "".$INSTALL["lang"]["str"]["logo"].", ".$INSTALL["lang"]["str"]["author"]."" ?> </footer>
-
-			</div>
-
+		 </div>
 		</div>
-
 	</div>
 </div>
 </div>

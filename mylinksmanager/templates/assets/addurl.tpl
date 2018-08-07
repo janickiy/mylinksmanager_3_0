@@ -288,9 +288,9 @@ function showLength2(id,max)
             <td align="right"><b>${STR_CHOOSE_YOUR_CATEGORY}:</b></td>
             <td><select type="text" class="input" name="cat_id">
                 <option value="0" <!-- IF '${ID_CAT}' == 0 -->selected="selected" <!-- END IF --> class="input"> ---- ${STR_CHOOSE_CATEGORY} ---- </option>
-                
+
               ${OPTION}
-           
+
               </select>
             </td>
           </tr>

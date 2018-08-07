@@ -42,6 +42,7 @@ if (Core_Array::getRequest('action')){
     // Cut out http:// from url address of reciprocal link
     if (!empty($reciprocal_link)){
         if (substr(strtolower($reciprocal_link), 0, 7) == "http://") $reciprocal_link = str_replace('http://', '', $reciprocal_link);
+        if (substr(strtolower($reciprocal_link), 0, 8) == "https://") $reciprocal_link = str_replace('https://', '', $reciprocal_link);
     }
 
     // Cut out all unnecessary tags and javascripts from HTML code of banner

@@ -49,8 +49,6 @@ if (Core_Array::getRequest('action')) {
                 $image_mime = $_FILES["image"]["type"];
                 $image = Helper::image_convert($original, 80, 80, $image_mime);
             }
-
-
         }
 
         $fields = [

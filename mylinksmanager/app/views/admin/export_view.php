@@ -16,9 +16,10 @@ Auth::authorization();
 core::requireEx('libs', "html_template/SeparateTemplate.php");
 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/export.tpl");
 
+include_once core::pathTo('extra', 'admin/top.php');
 
-
-
+//menu
+include_once core::pathTo('extra', 'admin/menu.php');
 
 //footer
 include_once core::pathTo('extra', 'admin/footer.php');

@@ -128,6 +128,13 @@ $tpl->assign("STR_NEW_LINKS_NOTIFICATION", core::getLanguage('str', 'new_links_n
 $tpl->assign("BUTTON_SAVE", core::getLanguage('button', 'save'));
 $tpl->assign("BUTTON_BY_DEFAULT", core::getLanguage('button', 'by_default'));
 
+if (empty(core::getSetting('url'))){
+    if (substr($_SERVER['SERVER_NAME'],0,4) == "www.") { $url = substr($_SERVER["SERVER_NAME"],4); }
+    else { $url = $_SERVER['SERVER_NAME']; }
+} else {
+    $url = core::getSetting('url');
+}
+
 //value
 $tpl->assign("ACTION", $_SERVER['REQUEST_URI']);
 $tpl->assign("LANGUAGE_OPTION", core::getSetting('language'));
@@ -136,7 +143,7 @@ $tpl->assign("ORDER_LINKS", core::getSetting('order_links'));
 $tpl->assign("ALL_NUMBER_LINK", core::getSetting('all_number_links'));
 $tpl->assign("ALL_NUMBER_NEW", core::getSetting('all_number_new'));
 $tpl->assign("COLUMNS_NUMBER", core::getSetting('columns_number'));
-$tpl->assign("URL", core::getSetting('url'));
+$tpl->assign("URL", $url);
 $tpl->assign("EMAIL", core::getSetting('email'));
 $tpl->assign("RULES", core::getSetting('rules'));
 $tpl->assign("FROM_ADD_MESSAGE", core::getSetting('from_add_message'));

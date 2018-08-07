@@ -3,6 +3,7 @@
 $INSTALL["lang"]["str"]["install"] = "Installation";
 $INSTALL["lang"]["str"]["install_lang_select"] = "Selecting Interface Language";
 $INSTALL["lang"]["str"]["step"] = "Step";
+$INSTALL["lang"]["str"]["license"] = "License Agreement";
 $INSTALL["lang"]["str"]["read_license"] = "Read the following License Agreement";
 $INSTALL["lang"]["str"]["accept_license"] = "I accept the agreement";
 $INSTALL["lang"]["str"]["yes"] = "Yes";
@@ -38,9 +39,6 @@ $INSTALL["lang"]["str"]["confirm_password"] = "Confirm password";
 $INSTALL["lang"]["str"]["further_actions"] = "Further Actions";
 $INSTALL["lang"]["str"]["install_complete"] = "My Links Manager %VERSION% installation completed successfully. Before you start working with My Links Manager, please delete the <strong>install</strong> folder.";
 $INSTALL["lang"]["str"]["admin_area"] = "Go to admin area";
-$INSTALL["lang"]["str"]["license_key"] = "License Key";
-$INSTALL["lang"]["str"]["demo_version"] = "Demoversion";
-$INSTALL["lang"]["str"]["commercial_version"] = "Commercial_version";
 $INSTALL["lang"]["str"]["login"] = "Login";
 $INSTALL["lang"]["error"]["must_be_enter_dbserver"] = "The database server name should be specified!";
 $INSTALL["lang"]["error"]["must_be_enter_dblogin"] = "The database user name should be specified!";
@@ -62,5 +60,3 @@ $INSTALL["lang"]["warning"]["system_req_warning"] = "<strong>Warning:</strong> t
 $INSTALL["lang"]["warning"]["update_warning"] = "<strong>Important!</strong> Before upgrading, save the backup copy of all data (Administering - Settings - Export). It will allow you to restore data in case of incorrect upgrade.";
 $INSTALL["lang"]["warning"]["reinstall_warning"] = "<strong>Important!</strong> All data will be lost. Save the backup copy (Administering - Settings - Export) if you want to restore data later.";
 $INSTALL["lang"]["script"]["name"] = "My Links Manager";
-
-?>

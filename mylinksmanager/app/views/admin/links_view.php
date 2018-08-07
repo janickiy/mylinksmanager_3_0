@@ -12,7 +12,6 @@ defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
 Auth::authorization();
 
-
 if (Core_Array::getRequest('remove') && is_numeric($_REQUEST['remove'])) {
     if ($data->removeLink($_REQUEST['remove']))
         $success_alert = core::getLanguage('msg', 'selected_links_deleted');
@@ -63,7 +62,6 @@ if (Core_Array::getRequest('action')) {
     }
 }
 
-
 //include template
 core::requireEx('libs', "html_template/SeparateTemplate.php");
 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/links.tpl");
@@ -72,7 +70,6 @@ $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "a
 $tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_links'));
 $tpl->assign('TITLE', core::getLanguage('title', 'admin_links'));
 $tpl->assign('HELP', core::getLanguage('info', 'admin_links'));
-
 
 include_once core::pathTo('extra', 'top.php');
 
@@ -112,17 +109,14 @@ else
 
 $search = Core_Array::getRequest('search');
 
-
 //form
 $tpl->assign('FORM_SEARCH_NAME', core::getLanguage('str', 'search_name'));
 $tpl->assign('BUTTON_FIND',  core::getLanguage('button', 'find'));
 $tpl->assign('ACTION', $_SERVER['REQUEST_URI']);
 
-
-$arrs = $data->getLinksArray($strtmp, urldecode($search), Core_Array::getRequest('category'), Core_Array::getRequest('page'), $pnumber);
+$arrs = $data->getLinksArray(Core_Array::getRequest('page'), $pnumber, $strtmp);
 
 if ($arrs) {
-
     $rowBlock = $tpl->fetch('row');
 
     $rowBlock->assign('STR_NAME', core::getLanguage('str', 'name'));
@@ -198,8 +192,6 @@ if ($arrs) {
         $columnBlock->assign('CATEGORY', $row['category']);
         $columnBlock->assign('VIEWS', $row['views']);
 
-
-
         $columnBlock->assign('CREATED', $row['created']);
         $columnBlock->assign('STR_EDIT', core::getLanguage('str', 'edit'));
         $columnBlock->assign('STR_REMOVE', core::getLanguage('str', 'remove'));
@@ -229,7 +221,6 @@ if ($arrs) {
 
         if ($search) $paginationBlock->assign('SEARCH', urlencode($search));
 
-
         $rowBlock->assign('pagination', $paginationBlock);
     }
 
@@ -251,24 +242,19 @@ if ($arrs) {
     }
 }
 
-
 $tpl->assign('STR_IMPORT_LINKS', core::getLanguage('str', 'import_links'));
 $tpl->assign('STR_EXPORT_LINKS', core::getLanguage('str', 'export_links'));
-
 
 if ($search) {
     $tpl->assign('SEARCH', urlencode($search));
     $tpl->assign('FORM_SEARCH', $search);
 }
 
-
 // menu
 include_once core::pathTo('extra', 'admin/menu.php');
 
-
 //footer
 include_once core::pathTo('extra', 'admin/footer.php');
-
 
 //display content
 $tpl->display();

@@ -302,10 +302,8 @@ if (Core_Array::getRequest('action')) {
 $tpl->assign('TITLE_PAGE', core::getLanguage('title', 'page_addurl'));
 $tpl->assign('TITLE', core::getLanguage('title', 'addurl'));
 
-
 $tpl->assign('STR_GO_TO_CATALOG', core::getLanguage('str','go_to_catalog'));
 $tpl->assign('STR_HTMLCODE_BANNER', core::getLanguage('str','htmlcode_banner'));
-
 
 $tpl->assign('ALERT_INITIAALIZATION_ERROR_INTERFACE', core::getLanguage('error','alert_initiaalization_error_interface'));
 
@@ -359,15 +357,15 @@ $tpl->assign('NUMBER_CHARS_FULLDESCRIPTION_MAX', core::getSetting('number_chars_
 $tpl->assign('NUMBER_HTML_CHARS', core::getSetting('number_html_chars'));
 $tpl->assign('SECURITYCODE', core::getSetting('request_captcha'));
 
-$tpl->assign('HTMLCODE_SITE1', core::getSetting('htmlcode_site1'));
-$tpl->assign('HTMLCODE_SITE2', core::getSetting('htmlcode_site2'));
-$tpl->assign('HTMLCODE_SITE3', core::getSetting('htmlcode_site3'));
+$tpl->assign('HTMLCODE_SITE1', str_replace("'","`", core::getSetting('htmlcode_site1')));
+$tpl->assign('HTMLCODE_SITE2', str_replace("'","`", core::getSetting('htmlcode_site2')));
+$tpl->assign('HTMLCODE_SITE3', str_replace("'","`", core::getSetting('htmlcode_site3')));
 
 $tpl->assign('HTMLCODE_BANNER1', core::getSetting('htmlcode_banner1'));
 $tpl->assign('HTMLCODE_BANNER2', core::getSetting('htmlcode_banner2'));
 $tpl->assign('HTMLCODE_BANNER3', core::getSetting('htmlcode_banner3'));
 
-$tpl->assign('RULES', core::getSetting('rules'));
+$tpl->assign('RULES', str_replace("'","`", core::getSetting('rules')));
 
 $tpl->assign('CHECK_URL', core::getSetting('check_links'));
 

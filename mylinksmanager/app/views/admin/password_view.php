@@ -56,12 +56,8 @@ if (Core_Array::getRequest('action')) {
         } else {
             $errors[] = core::getLanguage('error', 'change_password');
         }
-
-
-
     }
 }
-
 
 include_once core::pathTo('extra', 'admin/top.php');
 
