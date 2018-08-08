@@ -240,6 +240,8 @@ $language["str"]["html_code_of_banner_for_this"] = "Код кнопки этог
 $language["str"]["form_reciprocal_link"] = "Адрес страницы с ответной ссылкой";
 $language["str"]["subject_wait"] = "Ваш сайт добавлен в очередь на проверку";
 $language["str"]["subject_newlink"] = "Добавлена новая ссылка";
+$language["str"]["subject_noadd"] = "Ваш сайт не прошел проверку";
+$language["str"]["subject_add"] = "Ваш сайт добавлен в каталог ссылок";
 $language["str"]["database_file"] = "Файл базы данных";
 $language["str"]["links_db"] = "База каталога ссылок";
 

@@ -16,7 +16,7 @@ if (Core_Array::getRequest('remove') && is_numeric($_REQUEST['remove'])) {
     if ($data->removeLink($_REQUEST['remove']))
         $success_alert = core::getLanguage('msg', 'selected_links_deleted');
     else
-        $errors[] =   core::getLanguage('error', 'web_apps_error');
+        $errors[] = core::getLanguage('error', 'web_apps_error');
 
 }
 

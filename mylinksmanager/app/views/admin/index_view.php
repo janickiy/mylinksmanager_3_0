@@ -20,20 +20,21 @@ $tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_index'));
 $tpl->assign('TITLE', core::getLanguage('title', 'admin_index'));
 $tpl->assign('HELP', core::getLanguage('info', 'admin_index'));
 
-if (Core_Array::getPost('action')){
-    switch ($_POST['event'])
-    {
+if (Core_Array::getPost('action')) {
+
+    $errors = [];
+
+    switch (Core_Array::getPost('event')) {
         case 'add':
 
             if (Links::changeStatusLink(Core_Array::getPost('id'), 'show')) {
+                Helper::sendMailAdd($link, core::getLanguage('str', 'subject_add'));
 
+                header("Location: ./?a=admin");
+                exit;
 
-               // sendMailAdd($links, STR_SUBJECT_ADD);
-
-                $success = MSG_LINK_ADDED;
-
-            }  else {
-
+            } else {
+                $errors = core::getLanguage('error', 'web_apps_error');
             }
 
             break;
@@ -41,56 +42,61 @@ if (Core_Array::getPost('action')){
         // Remove link
         case 'delete':
 
-            Links::removeLink(Core_Array::getPost('id'), 'show');
+            $link = Links::getLinkInfo(Core_Array::getPost('id'));
 
+            if (core::database()->delete(core::database()->getTableName('links'), "id=" . Core_Array::getPost('id'), '')) {
+                Helper::sendMailNoAdd($link, core::getLanguage('str', 'subject_noadd'));
 
+                header("Location: ./?a=admin");
+                exit;
+            } else $errors = core::getLanguage('error', 'web_apps_error');
 
             break;
 
         // Add link to black list
         case 'black':
 
+            if (Links::changeStatusLink(Core_Array::getPost('id'), 'show')) {
+                $link = Links::getLinkInfo(Core_Array::getPost('id'));
+                Helper::sendMailNoAdd($link, core::getLanguage('str', 'subject_noadd'));
+                $success = core::getLanguage('msg', 'link_added_to_blacklist');
 
+                header("Location: ./?a=admin");
+                exit;
+
+            } else {
+                $errors = core::getLanguage('error', 'web_apps_error');
+            }
 
         // Automatic check the link
         case 'auto_check':
 
-            if(!empty($settings['url'])){
-
+            if (!empty(core::getSetting('url'))) {
                 // Check is exist answer link on page with address $_POST['url_link']
-                if(check_url_link ($_POST['reciprocal_link'], $_POST['url'])){
+                if (Helper::checkUrlLink(Core_Array::getPost('reciprocal_link'), Core_Array::getPost('url'))) {
                     // Add the link if it is
-                    $query = "UPDATE ".DB_LINKS." SET status = 'show', time_check = NOW() WHERE id_link = ".$_POST['id_link'];
-
-                    if($dbh->query($query)){
+                    if (Links::changeStatusLink(Core_Array::getPost('id'), 'show')) {
                         // Send email to the user about the link was added
-                        $query = "SELECT * FROM ".DB_LINKS." WHERE id_link = ".$_POST['id_link'];
-                        $result = $dbh->query($query);
+                        $link = Links::getLinkInfo(Core_Array::getPost('id'));
 
-                        if(!$result) throw new ExceptionMySQL($dbh->error, $query, "Error executing SQL query!");
+                        Helper::sendMailAdd($link, core::getLanguage('str', 'subject_add'));
 
-                        $links = $result->fetch_array();
+                        header("Location: ./?a=admin");
+                        exit;
 
-                        $result->close();
-
-                        sendMailAdd($links, STR_SUBJECT_ADD);
-
-                        $success = MSG_CHECK_IS_COMPLETED;
-
-                    } else throw new ExceptionMySQL($dbh->error,$query,"Error executing SQL query!");
-                }
-                else{
+                    } else core::getLanguage('error', 'web_apps_error');
+                } else {
                     // Remove the link or add to black list if it is not
-                    if($settings['add_to_blacklist'] == "yes"){
-                        $query = "UPDATE ".DB_LINKS." SET status = 'black', time = NOW(), reason = '".REASON_ABSENSE_RECIPROCAL."' WHERE id_link = ".$_POST['id_link'];
-                    }
-                    else{
-                        $query = "DELETE FROM ".DB_LINKS." WHERE id_link = ".$_POST['id_link'];
+                    if (core::getSetting('add_to_blacklist') == "yes") {
+                        $result = Links::changeStatusLink(Core_Array::getPost('id'), 'black', core::getSetting('msg', 'reason_absense_reciprocal'));
+                    } else {
+                        $result = core::database()->delete(core::database()->getTableName('links'), "id=" . Core_Array::getPost('id'), '');
                     }
 
-                    if($dbh->query($query))	{
-                        $success = MSG_CHECK_IS_COMPLETED;
-                    } else throw new ExceptionMySQL($dbh->error, $query, "Error executing SQL query!");
+                    if ($result) {
+                        header("Location: ./?a=admin");
+                        exit;
+                    } else core::getLanguage('error', 'web_apps_error');
                 }
             }
 
@@ -134,10 +140,10 @@ if (Core_Array::getGet('id')) {
 } else {
     $blockNewLinks = $tpl->fetch('new_links');
 
-    $arrs = Links::getLinksList('new','l.id',0,10);
+    $arrs = Links::getLinksList('new', 'l.id', 10, 0);
 
     if ($arrs) {
-        foreach($arrs as $row) {
+        foreach ($arrs as $row) {
             $blockRow = $blockNewLinks->fetch('links_row');
             $blockRow->assign('ID', $row['id']);
             $blockRow->assign('URL', $row['url']);

@@ -147,11 +147,16 @@ class Links
      * @param $status
      * @return mixed
      */
-    public function changeStatusLink($id, $status)
+    public function changeStatusLink($id, $status, $comment = null)
     {
         if (is_numeric($id) && $status) {
-            $query = "UPDATE " . core::database()->getTableName('links') . " SET status='" . $status . "' WHERE id=" . $id;
-            return core::database()->querySQL($query);
+            $fields = [
+                'status' => $status,
+                'reason' => $comment,
+                'time_check' => date("Y-m-d H:i:s"),
+            ];
+
+            return core::database()->update($fields, core::database()->getTableName('links'), "id=" . $id);
         }
     }
 

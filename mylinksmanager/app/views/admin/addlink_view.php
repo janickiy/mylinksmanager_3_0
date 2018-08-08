@@ -151,7 +151,6 @@ if (Core_Array::getRequest('action')){
         $fields['check_link'] = Core_Array::getPost('check_link') ? 'yes':'no';
         $fields['number_check'] = 0;
 
-
         if ($data->addLink($fields)) {
             unset($_POST);
             $success_msg = core::getLanguage('msg', 'link_added');
