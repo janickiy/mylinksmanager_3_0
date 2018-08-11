@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 
 /********************************************
  * My Links Manager 3.0.0 alfa
@@ -12,8 +12,5 @@ defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
 class Model_ajax extends Model
 {
-    public function getBlackList($offset, $number)
-    {
 
-    }
 }

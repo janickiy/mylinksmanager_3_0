@@ -91,15 +91,11 @@
 					<a <!-- IF '${ACTIVE_MENU}' == 'settings' -->class="active-menu"<!-- END IF --> title="${MENU_SETTINGS_TITLE}" href="./?a=admin&t=settings"><i class="fa fa-gear"></i> ${MENU_SETTINGS}</a>
 				</li>
 				<li>
-					<a	<!-- IF '${ACTIVE_MENU}' == 'blacklist' -->class="active-menu"<!-- END IF --> title="${MENU_BLACK_TITLE}" href="./?a=admin&t=blacklist"><i class="fa fa-thumbs-down"></i> ${MENU_BLACK}</a>
-				</li>
-				<li>
 					<a	<!-- IF '${ACTIVE_MENU}' == 'update' -->class="active-menu"<!-- END IF --> title="${MENU_UPDATE_TITLE}" href="./?a=admin&t=update"><i class="fa fa-refresh"></i> ${MENU_UPDATE}</a>
 				</li>
 				<li>
 					<a <!-- IF '${ACTIVE_MENU}' == 'password' -->class="active-menu"<!-- END IF --> title="${MENU_PASSWORD_TITLE}" href="./?a=admin&t=password"><i class="fa fa-key "></i> ${MENU_PASSWORD}</a>
 				</li>
-
 			</ul>
 		</div>
 	</nav>

@@ -12,5 +12,15 @@ defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
 class Model_update extends Model
 {
+    /**
+     * @param $version
+     * @return mixed
+     */
+    public function getVersionCode($version)
+    {
+        preg_match("/(\d+)\.(\d+)\./", $version, $out);
+        $code = ($out[1] * 10000 + $out[2] * 100);
 
+        return $code;
+    }
 }
