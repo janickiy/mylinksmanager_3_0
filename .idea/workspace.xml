@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ddc54ce9-1ab0-46a5-84c7-5cd13333537f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_blacklist.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_blacklist.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/blacklist_view.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/blacklist.tpl" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mylinksmanager/cron.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_ajax.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_ajax.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_update.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_update.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/update_view.php" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/update_view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/header.tpl" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/header.tpl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/update.tpl" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/update.tpl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/captcha.php" afterPath="$PROJECT_DIR$/mylinksmanager/captcha.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" afterPath="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" afterPath="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" />
     </list>
@@ -34,29 +27,35 @@
       <file leaf-file-name="ru.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/ru.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state relative-caret-position="464">
+              <caret line="304" column="0" lean-forward="false" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="editlink_view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php">
+      <file leaf-file-name="en.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/en.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajax_view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/ajax_view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-318">
-              <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="1887">
+              <caret line="111" column="52" lean-forward="false" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
+              <folding>
+                <marker date="1534118944951" expanded="true" signature="531:537" ph="&quot;" />
+                <marker date="1534118944951" expanded="true" signature="561:567" ph="&quot;" />
+                <marker date="1534118944951" expanded="true" signature="803:809" ph="&quot;" />
+                <marker date="1534118944951" expanded="true" signature="838:844" ph="&quot;" />
+                <marker date="1534118944951" expanded="true" signature="1295:1301" ph="&quot;" />
+                <marker date="1534118944951" expanded="true" signature="1326:1332" ph="&quot;" />
+                <marker date="1534118944951" expanded="true" signature="1337:1343" ph="&quot;" />
+                <marker date="1534118944951" expanded="true" signature="1365:1371" ph="&quot;" />
+                <marker date="1534118944951" expanded="true" signature="1740:1746" ph="&quot;" />
+                <marker date="1534118944951" expanded="true" signature="2239:2245" ph="&quot;" />
+                <marker date="1534118944951" expanded="true" signature="2265:2271" ph="&quot;" />
+                <marker date="1534118944951" expanded="true" signature="2311:2317" ph="&quot;" />
+                <marker date="1534118944951" expanded="true" signature="2340:2346" ph="&quot;" />
+                <marker date="1534118944951" expanded="true" signature="4437:4443" ph="&quot;" />
+                <marker date="1534118944951" expanded="true" signature="4461:4467" ph="&quot;" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,19 +63,30 @@
       <file leaf-file-name="Helper.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="686" column="30" lean-forward="true" selection-start-line="686" selection-start-column="30" selection-end-line="686" selection-end-column="30" />
+            <state relative-caret-position="194">
+              <caret line="256" column="27" lean-forward="false" selection-start-line="256" selection-start-column="27" selection-end-line="256" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Update.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Update.php">
+      <file leaf-file-name="cron.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/cron.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1678">
-              <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-              <folding />
+            <state relative-caret-position="2148">
+              <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+              <folding>
+                <element signature="e#7#254#0#PHP" expanded="true" />
+                <marker date="1534121023585" expanded="true" signature="929:947" ph="SELECT * FRO... ${DB_SETTING}" />
+                <marker date="1534121023585" expanded="true" signature="929:978" ph="SELECT * FRO... ${$ConfigDB[&quot;prefix&quot;]}" />
+                <marker date="1534121023585" expanded="true" signature="1248:1314" ph="SELECT * FRO... ${DB_LINKS}" />
+                <marker date="1534121023585" expanded="true" signature="2075:2129" ph="DELETE FROM " />
+                <marker date="1534121023585" expanded="true" signature="2820:2874" ph="DELETE FROM " />
+                <marker date="1534121023585" expanded="true" signature="3604:3658" ph="DELETE FROM " />
+                <marker date="1534121023585" expanded="true" signature="4418:4483" ph="SELECT * FRO... ${DB_LINKS}" />
+                <marker date="1534121023585" expanded="true" signature="5697:5751" ph="DELETE FROM " />
+                <marker date="1534121023585" expanded="true" signature="5893:5959" ph="SELECT * FRO... ${DB_LINKS}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,7 +95,7 @@
         <entry file="file://$PROJECT_DIR$/mylinksmanager/bootstrap.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
-              <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="8" />
+              <caret line="3" column="14" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="46" />
               <folding>
                 <marker date="1532913482181" expanded="true" signature="1174:1188" ph="SELECT * FRO... ${core::database()-&gt;getTableName('settings')}" />
               </folding>
@@ -93,28 +103,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="en.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/en.php">
+      <file leaf-file-name="captcha.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/captcha.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="269" column="119" lean-forward="false" selection-start-line="269" selection-start-column="119" selection-end-line="269" selection-end-column="119" />
+            <state relative-caret-position="-2422">
+              <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
               <folding>
-                <marker date="1533967435203" expanded="true" signature="531:537" ph="&quot;" />
-                <marker date="1533967435203" expanded="true" signature="561:567" ph="&quot;" />
-                <marker date="1533967435203" expanded="true" signature="803:809" ph="&quot;" />
-                <marker date="1533967435203" expanded="true" signature="838:844" ph="&quot;" />
-                <marker date="1533967435203" expanded="true" signature="1295:1301" ph="&quot;" />
-                <marker date="1533967435203" expanded="true" signature="1326:1332" ph="&quot;" />
-                <marker date="1533967435203" expanded="true" signature="1337:1343" ph="&quot;" />
-                <marker date="1533967435203" expanded="true" signature="1365:1371" ph="&quot;" />
-                <marker date="1533967435203" expanded="true" signature="1740:1746" ph="&quot;" />
-                <marker date="1533967435203" expanded="true" signature="2239:2245" ph="&quot;" />
-                <marker date="1533967435203" expanded="true" signature="2265:2271" ph="&quot;" />
-                <marker date="1533967435203" expanded="true" signature="2311:2317" ph="&quot;" />
-                <marker date="1533967435203" expanded="true" signature="2340:2346" ph="&quot;" />
-                <marker date="1533967435203" expanded="true" signature="4437:4443" ph="&quot;" />
-                <marker date="1533967435203" expanded="true" signature="4461:4467" ph="&quot;" />
+                <element signature="e#7#254#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ru.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/install/ru.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-306">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -142,7 +148,7 @@
       <file leaf-file-name="update.tpl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/update.tpl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="739">
+            <state relative-caret-position="1190">
               <caret line="70" column="6" lean-forward="false" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
               <folding />
             </state>
@@ -153,7 +159,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>STR_FORM_DESCRIPTION</find>
       <find>url RLIKE</find>
       <find>commonHo</find>
       <find>NUMBER_CHARS_DESCRIPTION_MIN</find>
@@ -183,6 +188,7 @@
       <find>.janicky.com/</find>
       <find>.ja</find>
       <find>li</find>
+      <find>web_apps_error</find>
     </findStrings>
     <replaceStrings>
       <replace>Copyright (c) 2011-2018 Alexander Yanitsky</replace>
@@ -206,14 +212,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mylinksmanager/.gitignore" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_addurl.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/header.tpl" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/styles/style.css" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_index.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/vendor/SimpleCaptcha.class.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/captcha.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/settings.tpl" />
         <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Update.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/ajax_view.php" />
@@ -252,11 +256,13 @@
         <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/header.tpl" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_ajax.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" />
-        <option value="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/update.tpl" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/models/model_update.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/update_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/captcha.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/cron.php" />
       </list>
     </option>
   </component>
@@ -281,8 +287,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="102" />
-    <option name="y" value="42" />
+    <option name="x" value="117" />
+    <option name="y" value="37" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -365,13 +371,6 @@
               <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="sys" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="core" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="mylinksmanager_3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylinksmanager_3" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mylinksmanager" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="sys" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="engine" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -420,8 +419,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -495,7 +494,9 @@
       <workItem from="1533594808219" duration="24619000" />
       <workItem from="1533679384838" duration="5988000" />
       <workItem from="1533859548869" duration="119000" />
-      <workItem from="1533937688828" duration="8181000" />
+      <workItem from="1533937688828" duration="9196000" />
+      <workItem from="1534073289716" duration="815000" />
+      <workItem from="1534116615471" duration="4348000" />
     </task>
     <task id="LOCAL-00001" summary="add files">
       <created>1486722105200</created>
@@ -728,11 +729,18 @@
       <option name="project" value="LOCAL" />
       <updated>1533689944783</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="добавлен раздел обновления">
+      <created>1533968194960</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1533968194960</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252805000" />
+    <option name="totallyTimeSpent" value="258983000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -746,23 +754,23 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22014925" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2260128" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33369565" sideWeight="0.50852877" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33369565" sideWeight="0.50852877" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33369565" sideWeight="0.4914712" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31304348" sideWeight="0.4914712" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -805,7 +813,8 @@
     <MESSAGE value="добавлен импорт ссылок" />
     <MESSAGE value="добавлен раздел экспорта ссылок" />
     <MESSAGE value="bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
+    <MESSAGE value="добавлен раздел обновления" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавлен раздел обновления" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -821,28 +830,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_editcategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="36" column="59" lean-forward="false" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="164" column="20" lean-forward="false" selection-start-line="164" selection-start-column="16" selection-end-line="164" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_addcategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="61" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2282">
@@ -886,13 +873,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_blacklist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_blacklist.php" />
     <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/export.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1023,14 +1004,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/blacklist_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/blacklist_view.php" />
     <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/edit_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1061,7 +1035,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1069,7 +1042,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1077,7 +1049,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1085,7 +1056,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2202">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1093,7 +1063,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="97" column="21" lean-forward="false" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1105,14 +1074,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/ajax_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/ajax_view.php" />
     <entry file="file://$PROJECT_DIR$/mylinksmanager/app/models/model_pic.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1132,40 +1094,14 @@
     <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/ru.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="686" column="30" lean-forward="true" selection-start-line="686" selection-start-column="30" selection-end-line="686" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="8" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="8" />
-          <folding>
-            <marker date="1532913482181" expanded="true" signature="1174:1188" ph="SELECT * FRO... ${core::database()-&gt;getTableName('settings')}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Update.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1678">
+        <state relative-caret-position="153">
           <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
           <folding />
         </state>
@@ -1173,7 +1109,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/ajax_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-318">
+        <state relative-caret-position="340">
           <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
           <folding />
         </state>
@@ -1197,32 +1133,95 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/update.tpl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="739">
+        <state relative-caret-position="1190">
           <caret line="70" column="6" lean-forward="false" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/install/ru.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-306">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/ru.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="304" column="0" lean-forward="false" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/language/en.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="269" column="119" lean-forward="false" selection-start-line="269" selection-start-column="119" selection-end-line="269" selection-end-column="119" />
+        <state relative-caret-position="1887">
+          <caret line="111" column="52" lean-forward="false" selection-start-line="111" selection-start-column="52" selection-end-line="111" selection-end-column="52" />
           <folding>
-            <marker date="1533967435203" expanded="true" signature="531:537" ph="&quot;" />
-            <marker date="1533967435203" expanded="true" signature="561:567" ph="&quot;" />
-            <marker date="1533967435203" expanded="true" signature="803:809" ph="&quot;" />
-            <marker date="1533967435203" expanded="true" signature="838:844" ph="&quot;" />
-            <marker date="1533967435203" expanded="true" signature="1295:1301" ph="&quot;" />
-            <marker date="1533967435203" expanded="true" signature="1326:1332" ph="&quot;" />
-            <marker date="1533967435203" expanded="true" signature="1337:1343" ph="&quot;" />
-            <marker date="1533967435203" expanded="true" signature="1365:1371" ph="&quot;" />
-            <marker date="1533967435203" expanded="true" signature="1740:1746" ph="&quot;" />
-            <marker date="1533967435203" expanded="true" signature="2239:2245" ph="&quot;" />
-            <marker date="1533967435203" expanded="true" signature="2265:2271" ph="&quot;" />
-            <marker date="1533967435203" expanded="true" signature="2311:2317" ph="&quot;" />
-            <marker date="1533967435203" expanded="true" signature="2340:2346" ph="&quot;" />
-            <marker date="1533967435203" expanded="true" signature="4437:4443" ph="&quot;" />
-            <marker date="1533967435203" expanded="true" signature="4461:4467" ph="&quot;" />
+            <marker date="1534118944951" expanded="true" signature="531:537" ph="&quot;" />
+            <marker date="1534118944951" expanded="true" signature="561:567" ph="&quot;" />
+            <marker date="1534118944951" expanded="true" signature="803:809" ph="&quot;" />
+            <marker date="1534118944951" expanded="true" signature="838:844" ph="&quot;" />
+            <marker date="1534118944951" expanded="true" signature="1295:1301" ph="&quot;" />
+            <marker date="1534118944951" expanded="true" signature="1326:1332" ph="&quot;" />
+            <marker date="1534118944951" expanded="true" signature="1337:1343" ph="&quot;" />
+            <marker date="1534118944951" expanded="true" signature="1365:1371" ph="&quot;" />
+            <marker date="1534118944951" expanded="true" signature="1740:1746" ph="&quot;" />
+            <marker date="1534118944951" expanded="true" signature="2239:2245" ph="&quot;" />
+            <marker date="1534118944951" expanded="true" signature="2265:2271" ph="&quot;" />
+            <marker date="1534118944951" expanded="true" signature="2311:2317" ph="&quot;" />
+            <marker date="1534118944951" expanded="true" signature="2340:2346" ph="&quot;" />
+            <marker date="1534118944951" expanded="true" signature="4437:4443" ph="&quot;" />
+            <marker date="1534118944951" expanded="true" signature="4461:4467" ph="&quot;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="14" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="8" selection-end-column="46" />
+          <folding>
+            <marker date="1532913482181" expanded="true" signature="1174:1188" ph="SELECT * FRO... ${core::database()-&gt;getTableName('settings')}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/captcha.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2422">
+          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding>
+            <element signature="e#7#254#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="256" column="27" lean-forward="false" selection-start-line="256" selection-start-column="27" selection-end-line="256" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/cron.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2148">
+          <caret line="128" column="0" lean-forward="true" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#254#0#PHP" expanded="true" />
+            <marker date="1534121023585" expanded="true" signature="929:947" ph="SELECT * FRO... ${DB_SETTING}" />
+            <marker date="1534121023585" expanded="true" signature="929:978" ph="SELECT * FRO... ${$ConfigDB[&quot;prefix&quot;]}" />
+            <marker date="1534121023585" expanded="true" signature="1248:1314" ph="SELECT * FRO... ${DB_LINKS}" />
+            <marker date="1534121023585" expanded="true" signature="2075:2129" ph="DELETE FROM " />
+            <marker date="1534121023585" expanded="true" signature="2820:2874" ph="DELETE FROM " />
+            <marker date="1534121023585" expanded="true" signature="3604:3658" ph="DELETE FROM " />
+            <marker date="1534121023585" expanded="true" signature="4418:4483" ph="SELECT * FRO... ${DB_LINKS}" />
+            <marker date="1534121023585" expanded="true" signature="5697:5751" ph="DELETE FROM " />
+            <marker date="1534121023585" expanded="true" signature="5893:5959" ph="SELECT * FRO... ${DB_LINKS}" />
           </folding>
         </state>
       </provider>

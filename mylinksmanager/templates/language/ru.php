@@ -302,7 +302,6 @@ $language["error"]["not_filled_captcha"] = "Введите защитный ко
 $language["error"]["not_your_site"] = "Укажите свой адрес сайта!";
 $language["error"]["no_import"] = "Импорт не выполнен!";
 $language["error"]["no_import_file"] = "Файл для импорта не выбран!";
-$language["error"]["web_apps_error"] = 'Ошибка веб приложения! Действия не были выполнены.';
 
 $language["alert"]["select_action"]  = "Выберите действие!";
 $language["alert"]["confirm_remove"] = "Вы действительно хотите удалить?";
