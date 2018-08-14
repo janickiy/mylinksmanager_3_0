@@ -109,9 +109,9 @@
         <th>${STATUS}</th>
         <td>${CREATED}</td>
         <td>
-            <a class="btn btn-outline btn-default" href="./?a=admin&t=editlink&id=${ID}" title="${STR_EDIT}"> <i
+            <a class="btn btn-outline btn-default" href="<!-- URL 'Helper::url("./?a=admin&t=editlink&id=${ID}")' -->" title="${STR_EDIT}"> <i
                         class="fa fa-pencil"></i></a>
-            <a class="btn btn-outline btn-danger" href="./?a=admin&t=links&remove=${ID}" title="${STR_REMOVE}"> <i
+            <a class="btn btn-outline btn-danger" href="<!-- URL 'Helper::url("./?a=admin&t=links&remove=${ID}")' -->" title="${STR_REMOVE}"> <i
                         class="fa fa-trash-o"></i></a>
         </td>
         </tr>

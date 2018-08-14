@@ -235,14 +235,14 @@ class Links
 
                 if ($row['id_parent'] == 0) {
                     $div_class = "menu_1";
-                    $name = '<span>' . $row["name"] . '</span> <a title="' . core::getLanguage('str', 'add_subcategory') . '" href="./?a=admin&t=addcategory&catalog_id=' . $row['id'] . '&parent_id=' . $row['id'] . '"><span class="fa fa-plus"></span> <a title="' . core::getLanguage('str', 'edit') . '" href="./?a=admin&t=editcategory&id=' . $row['id'] . '"><span class="fa fa-pencil"></span> <a title="' . core::getLanguage('str', 'remove') . '" href="./?a=admin&t=categories&action=remove&id=' . $row['id'] . '"><span class="fa fa-trash-o"></span></a>';
+                    $name = '<span>' . $row["name"] . '</span> <a title="' . core::getLanguage('str', 'add_subcategory') . '" href="' . Helper::url('./?a=admin&t=addcategory&catalog_id=' . $row['id'] . '&parent_id=' . $row['id']) . '"><span class="fa fa-plus"></span> <a title="' . core::getLanguage('str', 'edit') . '" href="' . Helper::url('./?a=admin&t=editcategory&id=' . $row['id']) . '"><span class="fa fa-pencil"></span> <a title="' . core::getLanguage('str', 'remove') . '" href="' . Helper::url('./?a=admin&t=categories&action=remove&id=' . $row['id']) . '"><span class="fa fa-trash-o"></span></a>';
                 } else {
                     if ($_GET['id'] == $ID)
                         $li = "class=\"active\"";
                     else
                         $li = '';
                     $div_class = "menu_1_1";
-                    $name = '' . $row["name"] . ' <a title="' . core::getLanguage('str', 'add_subcategory') . '" href="./?a=admin&t=addcategory&catalog_id=' . $row['id'] . '&parent_id=' . $row['id'] . '"><span class="fa fa-plus"></span> <a title="' . core::getLanguage('str', 'edit') . '" href="./?a=admin&t=editcategory&id=' . $row['id'] . '"><span class="fa fa-pencil"></span> <a title="' . core::getLanguage('str', 'remove') . '" href="./?a=admin&t=categories&action=remove&id=' . $row['id'] . '"><span class="fa fa-trash-o"></span></a>';
+                    $name = '' . $row["name"] . ' <a title="' . core::getLanguage('str', 'add_subcategory') . '" href="' . Helper::url('./?a=admin&t=addcategory&catalog_id=' . $row['id'] . '&parent_id=' . $row['id']) . '"><span class="fa fa-plus"></span> <a title="' . core::getLanguage('str', 'edit') . '" href="' . Helper::url('./?a=admin&t=editcategory&id=' . $row['id']) . '"><span class="fa fa-pencil"></span> <a title="' . core::getLanguage('str', 'remove') . '" href="' . Helper::url('./?a=admin&t=categories&action=remove&id=' . $row['id']) . '"><span class="fa fa-trash-o"></span></a>';
                 }
 
                 $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE parent_id='$ID'";

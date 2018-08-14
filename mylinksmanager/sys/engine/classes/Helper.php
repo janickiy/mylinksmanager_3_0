@@ -1095,11 +1095,12 @@ class Helper
     public static function url($url)
     {
         if (SLUG == 1) {
+            $url = preg_replace('/\?a=(\w+)&t=(\w+)/', '${1}/${2}', $url);
             $url = preg_replace('/\?a=(\w+)/', '${1}', $url);
-            $url = preg_replace('/\?a=(\w+)&t=(\w+)/', '${1} . '/' . ${2}', $url);
-            return $url;
+            $url = preg_replace('/\?t=(\w+)/', '${1}', $url);
+            return self::root() . $url;
         }
         else
-            return $url;
+            return self::root() . $url;
     }
 }

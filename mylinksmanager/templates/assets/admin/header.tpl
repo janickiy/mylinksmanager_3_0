@@ -5,20 +5,19 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>${TITLE}</title>
 	<!-- BOOTSTRAP STYLES-->
-	<link href="./templates/admin/assets/css/bootstrap.css" rel="stylesheet" />
+	<link href="<!-- URL 'Helper::url("templates/admin/assets/css/bootstrap.css")' -->" rel="stylesheet" />
 	<!-- FONTAWESOME STYLES-->
-	<link href="./templates/admin/assets/css/font-awesome.css" rel="stylesheet" />
+	<link href="<!-- URL 'Helper::url("templates/admin/assets/css/font-awesome.css")' -->" rel="stylesheet" />
 	<!-- MORRIS CHART STYLES-->
-	<link href="./templates/admin/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+	<link href="<!-- URL 'Helper::url("templates/admin/assets/js/morris/morris-0.4.3.min.css")' -->" rel="stylesheet" />
 	<!-- CUSTOM STYLES-->
-	<link href="./templates/admin/assets/css/custom.css" rel="stylesheet" />
+	<link href="<!-- URL 'Helper::url("templates/admin/assets/css/custom.css")' -->" rel="stylesheet" />
 	<!-- GOOGLE FONTS-->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
-	<script src="./js/jquery.min.js"></script>
-
-	<script src="./js/jquery.hide_alertblock.js"></script>
-	<script src="./js/jquery.cookie.js"></script>
+	<script src="<!-- URL 'Helper::url("js/jquery.min.js")' -->"></script>
+	<script src="<!-- URL 'Helper::url("js/jquery.hide_alertblock.js")' -->"></script>
+	<script src="<!-- URL 'Helper::url("js/jquery.cookie.js")' -->"></script>
 
 	<script type="text/javascript">
         $(document).ready(function(){
@@ -77,24 +76,24 @@
 		<div class="sidebar-collapse">
 			<ul class="nav" id="main-menu">
 				<li>
-					<a <!-- IF '${ACTIVE_MENU}' == '' -->class="active-menu"<!-- END IF --> title="${INDEXTITLE}" href="./?a=admin"><i class="fa fa-flag"></i> ${MENU_INDEX}</a>
+					<a <!-- IF '${ACTIVE_MENU}' == '' -->class="active-menu"<!-- END IF --> title="${INDEXTITLE}" href="<!-- URL 'Helper::url("./?a=admin")' -->"><i class="fa fa-flag"></i> ${MENU_INDEX}</a>
 				</li>
 				<li>
 					<a <!-- IF '${ACTIVE_MENU}' == 'addlink' -->class="active-menu"<!-- END IF --> title="${MENU_ADDURL_TITLE}" href="<!-- URL 'Helper::url("./?a=admin&t=addlink")' -->"><i class="fa fa-plus"></i> ${MENU_ADDURL}</a>
 				</li>
 				<li>
-					<a <!-- IF '${ACTIVE_MENU}' == 'category' -->class="active-menu"<!-- END IF --> title="${MENU_CATEGORIES_TITLE}" href="./?a=admin&t=categories"><i class="fa fa-folder-open "></i> ${MENU_CATEGORIES}</a>
+					<a <!-- IF '${ACTIVE_MENU}' == 'category' -->class="active-menu"<!-- END IF --> title="${MENU_CATEGORIES_TITLE}" href="<!-- URL 'Helper::url("./?a=admin&t=categories")' -->"><i class="fa fa-folder-open "></i> ${MENU_CATEGORIES}</a>
 				</li>
 				<li>
-					<a <!-- IF '${ACTIVE_MENU}' == 'links' -->class="active-menu"<!-- END IF --> title="${MENU_LINKS_TITLE}" href="./?a=admin&t=links"><i class="fa fa-list"></i> ${MENU_LINKS}</a></li>
+					<a <!-- IF '${ACTIVE_MENU}' == 'links' -->class="active-menu"<!-- END IF --> title="${MENU_LINKS_TITLE}" href="<!-- URL 'Helper::url("./?a=admin&t=links")' -->"><i class="fa fa-list"></i> ${MENU_LINKS}</a></li>
 				<li>
-					<a <!-- IF '${ACTIVE_MENU}' == 'settings' -->class="active-menu"<!-- END IF --> title="${MENU_SETTINGS_TITLE}" href="./?a=admin&t=settings"><i class="fa fa-gear"></i> ${MENU_SETTINGS}</a>
+					<a <!-- IF '${ACTIVE_MENU}' == 'settings' -->class="active-menu"<!-- END IF --> title="${MENU_SETTINGS_TITLE}" href="<!-- URL 'Helper::url("./?a=admin&t=settings")' -->"><i class="fa fa-gear"></i> ${MENU_SETTINGS}</a>
 				</li>
 				<li>
-					<a	<!-- IF '${ACTIVE_MENU}' == 'update' -->class="active-menu"<!-- END IF --> title="${MENU_UPDATE_TITLE}" href="./?a=admin&t=update"><i class="fa fa-refresh"></i> ${MENU_UPDATE}</a>
+					<a	<!-- IF '${ACTIVE_MENU}' == 'update' -->class="active-menu"<!-- END IF --> title="${MENU_UPDATE_TITLE}" href="<!-- URL 'Helper::url("./?a=admin&t=update")' -->"><i class="fa fa-refresh"></i> ${MENU_UPDATE}</a>
 				</li>
 				<li>
-					<a <!-- IF '${ACTIVE_MENU}' == 'password' -->class="active-menu"<!-- END IF --> title="${MENU_PASSWORD_TITLE}" href="./?a=admin&t=password"><i class="fa fa-key "></i> ${MENU_PASSWORD}</a>
+					<a <!-- IF '${ACTIVE_MENU}' == 'password' -->class="active-menu"<!-- END IF --> title="${MENU_PASSWORD_TITLE}" href="<!-- URL 'Helper::url("./?a=admin&t=password")' -->"><i class="fa fa-key "></i> ${MENU_PASSWORD}</a>
 				</li>
 			</ul>
 		</div>

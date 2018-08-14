@@ -68,7 +68,7 @@ if (Core_Array::getRequest('action')){
     else
         $errors[] = core::getLanguage('error', 'web_apps_error');
 
-	header('Location: ./?a=admin&t=settings');
+	header('Location: ' . Helper::url('./?a=admin&t=settings'));
 	exit;
 }
 

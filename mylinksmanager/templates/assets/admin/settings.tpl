@@ -1,7 +1,7 @@
 <!-- INCLUDE header.tpl -->
 <div class="row">
   <div class="col-md-12">
-    <form action="${PHP_SELF}" method="post" role="form">
+    <form action="${ACTION}" method="post" role="form">
       <div class="panel panel-default">
         <div class="panel-body">
           <ul class="nav nav-pills">

@@ -17,17 +17,9 @@
             <div class="col-xs-12 col-md-3 col-md-pull-6">
                 <p>${HTMLCODE_BANNER}</p>
             </div>
-            <div class="col-xs-6 col-md-6 col-md-push-3">
-                <!-- IF '${SHOW_PR}' == 'yes' -->
-                <iframe src="./?t=showpr&url='${URL}" frameborder="0" scrolling="no" width="100" height="50"></iframe>
-                <!-- END IF -->
-                &nbsp;
-                <!-- IF '${SHOW_CY}' == 'yes' -->
-                <iframe src="./?t=showcy&url='${URL}" frameborder="0" scrolling="no" width="125" height="50"></iframe>
-                <!-- END IF -->
-            </div>
+
             <div class="col-xs-12 col-md-12">
-                <a href="./?a=admin&id=${ID}" class="btn btn-primary" type="button">${BUTTON_HANDCHECK}</a>
+                <a href="<!-- URL 'Helper::url("./?a=admin&id=${ID}")' -->" class="btn btn-primary" type="button">${BUTTON_HANDCHECK}</a>
                 <button class="btn btn-primary" type="button">${BUTTON_AUTOCHECK}</button>
             </div>
         </div>
@@ -48,17 +40,6 @@
         <div class="link-right"> ${STR_RECIP_URL_LINK}: </b>${RECIPROCAL_LINK}<br />
             ${STR_CATEGORY}: </b>${CATEGORY_NAME}<br />
             ${STR_ADDED}: ${TIME} <br />
-        </div>
-        <div class="link-footer">
-            <p style="text-align: right">
-                <!-- IF '${SHOW_PR}' == 'yes' -->
-                <iframe src="./?t=showpr&url='${URL}" frameborder="0" scrolling="no" width="100" height="50"></iframe>
-                <!-- END IF -->
-                &nbsp;
-                <!-- IF '${SHOW_CY}' == 'yes' -->
-                <iframe src="./?t=showcy&url='${URL}" frameborder="0" scrolling="no" width="125" height="50"></iframe>
-                <!-- END IF -->
-            </p>
         </div>
         <div class="link-wrapper col-md-12">
             <div class="link-row">
