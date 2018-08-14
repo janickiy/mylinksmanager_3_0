@@ -223,6 +223,8 @@ $language["str"]["subject_wait"] = "Your site was added to turn for check";
 $language["str"]["subject_newlink"] = "New link";
 $language["str"]["subject_noadd"] = "Your site is not authenticated";
 $language["str"]["subject_add"] = "Your site is added to the catalog";
+$language["str"]["subject_hide"] = "Your link is temporarily hidden";
+$language["str"]["reciprocal_link"] = "Reciprocal link";
 $language["str"]["database_file"] = "Database file";
 $language["str"]["links_db"] = "Database links";
 

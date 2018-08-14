@@ -388,16 +388,18 @@ class SeparateTemplate
         $replaceTokens = array();
         foreach($searchTokens as $token)
         {
-            $replaceTokens[] = $this->statementIdentifier . $token;    
+            $replaceTokens[] = $this->statementIdentifier . $token;
         }
-        
+
         //do not allow php begin indicators
         $searchTokens[] = '<' . '?';
         $replaceTokens[] = '<' . "?php echo('<' . '?'); ?>";
         //
         $searchTokens[] = '<' . '%';
         $replaceTokens[] = '<' . "?php echo('<' . '%'); ?>";
-        
+
+
+
         //perform source replace
         return str_replace($searchTokens, $replaceTokens, $source);
     }
@@ -406,6 +408,12 @@ class SeparateTemplate
     {
         //remove source comments
         return preg_replace("/<!---\s+(.+?)\s+--->/ms", "", $source);
+    }
+
+
+    private function complileToUrl($source)
+    {
+        return preg_replace("/<!-- URL '(.+?)' -->/ms", "<?=\$1 ?>", $source);
     }
 
     private function compileIfStatements($source)
@@ -713,9 +721,11 @@ class SeparateTemplate
 
         //compile php unsafe source
         $source = $this->compilePhpUnsafeSource($source);
-        
+
         //compile comments
         $source = $this->compileComments($source);
+
+        $source = $this->complileToUrl($source);
         
         //compile if statements
         $source = $this->compileIfStatements($source);

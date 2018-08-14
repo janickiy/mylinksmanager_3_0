@@ -219,8 +219,11 @@ $language["str"]["subject_wait"] = "Ваш сайт добавлен в очер
 $language["str"]["subject_newlink"] = "Добавлена новая ссылка";
 $language["str"]["subject_noadd"] = "Ваш сайт не прошел проверку";
 $language["str"]["subject_add"] = "Ваш сайт добавлен в каталог ссылок";
+$language["str"]["subject_hide"] = "Ваша ссылка времено скрыта";
+$language["str"]["reciprocal_link"] = "Обратная ссылка";
 $language["str"]["database_file"] = "Файл базы данных";
 $language["str"]["links_db"] = "База каталога ссылок";
+
 
 $language["status"]["new"] = "Новые";
 $language["status"]["show"] = "Проверено";

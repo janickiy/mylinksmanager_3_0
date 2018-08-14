@@ -1087,4 +1087,19 @@ class Helper
             return "application/force-download";
         }
     }
+
+    /**
+     * @param $url
+     * @return mixed
+     */
+    public static function url($url)
+    {
+        if (SLUG == 1) {
+            $url = preg_replace('/\?a=(\w+)/', '${1}', $url);
+            $url = preg_replace('/\?a=(\w+)&t=(\w+)/', '${1} . '/' . ${2}', $url);
+            return $url;
+        }
+        else
+            return $url;
+    }
 }

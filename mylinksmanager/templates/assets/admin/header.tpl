@@ -80,7 +80,7 @@
 					<a <!-- IF '${ACTIVE_MENU}' == '' -->class="active-menu"<!-- END IF --> title="${INDEXTITLE}" href="./?a=admin"><i class="fa fa-flag"></i> ${MENU_INDEX}</a>
 				</li>
 				<li>
-					<a <!-- IF '${ACTIVE_MENU}' == 'addlink' -->class="active-menu"<!-- END IF --> title="${MENU_ADDURL_TITLE}" href="./?a=admin&t=addlink"><i class="fa fa-plus"></i> ${MENU_ADDURL}</a>
+					<a <!-- IF '${ACTIVE_MENU}' == 'addlink' -->class="active-menu"<!-- END IF --> title="${MENU_ADDURL_TITLE}" href="<!-- URL 'Helper::url("./?a=admin&t=addlink")' -->"><i class="fa fa-plus"></i> ${MENU_ADDURL}</a>
 				</li>
 				<li>
 					<a <!-- IF '${ACTIVE_MENU}' == 'category' -->class="active-menu"<!-- END IF --> title="${MENU_CATEGORIES_TITLE}" href="./?a=admin&t=categories"><i class="fa fa-folder-open "></i> ${MENU_CATEGORIES}</a>

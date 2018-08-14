@@ -40,8 +40,9 @@ if (!$result) exit('Error executing SQL query!');
 $settings = $result->fetch_array();
 $result->close();
 
-// interface module
-include "templates/language/" . $settings['language'] . ".inc";
+
+// get language
+include "templates/language/" . $settings['language'] . ".php";
 
 // Check all hidden and new links
 $query = "SELECT * FROM " . $ConfigDB["prefix"] . "links WHERE status='hide'";
@@ -58,47 +59,47 @@ while ($links = $result->fetch_array()) {
     if ($links['check_link'] == "yes" && $interval_check > $settings['check_interval'] && $interval_check != 1) {
         if (check_url_link($links['reciprocal_link'], $settings['url'])) {
             if ($settings['add_to_blacklist'] == "yes") {
-                $query = "UPDATE " . $ConfigDB["prefix"] . "links SET status='black', time_check=NOW(), reason='" . REASON_ABSENSE_RECIPROCAL . "' WHERE id=" . $links['id'];
+                $query = "UPDATE " . $ConfigDB["prefix"] . "links SET status='black', time_check=NOW(), reason='" . $language["msg"]["reason_absense_reciprocal"] . "' WHERE id=" . $links['id'];
             } else {
                 $query = "DELETE FROM " . $ConfigDB["prefix"] . "links WHERE id=" . $links['id'];
             }
 
             if ($dbh->query($query)) {
                 // Notify the user about his link was removed
-                Helper::sendmail_del_link($links, STR_SUBJECT_DEL);
+                Helper::sendmail_del_link($links, $language["msg"]["subject_del"]);
             }
         } else {
             // Check on, whether the page of answer link for index by metatag <meta name=robot>
             if (Helper::checkMeta($links['reciprocal_link'])) {
                 if ($settings['add_to_blacklist'] == "yes") {
-                    $query = "UPDATE " . $ConfigDB["prefix"] . "links SET status='black', time_check=NOW(), reason='" . REASON_CLOSED_FOR_INDEX_META . "' WHERE id=" . $links['id'];
+                    $query = "UPDATE " . $ConfigDB["prefix"] . "links SET status='black', time_check=NOW(), reason='" . $language["msg"]["reason_closed_for_index_meta"] . "' WHERE id=" . $links['id'];
                 } else {
                     $query = "DELETE FROM " . $ConfigDB["prefix"] . "links WHERE id=" . $links['id'];
                 }
 
                 if ($dbh->query($query)) {
                     // Notify the user about his link was removed
-                    Helper::sendmail_del_link($links, STR_SUBJECT_DEL);
+                    Helper::sendmail_del_link($links, $language["msg"]["subject_del"]);
                 }
             } else {
                 // Check on, whether the directory with answer link is closed for index
                 if (Helper::checkRobots($links['reciprocal_link'])) {
                     if ($settings['add_to_blacklist'] == "yes") {
-                        $query = "UPDATE " . $ConfigDB["prefix"] . "links SET status='black', time_check=NOW(), reason='" . REASON_CLOSED_FOR_INDEX_ROBOT . "' WHERE id=" . $links['id'];
+                        $query = "UPDATE " . $ConfigDB["prefix"] . "links SET status='black', time_check=NOW(), reason='" . $language["msg"]["reason_closed_for_index_robot"] . "' WHERE id=" . $links['id'];
                     } else {
                         $query = "DELETE FROM " . $ConfigDB["prefix"] . "links WHERE id=" . $links['id'];
                     }
 
                     if ($dbh->query($query)) {
                         // Notify the user about his link was removed
-                        Helper::sendmail_del_link($links, STR_SUBJECT_DEL);
+                        Helper::sendmail_del_link($links, $language["msg"]["subject_del"]);
                     }
                 } else {
                     $update = "UPDATE " . $ConfigDB["prefix"] . "links SET status='show', time_check=NOW(), reason='', number_check=0 WHERE id=" . $links['id'];
 
                     if ($dbh->query($update)) {
                         // Notify the user about his link was restored
-                        Helper::sendMailAdd($links, STR_SUBJECT_ADD);
+                        Helper::sendMailAdd($links, $language["str"]["subject_add"]);
                     }
                 }
             }
@@ -129,13 +130,13 @@ while ($links = $result->fetch_array()) {
 
             if ($dbh->query($query)) {
                 // Notify the user about his link was added to catalogue
-                Helper::sendMailAdd($links, STR_SUBJECT_ADD);
+                Helper::sendMailAdd($links, $language["str"]["subject_add"]);
             }
         } else {
             if ($settings['add_to_blacklist'] == "yes") {
                 $query = "UPDATE " . $ConfigDB["prefix"] . "links SET status='black',
 													time_check=NOW(),
-													reason='" . REASON_ABSENSE_RECIPROCAL . "'
+													reason='" . $language["msg"]["reason_absense_reciprocal"]. "'
 								  WHERE id=" . $links['id'];
 
                 $dbh->query($query);
@@ -165,7 +166,7 @@ while ($links = $result->fetch_array()) {
         if (Helper::checkUrlLink($links['reciprocal_link'], $settings['url'])) {
             if ($links['number_check'] == $settings['number_check']) {
                 // Form SQL-query to hide link
-                $update = "UPDATE " . $ConfigDB["prefix"] . "links SET status='hide', time_check=NOW(), reason='" . REASON_ABSENSE_RECIPROCAL . "' WHERE id=" . $links['id'];
+                $update = "UPDATE " . $ConfigDB["prefix"] . "links SET status='hide', time_check=NOW(), reason='" . $language["msg"]["reason_absense_reciprocal"] . "' WHERE id=" . $links['id'];
 
                 if ($dbh->query($update)) {
                     // Notify the user about his link was hidded
@@ -173,7 +174,7 @@ while ($links = $result->fetch_array()) {
                     $root = substr($_SERVER['REQUEST_URI'], 0, $nscript);
                     $url_link_edit = "" . $_SERVER['SERVER_NAME'] . $root . "edit.php?id=" . $links['id'] . "&token=" . $links['token'] . "";
 
-                    Helper::sendmail_hide_link($links, $url_link_edit, STR_SUBJECT_HIDE);
+                    Helper::sendmail_hide_link($links, $url_link_edit, $language["str"]["subject_hide"]);
                 }
             } else {
                 $update = "UPDATE " . $ConfigDB["prefix"] . "links SET time_check=NOW(), number_check=number_check + 1 WHERE id=" . $links['id'];
@@ -184,11 +185,11 @@ while ($links = $result->fetch_array()) {
             if (Helper::checkMeta($links['reciprocal_link'])) {
                 if ($links['number_check'] == $settings['number_check']) {
                     // Form SQL-query to hide link
-                    $update = "UPDATE " . $ConfigDB["prefix"] . "links SET status='hide', time_check=NOW(), reason='" . REASON_CLOSED_FOR_INDEX_ROBOT . "' WHERE id=" . $links['id'];
+                    $update = "UPDATE " . $ConfigDB["prefix"] . "links SET status='hide', time_check=NOW(), reason='" . $language["str"]["reciprocal_link"] . "' WHERE id=" . $links['id'];
 
                     if ($dbh->query($update)) {
                         // Notify the user about the link was hidded
-                        Helper::sendmail_hide_link2($links, MSG_CLOSED_FOR_INDEX_ROBOT, STR_SUBJECT_HIDE);
+                        Helper::sendmail_hide_link2($links, $language["msg"]["reason_closed_for_index_robot"], $language["str"]["subject_hide"]);
                     }
                 } else {
                     $update = "UPDATE " . $ConfigDB["prefix"] . "links SET time_check=NOW(), number_check=number_check + 1 WHERE id= " . $links['id'];
@@ -199,16 +200,16 @@ while ($links = $result->fetch_array()) {
                 if (Helper::checkRobots($links['reciprocal_link'])) {
                     if ($links['number_check'] == $settings['number_check']) {
                         // Form SQL-query to hide link
-                        $update = "UPDATE " . $ConfigDB["prefix"] . "links SET status='hide', time_check=NOW(), reason='" . REASON_CLOSED_FOR_INDEX_ROBOT . "' WHERE id= " . $links['id'];
+                        $update = "UPDATE " . $ConfigDB["prefix"] . "links SET status='hide', time_check=NOW(), reason='" . $language["msg"]["reason_closed_for_index_robot"] . "' WHERE id= " . $links['id'];
 
                         if ($dbh->query($update)) {
                             // Notify the user about his link was hidded
-                            $reason = MSG_CLOSED_FOR_INDEX_ROBOT;
+                            $reason = $language["msg"]["reason_closed_for_index_robot"];
 
-                            Helper::sendmail_hide_link2($links, $reason, STR_SUBJECT_HIDE);
+                            Helper::sendmail_hide_link2($links, $reason, $language["str"]["subject_hide"]);
                         }
                     } else {
-                        $update = "UPDATE " . $ConfigDB["prefix"] . "links SET time_check = NOW(), number_check=number_check + 1 WHERE id=" . $links['id'];
+                        $update = "UPDATE " . $ConfigDB["prefix"] . "links SET time_check=NOW(), number_check=number_check + 1 WHERE id=" . $links['id'];
                         $dbh->query($update);
                     }
                 } else {
