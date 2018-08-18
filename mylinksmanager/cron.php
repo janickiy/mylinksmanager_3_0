@@ -30,7 +30,6 @@ if ($ConfigDB["charset"] != '') {
     $dbh->query("SET NAMES " . $ConfigDB["charset"] . "");
 }
 
-
 // Get a settings of catalogue
 $query = "SELECT * FROM " . $ConfigDB["prefix"] . "settings";
 $result = $dbh->query($query);
@@ -39,7 +38,6 @@ if (!$result) exit('Error executing SQL query!');
 
 $settings = $result->fetch_array();
 $result->close();
-
 
 // get language
 include "templates/language/" . $settings['language'] . ".php";

@@ -262,6 +262,7 @@ $language["msg"]["reason_closed_for_index_robot"] = "Forbidden for indexing in r
 $language["msg"]["notlinks"] = "No links";
 $language["msg"]["check_is_completed"] = "Check is completed";
 $language["msg"]["imported_links"] = 'Imported %COUNT% links';
+$language["msg"]["change_has_added"] = 'Сhange has been added';
 
 $language["error"]["wait_verification"] = "This site is awaiting verification!";
 $language["error"]["already_exists"] = "This site already exists in the Database!";
@@ -307,6 +308,7 @@ $language["error"]["not_filled_captcha"] = "Please fill in security code (CAPTCH
 $language["error"]["not_your_site"] = "Please fill in address of your site!";
 $language["error"]["no_import"] = "Import is incomplete!";
 $language["error"]["no_import_file"] = "File for import is not selected!";
+$language["error"]["token"] = "Token error!";
 
 $language["alert"]["select_action"]  = "Select an action!";
 $language["alert"]["confirm_remove"] = "Are you sure you want to delete?";

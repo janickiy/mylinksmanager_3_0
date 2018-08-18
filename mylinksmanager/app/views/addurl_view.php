@@ -229,22 +229,23 @@ if (Core_Array::getRequest('action')) {
 
     // Add the link if there are not any errors
     if (empty($errors)) {
-        $fields = [];
-        $fields['id'] = 0;
-        $fields['name'] = $name;
-        $fields['url'] = $url;
-        $fields['reciprocal_link'] = $reciprocal_link;
-        $fields['created'] = date("Y-m-d H:i:s");;
-        $fields['time_check'] = '0000-00-00 00:00:00';
-        $fields['email'] = $email;
-        $fields['keywords'] = $keywords;
-        $fields['description'] = $description;
-        $fields['full_description'] = $full_description;
-        $fields['htmlcode_banner'] = $htmlcode_banner;
-        $fields['cat_id'] = $cat_id;
-        $fields['status'] = core::getSetting('add_links_without_check') == "yes" ? 'show' : 'new';;
-        $fields['token'] = Helper::getRandomCode();
-        $fields['check_link'] = 'yes';
+        $fields = [
+            'id' => 0,
+            'name' => $name,
+            'url' => $url,
+            'reciprocal_link' => $reciprocal_link,
+            'created' => date("Y-m-d H:i:s"),
+            'time_check' => '0000-00-00 00:00:00',
+            'email' => $email,
+            'keywords' => $keywords,
+            'description' => $description,
+            'full_description' => $full_description,
+            'htmlcode_banner' => $htmlcode_banner,
+            'cat_id' => $cat_id,
+            'status' => core::getSetting('add_links_without_check') == "yes" ? 'show' : 'new',
+            'token' => Helper::getRandomCode(),
+            'check_link' => 'yes',
+        ];
 
         $insert_id = $data->addLink($fields);
 

@@ -23,7 +23,7 @@ if (Core_Array::getRequest('action')) {
     switch($_REQUEST['action']){
         case 'remove':
             if ($data->delCategory(Core_Array::getGet('id'))) {
-                header('Location: ./?a=admin&t=categories');
+                header("Location: " . Helper::url('./?a=admin&t=categories'));
                 exit;
             } else {
                 $errors[] = core::getLanguage('error', 'web_apps_error');
@@ -32,7 +32,6 @@ if (Core_Array::getRequest('action')) {
             break;
     }
 }
-
 
 include_once core::pathTo('extra', 'admin/top.php');
 

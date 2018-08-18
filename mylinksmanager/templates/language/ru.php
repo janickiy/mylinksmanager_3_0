@@ -259,8 +259,8 @@ $language["msg"]["reason_closed_for_index_robot"] = "Закрыта для ин�
 $language["msg"]["notlinks"] = "Нет ссылок";
 $language["msg"]["check_is_completed"] = "Проверка закончена";
 $language["msg"]["imported_links"] = 'Импортировано %COUNT% ссылок';
+$language["msg"]["change_has_added"] = 'Измениения добавлены';
 
-//errors
 $language["error"]["wait_verification"] = "Этот сайт уже есть в каталоге!";
 $language["error"]["already_exists"] = "Этот сайт уже есть в каталоге!";
 $language["error"]["choose_category"] = "Выберите категорию!";
@@ -305,6 +305,7 @@ $language["error"]["not_filled_captcha"] = "Введите защитный ко
 $language["error"]["not_your_site"] = "Укажите свой адрес сайта!";
 $language["error"]["no_import"] = "Импорт не выполнен!";
 $language["error"]["no_import_file"] = "Файл для импорта не выбран!";
+$language["error"]["token"] = "Ошибка токена!";
 
 $language["alert"]["select_action"]  = "Выберите действие!";
 $language["alert"]["confirm_remove"] = "Вы действительно хотите удалить?";

@@ -133,23 +133,24 @@ if (Core_Array::getRequest('action')){
     }
 
     if (empty($errors)) {
-        $fields = [];
-        $fields['id'] = 0;
-        $fields['name'] = $name;
-        $fields['url'] = $url;
-        $fields['reciprocal_link'] = $reciprocal_link;
-        $fields['created'] = date("Y-m-d H:i:s");
-        $fields['time_check'] = '0000-00-00 00:00:00';
-        $fields['email'] = $email;
-        $fields['keywords'] = $keywords;
-        $fields['description'] = $description;
-        $fields['full_description'] = $full_description;
-        $fields['htmlcode_banner'] = $fields;
-        $fields['cat_id'] = $cat_id;
-        $fields['status'] = 'show';
-        $fields['token'] = Helper::getRandomCode();
-        $fields['check_link'] = Core_Array::getPost('check_link') ? 'yes':'no';
-        $fields['number_check'] = 0;
+        $fields = [
+            'id' => 0,
+            'name' => $name,
+            'url' => $url,
+            'reciprocal_link' => $reciprocal_link,
+            'created' => date("Y-m-d H:i:s"),
+            'time_check' => '0000-00-00 00:00:00',
+            'email' => $email,
+            'keywords' => $keywords,
+            'description' => $description,
+            'full_description' => $full_description,
+            'htmlcode_banner' => $htmlcode_banner,
+            'cat_id' => $cat_id,
+            'status' => 'show',
+            'token' => Helper::getRandomCode(),
+            'check_link' => Core_Array::getPost('check_link') ? 'yes':'no',
+            'number_check' => 0,
+        ];
 
         if ($data->addLink($fields)) {
             unset($_POST);

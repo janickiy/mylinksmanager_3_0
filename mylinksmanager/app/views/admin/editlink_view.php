@@ -112,21 +112,22 @@ if (Core_Array::getRequest('action')){
     }
 
     if (empty($errors)) {
-        $fields = [];
-        $fields['name'] = $name;
-        $fields['url'] = $url;
-        $fields['reciprocal_link'] = $reciprocal_link;
-        $fields['email'] = $email;
-        $fields['keywords'] = $keywords;
-        $fields['description'] = $description;
-        $fields['full_description'] = $full_description;
-        $fields['htmlcode_banner'] = $fields;
-        $fields['cat_id'] = $cat_id;
-        $fields['token'] = Helper::getRandomCode();
-        $fields['check_link'] = Core_Array::getPost('check_link') ? 'yes':'no';
+        $fields = [
+            'name' => $name,
+            'url'  => $url,
+            'reciprocal_link' => $reciprocal_link,
+            'email'    => $email,
+            'keywords' => $keywords,
+            'description' => $description,
+            'full_description' => $full_description,
+            'htmlcode_banner' => $htmlcode_banner,
+            'cat_id' => $cat_id,
+            'token' => Helper::getRandomCode(),
+            'check_link' => Core_Array::getPost('check_link') ? 'yes':'no'
+        ];
 
         if ($data->editLink($fields, Core_Array::getPost('id'))) {
-            header("Location: ./?a=admin&t=links");
+            header("Location: " . Helper::url('./?a=admin&t=links'));
             exit;
         } else $errors[] = core::getLanguage('error', 'web_apps_error');
     }

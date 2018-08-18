@@ -20,7 +20,6 @@ $tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_editcategory'))
 $tpl->assign('TITLE', core::getLanguage('title', 'admin_editcategory'));
 $tpl->assign('HELP', core::getLanguage('info', 'admin_help'));
 
-
 $errors = [];
 
 if (Core_Array::getRequest('action')) {
@@ -53,7 +52,6 @@ if (Core_Array::getRequest('action')) {
                 $image_mime = $_FILES["image"]["type"];
                 $image = Helper::image_convert($original, 80, 80, $image_mime);
             }
-
             //var_dump($image_mime);
            // exit;
         }
@@ -68,7 +66,7 @@ if (Core_Array::getRequest('action')) {
         ];
 
         if ($data->editCategory($fields, Core_Array::getPost('id'))) {
-            header("Location: ./?a=admin&t=categories");
+            header("Location: " . Helper::url('./?a=admin&t=categories'));
             exit;
         } else  $errors[] = core::getLanguage('error', 'web_apps_error');
     }
