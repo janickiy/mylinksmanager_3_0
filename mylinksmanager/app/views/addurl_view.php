@@ -163,12 +163,10 @@ if (Core_Array::getRequest('action')) {
         if ((core::getSetting('limit_reciprocal_links') == "yes" && !empty($url)) && Helper::countLinks($reciprocal_link, core::getSetting('limit_reciprocal_link'))) {
             $errors[] = str_replace('%NUMBER_RECIPROCAL_LINKS_LIMIT%', core::getSetting('limit_reciprocal_link'), core::getLanguage('error', 'number_url'));
         }
-    }
 
-// If $settings['check_links'] == yes, then check
-    // the find a reciprocal link on our site
-    if (!empty($reciprocal_link) && core::getSetting('check_links') == "yes") {
-        if (Helper::checkMultiLinkNative($reciprocal_link,core::getSetting('url'))) {
+        // If $settings['check_links'] == yes, then check
+        // the find a reciprocal link on our site
+        if (Helper::checkUrlLink($reciprocal_link,core::getSetting('url'))) {
             $errors[] = core::getLanguage('error','not_reciprocal_link');
         }
     }

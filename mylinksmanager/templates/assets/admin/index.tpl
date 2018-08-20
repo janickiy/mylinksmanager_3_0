@@ -3,7 +3,7 @@
 <!-- BEGIN links_row -->
 <div class="link-block">
     <div class="col-md-12">
-
+        <form  method="post">
         <div class="well well-lg clearfix" id="link-{ID}">
             <div class="col-xs-12 col-md-6 col-md-push-3">
                 <div>
@@ -19,11 +19,18 @@
             </div>
 
             <div class="col-xs-12 col-md-12">
-                <a href="<!-- URL 'Helper::url("./?a=admin&id=${ID}")' -->" class="btn btn-primary" type="button">${BUTTON_HANDCHECK}</a>
-                <button class="btn btn-primary" type="button">${BUTTON_AUTOCHECK}</button>
+                <a href="<!-- URL 'Helper::url("./?a=admin&t=index&id=${ID}")' -->" class="btn btn-primary" type="button">${BUTTON_HANDCHECK}</a>
+
+                    <button class="btn btn-primary" type="submit">${BUTTON_AUTOCHECK}</button>
+                    <input type=hidden name="id" value="${ID}">
+                    <input type=hidden name="reciprocal_link" value="${RECIPROCAL_LINK}">
+                    <input type=hidden name="url" value="${URL}">
+                    <input type=hidden name="event" value="auto_check">
+                    <input type=hidden name="action" value="post">
+
             </div>
         </div>
-
+</form>
     </div>
 </div>
 <!-- END links_row -->

@@ -30,7 +30,7 @@ if (Core_Array::getPost('action')) {
             if (Links::changeStatusLink(Core_Array::getPost('id'), 'show')) {
                 Helper::sendMailAdd($link, core::getLanguage('str', 'subject_add'));
 
-                header("Location: ./?a=admin");
+                header("Location: " . Helper::url('./?a=admin'));
                 exit;
 
             } else {
@@ -47,7 +47,7 @@ if (Core_Array::getPost('action')) {
             if (core::database()->delete(core::database()->getTableName('links'), "id=" . Core_Array::getPost('id'), '')) {
                 Helper::sendMailNoAdd($link, core::getLanguage('str', 'subject_noadd'));
 
-                header("Location: ./?a=admin");
+                header("Location: " . Helper::url('./?a=admin'));
                 exit;
             } else $errors = core::getLanguage('error', 'web_apps_error');
 
@@ -61,7 +61,7 @@ if (Core_Array::getPost('action')) {
                 Helper::sendMailNoAdd($link, core::getLanguage('str', 'subject_noadd'));
                 $success = core::getLanguage('msg', 'link_added_to_blacklist');
 
-                header("Location: ./?a=admin");
+                header("Location: " . Helper::url('./?a=admin'));
                 exit;
 
             } else {
@@ -73,7 +73,7 @@ if (Core_Array::getPost('action')) {
 
             if (!empty(core::getSetting('url'))) {
                 // Check is exist answer link on page with address $_POST['url_link']
-                if (Helper::checkUrlLink(Core_Array::getPost('reciprocal_link'), Core_Array::getPost('url'))) {
+                if (Helper::checkUrlLink(Core_Array::getPost('reciprocal_link'), core::getSetting('url'))) {
                     // Add the link if it is
                     if (Links::changeStatusLink(Core_Array::getPost('id'), 'show')) {
                         // Send email to the user about the link was added
@@ -81,7 +81,7 @@ if (Core_Array::getPost('action')) {
 
                         Helper::sendMailAdd($link, core::getLanguage('str', 'subject_add'));
 
-                        header("Location: ./?a=admin");
+                        header("Location: " . Helper::url('./?a=admin'));
                         exit;
 
                     } else core::getLanguage('error', 'web_apps_error');
@@ -94,7 +94,7 @@ if (Core_Array::getPost('action')) {
                     }
 
                     if ($result) {
-                        header("Location: ./?a=admin");
+                        header("Location: " . Helper::url('./?a=admin'));
                         exit;
                     } else core::getLanguage('error', 'web_apps_error');
                 }

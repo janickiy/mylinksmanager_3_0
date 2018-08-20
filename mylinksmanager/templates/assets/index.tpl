@@ -78,7 +78,7 @@ ${TOPBARMENU}
    <tr>
       <td>
          <h2>${SUBCATALOG}</h2>
-         <div style="text-align: center;"> <a href="./?t=addurl">${STR_ADD_URL}</a> </div>
+         <div style="text-align: center;"> <a href="<!-- URL 'Helper::url("./?t=addurl")' -->">${STR_ADD_URL}</a> </div>
          <!-- BEGIN ROW_LINKS -->
          <div id="link">
             <table width="100%" border="0">
@@ -114,7 +114,7 @@ ${TOPBARMENU}
             ${PERVPAGE}${PAGE2LEFT}${PAGE1LEFT}<b>${PAGE}</b>${PAGE1RIGHT}${PAGE2RIGHT}${NEXTPAGE} 
          </div>
          <!-- END pagination -->
-         <div style="text-align: center;"> <a href="./?t=addurl">${STR_ADD_URL}</a> </div>
+         <div style="text-align: center;"> <a href="<!-- URL 'Helper::url("./?t=addurl")' -->">${STR_ADD_URL}</a> </div>
       </td>
    </tr>
 </table>
