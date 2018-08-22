@@ -229,6 +229,7 @@ $language["str"]["warning"] = 'Внимание';
 $language["str"]["start_update"] = "Идёт обновление ... Загрузка архива";
 $language["str"]["download_completed"] = "Скачивание завершено. Обнавление базы данных...";
 $language["str"]["install_msg"] = 'Если PHP Newsletter уже установлен, то удалите папку <strong>install</strong>, иначе запустите <a href="%URL%">мастер установки</a>.';
+$language["str"]["url_info"] = 'http://janicky.com/php-scripts/my-links-manager';
 
 $language["status"]["new"] = "Новые";
 $language["status"]["show"] = "Проверено";
