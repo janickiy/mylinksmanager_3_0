@@ -232,6 +232,7 @@ $language["str"]["update_warning"] = 'A new version of %SCRIPTNAME% is already a
 $language["str"]["warning"] = 'Warning';
 $language["str"]["start_update"] = 'Start the update. Loading update... ';
 $language["str"]["download_completed"] = "Download completed. Updating the database...";
+$language["str"]["install_msg"] = 'If PHP Newsletter has been already installed, then you should delete <strong>install</strong> folder; otherwise launch the <a href="%URL%">installation wizard</a>.';
 
 $language["status"]["new"] = "New";
 $language["status"]["show"] = "Show";

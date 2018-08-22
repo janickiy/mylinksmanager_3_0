@@ -40,7 +40,6 @@ $INSTALL["lang"]["str"]["further_actions"] = "Дальнейшие действ�
 $INSTALL["lang"]["str"]["install_complete"] = "Установка My Links Manager %VERSION% успешно завершена. Прежде чем приступать к работе с My Links Manager, удалите папку <strong>install</strong>.";
 $INSTALL["lang"]["str"]["admin_area"] = "Перейти в панель администратора";
 $INSTALL["lang"]["str"]["login"] = "Логин";
-$language["str"]["install_msg"] = 'Если PHP Newsletter уже установлен, то удалите папку <strong>install</strong>, иначе запустите <a href="%URL%">мастер установки</a>.';
 
 $INSTALL["lang"]["error"]["must_be_enter_dbserver"] = "Должно быть указано имя сервера БД!";
 $INSTALL["lang"]["error"]["must_be_enter_dblogin"] = "Должен быть указан логин пользователя БД!";
