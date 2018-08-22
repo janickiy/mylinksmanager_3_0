@@ -23,7 +23,7 @@
         $(document).ready(function(){
             $.ajax({
                 cache: false,
-                url: './?t=ajax&action=alert_update',
+                url: "<!-- URL 'Helper::url("./?t=ajax&action=alert_update")' -->",
                 dataType: "json",
                 success: function(data){
                     if (data.msg != '' && $.cookie('alertshow') != 'no'){
@@ -67,9 +67,10 @@
 	<nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-			<a class="navbar-brand" href="./?a=admin"></a>
+			<a class="navbar-brand" href="<!-- URL 'Helper::url("./")' -->"></a>
+			<span class="version">${SCRIPT_VERSION}</span>
 		</div>
-		<div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;"> <a href="./?a=admin&t=logout" class="btn btn-danger square-btn-adjust">${STR_LOGOUT}</a> </div>
+		<div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;"> <a href="<!-- URL 'Helper::url("./?a=admin&t=logout")' -->" class="btn btn-danger square-btn-adjust">${STR_LOGOUT}</a> </div>
 	</nav>
 	<!-- /. NAV TOP  -->
 	<nav class="navbar-default navbar-side" role="navigation">
@@ -109,6 +110,7 @@
 					<!-- END IF -->
 				</div>
 			</div>
+
 			<!-- BEGIN show_errors -->
 			<div class="alert alert-danger">
 				<button class="close" data-dismiss="alert">×</button>
@@ -120,10 +122,11 @@
 				</ul>
 			</div>
 			<!-- END show_errors -->
+
 			<!-- IF '${INFO_ALERT}' != '' -->
 			<div class="alert alert-info"> ${INFO_ALERT} </div>
 			<!-- END IF -->
-			<div class="alert alert-warning" style="display:none">
+			<div class="alert alert-warning" id="alert_msg_block" style="display:none">
 				<button class="close" onClick="$.cookie('alertshow', 'no');" data-dismiss="alert">×</button>
 				<h4 class="alert-heading">${STR_WARNING}!</h4>
 				<span id="alert_warning_msg">${PAGE_ALERT_WARNING_MSG}</span>
@@ -135,6 +138,7 @@
 				<strong>${STR_ERROR}!</strong> ${ERROR_ALERT}
 			</div>
 			<!-- END IF -->
+
 			<!-- IF '${MSG_ALERT}' != '' -->
 			<div class="alert alert-success">
 				<button class="close" data-dismiss="alert">×</button>

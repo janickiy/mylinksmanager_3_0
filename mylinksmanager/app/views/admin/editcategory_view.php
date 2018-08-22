@@ -92,7 +92,7 @@ $tpl->assign('STR_REMOVE_PIC', core::getLanguage('str', 'remove_pic'));
 $tpl->assign('BUTTON', core::getLanguage('button', 'edit'));
 
 //value
-$tpl->assign('PHP_SELF', $_SERVER['REQUEST_URI']);
+$tpl->assign('ACTION', $_SERVER['REQUEST_URI']);
 $tpl->assign('NAME', Core_Array::getPost('name') ? $_POST['name'] : $row['name']);
 $tpl->assign('DESCRIPTION', Core_Array::getPost('description') ? $_POST['description'] : $row['description']);
 $tpl->assign('KEYWORDS', Core_Array::getPost('keywords') ? $_POST['keywords'] : $row['keywords']);

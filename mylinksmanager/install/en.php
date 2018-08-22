@@ -40,6 +40,8 @@ $INSTALL["lang"]["str"]["further_actions"] = "Further Actions";
 $INSTALL["lang"]["str"]["install_complete"] = "My Links Manager %VERSION% installation completed successfully. Before you start working with My Links Manager, please delete the <strong>install</strong> folder.";
 $INSTALL["lang"]["str"]["admin_area"] = "Go to admin area";
 $INSTALL["lang"]["str"]["login"] = "Login";
+$language["str"]["install_msg"] = 'If PHP Newsletter has been already installed, then you should delete <strong>install</strong> folder; otherwise launch the <a href="%URL%">installation wizard</a>.';
+
 $INSTALL["lang"]["error"]["must_be_enter_dbserver"] = "The database server name should be specified!";
 $INSTALL["lang"]["error"]["must_be_enter_dblogin"] = "The database user name should be specified!";
 $INSTALL["lang"]["error"]["must_be_enter_dbname"] = "The database name should be specified!";

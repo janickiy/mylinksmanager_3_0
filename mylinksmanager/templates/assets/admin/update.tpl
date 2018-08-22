@@ -7,7 +7,7 @@
             $.ajax({
                 type: "GET",
                 cache: false,
-                url: "./?t=ajax&action=start_update&p=start",
+                url: "<!-- URL 'Helper::url("./?t=ajax&action=start_update&p=start")' -->",
                 dataType: "json",
                 success: function(data){
                     if (data.result == 'yes') {
@@ -27,7 +27,7 @@
         $.ajax({
             type: "GET",
             cache: false,
-            url: "./?t=ajax&action=start_update&p=update_files",
+            url: "<!-- URL 'Helper::url("./?t=ajax&action=start_update&p=update_files")' -->",
             dataType: "json",
             success: function(data){
                 if (data.result == 'yes') {
@@ -45,7 +45,7 @@
         $.ajax({
             type: "GET",
             cache: false,
-            url: "./?t=ajax&action=start_update&p=update_bd",
+            url: "<!-- URL 'Helper::url("./?t=ajax&action=start_update&p=update_bd")' -->",
             dataType: "json",
             success: function(data){
                 if (data.result == 'yes') {

@@ -10,6 +10,16 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
-$tpl->assign('SCRIPT_VERSION', VERSION);
-$tpl->assign('STR_LOGOUT', core::getLanguage('str', 'logout'));
-$tpl->assign('STR_WARNING', core::getLanguage('str', 'warning'));
+class Controller_test extends Controller
+{
+	function __construct()
+	{
+		$this->model = new Model_test();
+		$this->view = new View();
+	}
+
+	function action_index()
+	{
+		$this->view->generate('test_view.php',$this->model);
+	}
+}

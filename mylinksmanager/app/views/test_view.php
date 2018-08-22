@@ -10,6 +10,10 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
-$tpl->assign('SCRIPT_VERSION', VERSION);
-$tpl->assign('STR_LOGOUT', core::getLanguage('str', 'logout'));
-$tpl->assign('STR_WARNING', core::getLanguage('str', 'warning'));
+
+$reciprocal_link = 'demo.janicky.com/link.html';
+
+var_dump(Helper::checkUrlLink($reciprocal_link, core::getSetting('url')));
+
+//Links::changeStatusLink(1, 'show');
+Links::changeStatusLink(1, 'black', core::getLanguage('msg', 'reason_absense_reciprocal'));

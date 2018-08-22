@@ -16,17 +16,18 @@ define("DEBUG", 1);
 define("SLUG", 1);
 define('VERSION', '3.0.0');
 
-$cmspaths = ['core' => 'sys/core',
-             'engine' => 'sys/engine', // Engines AUTOLOAD folder
-             'config' => 'config', // Config
-             'templates' => 'templates', // templates
-             'controllers' => 'app/controllers', // controllers
-             'libs' => 'vendor', // libraries
-             'models' => 'app/models',
-             'views' => 'app/views',
-             'extra' => 'app/snippets',
-             'tmp' => 'tmp'
-             ];
+$cmspaths = [
+    'core' => 'sys/core',
+    'engine' => 'sys/engine', // Engines AUTOLOAD folder
+    'config' => 'config', // Config
+    'templates' => 'templates', // templates
+    'controllers' => 'app/controllers', // controllers
+    'libs' => 'vendor', // libraries
+    'models' => 'app/models',
+    'views' => 'app/views',
+    'extra' => 'app/snippets',
+    'tmp' => 'tmp'
+];
 
 require_once SYS_ROOT . $cmspaths['config'] . '/config_db.php';
 require_once SYS_ROOT . $cmspaths['core'] . '/core.php';

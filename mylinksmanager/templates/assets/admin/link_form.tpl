@@ -4,8 +4,8 @@
       <div class="panel-heading"><span class="msg">*</span> - ${STR_REQUIRED_FIELDS}</div>
       <div class="panel-body">
         <form action="${ACTION}" method="post" role="form">
-          <!-- IF '${LINK_ID}' != '' -->
-          <input type=hidden name="link_id" value="${LINK_ID}">
+          <!-- IF '${ID}' != '' -->
+          <input type="hidden" name="id" value="${ID}">
           <!-- END IF -->
           <input type=hidden name="action" value="post">
           <div class="form-group">

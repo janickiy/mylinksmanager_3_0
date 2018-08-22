@@ -88,4 +88,76 @@ switch (Core_Array::getGet('action'))
         }
 
         break;
+
+    case 'start_update':
+
+        $path = SYS_ROOT . 'tmp/update.zip';
+        $update = new Update(core::getSetting("language"), VERSION);
+        $newversion = $update->getVersion();
+        $content = [];
+
+        if (Core_Array::getRequest('p') == 'start') {
+            if ($data->DownloadUpdate($path, $update->getUpdate())){
+                $content['status'] = core::getLanguage('str', 'download_completed');
+                $content['result'] = 'yes';
+            } else {
+                $content['status'] = core::getLanguage('error', 'failed_to_update');
+                $content['result'] = 'no';
+            }
+        }
+
+        if (Core_Array::getRequest('p') == 'update_files') {
+            $destination = SYS_ROOT;
+
+            $zip = new ZipArchive;
+            if ($zip->open($path) === TRUE) {
+
+                if (is_writeable($destination)) {
+                    $zip->extractTo($destination);
+                    $zip->close();
+                    $content['status'] = core::getLanguage('msg', 'files_unzipped_successfully');
+                    $content['result'] = 'yes';
+                } else {
+                    $content['status'] = core::getLanguage('msg', 'directory_not_writeable');
+                    $content['result'] = 'no';
+                }
+            } else {
+                $content['status'] = core::getLanguage('msg', 'cannot_read_zip_archive');
+                $content['result'] = 'no';
+            }
+        }
+
+        if (Core_Array::getRequest('p') == 'update_bd') {
+
+            $current_version_code = Helper::getCurrentVersionCode(VERSION);
+            $version_code_detect = $data->versionCodeDetect();
+
+            $result = false;
+
+            if ($version_code_detect < $current_version_code) {
+                if ($version_code_detect == 50000) {
+                    $path_update = 'tmp/update_3_0_' . core::getSetting('language') . '.sql';
+                }
+
+                if (is_file($path_update)) {
+                    if ($data->updateDB($path_update)) {
+                        $result = true;
+                    }
+                }
+            } else {
+                $result = true;
+            }
+
+            if ($result === true) {
+                $content['status'] = core::getLanguage('msg', 'update_completed');
+                $content['result'] = 'yes';
+            } else {
+                $content['status'] = core::getLanguage('error', 'failed_to_update');
+                $content['result'] = 'no';
+            }
+        }
+
+        Helper::showJSONContent(json_encode($content));
+
+        break;
 }

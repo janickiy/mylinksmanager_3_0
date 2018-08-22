@@ -24,7 +24,8 @@ class Model_links extends Model
     {
         core::database()->tablename = core::database()->getTableName('links') . " l LEFT JOIN " . core::database()->getTableName('catalog') . " c ON c.id=l.cat_id";
 
-        $search = trim(Core_Array::getPost('search'));
+        $search = trim(Core_Array::getRequest('search'));
+        $category = core::database()->escape(Core_Array::getRequest('category'));
 
         if ($search) {
             $_search = core::database()->escape($search);
@@ -71,7 +72,6 @@ class Model_links extends Model
     public function getTotal()
     {
         core::database()->tablename = core::database()->getTableName('links') . " l LEFT JOIN " . core::database()->getTableName('catalog') . " c ON l.cat_id=c.id";
-
         $number = intval((core::database()->get_total() - 1) / core::database()->pnumber) + 1;
 
         return $number;

@@ -24,17 +24,18 @@ if (Core_Array::getPost('action')) {
 
     $errors = [];
 
+    $link = Links::getLinkInfo(Core_Array::getPost('id'));
+
     switch (Core_Array::getPost('event')) {
         case 'add':
 
             if (Links::changeStatusLink(Core_Array::getPost('id'), 'show')) {
                 Helper::sendMailAdd($link, core::getLanguage('str', 'subject_add'));
 
-                header("Location: " . Helper::url('./?a=admin'));
-                exit;
+                $success = core::getLanguage('msg', 'link_added');
 
             } else {
-                $errors = core::getLanguage('error', 'web_apps_error');
+                $errors[] = core::getLanguage('error', 'web_apps_error');
             }
 
             break;
@@ -42,14 +43,12 @@ if (Core_Array::getPost('action')) {
         // Remove link
         case 'delete':
 
-            $link = Links::getLinkInfo(Core_Array::getPost('id'));
-
             if (core::database()->delete(core::database()->getTableName('links'), "id=" . Core_Array::getPost('id'), '')) {
                 Helper::sendMailNoAdd($link, core::getLanguage('str', 'subject_noadd'));
 
-                header("Location: " . Helper::url('./?a=admin'));
-                exit;
-            } else $errors = core::getLanguage('error', 'web_apps_error');
+                $success = core::getLanguage('msg', 'link_removed');
+
+            } else $errors[] = core::getLanguage('error', 'web_apps_error');
 
             break;
 
@@ -57,15 +56,13 @@ if (Core_Array::getPost('action')) {
         case 'black':
 
             if (Links::changeStatusLink(Core_Array::getPost('id'), 'show')) {
-                $link = Links::getLinkInfo(Core_Array::getPost('id'));
+
                 Helper::sendMailNoAdd($link, core::getLanguage('str', 'subject_noadd'));
+
                 $success = core::getLanguage('msg', 'link_added_to_blacklist');
 
-                header("Location: " . Helper::url('./?a=admin'));
-                exit;
-
             } else {
-                $errors = core::getLanguage('error', 'web_apps_error');
+                $errors[] = core::getLanguage('error', 'web_apps_error');
             }
 
         // Automatic check the link
@@ -73,30 +70,28 @@ if (Core_Array::getPost('action')) {
 
             if (!empty(core::getSetting('url'))) {
                 // Check is exist answer link on page with address $_POST['url_link']
-                if (Helper::checkUrlLink(Core_Array::getPost('reciprocal_link'), core::getSetting('url'))) {
+                if (!Helper::checkUrlLink($link['reciprocal_link'], core::getSetting('url'))) {
                     // Add the link if it is
                     if (Links::changeStatusLink(Core_Array::getPost('id'), 'show')) {
                         // Send email to the user about the link was added
-                        $link = Links::getLinkInfo(Core_Array::getPost('id'));
-
                         Helper::sendMailAdd($link, core::getLanguage('str', 'subject_add'));
 
-                        header("Location: " . Helper::url('./?a=admin'));
-                        exit;
+                        $success = core::getLanguage('msg', 'check_completed');
 
-                    } else core::getLanguage('error', 'web_apps_error');
+                    } else $errors[] = core::getLanguage('error', 'web_apps_error');
                 } else {
                     // Remove the link or add to black list if it is not
                     if (core::getSetting('add_to_blacklist') == "yes") {
-                        $result = Links::changeStatusLink(Core_Array::getPost('id'), 'black', core::getSetting('msg', 'reason_absense_reciprocal'));
+                        $result = Links::changeStatusLink(Core_Array::getPost('id'), 'black', core::getLanguage('msg', 'reason_absense_reciprocal'));
                     } else {
                         $result = core::database()->delete(core::database()->getTableName('links'), "id=" . Core_Array::getPost('id'), '');
                     }
 
                     if ($result) {
-                        header("Location: " . Helper::url('./?a=admin'));
-                        exit;
-                    } else core::getLanguage('error', 'web_apps_error');
+
+                        $success = core::getLanguage('msg', 'check_completed');
+
+                    } else $errors[] = core::getLanguage('error', 'web_apps_error');
                 }
             }
 
@@ -104,6 +99,20 @@ if (Core_Array::getPost('action')) {
     }
 }
 
+if (isset($success)) $tpl->assign('MSG_ALERT', $success);
+
+if (!empty($errors)) {
+    $errorBlock = $tpl->fetch('show_errors');
+    $errorBlock->assign('STR_IDENTIFIED_FOLLOWING_ERRORS', core::getLanguage('str', 'identified_following_errors'));
+
+    foreach($errors as $row) {
+        $rowBlock = $errorBlock->fetch('row');
+        $rowBlock->assign('ERROR', $row);
+        $errorBlock->assign('row', $rowBlock);
+    }
+
+    $tpl->assign('show_errors', $errorBlock);
+}
 
 include_once core::pathTo('extra', 'admin/top.php');
 
@@ -114,8 +123,8 @@ if (Core_Array::getGet('id')) {
     $blockInfoLink = $tpl->fetch('info_link');
 
     $blockInfoLink->assign('STR_BACK', core::getLanguage('str', 'back'));
-    $link_info = Links::getLinkInfo(Core_Array::getGet('id'));
-    $htmlcode_banner = !empty($link_info['htmlcode_banner']) ? $link_info['htmlcode_banner'] : '<a href="http://' . $link_info['url'] . '"><img border="0" width="88" height="31" src="./templates/images/noimage.gif"></a>';
+    $link_info = Links::getLinkInfo(Core_Array::getGet('id'));//<!-- URL 'Helper::url("./?a=admin")' -->
+    $htmlcode_banner = !empty($link_info['htmlcode_banner']) ? $link_info['htmlcode_banner'] : '<a href="http://' . $link_info['url'] . '"><img border="0" width="88" height="31" src="' . Helper::url('./templates/images/noimage.gif'). '"></a>';
     $blockInfoLink->assign('HTMLCODE_BANNER', $htmlcode_banner);
     $blockInfoLink->assign('DESCRIPTION', nl2br($link_info['description']));
     $blockInfoLink->assign('ID', $link_info['id']);
@@ -156,8 +165,6 @@ if (Core_Array::getGet('id')) {
             $htmlcode_banner = !empty($row['htmlcode_banner']) ? $row['htmlcode_banner'] : '<a href="http://' . $row['url'] . '" target=_blank><img border="0" width="88" height="31" src="./templates/images/noimage.gif"></a>';
 
             $blockRow->assign('HTMLCODE_BANNER', $htmlcode_banner);
-            $blockRow->assign('SHOW_PR', core::getSetting('show_cy'));
-            $blockRow->assign('SHOW_CY', core::getSetting('show_pr'));
             $blockRow->assign('STR_ADDED', core::getLanguage('str', 'added'));
             $blockRow->assign('STR_CATEGORY', core::getLanguage('str', 'category'));
             $blockRow->assign('STR_EMAIL', core::getLanguage('str', 'email'));

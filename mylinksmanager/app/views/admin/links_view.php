@@ -71,7 +71,7 @@ $tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_links'));
 $tpl->assign('TITLE', core::getLanguage('title', 'admin_links'));
 $tpl->assign('HELP', core::getLanguage('info', 'admin_links'));
 
-include_once core::pathTo('extra', 'top.php');
+
 
 $order = [
     'id'  => "id",
@@ -251,6 +251,8 @@ if ($search) {
     $tpl->assign('SEARCH', urlencode($search));
     $tpl->assign('FORM_SEARCH', $search);
 }
+
+include_once core::pathTo('extra', 'admin/top.php');
 
 // menu
 include_once core::pathTo('extra', 'admin/menu.php');

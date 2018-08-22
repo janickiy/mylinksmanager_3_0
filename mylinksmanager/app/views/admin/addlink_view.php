@@ -155,7 +155,7 @@ if (Core_Array::getRequest('action')){
         if ($data->addLink($fields)) {
             unset($_POST);
             $success_msg = core::getLanguage('msg', 'link_added');
-        }
+        } else $errors[] = core::getLanguage('error', 'web_apps_error');
     }
 }
 

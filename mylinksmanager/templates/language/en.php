@@ -227,6 +227,11 @@ $language["str"]["subject_hide"] = "Your link is temporarily hidden";
 $language["str"]["reciprocal_link"] = "Reciprocal link";
 $language["str"]["database_file"] = "Database file";
 $language["str"]["links_db"] = "Database links";
+$language["str"]["script_name"] = "My Links Manager";
+$language["str"]["update_warning"] = 'A new version of %SCRIPTNAME% is already available and you can use it. The newest version is %VERSION%, created %CREATED% <a href="%DOWNLOADLINK%">Download</a> %MESSAGE%';
+$language["str"]["warning"] = 'Warning';
+$language["str"]["start_update"] = 'Start the update. Loading update... ';
+$language["str"]["download_completed"] = "Download completed. Updating the database...";
 
 $language["status"]["new"] = "New";
 $language["status"]["show"] = "Show";
@@ -246,6 +251,7 @@ $language["button"]["reset"] = "reset";
 $language["button"]["find"] = "find";
 $language["button"]["check_all_links_automatically"] = "Check all links automatically";
 $language["button"]["export"] = "Export";
+$language["button"]["update"] = "Update to %SCRIPT_NAME% %NEW_VERSION%";
 
 $language["msg"]["notfound"] = "For your search nothing is found!";
 $language["msg"]["link_added"] = "Link has been added";
@@ -263,6 +269,13 @@ $language["msg"]["notlinks"] = "No links";
 $language["msg"]["check_is_completed"] = "Check is completed";
 $language["msg"]["imported_links"] = 'Imported %COUNT% links';
 $language["msg"]["change_has_added"] = 'Сhange has been added';
+$language["msg"]["check_completed"] = "Сheck completed";
+$language["msg"]["files_unzipped_successfully"] = "Files unzipped successfully";
+$language["msg"]["php_doesnt_support_unzip_func"] = "Error: Your PHP version does not support unzip functionality";
+$language["msg"]["files_unzipped_successfully"] = "Files unzipped successfully";
+$language["msg"]["directory_not_writeable"] = "Error: Directory not writeable by webserver";
+$language["msg"]["no_zlib_support_enabled"] = "Error: Your PHP has no zlib support enabled";
+$language["msg"]["cannot_read_zip_archive"] = "Error: Cannot read .zip archive";
 
 $language["error"]["wait_verification"] = "This site is awaiting verification!";
 $language["error"]["already_exists"] = "This site already exists in the Database!";
@@ -309,6 +322,7 @@ $language["error"]["not_your_site"] = "Please fill in address of your site!";
 $language["error"]["no_import"] = "Import is incomplete!";
 $language["error"]["no_import_file"] = "File for import is not selected!";
 $language["error"]["token"] = "Token error!";
+$language["error"]["failed_to_update"] = 'ERROR: Failed to update!';
 
 $language["alert"]["select_action"]  = "Select an action!";
 $language["alert"]["confirm_remove"] = "Are you sure you want to delete?";

@@ -694,7 +694,8 @@ class Helper
      * @param $ext
      * @return string
      */
-    public static function get_mime_type($ext) {
+    public static function get_mime_type($ext)
+    {
         $mimetypes = Array(
             "123" => "application/vnd.lotus-1-2-3",
             "3ds" => "image/x-3ds",
@@ -1099,8 +1100,19 @@ class Helper
             $url = preg_replace('/\?a=(\w+)/', '${1}', $url);
             $url = preg_replace('/\?t=(\w+)/', '${1}', $url);
             return self::root() . $url;
-        }
-        else
+        } else
             return self::root() . $url;
+    }
+
+    /**
+     * @param $version
+     * @return mixed
+     */
+    public function getCurrentVersionCode($version)
+    {
+        preg_match("/(\d+)\.(\d+)\./", $version, $out);
+        $current_version_code = ($out[1] * 10000 + $out[2] * 100);
+
+        return $current_version_code;
     }
 }

@@ -32,21 +32,21 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="BtnPanelIcon">
-            <a class="btn btn-outline btn-default btn-lg" title="${STR_IMPORT_LINKS}" href="./?a=admin&t=import"> <span
-                        class="fa fa-download fa-2x"></span> <span class="IconText">${STR_IMPORT_LINKS}</span> </a>
-            <a class="btn btn-outline btn-default btn-lg" title="${STR_EXPORT_LINKS}" href="./?a=admin&t=export"> <span
-                        class="fa fa-upload fa-2x"></span> <span class="IconText">${STR_EXPORT_LINKS}</span> </a>
+            <a class="btn btn-outline btn-default btn-lg" title="${STR_IMPORT_LINKS}" href="<!-- URL 'Helper::url("./?a=admin&t=import")' -->">
+            <span class="fa fa-download fa-2x"></span> <span class="IconText">${STR_IMPORT_LINKS}</span>
+            </a>
+            <a class="btn btn-outline btn-default btn-lg" title="${STR_EXPORT_LINKS}" href="<!-- URL 'Helper::url("./?a=admin&t=export")' -->">
+            <span class="fa fa-upload fa-2x"></span> <span class="IconText">${STR_EXPORT_LINKS}</span>
+            </a>
         </div>
     </div>
 </div>
 
 <div class="row">
     <div class="col-lg-12">
-        <form class="form-inline" style="margin-bottom: 20px; margin-top: 20px;" method="GET" name="searchform" action="${ACTION}">
-            <input type="hidden" name="a" value="admin">
-            <input type="hidden" name="t" value="links">
+        <form class="form-inline" style="margin-bottom: 20px; margin-top: 20px;" method="POST" name="searchform" action="<!-- URL 'Helper::url("./?a=admin&t=links")' --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->">
             <div class="form-group">
-                <input class="form-control form-warning input-sm" type="text" name="search" value="${FORM_SEARCH}">
+                <input class="form-control form-warning input-sm" type="text" name="search" value="${SEARCH}">
             </div>
             <input class="btn btn-info" type="submit" value="${BUTTON_FIND}">
         </form>
@@ -59,37 +59,37 @@
         <tr>
             <th width="10px"><input type="checkbox" title="TABLECOLMN_CHECK_ALLBOX" title="${STR_CHECK_ALLBOX}" id="check_all"></th>
             <th>
-                <a href="./?a=admin&t=links&id=<!-- IF '${GET_ID}' != '' -->${GET_ID}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">ID</a>
-                <span class="<!-- IF '${GET_ID}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_ID}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"</span>
+                <a href="<!-- URL 'Helper::url("./?a=admin&t=links&")' -->id=<!-- IF '${GET_ID}' != '' -->${GET_ID}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">ID</a>
+                <span class="<!-- IF '${GET_ID}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_ID}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"></span>
             </th>
             <th>
-                <a href="./?a=admin&t=links&name=<!-- IF '${GET_NAME}' != '' -->${GET_NAME}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_NAME}</a>
-                <span class="<!-- IF '${GET_NAME}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_NAME}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"</span>
+                <a href="<!-- URL 'Helper::url("./?a=admin&t=links&")' -->name=<!-- IF '${GET_NAME}' != '' -->${GET_NAME}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_NAME}</a>
+                <span class="<!-- IF '${GET_NAME}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_NAME}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"></span>
             </th>
             <th>${STR_DESCRIPTION}</th>
             <th>
-                <a href="./?a=admin&t=links&email=<!-- IF '${GET_EMAIL}' != '' -->${GET_EMAIL}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_EMAIL}</a>
-                <span class="<!-- IF '${GET_EMAIL}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_EMAIL}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"</span>
+                <a href="<!-- URL 'Helper::url("./?a=admin&t=links&")' -->email=<!-- IF '${GET_EMAIL}' != '' -->${GET_EMAIL}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_EMAIL}</a>
+                <span class="<!-- IF '${GET_EMAIL}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_EMAIL}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"></span>
             </th>
             <th>
-                <a href="./?a=admin&t=links&url=<!-- IF '${GET_URL}' != '' -->${GET_URL}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_URL}</a>
-                <span class="<!-- IF '${GET_URL}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_URL}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"</span>
+                <a href="<!-- URL 'Helper::url("./?a=admin&t=links&")' -->url=<!-- IF '${GET_URL}' != '' -->${GET_URL}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_URL}</a>
+                <span class="<!-- IF '${GET_URL}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_URL}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"></span>
             </th>
             <th>
-                <a href="./?a=admin&t=links&category=<!-- IF '${GET_CATEGORY}' != '' -->${GET_CATEGORY}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_CATEGORY}</a>
-                <span class="<!-- IF '${GET_CATEGORY}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_CATEGORY}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"</span>
+                <a href="<!-- URL 'Helper::url("./?a=admin&t=links&")' -->category=<!-- IF '${GET_CATEGORY}' != '' -->${GET_CATEGORY}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_CATEGORY}</a>
+                <span class="<!-- IF '${GET_CATEGORY}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_CATEGORY}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"></span>
             </th>
             <th>
-                <a href="./?a=admin&t=links&views=<!-- IF '${GET_VIEWS}' != '' -->${GET_VIEWS}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_VIEWS}</a>
-                <span class="<!-- IF '${GET_VIEWS}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_VIEWS}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"</span>
+                <a href="<!-- URL 'Helper::url("./?a=admin&t=links&")' -->views=<!-- IF '${GET_VIEWS}' != '' -->${GET_VIEWS}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_VIEWS}</a>
+                <span class="<!-- IF '${GET_VIEWS}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_VIEWS}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"></span>
             </th>
             <th>
-                <a href="./?a=admin&t=links&status=<!-- IF '${GET_STATUS}' != '' -->${GET_STATUS}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_STATUS}</a>
-                <span class="<!-- IF '${GET_STATUS}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_STATUS}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"</span>
+                <a href="<!-- URL 'Helper::url("./?a=admin&t=links&")' -->status=<!-- IF '${GET_STATUS}' != '' -->${GET_STATUS}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_STATUS}</a>
+                <span class="<!-- IF '${GET_STATUS}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_STATUS}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"></span>
             </th>
             <th>
-                <a href="./?a=admin&t=links&created=<!-- IF '${GET_CREATED}' != '' -->${GET_CREATED}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_CREATED}</a>
-                <span class="<!-- IF '${GET_CREATED}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_CREATED}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"</span>
+                <a href="<!-- URL 'Helper::url("./?a=admin&t=links&")' -->created=<!-- IF '${GET_CREATED}' != '' -->${GET_CREATED}<!-- ELSE -->up<!-- END IF --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->${PAGENAV}">${STR_CREATED}</a>
+                <span class="<!-- IF '${GET_CREATED}' == 'up' -->fa fa-sort-desc<!-- ELSE IF '${GET_CREATED}' == 'down' -->fa fa-sort-asc<!-- ELSE -->fa fa-sort<!-- END IF -->"></span>
             </th>
             <th>${STR_ACTION}</th>
         </tr>
@@ -109,10 +109,8 @@
         <th>${STATUS}</th>
         <td>${CREATED}</td>
         <td>
-            <a class="btn btn-outline btn-default" href="<!-- URL 'Helper::url("./?a=admin&t=editlink&id=${ID}")' -->" title="${STR_EDIT}"> <i
-                        class="fa fa-pencil"></i></a>
-            <a class="btn btn-outline btn-danger" href="<!-- URL 'Helper::url("./?a=admin&t=links&remove=${ID}")' -->" title="${STR_REMOVE}"> <i
-                        class="fa fa-trash-o"></i></a>
+            <a class="btn btn-outline btn-default" href="<!-- URL 'Helper::url("./?a=admin&t=editlink&id=${ID}")' -->" title="${STR_EDIT}"> <i class="fa fa-pencil"></i></a>
+            <a class="btn btn-outline btn-danger" href="<!-- URL 'Helper::url("./?a=admin&t=links&remove=${ID}")' -->" title="${STR_REMOVE}"> <i class="fa fa-trash-o"></i></a>
         </td>
         </tr>
         <!-- END column -->
@@ -123,19 +121,13 @@
         <div class="col-md-4">
             <div class="dataTables_length">
                 <label>
-                    ${STR_PNUMBER}: <select onchange="PnumberChange(this);" class="span1 form-control" id="pnumber"
-                                            name="pnumber">
+                    ${STR_PNUMBER}: <select onchange="PnumberChange(this);" class="span1 form-control" id="pnumber"  name="pnumber">
                         <option value="5"<!-- IF '${PNUMBER}' == 5 --> selected="selected"<!-- END IF -->> 5 </option>
-                        <option value="10"<!-- IF '${PNUMBER}' == 10 --> selected="selected"<!-- END IF -->>
-                        10 </option>
-                        <option value="15"<!-- IF '${PNUMBER}' == 15 --> selected="selected"<!-- END IF -->>
-                        15 </option>
-                        <option value="20"<!-- IF '${PNUMBER}' == 20 --> selected="selected"<!-- END IF -->>
-                        20 </option>
-                        <option value="50"<!-- IF '${PNUMBER}' == 50 --> selected="selected"<!-- END IF -->>
-                        50 </option>
-                        <option value="100"<!-- IF '${PNUMBER}' == 100 --> selected="selected"<!-- END IF -->>
-                        100 </option>
+                        <option value="10"<!-- IF '${PNUMBER}' == 10 --> selected="selected"<!-- END IF -->> 10 </option>
+                        <option value="15"<!-- IF '${PNUMBER}' == 15 --> selected="selected"<!-- END IF -->> 15 </option>
+                        <option value="20"<!-- IF '${PNUMBER}' == 20 --> selected="selected"<!-- END IF -->> 20 </option>
+                        <option value="50"<!-- IF '${PNUMBER}' == 50 --> selected="selected"<!-- END IF -->> 50 </option>
+                        <option value="100"<!-- IF '${PNUMBER}' == 100 --> selected="selected"<!-- END IF -->> 100 </option>
                     </select>
                 </label>
             </div>
@@ -189,8 +181,9 @@
                         <option value="4">${STR_REMOVE}</option>
                     </select>
                     <span class="help-inline">
-      <input type="submit" id="apply" value="${STR_APPLY}" class="btn btn-success" disabled="" name="">
-      </span></div>
+                        <input type="submit" id="apply" value="${STR_APPLY}" class="btn btn-success" disabled="" name="">
+                    </span>
+                </div>
             </div>
         </div>
     </div>
@@ -205,6 +198,5 @@
     ${MSG_NOTFOUND}
 </div>
 <!-- END notfound -->
-
 
 <!-- INCLUDE footer.tpl -->

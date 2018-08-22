@@ -81,3 +81,12 @@ ALTER TABLE `%prefix%catalog`
 ALTER TABLE `%prefix%links`
   ADD PRIMARY KEY (`id`),
   ADD KEY `cat_id` (`cat_id`);
+  
+
+ALTER TABLE `%prefix%catalog`
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `%prefix%links`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;   
+  

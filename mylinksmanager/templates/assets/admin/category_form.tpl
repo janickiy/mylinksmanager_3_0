@@ -3,7 +3,7 @@
       <div class="panel panel-default">
          <div class="panel-heading"><span class="msg">*</span> - ${STR_REQUIRED_FIELDS}</div>
          <div class="panel-body">
-            <form enctype="multipart/form-data" action="${PHP_SELF}" role="form" method=post>
+            <form enctype="multipart/form-data" action="${ACTION}" role="form" method=post>
                <div class="form-group">
                   <label for="name">${STR_CATEGORY_NAME}:<span class=msg>*</span></label>
                   <input type="text" class="form-control" value="${NAME}" name="name">
@@ -20,12 +20,7 @@
                <div class="form-group">
                   <label for="new_id_cat">${STR_CATEGORY}:</label>
                   <select type=text name="new_id_cat" class="form-control">
-                     <option value="0"  
-                     <!-- IF '${ID_CAT}' == 0 -->
-                     selected="selected"
-                     <!-- END IF -->
-                     class="input"> ----${STR_NO}---- 
-                     </option>            
+                     <option value="0"  <!-- IF '${CAT_ID}' == 0 -->selected="selected"<!-- END IF -->class="input"> ----${STR_NO}---- </option>
                      ${OPTION}
                   </select>
                </div>
@@ -36,21 +31,16 @@
                </div>
                <div class="checkbox">
                   <label for="removepic">
-                     <input type="checkbox" 
-                     <!-- IF '${FREEZ}' == 'yes' -->
-                     disabled
-                     <!-- END IF -->
-                     type="checkbox" name="removepic">
-                     ${STR_REMOVE_PIC} 
+                     <input type="checkbox" <!-- IF '${FREEZ}' == 'yes' -->disabled<!-- END IF --> type="checkbox" name="removepic">${STR_REMOVE_PIC}
                   </label>
                </div>
                <!-- IF '${PARENT_ID}' != '' -->
-               <input type=hidden name="parent_id" value="${PARENT_ID}">
+               <input type="hidden" name="parent_id" value="${PARENT_ID}">
                <!-- END IF -->
                <!-- IF '${ID}' != '' -->
                <input type=hidden name="id" value="${ID}">
                <!-- END IF -->
-               <input type=hidden name="action" value="post">
+               <input type="hidden" name="action" value="post">
                <button class="btn btn-primary" type="submit">${BUTTON}</button>
 
          </form>

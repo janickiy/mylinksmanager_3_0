@@ -6,100 +6,65 @@ My Links Manager is a universal tool introducing link exchange and distribution.
 My Links Manager will save you from tiresome routine of maintaining link directories, giving you all the tools you need for that. The script will check the availability of a backlink and correctness of the input data, it will inform you about recently added links and backlinks and will do many other things.
 Unlike many analogous tools, My Links Manager is totally free.
 
-
 #########
 # Version
 #########
 
-2.0.4
+3.0.0 alfa
 
 ##############
 # Requirements
 ##############
 
-- For correct work of "My Links Manager" you should have PHP 5.2 or higher installed in your server;
-- Database MySQL 4.1.0 or higher;
-- In order to check availability of backlinks, your hosting should allow outbound connection from your web-server;
-- In order to be able to use statistic URL mode of a link directory, your web-server should have a module mod_rewrite installed;
-- To use scheduled link checking, your web-server should have CronTab installed;
-- To be able to send notifications to your email, you need support mail();
-- In order to use CAPTCHA, you need GD2 Graphics Library.
+- PHP 5.4 or higher;
+- MySQL database 5.1 or higher;
+- Mail();
+- Zip;
+- cURL.
 
 ###############
 # Possibilities
 ###############
 
-- convenient multi-language interface managing the link directory of your computer;
-- all data are saved in database of MySQL;
-- automatic link exchange;
-- possibility of cross exhange;
-- checking back links at the moment of their adding;
-- checking input data;
-- checking backlinks if their indexing in robots.txt is forbidden;
-- checking backlinks if their indexing is forbidden with the help of meta-tags and tags;
+- Convenient multi-language interface managing the link directory of your computer;
+- Automatic link exchange;
+- Possibility of cross exhange;
+- Checking back links at the moment of their adding;
+- Input validation;
+- Checking the reciprocal link for disabling indexing in robots.txt;
+- Checking the response link to the prohibition of indexing using meta tags and the <noindex> tag
 - automatic scheduled link checking (cron);
-- blocking double entering a directory;
-- protection from automatic registration via CAPTCHA;
-- simple change of design and integration into any website;
-- creation of sub-directories (two-level nesting);
-- possibility to create static or dynamic mode of url directory;
-- displaying TIC Yandex and PR Google;
-- each link has its separate page with its description and its constant url address in a directory;
-- counting number of page views of site information and page jumps.
-- per-page navigation of link output;
-- directory search;
-- email notification about exchanges;
-- password-protected administration panel;
-- adding, editing and deleting websites via administration panel;
-- link moderation;
-- convenient installer;
-- totally free;
-- open source code.
+- Protection against re-adding a link to catalog;
+- Protection against automatic registration by generating a picture (CAPTCHA);
+- Each link has a own page with its description and a permanent url address in catalog;
+- Paginal navigation;
+- Catalogs have unlimited tree of categories;
+- Search in catalog;
+- Exchanges notification on e-mail;
+- Convenient administration panel;
+- Adding, editing and deleting websites via administration panel;
+- Convenient installer;
+- Totally free;
+- Open source code.
 
 ##############
 # Installation
 ##############
 
-1. Unpack the distribution in any directory of your web site, for example, '/phpnewsletter'. It is possible to be installed in the root of web catalogue.
-2. Run the Setup Wizard. To do this, type in the browser : http://your_website/mylinksmanager/install/
-3. Set access privileges (CHMOD) for the following folders and files:
-
-templates - 0755
-config - 0755
-config/config.inc - 0755
-admin/settings.php - 0755 
-
-4. After the installation procedure, remove the directory '/mylinksmanager/install/'
-
-If for any reason you are unable to install by the Setup Wizard, you can set it manually. Place the database tables MySQL by SQL-query from a file dump.sql. 
-It's easier to do through the web-interface, for example through phpMyAdmin, which is provided by most hosting providers.
-Once you have placed the table in the database, open with any text editor the file config/config.inc and list the parameters to connect to a MySQL database
-where values $db_location is an address of the server MySQL, $db_name is the name of the database, $db_user is a login, $db_passwd is a password
-To pass the admin area, enter password - 1111
-
-- Settings
-
-Write in the URL-bar of your browser the url-address of administration panel: http://your_website/folder_with_script/admin. If authentication procedure is successful, you get to the administration panel at once.
-All settings are situated in the Settings part. Prompting to each part is given in this part, on the right of the page.
-
-- Integration into design
-
-"My Links Manager" gives a possibility of flexible integration into any website design. Integration into site design will not take much time. You do not have to know programming in PHP.
-What you need is only knowledge of the basics of HTML and CSS (Cascading Style Sheet). Design editing can be also done via administration panel. In the part "Design" you can read the detailed instruction and description.
-Moreover, you can manually integrate the design by editing in any text editor the corresponding files. In the root of the script there is a folder named templates. There you will find files of template elements.
-You have to edit files header.tpl and footer.tpl.
-Cascading Style Sheets are found in file style.css, which is located in folder "style".
+1. Unpack the distribution into any directory of your website, for example, in '/ mylinksmanager' You can set it in root.
+2. Run the installation wizard by typing in the browser: http://your_website/mylinksmanager/install/
+3. After the installation procedure, delete the directory '/mylinksmanager/install/'
 
 ####################
 # Commercial version
 ####################
 
-According to the customer’s choice I can adapt the script to particular conditions. Different extra function can be added.
+According to the customers choice I can adapt the script to particular conditions. Different extra function can be added.
 
 ######
 # NOTE
 ######
 
-THE SCRIPT OF LINK CATALOGUE My Links Manager, FURTHER ON "PROGRAM", IS TOTALLY FREE. YOU CAN FREELY DISTRIBUTE, COPY, INTRODUCE CHANGES IN THE OPEN SOURCE CODE OF THE PROGRAM, ONLY IF YOU PRESERVE THE AUTHOR’S COPYRIGHT.
-USING THE PROGRAM My Links Manager FOR COMMERCIAL PURPOSES WITHOUT THE AUTHOR’S PERMISSION IS PROHIBITED.
+THE SCRIPT OF LINK CATALOGUE My Links Manager, FURTHER ON "PROGRAM", IS TOTALLY FREE. YOU CAN FREELY DISTRIBUTE, COPY, INTRODUCE CHANGES IN THE OPEN SOURCE CODE OF THE PROGRAM, ONLY IF YOU PRESERVE THE AUTHOR'S COPYRIGHT.
+USING THE PROGRAM My Links Manager FOR COMMERCIAL PURPOSES WITHOUT THE AUTHOR'S PERMISSION IS PROHIBITED.
 YOU USE THIS PROGRAM AT YOUR OWN RISK. THE AUTHOR BEARS NO RESPONSIBILITY FOR THE PROGRAM OPERABILITY, AS WELL AS FOR THE LOSSES AND DAMAGE A DATA OR ANYTHING ELSE CONNECTED WITH THE USAGE AND WORK OF THE PROGRAM.

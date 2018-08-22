@@ -223,7 +223,11 @@ $language["str"]["subject_hide"] = "Ваша ссылка времено скр�
 $language["str"]["reciprocal_link"] = "Обратная ссылка";
 $language["str"]["database_file"] = "Файл базы данных";
 $language["str"]["links_db"] = "База каталога ссылок";
-
+$language["str"]["script_name"] = "My Links Manager";
+$language["str"]["update_warning"] = 'Доступна более новая версия %SCRIPTNAME% и вам предлагается её использовать. Новейшая версия %VERSION%, выпущена %CREATED%. <a href="%DOWNLOADLINK%">Скачать</a> %MESSAGE%';
+$language["str"]["warning"] = 'Внимание';
+$language["str"]["start_update"] = "Идёт обновление ... Загрузка архива";
+$language["str"]["download_completed"] = "Скачивание завершено. Обнавление базы данных...";
 
 $language["status"]["new"] = "Новые";
 $language["status"]["show"] = "Проверено";
@@ -243,6 +247,7 @@ $language["button"]["reset"] = "Сброс";
 $language["button"]["find"] = "найти";
 $language["button"]["check_all_links_automatically"] = "Проверить все ссылки автоматически";
 $language["button"]["export"] = "Экспорт";
+$language["button"]["update"] = "Обновить до %SCRIPT_NAME% %NEW_VERSION%";
 
 $language["msg"]["notfound"] = "По вашему запросу ничего не найдено!";
 $language["msg"]["link_added"] = "Ссылка добавлена";
@@ -260,6 +265,12 @@ $language["msg"]["notlinks"] = "Нет ссылок";
 $language["msg"]["check_is_completed"] = "Проверка закончена";
 $language["msg"]["imported_links"] = 'Импортировано %COUNT% ссылок';
 $language["msg"]["change_has_added"] = 'Измениения добавлены';
+$language["msg"]["check_completed"] = "Проверка завершена";
+$language["msg"]["files_unzipped_successfully"] = "Файлы успешно распакованы";
+$language["msg"]["directory_not_writeable"] = "Ошибка: Каталог не доступен для записи веб-сервером";
+$language["msg"]["no_zlib_support_enabled"] = "Ошибка: В вашай версии PHP не включена поддержка Zlib";
+$language["msg"]["cannot_read_zip_archive"] = "Ошибка: Невозможно прочитать .zip архив";
+$language["msg"]["error_unzipping_file"] = "Ошибка распаковки архива";
 
 $language["error"]["wait_verification"] = "Этот сайт уже есть в каталоге!";
 $language["error"]["already_exists"] = "Этот сайт уже есть в каталоге!";
@@ -306,6 +317,7 @@ $language["error"]["not_your_site"] = "Укажите свой адрес сай
 $language["error"]["no_import"] = "Импорт не выполнен!";
 $language["error"]["no_import_file"] = "Файл для импорта не выбран!";
 $language["error"]["token"] = "Ошибка токена!";
+$language["error"]["failed_to_update"] = 'Ошибка: Не удалось выполнить обновление!';
 
 $language["alert"]["select_action"]  = "Выберите действие!";
 $language["alert"]["confirm_remove"] = "Вы действительно хотите удалить?";
