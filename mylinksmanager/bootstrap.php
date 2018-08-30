@@ -1,7 +1,7 @@
 <?php
 
 /********************************************
- * My Links Manager 3.0.0 alfa
+ * My Links Manager 3.0.1 beta
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -14,7 +14,7 @@ Error_Reporting(1); // set error reporting level
 
 define("DEBUG", 1);
 define("SLUG", 1);
-define('VERSION', '3.0.0');
+define('VERSION', '3.0.1');
 
 $cmspaths = [
     'core' => 'sys/core',
