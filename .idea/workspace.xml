@@ -5,94 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a967a45-03c6-4ad7-af83-7831d2e3c86c" name="Default" comment="bug fix">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_addcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_addcategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_addlink.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_addlink.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_addurl.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_addurl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_ajax.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_editcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_editcategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_editlink.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_editlink.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_export.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_export.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_import.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_import.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_links.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_links.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page403.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page403.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page404.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page404.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page500.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page500.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_password.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_pic.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_pic.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_test.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_addcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_addcategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_addlink.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_addlink.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_addurl.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_addurl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_ajax.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_editcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_editcategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_editlink.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_editlink.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_export.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_export.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_import.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_import.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_links.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_links.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_password.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_pic.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_pic.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_test.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/snippets/admin/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/snippets/admin/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/snippets/admin/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/snippets/admin/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/snippets/admin/top.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/snippets/admin/top.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/snippets/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/snippets/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/addcategory_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/addcategory_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/addlink_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/addlink_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/categories_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/categories_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/edit_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/edit_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/editcategory_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/editcategory_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/export_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/export_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/import_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/import_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/links_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/links_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/logout_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/logout_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/password_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/password_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/settings_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/settings_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/update_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/update_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/ajax_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/ajax_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/edit_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/edit_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/index_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/index_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/page403_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/page403_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/page404_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/page404_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/page500_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/page500_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/pic_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/pic_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/test_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/test_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/captcha.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/captcha.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/cron.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/cron.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/install/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/install/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Core_Array.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Core_Array.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Core_Type_Conversion.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Core_Type_Conversion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/DB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Exception403.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Exception403.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Exception404.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Exception404.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/ExceptionSQL.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/ExceptionSQL.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Links.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Links.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Update.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.eng" beforeDir="false" afterPath="$PROJECT_DIR$/readme.eng" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.rus" beforeDir="false" afterPath="$PROJECT_DIR$/readme.rus" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -159,6 +72,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="eng" value="1" />
+          <entry key="gitignore" value="1" />
           <entry key="php" value="10" />
           <entry key="rus" value="1" />
         </counts>
@@ -166,7 +80,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PHP" value="10" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -192,15 +106,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_editlink.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_addlink.php">
           <provider selected="true" editor-type-id="text-editor" />
@@ -236,11 +141,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/readme.rus">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-477">
               <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -331,7 +245,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/import_view.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/export_view.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_edit.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/edit_view.php" />
@@ -382,6 +295,7 @@
         <option value="$PROJECT_DIR$/mylinksmanager/install/index.php" />
         <option value="$PROJECT_DIR$/readme.eng" />
         <option value="$PROJECT_DIR$/readme.rus" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -530,7 +444,7 @@
       <workItem from="1534592622245" duration="5497000" />
       <workItem from="1534705368930" duration="7593000" />
       <workItem from="1534857273617" duration="22385000" />
-      <workItem from="1535619078146" duration="824000" />
+      <workItem from="1535619078146" duration="1171000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлена форма редактирования ссылки">
       <created>1534597724868</created>
@@ -553,11 +467,25 @@
       <option name="project" value="LOCAL" />
       <updated>1534943063790</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="bug fix">
+      <created>1535619943333</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1535619943333</updated>
+    </task>
+    <task id="LOCAL-00005" summary="bug fix">
+      <created>1535620100922</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1535620100922</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="311031000" />
+    <option name="totallyTimeSpent" value="311378000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -582,7 +510,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.30802602" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.30802602" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -642,9 +570,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/editcategory.tpl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/addcategory_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1343">
@@ -961,6 +886,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-477">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
