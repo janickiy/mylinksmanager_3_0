@@ -1,0 +1,70 @@
+##################
+# About the script
+##################
+
+My Links Manager is a universal tool introducing link exchange and distribution. If you are a web-master and optimizer, if you promote websites, you will find this script useful.
+My Links Manager will save you from tiresome routine of maintaining link directories, giving you all the tools you need for that. The script will check the availability of a backlink and correctness of the input data, it will inform you about recently added links and backlinks and will do many other things.
+Unlike many analogous tools, My Links Manager is totally free.
+
+#########
+# Version
+#########
+
+3.0.2
+
+##############
+# Requirements
+##############
+
+- PHP 5.4 or higher;
+- MySQL database 5.1 or higher;
+- Mail();
+- Zip;
+- cURL.
+
+###############
+# Possibilities
+###############
+
+- Convenient multi-language interface managing the link directory of your computer;
+- Automatic link exchange;
+- Possibility of cross exhange;
+- Checking back links at the moment of their adding;
+- Input validation;
+- Checking the reciprocal link for disabling indexing in robots.txt;
+- Checking the response link to the prohibition of indexing using meta tags and the <noindex> tag
+- automatic scheduled link checking (cron);
+- Protection against re-adding a link to catalog;
+- Protection against automatic registration by generating a picture (CAPTCHA);
+- Each link has a own page with its description and a permanent url address in catalog;
+- Paginal navigation;
+- Catalogs have unlimited tree of categories;
+- Search in catalog;
+- Exchanges notification on e-mail;
+- Convenient administration panel;
+- Adding, editing and deleting websites via administration panel;
+- Convenient installer;
+- Totally free;
+- Open source code.
+
+##############
+# Installation
+##############
+
+1. Unpack the distribution into any directory of your website, for example, in '/ mylinksmanager' You can set it in root.
+2. Run the installation wizard by typing in the browser: http://your_website/mylinksmanager/install/
+3. After the installation procedure, delete the directory '/mylinksmanager/install/'
+
+####################
+# Commercial version
+####################
+
+According to the customers choice I can adapt the script to particular conditions. Different extra function can be added.
+
+######
+# NOTE
+######
+
+THE SCRIPT OF LINK CATALOGUE My Links Manager, FURTHER ON "PROGRAM", IS TOTALLY FREE. YOU CAN FREELY DISTRIBUTE, COPY, INTRODUCE CHANGES IN THE OPEN SOURCE CODE OF THE PROGRAM, ONLY IF YOU PRESERVE THE AUTHOR'S COPYRIGHT.
+USING THE PROGRAM My Links Manager FOR COMMERCIAL PURPOSES WITHOUT THE AUTHOR'S PERMISSION IS PROHIBITED.
+YOU USE THIS PROGRAM AT YOUR OWN RISK. THE AUTHOR BEARS NO RESPONSIBILITY FOR THE PROGRAM OPERABILITY, AS WELL AS FOR THE LOSSES AND DAMAGE A DATA OR ANYTHING ELSE CONNECTED WITH THE USAGE AND WORK OF THE PROGRAM.

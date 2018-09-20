@@ -1,8 +1,8 @@
 <?php
 
 /********************************************
- * My Links Manager 3.0.0 alfa
- * Copyright (c) 2011-2017 Alexander Yanitsky
+ * My Links Manager 3.0.2
+ * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
  * Skype: janickiy
@@ -10,21 +10,24 @@
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
-Error_Reporting(0); // set error reporting level
-define("DEBUG", true);
-define('VERSION', '3.0.0');
+Error_Reporting(1); // set error reporting level
 
-$cmspaths = ['core' => 'sys/core',
-             'engine' => 'sys/engine', // Engines AUTOLOAD folder
-             'config' => 'config', // Config
-             'templates' => 'templates', // templates
-             'controllers' => 'app/controllers', // controllers
-             'libs' => 'vendor', // libraries
-             'models' => 'app/models',
-             'views' => 'app/views',
-             'extra' => 'app/snippets',
-             'tmp' => 'tmp'
-             ];
+define("DEBUG", 1);
+define("SLUG", 1);
+define('VERSION', '3.0.2');
+
+$cmspaths = [
+    'core' => 'sys/core',
+    'engine' => 'sys/engine', // Engines AUTOLOAD folder
+    'config' => 'config', // Config
+    'templates' => 'templates', // templates
+    'controllers' => 'app/controllers', // controllers
+    'libs' => 'vendor', // libraries
+    'models' => 'app/models',
+    'views' => 'app/views',
+    'extra' => 'app/snippets',
+    'tmp' => 'tmp'
+];
 
 require_once SYS_ROOT . $cmspaths['config'] . '/config_db.php';
 require_once SYS_ROOT . $cmspaths['core'] . '/core.php';
