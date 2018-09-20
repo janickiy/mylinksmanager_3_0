@@ -1,5 +1,6 @@
 RewriteEngine on
+RewriteRule ^install(\/)?$ install/ [L]
 RewriteRule ^admin(\/)?$ index.php?a=admin [L]
 RewriteRule ^admin/([^/\.]+)/?$ index.php?a=admin&t=$1 [L]
 RewriteRule ^([^/\.]+)/?$ index.php?t=$1 [L]
-
+RewriteRule ^install(\/)?$ install [L]

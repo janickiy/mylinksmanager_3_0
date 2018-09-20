@@ -12,7 +12,7 @@ error_reporting(0);
 session_start();
 
 $INSTALL = [];
-$INSTALL["version"] = '3.0.1';
+$INSTALL["version"] = '3.0.2';
 
 $INSTALL["system"]["dir_config"] = 'config/';
 $SCRIPT_URL = substr($_SERVER['SCRIPT_NAME'], 0, strpos($_SERVER['SCRIPT_NAME'],"install/"));

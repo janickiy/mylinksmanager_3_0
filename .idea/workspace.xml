@@ -5,119 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a967a45-03c6-4ad7-af83-7831d2e3c86c" name="Default" comment="bug fix">
-      <change afterPath="$PROJECT_DIR$/mylinksmanager/install_/en.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mylinksmanager/install_/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mylinksmanager/install_/ru.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mylinksmanager/install_/sql/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mylinksmanager/install_/sql/mylinksmanager.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mylinksmanager/install_/sql/mylinksmanager_data_en.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mylinksmanager/install_/sql/mylinksmanager_data_ru.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mylinksmanager/install_/update/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_addcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_addcategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_addlink.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_addlink.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_addurl.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_addurl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_ajax.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_editcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_editcategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_editlink.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_editlink.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_export.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_export.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_import.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_import.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_links.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_links.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page403.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page403.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page404.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page404.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page500.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_page500.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_password.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_pic.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_pic.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_test.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/controllers/controller_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_addcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_addcategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_addlink.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_addlink.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_addurl.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_addurl.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_ajax.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_ajax.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_editcategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_editcategory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_editlink.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_editlink.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_export.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_export.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_import.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_import.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_links.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_links.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_password.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_password.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_pic.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_pic.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_settings.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_settings.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_test.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_test.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/models/model_update.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/models/model_update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/snippets/admin/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/snippets/admin/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/snippets/admin/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/snippets/admin/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/snippets/admin/top.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/snippets/admin/top.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/snippets/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/snippets/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/addurl_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/addcategory_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/addcategory_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/addlink_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/addlink_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/categories_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/categories_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/edit_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/edit_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/editcategory_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/editcategory_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/editlink_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/export_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/export_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/import_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/import_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/links_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/links_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/logout_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/logout_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/password_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/password_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/settings_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/settings_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/admin/update_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/admin/update_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/ajax_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/ajax_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/edit_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/edit_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/index_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/index_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/page403_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/page403_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/page404_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/page404_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/page500_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/page500_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/pic_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/pic_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/app/views/test_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/app/views/test_view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/captcha.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/captcha.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/cron.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/cron.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/install/en.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/install/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/install/ru.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/install/sql/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager_data_en.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/install/sql/mylinksmanager_data_ru.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/install/update/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Core_Array.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Core_Array.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Core_Type_Conversion.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Core_Type_Conversion.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/DB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Exception403.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Exception403.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Exception404.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Exception404.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/ExceptionSQL.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/ExceptionSQL.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Links.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Links.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Session.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Session.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Update.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/model.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/sys/engine/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/sys/engine/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/templates/admin/assets/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/templates/admin/assets/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/authenticate.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/authenticate.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/export.tpl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/index.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/index.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/links.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/links.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/update.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/admin/update.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/templates/assets/index.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/templates/assets/index.tpl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/templates/language/en.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/templates/language/ru.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/vendor/html_template/SeparateTemplate.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/html_template/SeparateTemplate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mylinksmanager/vendor/html_template/formatter/UrlFormatter.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/vendor/html_template/formatter/UrlFormatter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mylinksmanager/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mylinksmanager/install/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/mylinksmanager/install/index.php" afterDir="false" />
     </list>
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -218,25 +108,25 @@
     <session id="1732945794">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="31" />
+          <entry key="php" value="36" />
           <entry key="tpl" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="31" />
+          <entry key="PHP" value="36" />
           <entry key="Smarty" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="204" />
+          <entry key="php" value="205" />
           <entry key="tpl" value="61" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="204" />
+          <entry key="PHP" value="205" />
           <entry key="Smarty" value="61" />
         </counts>
       </usages-collector>
@@ -251,10 +141,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mylinksmanager/bootstrap.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="255">
               <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
               <folding>
                 <element signature="e#7#249#0#PHP" expanded="true" />
@@ -271,6 +161,33 @@
               <folding>
                 <element signature="n#style#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_addcategory.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/install/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="30" column="72" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="76" />
             </state>
           </provider>
         </entry>
@@ -300,7 +217,7 @@
         <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/links_view.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="169">
-              <caret line="127" column="52" lean-forward="true" selection-start-line="127" selection-start-column="52" selection-end-line="127" selection-end-column="52" />
+              <caret line="127" column="52" selection-start-line="127" selection-start-column="52" selection-end-line="127" selection-end-column="52" />
               <folding>
                 <element signature="e#7#249#0#PHP" expanded="true" />
               </folding>
@@ -308,44 +225,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/install_/index.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/index.tpl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-867" />
-          </provider>
+        <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/core/core.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="348" column="67" lean-forward="true" selection-start-line="348" selection-start-column="67" selection-end-line="348" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/vendor/html_template/formatter/UrlFormatter.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mylinksmanager/vendor/html_template/SeparateTemplate.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3082">
-              <caret line="62" column="5" selection-start-line="62" selection-start-column="5" selection-end-line="62" selection-end-column="5" />
-              <folding>
-                <element signature="e#7#87#0#PHP" expanded="true" />
-              </folding>
+              <caret line="348" column="67" selection-start-line="348" selection-start-column="67" selection-end-line="348" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -439,7 +328,6 @@
         <option value="$PROJECT_DIR$/readme.eng" />
         <option value="$PROJECT_DIR$/readme.rus" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/mylinksmanager/install/index.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/vendor/html_template/formatter/TimeFormatter.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/vendor/html_template/formatter/TextFormatter.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/vendor/html_template/formatter/IsEmptyFormatter.php" />
@@ -457,6 +345,7 @@
         <option value="$PROJECT_DIR$/mylinksmanager/sys/engine/classes/Helper.php" />
         <option value="$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl" />
         <option value="$PROJECT_DIR$/mylinksmanager/app/views/admin/links_view.php" />
+        <option value="$PROJECT_DIR$/mylinksmanager/install/index.php" />
       </list>
     </option>
   </component>
@@ -523,50 +412,13 @@
               <item name="mylinksmanager_3_0_2" type="b2602c69:ProjectViewProjectNode" />
               <item name="mylinksmanager_3_0_2" type="462c0819:PsiDirectoryNode" />
               <item name="mylinksmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mylinksmanager_3_0_2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylinksmanager_3_0_2" type="462c0819:PsiDirectoryNode" />
-              <item name="mylinksmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="snippets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mylinksmanager_3_0_2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylinksmanager_3_0_2" type="462c0819:PsiDirectoryNode" />
-              <item name="mylinksmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="snippets" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mylinksmanager_3_0_2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylinksmanager_3_0_2" type="462c0819:PsiDirectoryNode" />
-              <item name="mylinksmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mylinksmanager_3_0_2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylinksmanager_3_0_2" type="462c0819:PsiDirectoryNode" />
-              <item name="mylinksmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="mylinksmanager_3_0_2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="mylinksmanager_3_0_2" type="462c0819:PsiDirectoryNode" />
-              <item name="mylinksmanager" type="462c0819:PsiDirectoryNode" />
               <item name="captcha" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mylinksmanager_3_0_2" type="b2602c69:ProjectViewProjectNode" />
               <item name="mylinksmanager_3_0_2" type="462c0819:PsiDirectoryNode" />
               <item name="mylinksmanager" type="462c0819:PsiDirectoryNode" />
-              <item name="install_" type="462c0819:PsiDirectoryNode" />
+              <item name="install" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mylinksmanager_3_0_2" type="b2602c69:ProjectViewProjectNode" />
@@ -691,7 +543,7 @@
       <workItem from="1534705368930" duration="7593000" />
       <workItem from="1534857273617" duration="22385000" />
       <workItem from="1535619078146" duration="1171000" />
-      <workItem from="1537436978143" duration="6520000" />
+      <workItem from="1537436978143" duration="7971000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлена форма редактирования ссылки">
       <created>1534597724868</created>
@@ -728,11 +580,25 @@
       <option name="project" value="LOCAL" />
       <updated>1535620100922</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="bug fix">
+      <created>1537445180409</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1537445180409</updated>
+    </task>
+    <task id="LOCAL-00007" summary="bug fix">
+      <created>1537445332040</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1537445332040</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="317972000" />
+    <option name="totallyTimeSpent" value="319423000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -747,7 +613,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25053304" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -818,13 +684,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/index_view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="981">
-          <caret line="167" selection-start-line="167" selection-end-line="167" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/app/snippets/admin/top.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -901,13 +760,6 @@
     <entry file="file://$PROJECT_DIR$/mylinksmanager/cron.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="30" column="72" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/captcha.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -943,13 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/install/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="8" column="46" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -1055,27 +900,10 @@
     <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/admin/authenticate.tpl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_addcategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_editlink.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/bootstrap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-          <folding>
-            <element signature="e#7#249#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1104,7 +932,7 @@
     <entry file="file://$PROJECT_DIR$/mylinksmanager/templates/assets/addurl.tpl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="348" column="67" lean-forward="true" selection-start-line="348" selection-start-column="67" selection-end-line="348" selection-end-column="67" />
+          <caret line="348" column="67" selection-start-line="348" selection-start-column="67" selection-end-line="348" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -1135,18 +963,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/install_/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/mylinksmanager/app/views/admin/links_view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
-          <caret line="127" column="52" lean-forward="true" selection-start-line="127" selection-start-column="52" selection-end-line="127" selection-end-column="52" />
+          <caret line="127" column="52" selection-start-line="127" selection-start-column="52" selection-end-line="127" selection-end-column="52" />
           <folding>
             <element signature="e#7#249#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mylinksmanager/install_/index.php">
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/sys/core/core.php">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/app/controllers/controller_addcategory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/install/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="14" lean-forward="true" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="30" column="72" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mylinksmanager/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding>
+            <element signature="e#7#249#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
