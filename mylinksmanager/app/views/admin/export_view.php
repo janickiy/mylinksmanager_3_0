@@ -1,7 +1,7 @@
 <?php
 
 /********************************************
- * My Links Manager 3.0.1 beta
+ * My Links Manager 3.0.2
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -29,6 +29,14 @@ if (Core_Array::getRequest('action')) {
 
     foreach ($arr as $row) {
         $i++;
+        $category = Category::getCategoryById($row['cat_id']);
+        $arraypathway = Category::topbarMenu($category['parent_id'], '');
+        $category_name = [];
+        $category_name[] = $category['name'];
+
+        for ($n = 0; $n < count($arraypathway); $n++) {
+            $category_name[] = $arraypathway[$n][1];
+        }
         $aSheet->setCellValue('A' . $i, $row['name']);
         $aSheet->setCellValue('B' . $i, $row['url']);
         $aSheet->setCellValue('C' . $i, $row['reciprocal_link']);
@@ -37,7 +45,7 @@ if (Core_Array::getRequest('action')) {
         $aSheet->setCellValue('F' . $i, $row['description']);
         $aSheet->setCellValue('G' . $i, $row['full_description']);
 
-        $aSheet->setCellValue('I' . $i, '');
+        $aSheet->setCellValue('I' . $i, implode("/", $category_name));
     }
 
     $aSheet->getColumnDimension('F')->setWidth(30);

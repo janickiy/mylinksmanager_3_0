@@ -1,7 +1,7 @@
 <?php
 
 /********************************************
- * My Links Manager 3.0.1 beta 
+ * My Links Manager 3.0.1 beta
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -1099,6 +1099,8 @@ class Helper
             $url = preg_replace('/\?a=(\w+)&t=(\w+)/', '${1}/${2}', $url);
             $url = preg_replace('/\?a=(\w+)/', '${1}', $url);
             $url = preg_replace('/\?t=(\w+)/', '${1}', $url);
+            $url = str_replace("./", '', $url);
+
             return self::root() . $url;
         } else
             return self::root() . $url;

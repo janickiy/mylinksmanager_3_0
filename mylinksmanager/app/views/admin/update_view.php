@@ -1,7 +1,7 @@
 <?php
 
 /********************************************
- * My Links Manager 3.0.1 beta
+ * My Links Manager 3.0.0 alfa
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -35,7 +35,7 @@ if ($update->checkNewVersion() && $update->checkTree()){
     $no_updates = core::getLanguage('msg', 'no_updates');
     $no_updates = str_replace('%SCRIPT_NAME%', core::getLanguage('script', 'name'), $no_updates);
     $no_updates = str_replace('%NEW_VERSION%', VERSION, $no_updates);
-    $tpl->assign('MSG_NO_UPDATES', core::getLanguage('str', 'no_updates'));
+    $tpl->assign('MSG_NO_UPDATES', $no_updates);
 }
 
 //menu

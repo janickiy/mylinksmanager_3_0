@@ -1,7 +1,7 @@
 <?php
 
 /********************************************
- * My Links Manager 3.0.1 beta 
+ * My Links Manager 3.0.2
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -76,9 +76,9 @@ class Category
                 for($c = 1; $c < $lvl; $c++) $indent .= '-';
 
                 if (core::database()->getRecordCount($result2) == 0)
-                    $option .= "<option value=" . $row['id'] . " " . ($_REQUEST['id_catalog'] == $row['id'] ? ' selected="selected"' : "") . ">" . $indent . " " . $row["name"] . "</option>\r\n";
+                    $option .= "<option value=" . $row['id'] . " " . ($_REQUEST['catalog_id'] == $row['id'] ? ' selected="selected"' : "") . ">" . $indent . " " . $row["name"] . "</option>\r\n";
                 else
-                    $option .= "<option value=" . $row['id'] . " " . ($_REQUEST['id_catalog'] == $row['id'] ? ' selected="selected"' : "") . ">" . $indent . " " . $row["name"] . "</option>\r\n";
+                    $option .= "<option value=" . $row['id'] . " " . ($_REQUEST['catalog_id'] == $row['id'] ? ' selected="selected"' : "") . ">" . $indent . " " . $row["name"] . "</option>\r\n";
 
                 self::ShowCatalogList($row["id"], $lvl);
                 $lvl--;
@@ -145,75 +145,6 @@ class Category
         return $topbar;
     }
 
-    /**
-     * @param $parent_id
-     * @param $lvl
-     * @return string
-     */
-    public static function CatalogTree($parent_id, $lvl)
-    {
-        global $lvl;
-        $lvl++;
-        global $treelist;
-
-        $parent_id = core::database()->escape($parent_id);
-
-        $query = "SELECT `id`,`parent_id`,`name` FROM " . core::database()->getTableName('catalog') . " WHERE parent_id=" . $parent_id . " ORDER BY name";
-        $result = core::database()->querySQL($query);
-
-        if (core::database()->getRecordCount($result) > 0){
-            if ($lvl == 1)
-                $lf_menu = 'class="lf_menu"';
-            else
-                $lf_menu = '';
-
-            $treelist .= "<ul ". $lf_menu . ">\n";
-
-            while($row = core::database()->getRow($result))
-            {
-                $ID = $row["id"];
-
-                if ($_GET['cat_id'] == $ID)
-                    $ul = "style=\"display: block;\"";
-                else
-                    $ul = "";
-
-                if ($row['parent_id'] == 0) {
-                    $div_class = "menu_1";
-                    $name = '<span>' . $row["name"] . '</span> <a title="' . core::getLanguage('str', 'add_subcategory') . '" href="./?a=admin&t=addcategory&id_catalog='.$row['id'].'&id_parent=' . $row['id'] . '"><img border="0" src="/templates/images/add.gif"></a> <a title="' . core::getLanguage('str', 'remove') . '" href="./?a=admin&t=editcategory&id_cat=' . $row['id'] . '"><img border=0 src="/templates/images/edit.gif"></a> <a title="' . core::getLanguage('str', 'remove') . '" href="./?a=admin&t=delcategory&id_cat=' . $row['id'] . '"><img border="0" src="/templates/images/del.gif"></a>';
-                } else {
-                    if ($_GET['id'] == $ID)
-                        $li="class=\"active\"";
-                    else
-                        $li='';
-                    $div_class = "menu_1_1";
-                    $name = '' . $row["name"] . ' <a title="' . core::getLanguage('str', 'add_subcategory') . '" href="./?a=admin&t=addcategory&id_catalog=' . $row['id'] . '&id_parent=' . $row['id'] . '"><img border="0" src="images/add.gif"></a> <a title="' . core::getLanguage('str', 'edit') . '" href="./?a=admin&editcategory&id_cat=' . $row['id'] . '"><img border="0" src="/templates/images/edit.gif"></a> <a title="' . core::getLanguage('str', 'remove') . '" href="./?a=admin&t=delcategory&id_cat=' . $row['id'] . '"><img border="0" src="/templates/images/del.gif"></a>';
-                }
-
-                $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE parent_id=" . $ID;
-                $result2 = core::database()->querySQL($query);
-
-                if (core::database()->getRecordCount($result2) > 0) {
-                    $treelist .= "<li " . $li . ">\n";
-                    $treelist .="<div class=" . $div_class . "><div><div><div>" . $name . "</div></div></div></div>\n";
-                } else {
-                    if ($row['id_parent'] == 0) {
-                        $div_class = "menu_2";
-                    } else {
-                        $div_class = "";
-                    }
-                    $treelist .= "<li " . $li . ">\n";
-                    $treelist .= "<div class=" . $div_class . "><div ><div><div>" . $name . "</div></div></div></div>\n";
-                }
-
-                self::CatalogTree($ID, $lvl);
-                $lvl--;
-            }
-            $treelist .= "</ul>\n";
-        }
-
-        return $treelist;
-    }
 
     /**
      * @param $parent_id
@@ -238,10 +169,10 @@ class Category
                 $indent = '';
                 for($c = 1; $c < $lvl; $c++) $indent .= '-';
 
-                $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE parent_id=" . $row['id'] . " AND id=" . $_REQUEST['id_cat'];
+                $query = "SELECT * FROM " . core::database()->getTableName('catalog') . " WHERE parent_id=" . $row['id'] . " AND id=" . $_REQUEST['cat_id'];
                 $result2 = core::database()->querySQL($query);
 
-                if ($row['id'] != $_REQUEST['id_cat']) $option .= "<option value=" . $row['id'] . " " . (core::database()->getRecordCount($result2) > 0 ? ' selected="selected"' : "") . ">" . $indent . " " . $row["name"] . "</option>\r\n";
+                if ($row['id'] != $_REQUEST['cat_id']) $option .= "<option value=" . $row['id'] . " " . (core::database()->getRecordCount($result2) > 0 ? ' selected="selected"' : "") . ">" . $indent . " " . $row["name"] . "</option>\r\n";
 
                 self::ShowCategoryList($ID, $lvl);
                 $lvl--;

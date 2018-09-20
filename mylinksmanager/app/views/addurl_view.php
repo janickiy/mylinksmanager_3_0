@@ -1,7 +1,7 @@
 <?php
 
 /********************************************
- * My Links Manager 3.0.1 beta
+ * My Links Manager 3.0.2
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -294,6 +294,10 @@ if (Core_Array::getRequest('action')) {
                 $m->Body = $msgAdmin;
                 $m->Send();
             }
+
+            $success = core::getSetting('from_add_message');
+        } else {
+            $errors[] = core::getLanguage('error', 'web_apps_error');
         }
     }
 }

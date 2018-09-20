@@ -1,7 +1,7 @@
 ﻿<?php
 
 /********************************************
- * My Links Manager 3.0.1 beta
+ * My Links Manager 3.0.2
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -40,7 +40,7 @@ class Model_index extends Model
      * @param $pnumber
      * @return mixed
      */
-    public function getLinks($page, $pnumber)
+    public function getLinks($page, $pnumber, $cat_id)
     {
         core::database()->tablename = core::database()->getTableName('links') . " l LEFT JOIN " . core::database()->getTableName('catalog') . " c ON c.id=l.cat_id";
 
@@ -67,12 +67,12 @@ class Model_index extends Model
             }
 
             core::database()->parameters = "l.*, c.name AS category";
-            core::database()->where = "WHERE " . ($category ? "(l.status='show' AND l.id_cat=$category)" : "l.status='show'") . "  " . ((!empty($tmp)) ? 'AND' : '') . " " . $tmp . "";
+            core::database()->where = "WHERE " . ($category ? "(l.status='show' AND l.cat_id=$category)" : "l.status='show'") . "  " . ((!empty($tmp)) ? 'AND' : '') . " " . $tmp . "";
             core::database()->group = "GROUP BY l.id";
             core::database()->order = "ORDER BY l.name";
         } else {
             core::database()->parameters = "l.*, c.name AS category";
-            core::database()->where = "WHERE " . ($category ? "(l.status='show' AND l.id_cat=$category)" : "l.status='show'") . "";
+            core::database()->where = "WHERE " . ($cat_id ? "(l.status='show' AND l.cat_id=$cat_id)" : "l.status='show'") . "";
             core::database()->order = "ORDER BY l.id DESC";
         }
 
@@ -106,11 +106,12 @@ class Model_index extends Model
      * @param $link_id
      * @return mixed
      */
-    public function countView($link_id)
+    public function countView($link_id, $views)
     {
         if (is_numeric($link_id)) {
+
             $fields = [
-                'views' => 'count + 1',
+                'views' => $views + 1,
             ];
 
             return core::database()->update($fields, core::database()->getTableName('links'), "id=" . $link_id);

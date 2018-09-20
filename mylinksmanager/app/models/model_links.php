@@ -1,7 +1,7 @@
 ﻿<?php
 
 /********************************************
- * My Links Manager 3.0.1 beta
+ * My Links Manager 3.0.2
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -24,7 +24,7 @@ class Model_links extends Model
     {
         core::database()->tablename = core::database()->getTableName('links') . " l LEFT JOIN " . core::database()->getTableName('catalog') . " c ON c.id=l.cat_id";
 
-        $search = trim(Core_Array::getRequest('search'));
+        $search = trim(urldecode(Core_Array::getRequest('search')));
         $category = core::database()->escape(Core_Array::getRequest('category'));
 
         if ($search) {

@@ -1,7 +1,7 @@
 <?php
 
 /********************************************
- * My Links Manager 3.0.1 beta
+ * My Links Manager 3.0.2
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -19,19 +19,12 @@ $tpl->assign('MENU_ADDURL_TITLE', core::getLanguage('menu', 'addurl_title'));
 $tpl->assign('MENU_ADDURL', core::getLanguage('menu', 'addurl'));
 
 
-
-
 $tpl->assign('MENU_CATEGORIES_TITLE}', core::getLanguage('menu', 'categories_title'));
 $tpl->assign('MENU_CATEGORIES', core::getLanguage('menu', 'categories'));
 
 
-
-
-
 $tpl->assign('MENU_LINKS_TITLE', core::getLanguage('menu', 'links_title'));
 $tpl->assign('MENU_LINKS', core::getLanguage('menu', 'links'));
-
-
 
 
 $tpl->assign('MENU_EDIT_TITLE', core::getLanguage('menu', 'edit_title'));
@@ -46,8 +39,6 @@ $tpl->assign('MENU_BLACK', core::getLanguage('menu', 'black'));
 
 $tpl->assign('MENU_UPDATE_TITLE', core::getLanguage('menu', 'update_title'));
 $tpl->assign('MENU_UPDATE', core::getLanguage('menu', 'update'));
-
-
 
 
 $tpl->assign('MENU_PASSWORD_TITLE', core::getLanguage('menu', 'password_title'));

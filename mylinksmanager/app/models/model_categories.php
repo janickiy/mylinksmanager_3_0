@@ -1,7 +1,7 @@
 ﻿<?php
 
 /********************************************
- * My Links Manager 3.0.1 beta
+ * My Links Manager 3.0.2
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -30,7 +30,7 @@ class Model_categories extends Model
 
             $result = core::database()->delete(core::database()->getTableName('catalog'), "id=" . $id, '');
 
-            if ($result) $this->delCategory($_GET['id_cat']);
+            if ($result) $this->delCategory($_GET['cat_id']);
         }
     }
 }

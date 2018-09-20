@@ -68,5 +68,6 @@
     <!-- IF '${MSG_NO_UPDATES}' != '' -->
     <a class="btn btn-outline btn-default" disabled><i class="fa fa-refresh"></i> ${MSG_NO_UPDATES}</a>
     <!-- END IF -->
+
 </div>
 <!-- INCLUDE footer.tpl -->

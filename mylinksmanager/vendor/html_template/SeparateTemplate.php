@@ -23,6 +23,8 @@
 // | USE OR OTHER DEALINGS IN THE SOFTWARE.                                    |
 // +---------------------------------------------------------------------------+
 
+include_once "formatter/UrlFormatter.php";
+
 class SeparateTemplate
 {
     public static $instance;

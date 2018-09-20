@@ -1,7 +1,7 @@
 <?php
 
 /********************************************
- * My Links Manager 3.0.1 beta
+ * My Links Manager 3.0.2
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -64,13 +64,27 @@ if (Core_Array::getRequest('action')){
     $fields['check_url'] = Core_Array::getPost('check_url') == "on" ? "yes" : "no";
 
     if ($data->updateSettings($fields))
-        $success = core::getLanguage('msg', 'changes_added');
+        $success_msg = core::getLanguage('msg', 'changes_added');
     else
         $errors[] = core::getLanguage('error', 'web_apps_error');
 
-	header('Location: ' . Helper::url('./?a=admin&t=settings'));
-	exit;
+    unset($_POST);
 }
+
+if (!empty($errors)) {
+    $errorBlock = $tpl->fetch('show_errors');
+    $errorBlock->assign('STR_IDENTIFIED_FOLLOWING_ERRORS', core::getLanguage('str', 'identified_following_errors'));
+
+    foreach($errors as $row) {
+        $rowBlock = $errorBlock->fetch('row');
+        $rowBlock->assign('ERROR', $row);
+        $errorBlock->assign('row', $rowBlock);
+    }
+
+    $tpl->assign('show_errors', $errorBlock);
+}
+
+if (isset($success_msg)) $tpl->assign('MSG_ALERT', $success_msg);
 
 include_once core::pathTo('extra', 'admin/top.php');
 

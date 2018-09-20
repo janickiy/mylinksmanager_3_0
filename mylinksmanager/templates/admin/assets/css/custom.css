@@ -41,7 +41,7 @@ border-radius: 0px;
 
 }
 p {
-    font-size:16px;
+    font-size:14px;
     line-height:25px;
     padding-top:20px;
 }
@@ -52,12 +52,13 @@ p {
     background-color:#F8F8F8;
 
 }
-   .noti-box {
+
+.noti-box {
 min-height: 100px;
 padding: 20px;
 }
 
-    .noti-box .icon-box {
+.noti-box .icon-box {
 display: block;
 float: left;
 margin: 0 15px 10px 0;
@@ -76,12 +77,12 @@ font-size: 40px;
     font-weight:600;
 }
 .set-icon {
-    -webkit-border-radius: 50px;
+-webkit-border-radius: 50px;
 -moz-border-radius: 50px;
 border-radius: 50px;
-
 }
-    .bg-color-green {
+
+ .bg-color-green {
 background-color: #00CE6F;
 color: #fff;
 }
@@ -99,7 +100,7 @@ color: #fff;
 }
 
 
- .icon-box-right {
+.icon-box-right {
 display: block;
 float: right;
 margin: 0 15px 10px 0;
@@ -111,7 +112,7 @@ text-align: center;
 font-size: 40px;
 }
 
- .main-temp-back {
+.main-temp-back {
 background: #8702A8;
 color: #FFFFFF;
 font-size: 16px;
@@ -146,13 +147,15 @@ color:#fff;
     background-color: #AF0000;
     border-top: 0px solid #fff;
 }
-     .color-bottom-txt {
+
+.color-bottom-txt {
    color: #000;
 font-size: 16px;
 line-height: 30px;
 }
-     /*CHAT PANEL*/
- .chat-panel .panel-body {
+
+ /*CHAT PANEL*/
+.chat-panel .panel-body {
 height: 450px;
 overflow-y: scroll;
 }

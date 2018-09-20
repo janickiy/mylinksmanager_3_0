@@ -1,7 +1,7 @@
 <?php
 
 /********************************************
- * My Links Manager 3.0.1 beta
+ * My Links Manager 3.0.2
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -78,6 +78,8 @@ include_once core::pathTo('extra', 'admin/top.php');
 include_once core::pathTo('extra', 'admin/menu.php');
 
 $row = $data->getCategoryRow(Core_Array::getRequest('id'));
+
+if (!$row) throw new Exception404("Not found");
 
 //form
 $tpl->assign('STR_REQUIRED_FIELDS', core::getLanguage('str', 'required_fields'));

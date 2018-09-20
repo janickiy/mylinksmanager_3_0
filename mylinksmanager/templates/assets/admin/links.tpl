@@ -35,7 +35,7 @@
             <a class="btn btn-outline btn-default btn-lg" title="${STR_IMPORT_LINKS}" href="<!-- URL 'Helper::url("./?a=admin&t=import")' -->">
             <span class="fa fa-download fa-2x"></span> <span class="IconText">${STR_IMPORT_LINKS}</span>
             </a>
-            <a class="btn btn-outline btn-default btn-lg" title="${STR_EXPORT_LINKS}" href="<!-- URL 'Helper::url("./?a=admin&t=export")' -->">
+            <a class="btn btn-outline btn-default btn-lg" title="${STR_EXPORT_LINKS}" href="<!-- URL 'Helper::url("./?a=admin&t=export&action=on")' -->">
             <span class="fa fa-upload fa-2x"></span> <span class="IconText">${STR_EXPORT_LINKS}</span>
             </a>
         </div>
@@ -46,7 +46,7 @@
     <div class="col-lg-12">
         <form class="form-inline" style="margin-bottom: 20px; margin-top: 20px;" method="POST" name="searchform" action="<!-- URL 'Helper::url("./?a=admin&t=links")' --><!-- IF '${SEARCH}' != '' -->&search=${SEARCH}<!-- END IF -->">
             <div class="form-group">
-                <input class="form-control form-warning input-sm" type="text" name="search" value="${SEARCH}">
+                <input class="form-control form-warning input-sm" type="text" name="search" value="${(Url)SEARCH}">
             </div>
             <input class="btn btn-info" type="submit" value="${BUTTON_FIND}">
         </form>
@@ -97,7 +97,7 @@
 
         <tbody>
         <!-- BEGIN column -->
-        <tr <!-- IF '${CLASS_NOACTIVE}' == 'no' -->class="danger"<!-- END IF -->>
+        <tr <!-- IF '${LINK_STATUS}' == 'black' -->class="danger"<!-- END IF -->>
         <td style="vertical-align: middle;"><input type="checkbox" class="checkbox" title="${TABLECOLMN_CHECKBOX}"  value="${ID}" name=activate[]></td>
         <td>${ID}</td>
         <td>${NAME}</td>
@@ -106,7 +106,7 @@
         <td>${URL}</td>
         <td>${CATEGORY}</td>
         <td>${VIEWS}</td>
-        <th>${STATUS}</th>
+        <td>${STATUS}</td>
         <td>${CREATED}</td>
         <td>
             <a class="btn btn-outline btn-default" href="<!-- URL 'Helper::url("./?a=admin&t=editlink&id=${ID}")' -->" title="${STR_EDIT}"> <i class="fa fa-pencil"></i></a>

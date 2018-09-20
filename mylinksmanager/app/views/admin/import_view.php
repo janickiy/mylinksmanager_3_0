@@ -1,7 +1,7 @@
 <?php
 
 /********************************************
- * My Links Manager 3.0.1 beta
+ * My Links Manager 3.0.2
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -16,6 +16,9 @@ Auth::authorization();
 //include template
 core::requireEx('libs', "html_template/SeparateTemplate.php");
 $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/import.tpl");
+
+$tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_import'));
+$tpl->assign('TITLE', core::getLanguage('title', 'admin_import'));
 
 $errors = [];
 

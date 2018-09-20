@@ -285,7 +285,7 @@ function showLength2(id,max)
               <br /></td>
           </tr>
           <tr>
-            <td align="right"><b>${STR_CHOOSE_YOUR_CATEGORY}:</b></td>
+            <td align="right"><b>${STR_CHOOSE_YOUR_CATEGORY}*:</b></td>
             <td><select type="text" class="input" name="cat_id">
                 <option value="0" <!-- IF '${ID_CAT}' == 0 -->selected="selected" <!-- END IF --> class="input"> ---- ${STR_CHOOSE_CATEGORY} ---- </option>
 
@@ -295,21 +295,21 @@ function showLength2(id,max)
             </td>
           </tr>
           <tr>
-            <td align="right"><b>${STR_FORM_NAME}:</b></td>
+            <td align="right"><b>${STR_FORM_NAME}*:</b></td>
             <td><input size="50" class="input" name="name" type="text" value="${NAME}"></td>
           </tr>
           <tr>
-            <td align="right"><b>${STR_FORM_URL}:</b><span class="msg" id="id_url"></span></td>
+            <td align="right"><b>${STR_FORM_URL}*:</b><span class="msg" id="id_url"></span></td>
             <td><input size="50" class="input" maxlength="200" name="url" id="url" onChange="sendRequest();" type="text" value="${URL}"></td>
           </tr>
           <!-- IF '${CHECK_URL}' == 'yes' -->
           <tr>
-            <td align="right"><b>${STR_FORM_RECIPROCAL_LINK}:</b></td>
+            <td align="right"><b>${STR_FORM_RECIPROCAL_LINK}*:</b></td>
             <td><input size="50" class="input" maxlength="200" name="reciprocal_link" type="text" value="${RECIPROCAL_LINK}"></td>
           </tr>
           <!-- END IF -->
           <tr>
-            <td align="right"><b>${STR_FORM_EMAIL}:</b></td>
+            <td align="right"><b>${STR_FORM_EMAIL}*:</b></td>
             <td><input class="input" size="50" maxlength="150" name="email" type="text" value="${EMAIL}"></td>
           </tr>
           <tr>
@@ -317,14 +317,14 @@ function showLength2(id,max)
             <td><input class="input" size="50" maxlength="250" name="keywords" type="text" value="${KEYWORDS}"></td>
           </tr>
           <tr>
-            <td align="right"><b>${STR_FORM_DESCRIPTION}:</b><br />
+            <td align="right"><b>${STR_FORM_DESCRIPTION}*:</b><br />
               (${STR_ONLY_TEXT_NOT_HTMLCODE} ${STR_FROM} ${NUMBER_CHARS_DESCRIPTION_MIN} ${STR_TO} ${NUMBER_CHARS_DESCRIPTION_MAX} ${STR_CHARACTERS}) </td>
             <td><textarea class="input2" cols="45" rows="3" onkeyup=showLength(this,${NUMBER_CHARS_DESCRIPTION_MIN},${NUMBER_CHARS_DESCRIPTION_MAX}); id="description" name="description">${DESCRIPTION}</textarea>
               <br />
               <span id="id_description"><img style="BACKGROUND: #FFDBD9" height="8" border="1" src="./templates/images/line.gif" width="150" align="middle"> ${STR_LEFT}: ${NUMBER_CHARS_DESCRIPTION_MAX} (${STR_FROM_TOTAL} ${NUMBER_CHARS_DESCRIPTION_MAX})</span></td>
           </tr>
           <tr>
-            <td align="right"><b>${STR_FORM_FULL_DESCRIPTION}:</b><br />
+            <td align="right"><b>${STR_FORM_FULL_DESCRIPTION}*:</b><br />
               (${STR_ONLY_TEXT_NOT_HTMLCODE} ${STR_FROM} ${NUMBER_CHARS_FULLDESCRIPTION_MIN} ${STR_TO} ${NUMBER_CHARS_FULLDESCRIPTION_MAX} ${STR_CHARACTERS}) </td>
             <td><textarea class="input2" cols="45" rows="6" onkeyup=showLength(this,${NUMBER_CHARS_FULLDESCRIPTION_MIN},${NUMBER_CHARS_FULLDESCRIPTION_MAX}); id="full_description" name="full_description">${FULL_DESCRIPTION}</textarea>
               <br />
@@ -341,7 +341,7 @@ function showLength2(id,max)
           <!-- IF '${SECURITYCODE}' == 'yes' -->
 
           <tr>
-            <td align="right"><b>${STR_FORM_SECURITYCODE}:</b></td>
+            <td align="right"><b>${STR_FORM_SECURITYCODE}*:</b></td>
             <td rowspan="2" valign="bottom"><input class="input" type="text" size="8" maxlength="8" name="securitycode"></td>
           </tr>
           <tr>

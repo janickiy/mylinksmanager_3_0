@@ -1,7 +1,7 @@
 ﻿<?php
 
 /********************************************
- * My Links Manager 3.0.1 beta
+ * My Links Manager 3.0.2
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -113,13 +113,15 @@ class Model_import extends Model
                 $row = core::database()->getRow($result);
                 return $row['id'];
             } else {
-                $fields = [
-                    'id' => 0,
-                    'name' => $name,
-                    'parent_id' => $parent_id,
-                ];
+                if ($name) {
+                    $fields = [
+                        'id' => 0,
+                        'name' => $name,
+                        'parent_id' => $parent_id,
+                    ];
 
-                return core::database()->insert($fields, core::database()->getTableName('catalog'));
+                    return core::database()->insert($fields, core::database()->getTableName('catalog'));
+                }
             }
         }
     }

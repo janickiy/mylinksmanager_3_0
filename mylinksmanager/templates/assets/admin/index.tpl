@@ -17,9 +17,8 @@
             <div class="col-xs-12 col-md-3 col-md-pull-6">
                 <p>${HTMLCODE_BANNER}</p>
             </div>
-
             <div class="col-xs-12 col-md-12">
-                <a href="<!-- URL 'Helper::url("./?a=admin")' -->" class="btn btn-primary" type="button">${BUTTON_HANDCHECK}</a>
+                <a href="<!-- URL 'Helper::url("./?a=admin&t=index&id=${ID}")' -->" class="btn btn-primary">${BUTTON_HANDCHECK}</a>
                     <button class="btn btn-primary" type="submit">${BUTTON_AUTOCHECK}</button>
                     <input type="hidden" name="id" value="${ID}">
                     <input type="hidden" name="event" value="auto_check">
@@ -44,37 +43,37 @@
             ${STR_CATEGORY}: </b>${CATEGORY_NAME}<br />
             ${STR_ADDED}: ${TIME} <br />
         </div>
+        <br>
+        <iframe width="100%" height="500" src="http://${RECIPROCAL_LINK}"></iframe>
         <div class="link-wrapper col-md-12">
-            <div class="link-row">
-                <div class="link-col link-c25">
+            <div class="row">
+                <div class="col-xs-4">
                     <form action="<!-- URL 'Helper::url("./?a=admin")' -->" method="post">
-                        <button class="btn btn-success" type="submit">${BUTTON_ADD}</button>
-                        <input type="hidden" name="id" value="${ID}">
-                        <input type="hidden" name="event" value="add">
-                        <input type="hidden" name="action" value="post">
+                    <button class="btn btn-success" type="submit">${BUTTON_ADD}</button>
+                    <input type="hidden" name="id" value="${ID}">
+                    <input type="hidden" name="event" value="add">
+                    <input type="hidden" name="action" value="post">
                     </form>
                 </div>
-                <div class="link-col link-c25">
+                <div class="col-xs-4">
                     <form action="<!-- URL 'Helper::url("./?a=admin")' -->" method="post">
-                        <button class="btn btn-primary" type="submit">${BUTTON_TO_BLACKLIST}</button>
-                        <input type="hidden" name="id" value="${ID}">
-                        <input type="hidden" name="event" value="black">
-                        <input type="hidden" name="action" value="post">
+                    <button class="btn btn-primary" type="submit">${BUTTON_TO_BLACKLIST}</button>
+                    <input type="hidden" name="id" value="${ID}">
+                    <input type="hidden" name="event" value="black">
+                    <input type="hidden" name="action" value="post">
                     </form>
                 </div>
-                <div class="link-col link-c50">
+                <div class="col-xs-4">
                     <form action="<!-- URL 'Helper::url("./?a=admin")' -->" method="post">
-                        <button class="btn btn-danger" type="submit">${BUTTON_DELETE}</button>
-                        <input type="hidden" name="id" value="${ID}">
-                        <input type="hidden" name="event" value="delete">
-                        <input type="hidden" name="action" value="post">
+                    <button class="btn btn-danger" type="submit">${BUTTON_DELETE}</button>
+                    <input type="hidden" name="id" value="${ID}">
+                    <input type="hidden" name="event" value="delete">
+                    <input type="hidden" name="action" value="post">
                     </form>
                 </div>
             </div>
         </div>
-        <br>
-        <br>
-        <iframe width="100%" height="500" src="http://${RECIPROCAL_LINK}"></iframe>
+
     </div>
 </div>
 <!-- END info_link -->

@@ -1,7 +1,7 @@
 <?php
 
 /********************************************
- * My Links Manager 3.0.1 beta
+ * My Links Manager 3.0.2
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -9,6 +9,10 @@
  ********************************************/
 
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
+
+$title = core::getLanguage('title', 'index');
+$description = core::getLanguage('description', 'index');
+$keywords = core::getLanguage('keywords', 'index');
 
 if (Core_Array::getGet('id')) {
     $arraypathway = [];
@@ -43,10 +47,9 @@ if (!empty(Core_Array::getGet('link_id'))) {
     $title = $link['name'];
 
     //header
-    $tpl->assign('METATITLE', $title);
+    $tpl->assign('TITLE', $title);
     $tpl->assign('METADESCRIPTION', $description);
     $tpl->assign('METAKEYWORDS', $keywords);
-    $tpl->assign('VERSION', VERSION);
 
     $link_go_back = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['PHP_SELF'] . "?id=" . $link['id'];
 
@@ -65,8 +68,9 @@ if (!empty(Core_Array::getGet('link_id'))) {
     $tpl->assign('STR_GO_BACK', core::getLanguage('str', 'go_back'));
 
     if (Core_Array::getGet('url')) {
+
         // If there is a URL then count one click
-        if ($data->countView(Core_Array::getGet('link_id'))) {
+        if ($data->countView($link['id'],$link['views'])) {
             // Make a redirect
             $tpl->assign('REDIRECT_URL', $link['url']);
         }
@@ -94,12 +98,15 @@ if (!empty(Core_Array::getGet('link_id'))) {
         $title = core::getLanguage('title', 'index') . " " . VERSION;
     }
 
+
     //include template
     core::requireEx('libs', "html_template/SeparateTemplate.php");
     $tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . core::getSetting('controller') . ".tpl");
 
     $tpl->assign('TITLE_PAGE', core::getLanguage('title', 'page_index'));
-    $tpl->assign('TITLE', core::getLanguage('title', 'title'));
+    $tpl->assign('TITLE', $title);
+    $tpl->assign('METADESCRIPTION', $description);
+    $tpl->assign('METAKEYWORDS', $keywords);
 
     //searchform
     $tpl->assign('STR_KEYWORDS_SEARCHFORM', core::getLanguage('str', 'keywords_searchform'));
@@ -113,7 +120,7 @@ if (!empty(Core_Array::getGet('link_id'))) {
 
     $tpl->assign('ACTION', $_SERVER['REQUEST_URI']);
     $tpl->assign('SEARCH', urldecode(Core_Array::getGet('search')));
-    $tpl->assign('ID_CATALOG', Core_Array::getGet('id_catalog'));
+    $tpl->assign('ID_CATALOG', Core_Array::getGet('catalog_id'));
     $tpl->assign('LOGIC', Core_Array::getGet('logic'));
     $tpl->assign('OPTION', Links::ShowCatalogList(0, 0));
 
@@ -164,14 +171,19 @@ if (!empty(Core_Array::getGet('link_id'))) {
 
     $tpl->assign('PRINT_CAT', $rowPrintCat);
     $tpl->assign('TOPBARMENU', $pathway);
-    $tpl->assign('SUBCATALOG', $catalog['name'] ? $catalog['name'] : core::getLanguage('str', 'new_links'));
+
+    if (Core_Array::getGet('search'))  {
+        $tpl->assign('SUBCATALOG', $catalog['name'] ? $catalog['name'] : core::getLanguage('str', 'search'));
+    } else {
+        $tpl->assign('SUBCATALOG', $catalog['name'] ? $catalog['name'] : core::getLanguage('str', 'new_links'));
+    }
 
     $tpl->assign('STR_ADD_URL', core::getLanguage('str', 'add_url'));
 
-    if (empty(Core_Array::getGet('id'))) {
-        $links = $data->getLinks($page, $all_number_links);
-    } else {
+    if (empty(Core_Array::getGet('id')) and empty(Core_Array::getGet('search'))) {
         $links = Links::getLinksList('show', 'l.id DESC', $all_number_links);
+    } else {
+        $links = $data->getLinks($page, $all_number_links, Core_Array::getGet('id'));
     }
 
     if ($links) {

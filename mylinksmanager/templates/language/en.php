@@ -8,8 +8,8 @@ If you choose &quot;<b>Check up manually</b>&quot; the window describing the lin
 The administrator decides what to do with the link next. Whether to add, remove or blacklist it. 
 If you choose &quot;<b>check up automatically</b>&quot; option  a script checks the link quality according to the rules set up in the options, and depending on the result the link gets to the catalogue, is deleted or blacklisted.';
 
-$language["title"]["admin_page_addcategory"] = "Add the category";
-$language["title"]["admin_addcategory"] = "Admin area My Links Manager | Add the category";
+$language["title"]["admin_page_addcategory"] = "Add category";
+$language["title"]["admin_addcategory"] = "Admin area My Links Manager | Add category";
 $language["info"]["admin_addcategory"] = 'In the field "Category" you can change the name of the category. Fields &quot;<b>Description (html)</b>&quot; and &quot;<b>Keywords (html)</b>&quot; are optional and will only appear in meta tags.';
 
 $language["title"]["admin_page_addlink"] = "Add the url";
@@ -21,6 +21,14 @@ $language["title"]["admin_page_categories"] = "Categories";
 $language["title"]["admin_categories"] = "Admin area My Links Manager | Categories";
 $language["info"]["admin_categories"] = 'Here there is a list of catalogs and subcategories. To look through the list of subcategories for the catalog, go to the page using the name of the catalog link, after that the list of subcategories appears at the bottom of the page. 
 To add a new category, click the link &quot;<b>+Add category</b>&quot;. To add a subcategories click the link &quot;<b>+Add subcategory</b>&quot;';
+
+$language["title"]["admin_page_import"] = "Import";
+$language["title"]["admin_import"] = "Admin area My Links Manager | Import";
+$language["info"]["admin_import"] = "";
+
+$language["title"]["admin_page_update"] = "Update";
+$language["title"]["admin_update"] = "Admin area My Links Manager | Update";
+$language["info"]["admin_update"] = "";
 
 $language["title"]["admin_page_password"] = "Password";
 $language["title"]["admin_password"] = "Admin area My Links Manager | Change password";
@@ -44,6 +52,10 @@ $language["info"]["admin_links"] = "In this section you can edit links. There is
 $language["title"]["admin_page_editlink"] = "Edit link";
 $language["title"]["admin_editlink"] = "Admin area My Links Manager | Edit link";
 $language["info"]["admin_editlink"] = "In this section you can edit link. Please fill in all required fields. If You do not want to check the added site uncheck <b>&quot;To check this link&quot;</b>";
+
+$language["title"]["admin_page_editcategory"] = "Edit category";
+$language["title"]["admin_editcategory"] = "Admin area My Links Manager | Edit category";
+$language["info"]["admin_editcategory"] = '';
 
 $language["title"]["page_addurl"] = 'Catalog of sites My Links Manager | add url';
 $language["title"]["addurl"] = 'Catalog of sites My Links Manager | add url';
@@ -234,6 +246,7 @@ $language["str"]["start_update"] = 'Start the update. Loading update... ';
 $language["str"]["download_completed"] = "Download completed. Updating the database...";
 $language["str"]["install_msg"] = 'If PHP Newsletter has been already installed, then you should delete <strong>install</strong> folder; otherwise launch the <a href="%URL%">installation wizard</a>.';
 $language["str"]["url_info"] = 'http://janicky.com/php-scripts/my-links-manager';
+$language["str"]["search"] = "Search";
 
 $language["status"]["new"] = "New";
 $language["status"]["show"] = "Show";
@@ -278,6 +291,7 @@ $language["msg"]["files_unzipped_successfully"] = "Files unzipped successfully";
 $language["msg"]["directory_not_writeable"] = "Error: Directory not writeable by webserver";
 $language["msg"]["no_zlib_support_enabled"] = "Error: Your PHP has no zlib support enabled";
 $language["msg"]["cannot_read_zip_archive"] = "Error: Cannot read .zip archive";
+$language["msg"]["no_updates"] = "There are no updates at this time. You already have the latest version of %SCRIPT_NAME%, %NEW_VERSION%.";
 
 $language["error"]["wait_verification"] = "This site is awaiting verification!";
 $language["error"]["already_exists"] = "This site already exists in the Database!";
@@ -328,3 +342,5 @@ $language["error"]["failed_to_update"] = 'ERROR: Failed to update!';
 
 $language["alert"]["select_action"]  = "Select an action!";
 $language["alert"]["confirm_remove"] = "Are you sure you want to delete?";
+
+$language["script"]["name"] = 'My Links Manager';

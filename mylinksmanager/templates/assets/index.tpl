@@ -38,7 +38,7 @@
                         <p align="right">${STR_SEARCH_IN_CATALOG_SEARCHFORM}:</p>
                      </td>
                      <td>
-                        <select type=text class="input" name="id_catalog">
+                        <select type=text class="input" name="catalog_id">
                            <option value=0 <!-- IF '${ID_CATALOG}' == 0 -->selected="selected"<!-- END IF -->>${STR_IT_DOESNT_MATTER_SEARCHFORM}</option>
                            ${OPTION}                
                         </select>
@@ -73,7 +73,7 @@
       </td>
    </tr>
 </table>
-${TOPBARMENU}
+<p>${TOPBARMENU}</p>
 <table border="0" width="100%">
    <tr>
       <td>

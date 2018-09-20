@@ -1,7 +1,7 @@
 <?php
 
 /********************************************
- * My Links Manager 3.0.1 beta
+ * My Links Manager 3.0.2
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -11,6 +11,11 @@
 defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
 
 Auth::authorization();
+
+//include template
+core::requireEx('libs', "html_template/SeparateTemplate.php");
+core::requireEx('libs', "html_template/formatter/UrlFormatter.php");
+$tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/links.tpl");
 
 if (Core_Array::getRequest('remove') && is_numeric($_REQUEST['remove'])) {
     if ($data->removeLink($_REQUEST['remove']))
@@ -62,16 +67,9 @@ if (Core_Array::getRequest('action')) {
     }
 }
 
-//include template
-core::requireEx('libs', "html_template/SeparateTemplate.php");
-$tpl = SeparateTemplate::instance()->loadSourceFromFile(core::getTemplate() . "admin/links.tpl");
-
-
 $tpl->assign('TITLEPAGE', core::getLanguage('title', 'admin_page_links'));
 $tpl->assign('TITLE', core::getLanguage('title', 'admin_links'));
 $tpl->assign('HELP', core::getLanguage('info', 'admin_links'));
-
-
 
 $order = [
     'id'  => "id",
@@ -128,7 +126,7 @@ if ($arrs) {
     $rowBlock->assign('STR_CREATED', core::getLanguage('str', 'created'));
     $rowBlock->assign('STR_STATUS', core::getLanguage('str', 'status'));
     $rowBlock->assign('STR_ACTION', core::getLanguage('str', 'action'));
-    $rowBlock->assign('SEARCH', $search);
+    $rowBlock->assign('SEARCH', urlencode($search));
 
     $rowBlock->assign('ALERT_SELECT_ACTION', core::getLanguage('alert', 'select_action'));
     $rowBlock->assign('ALERT_CONFIRM_REMOVE', core::getLanguage('alert', 'confirm_remove'));
@@ -139,6 +137,7 @@ if ($arrs) {
     $rowBlock->assign('GET_CATEGORY', $_GET['category']);
     $rowBlock->assign('GET_URL', $_GET['url']);
     $rowBlock->assign('GET_VIEWS', $_GET['views']);
+    $rowBlock->assign('GET_STATUS', $_GET['status']);
     $rowBlock->assign('GET_CREATED', $_GET['created']);
 
     $number = $data->getTotal();
@@ -190,10 +189,10 @@ if ($arrs) {
         $columnBlock->assign('DESCRIPTION', $row['description']);
         $columnBlock->assign('EMAIL', $row['email']);
         $columnBlock->assign('STATUS', str_replace($row['status'], core::getLanguage('status', $row['status']), $row['status']));
+        $columnBlock->assign('STATUS_LINK', $row['status']);
         $columnBlock->assign('URL', $row['url']);
         $columnBlock->assign('CATEGORY', $row['category']);
         $columnBlock->assign('VIEWS', $row['views']);
-
         $columnBlock->assign('CREATED', $row['created']);
         $columnBlock->assign('STR_EDIT', core::getLanguage('str', 'edit'));
         $columnBlock->assign('STR_REMOVE', core::getLanguage('str', 'remove'));

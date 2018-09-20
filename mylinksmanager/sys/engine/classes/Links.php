@@ -1,7 +1,7 @@
 <?php
 
 /********************************************
- * My Links Manager 3.0.1 beta 
+ * My Links Manager 3.0.2
  * Copyright (c) 2011-2018 Alexander Yanitsky
  * Website: http://janicky.com
  * E-mail: janickiy@mail.ru
@@ -116,7 +116,7 @@ class Links
     public static function getLinksList($status, $order, $number = 10, $offset=0)
     {
         if (is_numeric($offset) && is_numeric($number)) {
-            $query = "SELECT *,c.name AS catname, l.description AS description, l.id AS id FROM " . core::database()->getTableName('links') . " l
+            $query = "SELECT l.*, c.name AS category FROM " . core::database()->getTableName('links') . " l
                       LEFT JOIN " . core::database()->getTableName('catalog') . " c ON c.id = l.cat_id
                       WHERE l.status='" . $status . "'
                       ORDER BY " . $order . "
