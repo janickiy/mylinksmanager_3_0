@@ -1,37 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>${TITLE}</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<meta name="ROBOTS" content="noindex">
-	<base href="http://${BASE_URL}">
-	<link href="templates/styles/bootstrap.min.css" rel="stylesheet" media="screen">
-	<link href="templates/styles/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
-	<link href="templates/styles/styles.css" rel="stylesheet" media="screen">
-	<link href="templates/styles/DT_bootstrap.css" rel="stylesheet" media="screen">
-	<link type="text/css" href="templates/styles/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
-	<link href="templates/styles/css/font-awesome.min.css" rel="stylesheet">
-	<script type="text/javascript" src="templates/js/jquery.min.js"></script>
-	<script type="text/javascript" src="templates/js/jquery.hide_alertblock.js"></script>
+	<!-- BOOTSTRAP STYLES-->
+	<link href="<!-- URL 'Helper::url("templates/admin/assets/css/bootstrap.css")' -->" rel="stylesheet" />
+	<!-- FONTAWESOME STYLES-->
+	<link href="<!-- URL 'Helper::url("templates/admin/assets/css/font-awesome.css")' -->" rel="stylesheet" />
+	<!-- MORRIS CHART STYLES-->
+	<link href="<!-- URL 'Helper::url("templates/admin/assets/js/morris/morris-0.4.3.min.css")' -->" rel="stylesheet" />
+	<!-- CUSTOM STYLES-->
+	<link href="<!-- URL 'Helper::url("templates/admin/assets/css/custom.css")' -->" rel="stylesheet" />
+	<!-- GOOGLE FONTS-->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+	<script src="<!-- URL 'Helper::url("js/jquery.min.js")' -->"></script>
+	<script src="<!-- URL 'Helper::url("js/jquery.hide_alertblock.js")' -->"></script>
+	<script src="<!-- URL 'Helper::url("js/jquery.cookie.js")' -->"></script>
+
+	<script type="text/javascript">
+        $(document).ready(function(){
+            $.ajax({
+                cache: false,
+                url: "<!-- URL 'Helper::url("./?t=ajax&action=alert_update")' -->",
+                dataType: "json",
+                success: function(data){
+                    if (data.msg != '' && $.cookie('alertshow') != 'no'){
+                        $('#alert_msg_block').fadeIn('700');
+                        $("#alert_warning_msg").append(data.msg);
+                    }
+                }
+            });
+
+            $('.close').on('click', function(){
+                var deleted_block = $(this).parent(),
+                    bl_h = deleted_block.outerHeight(),
+                    bk_index = deleted_block.index(),
+                    next_bl = deleted_block.siblings(':eq('+bk_index+')'),
+                    marg = parseInt(deleted_block.css('margin-bottom'));
+
+                deleted_block.fadeOut(500);
+
+                setTimeout(function(){
+                    $(next_bl).css('margin-top', bl_h+marg);
+                    $(next_bl).animate({
+                        marginTop: 0
+                    },400);
+                }, 505);
+
+                setTimeout(function(){
+                    deleted_block.remove();
+                }, 700);
+                return false;
+            });
+
+            setTimeout(function(){
+                setTimeout(function(){$('.alert-success').fadeOut('700')},5000);
+            });
+        });
+
+	</script>
 </head>
 <body>
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span3" id="sidebar"></span>
-			<ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
-				<li <!-- IF '${ACTIVE_MENU}' == '' -->class="active" <!-- END IF -->><a href="./?a=admin" title="Список лицензионных ключей"><i class="fa fa-list-ul"></i> Список лицензионных ключей</a></li>
-				<li <!-- IF '${ACTIVE_MENU}' == 'domains' -->class="active"<!-- END IF -->><a href="./?t=domains&a=admin" title="Список доменов"><i class="fa fa-list-ul "></i> Список доменов</a><span class="menu-create-tmpl-icon"></span></li>
-				<li <!-- IF '${ACTIVE_MENU}' == 'info' -->class="active"<!-- END IF -->><a href="./?t=info&a=admin" title="Инфо"><i class="fa fa-list-ul "></i> Инфо</a><span class="menu-create-tmpl-icon"></span></li>
-				<li <!-- IF '${ACTIVE_MENU}' == 'log' -->class="active"<!-- END IF -->><a href="./?t=log&a=admin" title="Стастика"><i class="fa fa-bar-chart-o"></i> Стастика</a></li>
-				<li <!-- IF '${ACTIVE_MENU}' == 'change_password' -->class="active"<!-- END IF -->><a href="./?t=change_password&a=admin" title="Сменить пароль"><i class="fa fa-key"></i> Сменить пароль</a></li>
+<div id="wrapper">
+	<nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+			<a class="navbar-brand" href="<!-- URL 'Helper::url("./")' -->"></a>
+			<span class="version">${SCRIPT_VERSION}</span>
+		</div>
+		<div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;"> <a href="<!-- URL 'Helper::url("./?a=admin&t=logout")' -->" class="btn btn-danger square-btn-adjust">${STR_LOGOUT}</a> </div>
+	</nav>
+	<!-- /. NAV TOP  -->
+	<nav class="navbar-default navbar-side" role="navigation">
+		<div class="sidebar-collapse">
+			<ul class="nav" id="main-menu">
+				<li>
+					<a <!-- IF '${ACTIVE_MENU}' == '' -->class="active-menu"<!-- END IF --> title="${INDEXTITLE}" href="<!-- URL 'Helper::url("./?a=admin")' -->"><i class="fa fa-flag"></i> ${MENU_INDEX}</a>
+				</li>
+				<li>
+					<a <!-- IF '${ACTIVE_MENU}' == 'addlink' -->class="active-menu"<!-- END IF --> title="${MENU_ADDURL_TITLE}" href="<!-- URL 'Helper::url("./?a=admin&t=addlink")' -->"><i class="fa fa-plus"></i> ${MENU_ADDURL}</a>
+				</li>
+				<li>
+					<a <!-- IF '${ACTIVE_MENU}' == 'category' -->class="active-menu"<!-- END IF --> title="${MENU_CATEGORIES_TITLE}" href="<!-- URL 'Helper::url("./?a=admin&t=categories")' -->"><i class="fa fa-folder-open "></i> ${MENU_CATEGORIES}</a>
+				</li>
+				<li>
+					<a <!-- IF '${ACTIVE_MENU}' == 'links' -->class="active-menu"<!-- END IF --> title="${MENU_LINKS_TITLE}" href="<!-- URL 'Helper::url("./?a=admin&t=links")' -->"><i class="fa fa-list"></i> ${MENU_LINKS}</a></li>
+				<li>
+					<a <!-- IF '${ACTIVE_MENU}' == 'settings' -->class="active-menu"<!-- END IF --> title="${MENU_SETTINGS_TITLE}" href="<!-- URL 'Helper::url("./?a=admin&t=settings")' -->"><i class="fa fa-gear"></i> ${MENU_SETTINGS}</a>
+				</li>
+				<li>
+					<a	<!-- IF '${ACTIVE_MENU}' == 'update' -->class="active-menu"<!-- END IF --> title="${MENU_UPDATE_TITLE}" href="<!-- URL 'Helper::url("./?a=admin&t=update")' -->"><i class="fa fa-refresh"></i> ${MENU_UPDATE}</a>
+				</li>
+				<li>
+					<a <!-- IF '${ACTIVE_MENU}' == 'password' -->class="active-menu"<!-- END IF --> title="${MENU_PASSWORD_TITLE}" href="<!-- URL 'Helper::url("./?a=admin&t=password")' -->"><i class="fa fa-key "></i> ${MENU_PASSWORD}</a>
+				</li>
 			</ul>
 		</div>
-		<div class="span9" id="content">
-			<div class="row-fluid">
-				<!-- block -->
-				<div class="block">
-					<div class="navbar navbar-inner block-header">
-						<div class="muted pull-left"><strong><h3>${TITLE_PAGE}</h3></strong></div>
-					</div>
-					<div class="block-content collapse in">
-						<div class="span12">
+	</nav>
+	<!-- /. NAV SIDE  -->
+	<div id="page-wrapper" >
+		<div id="page-inner">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>${TITLEPAGE}</h1>
+					<!-- IF '${HELP}' != '' -->
+					<div class="alert alert-info">${HELP}</div>
+					<!-- END IF -->
+				</div>
+			</div>
+
+			<!-- BEGIN show_errors -->
+			<div class="alert alert-danger">
+				<button class="close" data-dismiss="alert">×</button>
+				<h4 class="alert-heading">${STR_IDENTIFIED_FOLLOWING_ERRORS}:</h4>
+				<ul>
+					<!-- BEGIN row -->
+					<li> ${ERROR}</li>
+					<!-- END row -->
+				</ul>
+			</div>
+			<!-- END show_errors -->
+
+			<!-- IF '${INFO_ALERT}' != '' -->
+			<div class="alert alert-info"> ${INFO_ALERT} </div>
+			<!-- END IF -->
+			<div class="alert alert-warning" id="alert_msg_block" style="display:none">
+				<button class="close" onClick="$.cookie('alertshow', 'no');" data-dismiss="alert">×</button>
+				<h4 class="alert-heading">${STR_WARNING}!</h4>
+				<span id="alert_warning_msg">${PAGE_ALERT_WARNING_MSG}</span>
+			</div>
+
+			<!-- IF '${ERROR_ALERT}' != '' -->
+			<div class="alert alert-danger">
+				<button class="close" data-dismiss="alert">×</button>
+				<strong>${STR_ERROR}!</strong> ${ERROR_ALERT}
+			</div>
+			<!-- END IF -->
+
+			<!-- IF '${MSG_ALERT}' != '' -->
+			<div class="alert alert-success">
+				<button class="close" data-dismiss="alert">×</button>
+				${MSG_ALERT}
+			</div>
+			<!-- END IF -->

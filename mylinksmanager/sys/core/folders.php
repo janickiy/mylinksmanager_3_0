@@ -1,15 +1,5 @@
 <?php
 
-/********************************************
- * My Links Manager 3.0.0 alfa
- * Copyright (c) 2011-2017 Alexander Yanitsky
- * Website: http://janicky.com
- * E-mail: janickiy@mail.ru
- * Skype: janickiy
- ********************************************/
-
-defined('MYLINKSMANAGER') || exit('My Links Manager: access denied!');
-
 class folders
 {
     private static $directories, $files, $ext_filter, $recursive;
@@ -52,9 +42,6 @@ class folders
         return self::$files;
     }
 
-    /**
-     * @param $paths
-     */
     static private function verifyPaths($paths)
     {
         $path_errors = array();
@@ -78,12 +65,8 @@ class folders
             die(var_dump($path_errors));
         }
     }
-
-    /**
-     * @param $dir
-     * @return array
-     * This is how we scan directories
-     */
+    
+    // This is how we scan directories
     static private function find_contents($dir)
     {
         $result = array();

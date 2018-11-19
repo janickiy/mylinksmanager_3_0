@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>${TITLE}</title>
-	<base href="http://${BASE_URL}">
-	<link href="templates/styles/bootstrap.min.css" rel="stylesheet" media="screen">
-	<link href="templates/styles/styles.css" rel="stylesheet" media="screen">
-	<script type="text/javascript" src="templates/js/jquery.min.js"></script>
-	<script type="text/javascript" src="templates/js/jquery.hide_alertblock.js"></script>
+<title>${TITLE}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta content="${METADESCRIPTION}" name=description>
+<meta content="${METAKEYWORDS}" name=keywords>
+<link rel="StyleSheet" type="text/css" href="./templates/styles/style.css">
 </head>
 <body>
-
-
-
-
-
-
-
+<div id="main">
+<div id="header"><span id="vrsn">${VERSION}</span></div>
+<br />

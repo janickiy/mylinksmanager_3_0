@@ -1,0 +1,219 @@
+#main {
+    width: 800px;
+    left: 50%;
+    margin-left: -400px;
+    position: absolute;
+}
+
+a:link {
+    color: #b1b1b1;
+    text-decoration: none
+}
+
+a:visited {
+    color: #5d5d5d;
+    text-decoration: none
+}
+
+a:hover {
+    color: #ff6640;
+    text-decoration: underline
+}
+
+h1 {
+    font-family: times new roman, sans-serif;
+    color: #3366cc;
+    font-size: 18px;
+    text-align: center;
+}
+
+h2 {
+    font-family: times new roman, sans-serif;
+    color: #3366cc;
+    font-size: 17px;
+    text-align: center;
+}
+
+h3 {
+    font-family: times new roman, sans-serif;
+    color: #3366cc;
+    font-size: 16px;
+    text-align: center;
+}
+
+h4 {
+    font-family: times new roman, sans-serif;
+    color: #3366cc;
+    font-size: 14px;
+}
+
+h5 {
+    font-family: times new roman, sans-serif;
+    color: #3366cc;
+    font-size: 13px;
+}
+
+h6 {
+    font-family: times new roman, sans-serif;
+    color: #3366cc;
+    font-size: 12px;
+}
+
+#header {
+    height: 70px;
+    margin: 0 auto;
+    background-image: url('../images/logo.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    border-bottom: 1px dashed #cccccc;
+}
+
+#vrsn {
+    position: absolute;
+    margin-top: 52px;
+    margin-left: 15px;
+    font-size: 12px;
+    font-family: times new roman;
+    text-align: left;
+    background-position: left;
+    color: #5f5f5f;
+}
+
+p {
+    font-family: times new roman, sans-serif;
+    color: #191919;
+    font-size: 13px;
+}
+
+a {
+    font-size: 13px;
+    font-family: times new roman, sans-serif;
+}
+
+legend {
+    font-family: times new roman, sans-serif;
+    color: #6e6e6e;
+    font-size: 13px;
+    font-weight: bold
+}
+
+.info {
+    font-family: times new roman, sans-serif;
+    color: #808080;
+    font-size: 12px;
+}
+
+.input {
+    color: #5b5b5b;
+    font: 13px times new roman;
+    height: 20px;
+    border: 1px #c0c0c0 solid;
+}
+
+.input2 {
+    border: 1px #c0c0c0 solid;
+    color: #5b5b5b;
+    font: 13px times new roman;
+}
+
+.form {
+    font-family: times new roman, sans-serif;
+    color: #191919;
+    font-size: 13px;
+}
+
+.inputsubmit {
+    font: bold small "trebuchet ms", arial, helvetica, sans-serif;
+    padding: 0px 5px;
+    background-color: #2992df;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.msg {
+    color: #bf0000;
+    font-size: 14px;
+}
+
+.folder a:link {
+    color: #f00000;
+    text-decoration: none
+}
+
+.folder a:visited {
+    color: #f00000;
+    text-decoration: none
+}
+
+.folder a:hover {
+    color: #b1b1b1;
+    text-decoration: underline
+}
+
+.folder span, .folder p {
+    color: #b1b1b1;
+}
+
+.folder span, .folder p, .folder a {
+    font-family: times new roman, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.subcat span, .subcat p, .subcat a {
+    font-family: times new roman, sans-serif;
+    font-size: 12px;
+    color: #b1b1b1;
+    font-weight: normal;
+}
+
+.subcat a:link {
+    color: #b1b1b1;
+    text-decoration: underline
+}
+
+.subcat a:visited {
+    color: #b1b1b1;
+    text-decoration: none
+}
+
+.subcat a:hover {
+    color: #b1b1b1;
+    text-decoration: none
+}
+
+#rule {
+    background-color: #ffeaea;
+    margin: 0 auto;
+    clear: both;
+    padding: 3px 3px 3px 3px;
+    border: 1px dashed #cb0601;
+    font-family: times new roman, sans-serif;
+    color: #9a0501;
+    font-size: 13px;
+}
+
+#footer {
+    margin-top: 10px;
+    padding: 10px 5px 0 4px;
+    clear: both;
+    border-top: 1px dashed #cccccc;
+    font-family: times new roman, sans-serif;
+    color: #191919;
+    font-size: 13px;
+}
+
+.warning_msg {
+    color: #b94a48;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pagination {
+    color: #191919;
+    font-family: times new roman, sans-serif;
+    font-size: 13px;
+}

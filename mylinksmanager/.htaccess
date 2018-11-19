@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteRule ^admin(\/)?$ index.php?a=admin [L]
+RewriteRule ^admin/([^/\.]+)/?$ index.php?a=admin&t=$1 [L]
+RewriteRule ^([^/\.]+)/?$ index.php?t=$1 [L]
+
